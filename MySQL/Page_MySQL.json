@@ -10,7 +10,7 @@
   "sf_page" : "MySQL",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : ""
+  "sf_description" : "MySQL metrics."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "MySQL",

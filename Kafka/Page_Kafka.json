@@ -10,7 +10,7 @@
   "sf_page" : "Kafka",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : ""
+  "sf_description" : "Kafka metrics."
 }, {
   "sf_updatedBy" : "BwjrRA1AAAA",
   "sf_type" : "Dashboard",

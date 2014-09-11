@@ -10,7 +10,7 @@
   "sf_page" : "Nginx",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : ""
+  "sf_description" : "Nginx metrics."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Nginx",

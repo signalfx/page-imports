@@ -10,7 +10,7 @@
   "sf_page" : "Elastic Search",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : ""
+  "sf_description" : "Elasticsearch metrics."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Elastic Search",

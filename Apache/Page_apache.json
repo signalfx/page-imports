@@ -10,7 +10,7 @@
   "sf_page" : "apache",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : ""
+  "sf_description" : "Apache metrics."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Main stats",

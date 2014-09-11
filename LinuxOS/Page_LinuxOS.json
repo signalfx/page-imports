@@ -10,7 +10,7 @@
   "sf_page" : "LinuxOS",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Basic Linux system stats"
+  "sf_description" : "Basic Linux system stats."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Overview",
