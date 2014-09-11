@@ -4,7 +4,7 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Elastic Search",
-  "sf_description" : ""
+  "sf_description" : "Elasticsearch metrics."
 }, {
   "sf_type" : "Page",
   "sf_page" : "Elastic Search",

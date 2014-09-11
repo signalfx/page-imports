@@ -4,7 +4,7 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "JMX",
-  "sf_description" : "Generic JMX stats"
+  "sf_description" : "Generic JMX stats."
 }, {
   "sf_type" : "Page",
   "sf_page" : "JMX",
