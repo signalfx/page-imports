@@ -4,14 +4,14 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Infrastructure - Collectd",
-  "sf_description" : "Collectd metrics for infrastructure."
+  "sf_description" : "Collectd metrics for infrastructure. Created by SignalFuse through service discovery."
 }, {
   "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_type" : "Page",
   "sf_page" : "Infrastructure - Collectd",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Collectd metrics for infrastructure."
+  "sf_description" : "Collectd metrics for infrastructure. Created by SignalFuse through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Infrastructure - Collectd",

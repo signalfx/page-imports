@@ -4,13 +4,13 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "JMX",
-  "sf_description" : "Generic JMX stats."
+  "sf_description" : "Generic JMX stats. Created by SignalFuse through service discovery."
 }, {
   "sf_type" : "Page",
   "sf_page" : "JMX",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Generic JMX stats."
+  "sf_description" : "Generic JMX stats. Created by SignalFuse through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Generic Java stats",
