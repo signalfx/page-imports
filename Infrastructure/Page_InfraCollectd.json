@@ -143,645 +143,13 @@
   "marshallMemberOf" : [ 2 ],
   "sf_description" : "Collectd metrics for infrastructure."
 }, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_cacheProgram" : true,
-  "sf_chart" : "Disk Time Reads & Writes",
+  "sf_chart" : "Top 5 Memory Utilization by Source",
   "marshallId" : 4,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 7,
-    "currentUniqueKey" : 7,
-    "allPlots" : [ {
-      "name" : "collectd.disk.*.disk_time.read",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_time.read"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.disk.*.disk_time.write",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_time.write"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "Read:Write.P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 1,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 3,
-      "focusNext" : false,
-      "expressionText" : "A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "Read.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_time.read"
-      },
-      "uniqueKey" : 4,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
-    }, {
-      "name" : "Write.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_time.write"
-      },
-      "uniqueKey" : 5,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 6,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_7",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id", "_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : true,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000"
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 7,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_7',metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_jobResolution" : 3000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id;_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "Disk Ops Reads & Writes",
-  "marshallId" : 5,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 7,
-    "currentUniqueKey" : 7,
-    "allPlots" : [ {
-      "name" : "collectd.disk.*.disk_ops.read",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_ops.read"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.disk.*.disk_ops.write",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_ops.write"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "Read:Write.P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 1,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 3,
-      "focusNext" : false,
-      "expressionText" : "A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "Read.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_ops.read"
-      },
-      "uniqueKey" : 4,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
-    }, {
-      "name" : "Write.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_ops.write"
-      },
-      "uniqueKey" : 5,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 6,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_7",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id", "_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : true,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000"
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 6,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_7',metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_jobResolution" : 3000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id;_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "CPU Utilization",
-  "marshallId" : 6,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 6,
-    "currentUniqueKey" : 15,
-    "allPlots" : [ {
-      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "sf_source"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SUM"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "Max",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "MAX"
-        }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SCALE",
-          "options" : {
-            "scaleAmount" : 100
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 11,
-      "focusNext" : false,
-      "expressionText" : "1-A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SCALE",
-          "options" : {
-            "scaleAmount" : 100
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 12,
-      "focusNext" : false,
-      "expressionText" : "1-A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "Min",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "MIN"
-        }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SCALE",
-          "options" : {
-            "scaleAmount" : 100
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 13,
-      "focusNext" : false,
-      "expressionText" : "1-A/B",
-      "sf_programText" : "_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_BxMNP8sAYAA_12_6=id->publish(defaultSource='_SF_PLOT_KEY_BxMNP8sAYAA_12_6',metric='_SF_PLOT_KEY_BxMNP8sAYAA_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMNP8sAYAA_6');_SF_PLOT_KEY_BxMNP8sAYAA_1_6->?A:_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK;_SF_PLOT_KEY_BxMNP8sAYAA_2_6->?B:_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK"
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 14,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_6",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id", "_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK" ],
-    "chartconfig" : {
-      "range" : -900001,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : true,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000"
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 11,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_6',metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_6',metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK",
-  "sf_jobResolution" : 3000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id;_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "Top 5 Memory Utilization by Source",
-  "marshallId" : 7,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 11,
-    "currentUniqueKey" : 11,
+    "revisionNumber" : 8,
     "allPlots" : [ {
       "name" : "collectd.memory.memory.buffered",
       "type" : "plot",
@@ -876,11 +244,7 @@
           }
         },
         "fn" : {
-          "type" : "TOPN",
-          "options" : {
-            "count" : 5,
-            "mode" : "count"
-          }
+          "type" : "TOPN"
         }
       } ],
       "yAxisIndex" : 0,
@@ -907,12 +271,13 @@
       "focusNext" : false,
       "sf_programText" : ""
     } ],
+    "currentUniqueKey" : 11,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_11",
     "chartMode" : "list",
     "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_11=id", "_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_11',metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_11->?D:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK" ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id", "_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK" ],
     "chartconfig" : {
       "range" : -900000,
       "yAxisConfigurations" : [ {
@@ -925,31 +290,30 @@
           "low" : null
         }
       } ],
-      "updateInterval" : 5000,
+      "updateInterval" : "60000",
       "colorByMetric" : false,
       "stackedChart" : false,
       "absoluteStart" : null,
       "absoluteEnd" : null,
       "rangeEnd" : 0,
-      "forcedResolution" : "10000"
+      "forcedResolution" : "10000",
+      "maxDecimalPlaces" : 2
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 20,
+  "sf_chartIndex" : 21,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_11',metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_11',metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_11',metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_11',metric='_SF_PLOT_KEY_##CHARTID##_4_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_11',metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_11->?D:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK",
-  "sf_jobResolution" : 5000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_11=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_11=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_11=id;_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_11',metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_11->?D:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_8',metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_8',metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_8',metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_8',metric='_SF_PLOT_KEY_##CHARTID##_4_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK",
+  "sf_jobResolution" : 60000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id;_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK",
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_cacheProgram" : true,
   "sf_chart" : "Disk Octets Reads & Writes",
-  "marshallId" : 8,
+  "marshallId" : 5,
   "sf_uiModel" : {
     "chartType" : "line",
     "revisionNumber" : 6,
-    "currentUniqueKey" : 7,
     "allPlots" : [ {
       "name" : "collectd.disk.*.disk_octets.read",
       "type" : "plot",
@@ -1091,9 +455,10 @@
       "focusNext" : false,
       "sf_programText" : ""
     } ],
+    "currentUniqueKey" : 7,
     "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
     "uiHelperValue" : "##CHARTID##_6",
+    "sf_detectorDecorators" : [ ],
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_6=id", "_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_6',metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_6',metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_6',metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')" ],
@@ -1127,517 +492,20 @@
       "forcedResolution" : "10000"
     }
   },
-  "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 5,
   "sf_type" : "Chart",
   "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_6',metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_6',metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_6',metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_6',metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_6',metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
   "sf_jobResolution" : 3000,
   "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_6=id;_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_6',metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_3_6_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_6',metric='_SF_PLOT_KEY_##CHARTID##_4_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_6',metric='_SF_PLOT_KEY_##CHARTID##_5_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
-  "sf_notificationPolicies" : [ ],
   "marshallMemberOf" : [ 3 ]
 }, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "Top 5 CPU Utilization by Source",
-  "marshallId" : 9,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 11,
-    "currentUniqueKey" : 14,
-    "allPlots" : [ {
-      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "sf_source"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SUM"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SCALE",
-          "options" : {
-            "scaleAmount" : 100
-          }
-        }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "TOPN",
-          "options" : {
-            "count" : 5
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 12,
-      "focusNext" : false,
-      "expressionText" : "1-A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 13,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_11",
-    "chartMode" : "list",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id", "_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK" ],
-    "chartconfig" : {
-      "range" : -900001,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : "60000",
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000",
-      "maxDecimalPlaces" : 2
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 18,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_11',metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_11',metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK",
-  "sf_jobResolution" : 60000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id;_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "Merged Reads & Writes",
-  "marshallId" : 10,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 5,
-    "currentUniqueKey" : 7,
-    "allPlots" : [ {
-      "name" : "collectd.disk.*.disk_merged.read",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_merged.read"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.disk.*.disk_merged.write",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_merged.write"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "Read:Write.P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 1,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 3,
-      "focusNext" : false,
-      "expressionText" : "A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "Read.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_merged.read"
-      },
-      "uniqueKey" : 4,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_BxMK34SAcAA_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_BxMK34SAcAA_4_2',metric='_SF_PLOT_KEY_BxMK34SAcAA_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMK34SAcAA_2')"
-    }, {
-      "name" : "Write.P90",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "PERCENTILE",
-          "options" : {
-            "percentile" : 90
-          }
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.disk.*.disk_merged.write"
-      },
-      "uniqueKey" : 5,
-      "focusNext" : false,
-      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_BxMK34SAcAA_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_BxMK34SAcAA_5_2',metric='_SF_PLOT_KEY_BxMK34SAcAA_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMK34SAcAA_2')"
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 6,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_5",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id", "_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : true,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000"
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 4,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_5',metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_5',metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
-  "sf_jobResolution" : 3000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id;_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "Top 5 CPU Utilization by Source",
-  "marshallId" : 11,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 10,
-    "currentUniqueKey" : 14,
-    "allPlots" : [ {
-      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
-      "type" : "plot",
-      "invisible" : true,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "sf_source"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SUM"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
-      },
-      "uniqueKey" : 2,
-      "focusNext" : false,
-      "sf_programText" : ""
-    }, {
-      "name" : "P90",
-      "type" : "ratio",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SCALE",
-          "options" : {
-            "scaleAmount" : 100
-          }
-        }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "TOPN"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : null
-      },
-      "uniqueKey" : 12,
-      "focusNext" : false,
-      "expressionText" : "1-A/B",
-      "sf_programText" : ""
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 13,
-      "focusNext" : false,
-      "sf_programText" : ""
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_10",
-    "chartMode" : "list",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_10=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10=id", "_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_10=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_10',metric='_SF_PLOT_KEY_##CHARTID##_12_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK" ],
-    "chartconfig" : {
-      "range" : -900001,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "forcedResolution" : "10000"
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 15,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_10=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_10',metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_10',metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_10=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_10',metric='_SF_PLOT_KEY_##CHARTID##_12_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK",
-  "sf_jobResolution" : 5000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_10=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10=id;_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_10=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_10',metric='_SF_PLOT_KEY_##CHARTID##_12_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_cacheProgram" : true,
   "sf_chart" : "Memory Utilization",
-  "marshallId" : 12,
+  "marshallId" : 6,
   "sf_uiModel" : {
     "chartType" : "line",
     "revisionNumber" : 5,
-    "currentUniqueKey" : 12,
     "allPlots" : [ {
       "name" : "collectd.memory.memory.buffered",
       "type" : "plot",
@@ -1856,9 +724,10 @@
       "focusNext" : false,
       "sf_programText" : ""
     } ],
+    "currentUniqueKey" : 12,
     "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
     "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_5=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_5=id", "_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_7_5',metric='_SF_PLOT_KEY_##CHARTID##_7_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_9_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_5',metric='_SF_PLOT_KEY_##CHARTID##_9_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_10_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_10_5',metric='_SF_PLOT_KEY_##CHARTID##_10_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK" ],
@@ -1883,22 +752,306 @@
       "forcedResolution" : "10000"
     }
   },
-  "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 3,
   "sf_type" : "Chart",
   "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_5',metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_5',metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_7_5',metric='_SF_PLOT_KEY_##CHARTID##_7_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_9_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_5',metric='_SF_PLOT_KEY_##CHARTID##_9_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_10_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_10_5',metric='_SF_PLOT_KEY_##CHARTID##_10_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK",
   "sf_jobResolution" : 3000,
   "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_5=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_5=id;_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_7_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_7_5',metric='_SF_PLOT_KEY_##CHARTID##_7_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_7_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_9_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_5',metric='_SF_PLOT_KEY_##CHARTID##_9_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_9_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1 - ?C/(?A+?B+?C+?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_10_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_10_5',metric='_SF_PLOT_KEY_##CHARTID##_10_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5->?C:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_5->?D:_SF_PLOT_KEY_##CHARTID##_10_5_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_cacheProgram" : true,
-  "sf_chart" : "Top 5 Memory Utilization by Source",
-  "marshallId" : 13,
+  "sf_chart" : "CPU Utilization by Source",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "chartType" : "heatmap",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_source"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 12,
+      "focusNext" : false,
+      "expressionText" : "1-A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 13,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 14,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_10=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_10=id", "_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_10=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_10',metric='_SF_PLOT_KEY_##CHARTID##_12_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_12_10_MACROBLOCK" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 15,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_12',metric='_SF_PLOT_KEY_##CHARTID##_2_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK:!OUT->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_12',metric='_SF_PLOT_KEY_##CHARTID##_12_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_12->?B:_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK",
+  "sf_jobResolution" : 10000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_12=id;_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK:!OUT->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_12',metric='_SF_PLOT_KEY_##CHARTID##_12_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_12->?B:_SF_PLOT_KEY_##CHARTID##_12_12_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Top 5 CPU Utilization by Source",
+  "marshallId" : 8,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 8,
-    "currentUniqueKey" : 11,
+    "revisionNumber" : 11,
+    "allPlots" : [ {
+      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_source"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 12,
+      "focusNext" : false,
+      "expressionText" : "1-A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 13,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 14,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "list",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id", "_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000",
+      "maxDecimalPlaces" : 2
+    }
+  },
+  "sf_chartIndex" : 18,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_11',metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_11',metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK",
+  "sf_jobResolution" : 60000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_11=id;_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK=[?A,?B,!OUT]{1 - ?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_12_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_11',metric='_SF_PLOT_KEY_##CHARTID##_12_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_12_11_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Memory Utilization by Source",
+  "marshallId" : 9,
+  "sf_uiModel" : {
+    "chartType" : "heatmap",
+    "revisionNumber" : 13,
     "allPlots" : [ {
       "name" : "collectd.memory.memory.buffered",
       "type" : "plot",
@@ -1981,20 +1134,6 @@
             "scaleAmount" : 100
           }
         }
-      }, {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "TOPN"
-        }
       } ],
       "yAxisIndex" : 0,
       "queryItems" : [ ],
@@ -2020,12 +1159,441 @@
       "focusNext" : false,
       "sf_programText" : ""
     } ],
+    "currentUniqueKey" : 11,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_13",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_8",
-    "chartMode" : "list",
+    "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id", "_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK" ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_11=id", "find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_11=id", "_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_11',metric='_SF_PLOT_KEY_##CHARTID##_9_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_11->?D:_SF_PLOT_KEY_##CHARTID##_9_11_MACROBLOCK" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 100,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "stackedChart" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 20,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_13',metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_13',metric='_SF_PLOT_KEY_##CHARTID##_2_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_13',metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_13',metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK:!OUT->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_9_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_13',metric='_SF_PLOT_KEY_##CHARTID##_9_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_13->?D:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK",
+  "sf_jobResolution" : 10000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_13=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_13=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_13=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_13=id;_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK:!OUT->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_9_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_13',metric='_SF_PLOT_KEY_##CHARTID##_9_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_13->?D:_SF_PLOT_KEY_##CHARTID##_9_13_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "CPU Utilization",
+  "marshallId" : 10,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 6,
+    "allPlots" : [ {
+      "name" : "collectd.aggregation.cpu-sum.cpu.idle",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.idle"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.aggregation.cpu-sum.cpu.* - SUM by sf_source",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_source"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.aggregation.cpu-sum.cpu.*"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "Max",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX"
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 11,
+      "focusNext" : false,
+      "expressionText" : "1-A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 12,
+      "focusNext" : false,
+      "expressionText" : "1-A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "Min",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN"
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 13,
+      "focusNext" : false,
+      "expressionText" : "1-A/B",
+      "sf_programText" : "_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_BxMNP8sAYAA_12_6=id->publish(defaultSource='_SF_PLOT_KEY_BxMNP8sAYAA_12_6',metric='_SF_PLOT_KEY_BxMNP8sAYAA_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMNP8sAYAA_6');_SF_PLOT_KEY_BxMNP8sAYAA_1_6->?A:_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK;_SF_PLOT_KEY_BxMNP8sAYAA_2_6->?B:_SF_PLOT_KEY_BxMNP8sAYAA_12_6_MACROBLOCK"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 14,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 15,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id", "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id", "_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK", "_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 11,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_6',metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_6',metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK",
+  "sf_jobResolution" : 3000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.idle AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6=id;find(refresh=300000,query='sf_metric:collectd.aggregation.cpu-sum.cpu.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_6=id;_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK:!OUT->groupby()->stats:!max->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_11_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_11_6',metric='_SF_PLOT_KEY_##CHARTID##_11_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_11_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK:!OUT->groupby()->stats:!p90->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_12_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_12_6',metric='_SF_PLOT_KEY_##CHARTID##_12_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_12_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK=[?A,?B,!OUT]{1-?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK:!OUT->groupby()->stats:!min->?a:math(b=100):!product->_SF_PLOT_KEY_##CHARTID##_13_6=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_13_6',metric='_SF_PLOT_KEY_##CHARTID##_13_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');_SF_PLOT_KEY_##CHARTID##_1_6->?A:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_6->?B:_SF_PLOT_KEY_##CHARTID##_13_6_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Merged Reads & Writes",
+  "marshallId" : 11,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "allPlots" : [ {
+      "name" : "collectd.disk.*.disk_merged.read",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_merged.read"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.disk.*.disk_merged.write",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_merged.write"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "Read:Write.P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "Read.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_merged.read"
+      },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_BxMK34SAcAA_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_BxMK34SAcAA_4_2',metric='_SF_PLOT_KEY_BxMK34SAcAA_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMK34SAcAA_2')"
+    }, {
+      "name" : "Write.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_merged.write"
+      },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_BxMK34SAcAA_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_BxMK34SAcAA_5_2',metric='_SF_PLOT_KEY_BxMK34SAcAA_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='BxMK34SAcAA_2')"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 7,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id", "_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')" ],
     "chartconfig" : {
       "range" : -900000,
       "yAxisConfigurations" : [ {
@@ -2037,23 +1605,413 @@
           "high" : null,
           "low" : null
         }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
       } ],
-      "updateInterval" : "60000",
-      "colorByMetric" : false,
-      "stackedChart" : false,
+      "updateInterval" : 5000,
+      "colorByMetric" : true,
       "absoluteStart" : null,
       "absoluteEnd" : null,
       "rangeEnd" : 0,
-      "forcedResolution" : "10000",
-      "maxDecimalPlaces" : 2
+      "forcedResolution" : "10000"
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 21,
+  "sf_chartIndex" : 4,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_8',metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_8',metric='_SF_PLOT_KEY_##CHARTID##_2_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_8',metric='_SF_PLOT_KEY_##CHARTID##_3_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_8',metric='_SF_PLOT_KEY_##CHARTID##_4_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK",
-  "sf_jobResolution" : 60000,
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.memory.memory.buffered AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.cached AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.free AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_8=id;find(refresh=300000,query='sf_metric:collectd.memory.memory.used AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_8=id;_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK=[?C,?A,?B,?D,!OUT]{1  -  ?C / (?A + ?B + ?C + ?D)->!OUT};_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK:!OUT->?a:math(b=100):!product->groupby()->select(count=5):!top->groupby('sf_source')->_SF_PLOT_KEY_##CHARTID##_9_8=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_9_8',metric='_SF_PLOT_KEY_##CHARTID##_9_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8');_SF_PLOT_KEY_##CHARTID##_3_8->?C:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_8->?A:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_8->?B:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_8->?D:_SF_PLOT_KEY_##CHARTID##_9_8_MACROBLOCK",
-  "sf_notificationPolicies" : [ ],
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_5',metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_5',metric='_SF_PLOT_KEY_##CHARTID##_2_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_jobResolution" : 3000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_5=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_5=id;_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_5=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_5',metric='_SF_PLOT_KEY_##CHARTID##_3_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');_SF_PLOT_KEY_##CHARTID##_1_5->?A:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_5->?B:_SF_PLOT_KEY_##CHARTID##_3_5_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_5',metric='_SF_PLOT_KEY_##CHARTID##_4_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_merged.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_5=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_5',metric='_SF_PLOT_KEY_##CHARTID##_5_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Disk Ops Reads & Writes",
+  "marshallId" : 12,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 7,
+    "allPlots" : [ {
+      "name" : "collectd.disk.*.disk_ops.read",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_ops.read"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.disk.*.disk_ops.write",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_ops.write"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "Read:Write.P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "Read.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_ops.read"
+      },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
+    }, {
+      "name" : "Write.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_ops.write"
+      },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 7,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id", "_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 6,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_7',metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_jobResolution" : 3000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id;_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_ops.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BrpzFeSAYAA",
+  "sf_cacheProgram" : true,
+  "sf_chart" : "Disk Time Reads & Writes",
+  "marshallId" : 13,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 7,
+    "allPlots" : [ {
+      "name" : "collectd.disk.*.disk_time.read",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_time.read"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "collectd.disk.*.disk_time.write",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_time.write"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    }, {
+      "name" : "Read:Write.P90",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A/B",
+      "sf_programText" : ""
+    }, {
+      "name" : "Read.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_time.read"
+      },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.read AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
+    }, {
+      "name" : "Write.P90",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 90
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "collectd.disk.*.disk_time.write"
+      },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_octets.write AND sf_organizationID:BrppnSQAgAA AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2=id -> publish(defaultSource='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',metric='_SF_PLOT_KEY_SYNTH_CHART_ID_9_5_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='SYNTH_CHART_ID_9_2')"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 7,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id", "_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')", "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "10000"
+    }
+  },
+  "sf_chartIndex" : 7,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_7',metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_jobResolution" : 3000,
+  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_7=id;_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK=[?A,?B,!OUT]{?A/?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_3_7=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_7',metric='_SF_PLOT_KEY_##CHARTID##_3_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');_SF_PLOT_KEY_##CHARTID##_1_7->?A:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_7->?B:_SF_PLOT_KEY_##CHARTID##_3_7_MACROBLOCK;find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.read AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_4_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_7',metric='_SF_PLOT_KEY_##CHARTID##_4_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(refresh=300000,query='sf_metric:collectd.disk.*.disk_time.write AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> stats:!p90 -> _SF_PLOT_KEY_##CHARTID##_5_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_5_7',metric='_SF_PLOT_KEY_##CHARTID##_5_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
   "marshallMemberOf" : [ 3 ]
 } ]
