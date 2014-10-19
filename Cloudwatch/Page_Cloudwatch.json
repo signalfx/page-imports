@@ -1,0 +1,1720 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_type" : "Service",
+  "marshallId" : 1,
+  "sf_service" : "Cloudwatch System Metrics",
+  "sf_description" : ""
+}, {
+  "sf_updatedBy" : "BrppnRvAcAA",
+  "sf_type" : "Page",
+  "sf_page" : "Cloudwatch System Metrics",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "Cloudwatch system metrics. Created by SignalFuse through service discovery."
+}, {
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "Cloudwatch System Metrics",
+  "marshallId" : 3,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 2,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 8,
+        "name" : "New Text Block",
+        "id" : 1
+      }
+    }, {
+      "col" : 2,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1,
+        "name" : "New Text Block",
+        "id" : 2
+      }
+    }, {
+      "col" : 5,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 9,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 8,
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 12,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 5,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 4,
+        "name" : "",
+        "id" : 5
+      }
+    }, {
+      "col" : 5,
+      "row" : 1,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 10,
+        "name" : "",
+        "id" : 6
+      }
+    }, {
+      "col" : 8,
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 13,
+        "name" : "",
+        "id" : 7
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 5,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 5,
+        "name" : "",
+        "id" : 8
+      }
+    }, {
+      "col" : 5,
+      "row" : 2,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 14,
+        "name" : "",
+        "id" : 9
+      }
+    }, {
+      "col" : 8,
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 15,
+        "name" : "",
+        "id" : 10
+      }
+    }, {
+      "col" : 3,
+      "row" : 3,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 3,
+        "name" : "",
+        "id" : 11
+      }
+    }, {
+      "col" : 0,
+      "row" : 3,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 2,
+        "name" : "",
+        "id" : 12
+      }
+    }, {
+      "col" : 9,
+      "row" : 3,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 7,
+        "name" : "",
+        "id" : 13
+      }
+    }, {
+      "col" : 6,
+      "row" : 3,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 6,
+        "name" : "",
+        "id" : 14
+      }
+    } ],
+    "version" : 1
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Cloudwatch System Metrics"
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "host network out bits/sec heatmap",
+  "marshallId" : 4,
+  "sf_uiModel" : {
+    "chartType" : "heatmap",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkOut.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -3600000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 14,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id;_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_jobResolution" : 12000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top 5 cpu %",
+  "marshallId" : 5,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 6,
+    "allPlots" : [ {
+      "name" : "cpu %",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "CPUUtilization.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "list",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800812,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 120,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 1,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_6',metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_6=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_6',metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top disk read bytes/sec",
+  "marshallId" : 6,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "DiskReadBytes.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bytes/sec",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800676,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 6,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskReadBytes.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskReadBytes.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id;_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : false,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_7=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_7',metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_chart" : "host cpu heatmap",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "chartType" : "heatmap",
+    "revisionNumber" : 7,
+    "allPlots" : [ {
+      "name" : "cpu %",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "CPUUtilization.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800812,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 120,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 9
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top network out bits/sec",
+  "marshallId" : 8,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkOut.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 15,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id;_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top 5 network out bits/sec",
+  "marshallId" : 9,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 11,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkOut.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "list",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -3600000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 5,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_11=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_11',metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_11',metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkOut.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_11=id;_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_11',metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
+  "sf_jobResolution" : 12000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top 5 network in bits/sec",
+  "marshallId" : 10,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkIn.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "list",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800410,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 4,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_12=id;_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top disk iops read",
+  "marshallId" : 11,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 9,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "DiskReadOps.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "read ops/sec",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "expressionText" : "A/60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 4,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800295,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "forcedResolution" : "0"
+    }
+  },
+  "sf_chartIndex" : 2,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskReadOps.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_9=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_9',metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK=[?A,!OUT]{?A / 60->!OUT};_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_9=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_9',metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskReadOps.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_9=id;_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK=[?A,!OUT]{?A / 60->!OUT};_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_9=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_9',metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_2_9_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "# active hosts in last hour",
+  "marshallId" : 12,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "CPUUtilization.avg - MAX(1h) - COUNT",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "h",
+            "amount" : 1,
+            "transformTimeRange" : "1h"
+          }
+        },
+        "fn" : {
+          "type" : "MAX"
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "CPUUtilization.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 5,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "single",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "maxDecimalPlaces" : 4,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "That reported in last hour",
+  "sf_chartIndex" : 8,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> window(1h) -> stats:!max -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_jobResolution" : 36000,
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> window(1h) -> stats:!max -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top disk iops write",
+  "marshallId" : 13,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 13,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "DiskWriteOps.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "write ops/sec",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A/60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 5,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800570,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 3,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskWriteOps.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_13',metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,!OUT]{?A / 60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_13',metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskWriteOps.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_13=id;_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,!OUT]{?A / 60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_13',metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top disk write bytes/sec",
+  "marshallId" : 14,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 13,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "DiskWriteBytes.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bytes/sec",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800912,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 7,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskWriteBytes.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_13=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_13',metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,!OUT]{?A  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_13',metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:DiskWriteBytes.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_13=id;_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK=[?A,!OUT]{?A  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_13=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_13',metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_3_13_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "host network in bits/sec heatmap",
+  "marshallId" : 15,
+  "sf_uiModel" : {
+    "chartType" : "heatmap",
+    "revisionNumber" : 12,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkIn.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -3600000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 10,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_12',metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_12=id;_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_12=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_12',metric='_SF_PLOT_KEY_##CHARTID##_3_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_3_12_MACROBLOCK",
+  "sf_jobResolution" : 12000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top network in bits/sec",
+  "marshallId" : 16,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 14,
+    "allPlots" : [ {
+      "name" : "iops",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "NetworkIn.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "bps",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : null
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "expressionText" : "A * 8 / 60",
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 6,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800410,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 13,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_14=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_14',metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_14=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_14',metric='_SF_PLOT_KEY_##CHARTID##_3_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:NetworkIn.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_14=id;_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK=[?A,!OUT]{?A  *  8  /  60->!OUT};_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_14=id->publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_14',metric='_SF_PLOT_KEY_##CHARTID##_3_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_3_14_MACROBLOCK",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_chart" : "top cpu %",
+  "marshallId" : 17,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 8,
+    "allPlots" : [ {
+      "name" : "cpu %",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 5
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "CPUUtilization.avg"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : ""
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "sf-icon-timeseriesrollup",
+        "type" : "name",
+        "value" : "*",
+        "query" : "sf_source:*"
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "sf_programText" : ""
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "chartconfig" : {
+      "range" : -10800812,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 120,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 12,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_8',metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_programTextRegex" : "find(refresh=300000,query='(sf_source:*) AND sf_metric:CPUUtilization.avg AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby() -> select(count=5):!top -> groupby('sf_source') -> _SF_PLOT_KEY_##CHARTID##_1_8=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_8',metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_jobResolution" : 36000,
+  "marshallMemberOf" : [ 3 ]
+} ]
