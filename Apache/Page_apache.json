@@ -6,436 +6,16 @@
   "sf_service" : "apache",
   "sf_description" : "Apache metrics. Created by SignalFuse through service discovery."
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_type" : "Page",
-  "sf_page" : "apache",
+  "sf_page" : "Apache Metrics (CollectD)",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
   "sf_description" : "Apache metrics. Created by SignalFuse through service discovery."
 }, {
   "sf_type" : "Dashboard",
-  "sf_dashboard" : "Main stats",
-  "marshallId" : 3,
-  "sf_uiModel" : {
-    "widgets" : [ {
-      "col" : 0,
-      "row" : 0,
-      "sizeX" : 6,
-      "sizeY" : 1,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 1,
-        "name" : "New Text Block",
-        "id" : 1
-      }
-    }, {
-      "col" : 6,
-      "row" : 0,
-      "sizeX" : 6,
-      "sizeY" : 1,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 2,
-        "name" : "New Text Block",
-        "id" : 2
-      }
-    }, {
-      "col" : 0,
-      "row" : 1,
-      "sizeX" : 6,
-      "sizeY" : 1,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 3,
-        "name" : "New Text Block",
-        "id" : 3
-      }
-    }, {
-      "col" : 6,
-      "row" : 1,
-      "sizeX" : 6,
-      "sizeY" : 1,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 4,
-        "name" : "New Text Block",
-        "id" : 4
-      }
-    }, {
-      "col" : 0,
-      "row" : 2,
-      "sizeX" : 6,
-      "sizeY" : 3,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 5,
-        "name" : "New Text Block",
-        "id" : 5
-      }
-    } ],
-    "version" : 1
-  },
-  "marshallMemberOf" : [ 2 ],
-  "sf_description" : "Main apache stats"
-}, {
-  "sf_cacheProgram" : false,
-  "sf_dashboard" : "apache",
-  "sf_chart" : "apache idle workers",
-  "marshallId" : 4,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 3,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "Idle workers",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_idle_workers"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_3",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_idle_workers AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 3,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_idle_workers AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_idle_workers AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_dashboard" : "apache",
-  "sf_chart" : "apache connections",
-  "marshallId" : 5,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 3,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "Connection count",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_connections"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_3",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_connections AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 2,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_connections AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_connections AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "apache bytes per second",
-  "marshallId" : 6,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "Bytes/sec",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_bytes"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_bytes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 1,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_bytes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_bytes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "apache requests",
-  "marshallId" : 7,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "requests/sec",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_requests"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_requests AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900001,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 4,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_requests AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_requests AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_chart" : "",
-  "marshallId" : 8,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "All scoreboard stats",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "sf_metric"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "SUM"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.*"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "list",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : 60000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 5,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_jobResolution" : 5000,
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_type" : "Dashboard",
   "sf_dashboard" : "scoreboard",
-  "marshallId" : 9,
+  "marshallId" : 3,
   "sf_uiModel" : {
     "widgets" : [ {
       "col" : 0,
@@ -575,479 +155,17 @@
   "marshallMemberOf" : [ 2 ],
   "sf_description" : "Apache scoreboard stats"
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard sending",
-  "marshallId" : 10,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# sending",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.sending"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.sending AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900001,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 9,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.sending AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.dnslookup AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.sending AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard waiting",
-  "marshallId" : 11,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# waiting",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.waiting"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 11,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard idle cleanup",
-  "marshallId" : 12,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# in idle cleanup",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.idle_cleanup"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.idle_cleanup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 4,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.idle_cleanup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.idle_cleanup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard starting",
-  "marshallId" : 13,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# starting",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.starting"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.starting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : 60000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 10,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.starting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.starting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard logging",
-  "marshallId" : 14,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# logging",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.logging"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.logging AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 6,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.logging AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.logging AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "Scoreboard closing",
-  "marshallId" : 15,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# closing",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.myapacheinstance.apache_scoreboard.closing"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.myapacheinstance.apache_scoreboard.closing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 1,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.myapacheinstance.apache_scoreboard.closing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.myapacheinstance.apache_scoreboard.closing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard finishing",
-  "marshallId" : 16,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
-    "allPlots" : [ {
-      "name" : "# finishing",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.finishing"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.finishing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 3,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.finishing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.finishing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
-}, {
-  "sf_cacheProgram" : false,
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.dnslookup AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "sf_chart" : "scoreboard DNS lookup",
-  "marshallId" : 17,
+  "marshallId" : 4,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 3,
-    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
     "allPlots" : [ {
       "name" : "DNS lookup",
       "type" : "plot",
@@ -1058,10 +176,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.dnslookup"
+        "metric" : "apache_scoreboard.dnslookup"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -1073,11 +195,13 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_3",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.dnslookup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
@@ -1100,23 +224,22 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 2,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.dnslookup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.dnslookup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 2
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "Scoreboard reading",
-  "marshallId" : 18,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.sending AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.sending AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard sending",
+  "marshallId" : 5,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
     "allPlots" : [ {
-      "name" : "# reading",
+      "name" : "# sending",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -1125,10 +248,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.reading"
+        "metric" : "apache_scoreboard.sending"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -1140,11 +267,157 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.sending AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 9
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.idle_cleanup AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.idle_cleanup AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard idle cleanup",
+  "marshallId" : 6,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# in idle cleanup",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.idle_cleanup"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.idle_cleanup AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 4
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.reading AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.reading AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "Scoreboard reading",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# reading",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.reading"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -1167,23 +440,22 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 8,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 8
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard open",
-  "marshallId" : 19,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.logging AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.logging AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard logging",
+  "marshallId" : 8,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
     "allPlots" : [ {
-      "name" : "# open",
+      "name" : "# logging",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -1192,10 +464,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.open"
+        "metric" : "apache_scoreboard.logging"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -1207,11 +483,367 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.logging AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 6
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.waiting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.waiting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard waiting",
+  "marshallId" : 9,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# waiting",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.waiting"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 11
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.keepalive AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.keepalive AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard keepalive",
+  "marshallId" : 10,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# keepalive",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.keepalive"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.keepalive AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : 60000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 5
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.finishing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.finishing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard finishing",
+  "marshallId" : 11,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# finishing",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.finishing"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.finishing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 3
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.starting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.starting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard starting",
+  "marshallId" : 12,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# starting",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.starting"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.starting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : 60000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 10
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.open AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.open AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "scoreboard open",
+  "marshallId" : 13,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "# open",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.open"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.open AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -1234,23 +866,22 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 7,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.open AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.open AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 7
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "scoreboard keepalive",
-  "marshallId" : 20,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.closing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.closing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_chart" : "Scoreboard closing",
+  "marshallId" : 14,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
     "allPlots" : [ {
-      "name" : "# keepalive",
+      "name" : "# closing",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -1259,10 +890,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.apache.*.apache_scoreboard.keepalive"
+        "metric" : "apache_scoreboard.closing"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -1274,14 +909,171 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.keepalive AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.myapacheinstance.apache_scoreboard.closing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 1
+}, {
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "Main stats",
+  "marshallId" : 15,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1,
+        "name" : "New Text Block",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 2,
+        "name" : "New Text Block",
+        "id" : 2
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 3,
+        "name" : "New Text Block",
+        "id" : 3
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 4,
+        "name" : "New Text Block",
+        "id" : 4
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 3,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 5,
+        "name" : "New Text Block",
+        "id" : 5
+      }
+    } ],
+    "version" : 1
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Main apache stats"
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : true,
+  "sf_page" : "apache",
+  "sf_chart" : "All scoreboard stats",
+  "marshallId" : 16,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "All scoreboard stats",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_scoreboard.*"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "list",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.* AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
     "chartconfig" : {
       "range" : 60000,
       "yAxisConfigurations" : [ {
@@ -1295,14 +1087,304 @@
         }
       } ],
       "updateInterval" : 5000,
-      "colorByMetric" : false
+      "colorByMetric" : false,
+      "sortPreference" : "-value"
     }
   },
-  "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 5,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.keepalive AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
   "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_scoreboard.keepalive AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 9 ]
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_scoreboard.* AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_jobResolution" : 5000,
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_scoreboard.* AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('sf_metric') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallMemberOf" : [ 15 ]
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_connections AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_connections AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_dashboard" : "apache",
+  "sf_chart" : "apache connections",
+  "marshallId" : 17,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "Connection count",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_connections"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_connections AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 15 ],
+  "sf_chartIndex" : 2
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_requests AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_requests AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "apache requests",
+  "marshallId" : 18,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "requests/sec",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_requests"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_requests AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 15 ],
+  "sf_chartIndex" : 4
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_idle_workers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_idle_workers AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_dashboard" : "apache",
+  "sf_chart" : "apache idle workers",
+  "marshallId" : 19,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "Idle workers",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_idle_workers"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_idle_workers AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 15 ],
+  "sf_chartIndex" : 3
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:apache_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "apache",
+  "sf_programTextRegex" : "find(query='(sf_metric:apache_bytes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_chart" : "apache bytes per second",
+  "marshallId" : 20,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 3,
+    "allPlots" : [ {
+      "name" : "Bytes/sec",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "apache_bytes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.apache.*.apache_bytes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "marshallMemberOf" : [ 15 ],
+  "sf_chartIndex" : 1
 } ]
