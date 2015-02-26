@@ -6,8 +6,9 @@
   "sf_service" : "Kafka",
   "sf_description" : "Kafka metrics. Created by SignalFx through service discovery."
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_type" : "Page",
-  "sf_page" : "Kafka",
+  "sf_page" : "Kafka (CollectD)",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
   "sf_description" : "Kafka metrics. Created by SignalFx through service discovery."
@@ -83,96 +84,40 @@
   "marshallMemberOf" : [ 2 ],
   "sf_description" : "Default dashboard."
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "Bytes out/s",
+  "sf_chart" : "Bytes in/s",
   "marshallId" : 4,
   "sf_uiModel" : {
     "chartType" : "area",
-    "revisionNumber" : 3,
+    "revisionNumber" : 4,
+    "currentUniqueKey" : 3,
     "allPlots" : [ {
-      "name" : "collectd.GenericJMX.kafka-all-bytes-out.counter",
+      "name" : "bytes in/s",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
       "dataManipulations" : [ ],
       "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.GenericJMX.kafka-all-bytes-out.counter"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "currentUniqueKey" : 3,
-    "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_3",
-    "sf_detectorDecorators" : [ ],
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-out.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
-    "chartconfig" : {
-      "range" : -900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : 0,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "all",
+        "query" : "plugin_instance:all",
+        "value" : "all",
+        "NOT" : false
       } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "forcedResolution" : "10000",
-      "stackedChart" : true,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 7,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-out.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-out.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_jobResolution" : 10000,
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "Bytes in/s",
-  "marshallId" : 5,
-  "sf_uiModel" : {
-    "chartType" : "area",
-    "revisionNumber" : 2,
-    "allPlots" : [ {
-      "name" : "collectd.GenericJMX.kafka-all-bytes-in.counter",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.GenericJMX.kafka-all-bytes-in.counter"
+        "metric" : "counter.kafka-bytes-in"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -184,12 +129,12 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
-    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
     "sf_detectorDecorators" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -214,24 +159,23 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 6,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "find(query='((plugin_instance:all)) AND (sf_metric:counter.kafka\\\\-bytes\\\\-in AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "sf_jobResolution" : 10000,
-  "sf_notificationPolicies" : [ ],
+  "sf_programTextRegex" : "find(query='((plugin_instance:all)) AND (sf_metric:counter.kafka\\\\-bytes\\\\-in AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
-  "sf_chart" : "Messages In/s",
-  "marshallId" : 6,
+  "sf_chart" : "Bytes out/s",
+  "marshallId" : 5,
   "sf_uiModel" : {
     "chartType" : "area",
-    "revisionNumber" : 4,
+    "revisionNumber" : 5,
     "currentUniqueKey" : 3,
     "allPlots" : [ {
-      "name" : "collectd.GenericJMX.kafka-all-messages-in.counter",
+      "name" : "bytes out/sec",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -240,13 +184,13 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.GenericJMX.kafka-all-messages-in.counter"
+        "metric" : "counter.kafka-bytes-out"
       },
       "uniqueKey" : 1,
       "focusNext" : false,
+      "valid" : false,
       "configuration" : {
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 1000
+        "rollupPolicy" : null
       }
     }, {
       "name" : "New Plot",
@@ -259,14 +203,15 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
     "allPlotConstructs" : [ ],
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_4",
+    "uiHelperValue" : "##CHARTID##_5",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-messages-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')" ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-bytes-out.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_3=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_3',metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')" ],
     "chartconfig" : {
       "range" : -900000,
       "yAxisConfigurations" : [ {
@@ -281,97 +226,30 @@
       } ],
       "updateInterval" : 5000,
       "colorByMetric" : false,
-      "absoluteStart" : null,
-      "absoluteEnd" : null,
-      "rangeEnd" : 0,
-      "stackedChart" : true
-    }
-  },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 4,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-messages-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-messages-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_chart" : "Log Flush Time (ms)",
-  "marshallId" : 7,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 2,
-    "allPlots" : [ {
-      "name" : "collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "focusNext" : false
-    } ],
-    "currentUniqueKey" : 3,
-    "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
-    "sf_detectorDecorators" : [ ],
-    "chartMode" : "graph",
-    "allDetectorDecorators" : [ ],
-    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95 AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
-    "chartconfig" : {
-      "range" : -900002,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
       "forcedResolution" : "10000",
+      "stackedChart" : true,
       "absoluteStart" : null,
       "absoluteEnd" : null,
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 8,
+  "sf_chartIndex" : 7,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95 AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95 AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "find(query='(sf_metric:counter.kafka\\\\-bytes\\\\-out AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "sf_jobResolution" : 10000,
-  "sf_notificationPolicies" : [ ],
+  "sf_programTextRegex" : "find(query='(sf_metric:counter.kafka\\\\-bytes\\\\-out AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
   "sf_chart" : "Log Flushes/s",
-  "marshallId" : 8,
+  "marshallId" : 6,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
+    "revisionNumber" : 4,
+    "currentUniqueKey" : 3,
     "allPlots" : [ {
-      "name" : "collectd.GenericJMX.counter.kafka-log-flushes",
+      "name" : "flushes/s",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -380,10 +258,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.GenericJMX.counter.kafka-log-flushes"
+        "metric" : "counter.kafka-log-flushes"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -395,12 +277,12 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
-    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
     "sf_detectorDecorators" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.kafka-log-flushes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -424,12 +306,157 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 5,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.kafka-log-flushes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.kafka-log-flushes AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "find(query='(sf_metric:counter.kafka\\\\-log\\\\-flushes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "sf_jobResolution" : 10000,
-  "sf_notificationPolicies" : [ ],
+  "sf_programTextRegex" : "find(query='(sf_metric:counter.kafka\\\\-log\\\\-flushes AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
   "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_chart" : "Log Flush Time 95th-percentile (ms)",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 5,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "flush/s",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "gauge.kafka-log-flush-time-ms-p95"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "sf_detectorDecorators" : [ ],
+    "uiHelperValue" : "##CHARTID##_5",
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.kafka-log-flush-time-ms-p95 AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
+    "chartconfig" : {
+      "range" : -900002,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "forcedResolution" : "10000",
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 8,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='(sf_metric:gauge.kafka\\\\-log\\\\-flush\\\\-time\\\\-ms\\\\-p95 AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_jobResolution" : 10000,
+  "sf_programTextRegex" : "find(query='(sf_metric:gauge.kafka\\\\-log\\\\-flush\\\\-time\\\\-ms\\\\-p95 AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_updatedBy" : "BxCfY82AEAA",
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:counter.kafka\\\\-messages\\\\-in AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_type" : "Chart",
+  "sf_programTextRegex" : "find(query='(sf_metric:counter.kafka\\\\-messages\\\\-in AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_chart" : "Messages In/s",
+  "marshallId" : 8,
+  "sf_uiModel" : {
+    "chartType" : "area",
+    "revisionNumber" : 6,
+    "allPlots" : [ {
+      "name" : "messages in/s",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "counter.kafka-messages-in"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 1000,
+        "rollupPolicy" : null
+      },
+      "valid" : false
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 3,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "sf_detectorDecorators" : [ ],
+    "chartMode" : "graph",
+    "allDetectorDecorators" : [ ],
+    "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.GenericJMX.kafka-all-messages-in.counter AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=1000) -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')" ],
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : true
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 4
 } ]
