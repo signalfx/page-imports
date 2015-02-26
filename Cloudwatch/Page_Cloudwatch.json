@@ -11,7 +11,7 @@
   "sf_page" : "Cloudwatch System Metrics",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Cloudwatch system metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Cloudwatch system metrics. Created by SignalFx through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Cloudwatch System Metrics",

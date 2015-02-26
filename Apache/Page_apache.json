@@ -4,14 +4,14 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "apache",
-  "sf_description" : "Apache metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Apache metrics. Created by SignalFx through service discovery."
 }, {
   "sf_updatedBy" : "BxCfY82AEAA",
   "sf_type" : "Page",
   "sf_page" : "Apache Metrics (CollectD)",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Apache metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Apache metrics. Created by SignalFx through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "scoreboard",

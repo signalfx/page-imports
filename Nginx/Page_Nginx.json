@@ -4,13 +4,13 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Nginx",
-  "sf_description" : "Nginx metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Nginx metrics. Created by SignalFx through service discovery."
 }, {
   "sf_type" : "Page",
   "sf_page" : "Nginx",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Nginx metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Nginx metrics. Created by SignalFx through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Nginx",

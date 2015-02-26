@@ -4,14 +4,14 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Org Metrics",
-  "sf_description" : "Metrics specific to your organization. Created by SignalFuse through service discovery."
+  "sf_description" : "Metrics specific to your organization. Created by SignalFx through service discovery."
 }, {
   "sf_updatedBy" : "BqR13zSAAAA",
   "sf_type" : "Page",
   "sf_page" : "Organization",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Metrics specific to your organization. Created by SignalFuse through service discovery."
+  "sf_description" : "Metrics specific to your organization. Created by SignalFx through service discovery."
 }, {
   "sf_type" : "Dashboard",
   "sf_page" : "Org Metrics",
@@ -194,7 +194,7 @@
       "forcedResolution" : "5000"
     }
   },
-  "sf_description" : "Number of data points received per minute by SignalFuse from your organization.",
+  "sf_description" : "Number of data points received per minute by SignalFx from your organization.",
   "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 24,
   "sf_type" : "Chart",
@@ -283,7 +283,7 @@
       "forcedResolution" : "60000"
     }
   },
-  "sf_description" : "Number of data points received per second by SignalFuse from your organization.",
+  "sf_description" : "Number of data points received per second by SignalFx from your organization.",
   "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 18,
   "sf_type" : "Chart",
@@ -372,7 +372,7 @@
       "forcedResolution" : "60000"
     }
   },
-  "sf_description" : "Number of data points received per second by SignalFuse from your organization.",
+  "sf_description" : "Number of data points received per second by SignalFx from your organization.",
   "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 25,
   "sf_type" : "Chart",
@@ -492,7 +492,7 @@
       "forcedResolution" : "5000"
     }
   },
-  "sf_description" : "Number of data points received per minute by SignalFuse from your organization.",
+  "sf_description" : "Number of data points received per minute by SignalFx from your organization.",
   "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 26,
   "sf_type" : "Chart",
@@ -574,7 +574,7 @@
       "colorByMetric" : false
     }
   },
-  "sf_description" : "Calls to SignalFuse servers to add data points on your behalf.",
+  "sf_description" : "Calls to SignalFx servers to add data points on your behalf.",
   "sf_anomalyDetectors" : [ ],
   "sf_chartIndex" : 28,
   "sf_type" : "Chart",
