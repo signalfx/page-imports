@@ -6,8 +6,9 @@
   "sf_service" : "Nginx",
   "sf_description" : "Nginx metrics. Created by SignalFx through service discovery."
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_type" : "Page",
-  "sf_page" : "Nginx",
+  "sf_page" : "Nginx (CollectD)",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
   "sf_description" : "Nginx metrics. Created by SignalFx through service discovery."
@@ -46,15 +47,19 @@
   "marshallMemberOf" : [ 2 ],
   "sf_description" : "Default dashboard."
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='(sf_metric:nginx_connections.active AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.reading AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.waiting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.writing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "Nginx",
+  "sf_programTextRegex" : "find(query='(sf_metric:nginx_connections.active AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.reading AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.waiting AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:nginx_connections.writing AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
   "sf_chart" : "Current connection states",
   "marshallId" : 4,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 6,
+    "revisionNumber" : 3,
     "allPlots" : [ {
-      "name" : "collectd.nginx.nginx_connections.active",
+      "name" : "nginx_connections.active",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -63,12 +68,16 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.nginx_connections.active"
+        "metric" : "nginx_connections.active"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
-      "name" : "collectd.nginx.nginx_connections.reading",
+      "name" : "nginx_connections.reading",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -77,12 +86,16 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.nginx_connections.reading"
+        "metric" : "nginx_connections.reading"
       },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
-      "name" : "collectd.nginx.nginx_connections.waiting",
+      "name" : "nginx_connections.waiting",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -91,12 +104,16 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.nginx_connections.waiting"
+        "metric" : "nginx_connections.waiting"
       },
       "uniqueKey" : 3,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
-      "name" : "collectd.nginx.nginx_connections.writing",
+      "name" : "nginx_connections.writing",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -105,10 +122,14 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.nginx_connections.writing"
+        "metric" : "nginx_connections.writing"
       },
       "uniqueKey" : 4,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -120,11 +141,13 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 5,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 6,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.active AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')", "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')", "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_2',metric='_SF_PLOT_KEY_##CHARTID##_3_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')", "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.writing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_2',metric='_SF_PLOT_KEY_##CHARTID##_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -147,49 +170,72 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 2,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.active AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_2',metric='_SF_PLOT_KEY_##CHARTID##_3_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.writing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_2',metric='_SF_PLOT_KEY_##CHARTID##_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.active AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.reading AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.waiting AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_3_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_3_2',metric='_SF_PLOT_KEY_##CHARTID##_3_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.nginx_connections.writing AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_4_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_4_2',metric='_SF_PLOT_KEY_##CHARTID##_4_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 2
 }, {
+  "sf_updatedBy" : "BxCfY82AEAA",
   "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "find(query='((plugin:nginx)) AND (sf_metric:connections.accepted AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='((plugin:nginx)) AND (sf_metric:connections.handled AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_type" : "Chart",
+  "sf_page" : "Nginx",
+  "sf_programTextRegex" : "find(query='((plugin:nginx)) AND (sf_metric:connections.accepted AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='((plugin:nginx)) AND (sf_metric:connections.handled AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
   "sf_chart" : "Connection states per sec",
   "marshallId" : 5,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 2,
-    "currentUniqueKey" : 4,
+    "revisionNumber" : 3,
     "allPlots" : [ {
-      "name" : "collectd.nginx.connections.accepted",
+      "name" : "Accepted/Sec",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
       "dataManipulations" : [ ],
       "yAxisIndex" : 0,
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "nginx",
+        "query" : "plugin:nginx",
+        "value" : "nginx",
+        "NOT" : false
+      } ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.connections.accepted"
+        "metric" : "connections.accepted"
       },
       "uniqueKey" : 1,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
-      "name" : "collectd.nginx.connections.handled",
+      "name" : "Handled/Sec",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
       "dataManipulations" : [ ],
       "yAxisIndex" : 0,
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "nginx",
+        "query" : "plugin:nginx",
+        "value" : "nginx",
+        "NOT" : false
+      } ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "collectd.nginx.connections.handled"
+        "metric" : "connections.handled"
       },
       "uniqueKey" : 2,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
     }, {
       "name" : "New Plot",
       "type" : "plot",
@@ -201,11 +247,13 @@
       "metricDefinition" : { },
       "seriesData" : { },
       "uniqueKey" : 3,
-      "focusNext" : false
+      "focusNext" : false,
+      "valid" : false
     } ],
+    "currentUniqueKey" : 4,
     "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_3",
     "sf_detectorDecorators" : [ ],
-    "uiHelperValue" : "##CHARTID##_2",
     "chartMode" : "graph",
     "allDetectorDecorators" : [ ],
     "allPlotProgramText" : [ "find(refresh=300000,query='sf_metric:collectd.nginx.connections.accepted AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')", "find(refresh=300000,query='sf_metric:collectd.nginx.connections.handled AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')" ],
@@ -228,11 +276,6 @@
       "rangeEnd" : 0
     }
   },
-  "sf_anomalyDetectors" : [ ],
-  "sf_chartIndex" : 1,
-  "sf_viewProgramText" : "find(refresh=300000,query='sf_metric:collectd.nginx.connections.accepted AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.connections.handled AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_type" : "Chart",
-  "sf_programTextRegex" : "find(refresh=300000,query='sf_metric:collectd.nginx.connections.accepted AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_2',metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');find(refresh=300000,query='sf_metric:collectd.nginx.connections.handled AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_2=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_2_2',metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
-  "sf_notificationPolicies" : [ ],
-  "marshallMemberOf" : [ 3 ]
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 1
 } ]
