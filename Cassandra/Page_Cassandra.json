@@ -8,7 +8,7 @@
 }, {
   "sf_updatedBy" : "Brg3F8oAAAA",
   "sf_type" : "Page",
-  "sf_page" : "Cassandra (Page)",
+  "sf_page" : "Cassandra (CollectD)",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
   "sf_description" : "Cassandra metrics. Created by SignalFx through service discovery."
