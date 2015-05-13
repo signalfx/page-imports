@@ -4,7 +4,7 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Org Metrics",
-  "sf_description" : "Metrics specific to your organization. Created by SignalFuse through service discovery."
+  "sf_description" : "Metrics specific to your organization. Created by SignalFx through service discovery."
 }, {
   "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_type" : "Page",
@@ -495,7 +495,7 @@
       "forcedResolution" : "5000"
     }
   },
-  "sf_description" : "Number of datapoints received per minute by SignalFuse from your organization.",
+  "sf_description" : "Number of datapoints received per minute by SignalFx from your organization.",
   "sf_chartIndex" : 24,
   "sf_type" : "Chart",
   "sf_viewProgramText" : "find(query='(sf_metric:sf.org.numDatapointsReceived AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby() -> stats:!sum -> window(1m) -> stats:!mean -> ?a:math(b=60):!product -> _SF_PLOT_KEY_##CHARTID##_1_16=id(report=1) -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",

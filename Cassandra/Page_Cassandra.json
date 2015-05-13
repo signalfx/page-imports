@@ -4,7 +4,7 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Cassandra",
-  "sf_description" : "Cassandra metrics. Created by SignalFuse through service discovery."
+  "sf_description" : "Cassandra metrics. Created by SignalFx through service discovery."
 }, {
   "sf_updatedBy" : "Brg3F8oAAAA",
   "sf_type" : "Page",
