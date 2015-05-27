@@ -439,7 +439,7 @@
   "sf_chartIndex" : 1431968886455
 }, {
   "sf_type" : "Dashboard",
-  "sf_dashboard" : "Introduction",
+  "sf_dashboard" : "Welcome to SignalFx - Intro",
   "marshallId" : 9,
   "sf_uiModel" : {
     "widgets" : [ {
