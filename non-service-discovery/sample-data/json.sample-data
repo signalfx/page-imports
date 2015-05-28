@@ -96,11 +96,11 @@
   "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : true,
   "sf_dashboard" : "Demo data - page 1 of 3",
-  "sf_chart" : "Total transactions",
+  "sf_chart" : "3. Total transactions",
   "marshallId" : 4,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 15,
+    "revisionNumber" : 16,
     "allPlots" : [ {
       "name" : "Total transactions",
       "type" : "plot",
@@ -150,7 +150,7 @@
     } ],
     "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_15",
+    "uiHelperValue" : "##CHARTID##_16",
     "chartMode" : "single",
     "chartconfig" : {
       "range" : -300001,
@@ -175,8 +175,8 @@
   "sf_description" : "Total transactions across all customers and servers.",
   "sf_chartIndex" : 1431968413124,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_16=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
   "sf_jobResolution" : 5000,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -228,11 +228,11 @@
   "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : true,
   "sf_dashboard" : "Demo data - page 1 of 3",
-  "sf_chart" : "Raw metrics on transaction count",
+  "sf_chart" : "1. Raw metrics on transaction count",
   "marshallId" : 6,
   "sf_uiModel" : {
     "chartType" : "area",
-    "revisionNumber" : 15,
+    "revisionNumber" : 16,
     "allPlots" : [ {
       "name" : "Transaction count (30s moving average)",
       "type" : "plot",
@@ -282,7 +282,7 @@
     } ],
     "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_15",
+    "uiHelperValue" : "##CHARTID##_16",
     "chartMode" : "graph",
     "chartconfig" : {
       "range" : -300000,
@@ -307,8 +307,8 @@
   "sf_description" : "Transaction count metrics with a smoothing function (mean:transformation for 30s) applied.",
   "sf_chartIndex" : 1431968266619,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16')",
   "sf_jobResolution" : 1000,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -321,7 +321,7 @@
   "marshallId" : 7,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 13,
+    "revisionNumber" : 14,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -338,8 +338,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nGo to the dashboard named `Your first dashboard` and see if you can recreate the charts above. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504469\" target=\"_blank\">chart 1</a> and for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504479\" target=\"_blank\">charts 2 and 3</a>. When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 2` to see how to take advantage of our rich analytics functionality.",
-    "uiHelperValue" : "##CHARTID##_13",
+    "markdownText" : "<br>\nGo to the dashboard named `Your first dashboard` and see if you can recreate the charts above. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504469\" target=\"_blank\">chart 1</a> (Raw metrics on transaction count) and for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504479\" target=\"_blank\">charts 2 and 3</a> (Total transactions). When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 2` to see how to take advantage of our rich analytics functionality.",
+    "uiHelperValue" : "##CHARTID##_14",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -368,7 +368,7 @@
   "marshallId" : 8,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 9,
+    "revisionNumber" : 10,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -385,8 +385,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nSignalFx lets you interact with your data to discover new insights, by applying analytics functions to it and by filtering or aggregating it using metadata. \n\nIn the charts to the right, we’ve added up the transactions from all the servers in the chart above. Click on the name of the charts, `Total transactions`, to see how they're built.",
-    "uiHelperValue" : "##CHARTID##_9",
+    "markdownText" : "<br>\nSignalFx lets you interact with your data to discover new insights, by applying analytics functions to it and by filtering or aggregating it using metadata. \n\nIn the charts to the right, we’ve added up the transactions from all the servers in the chart above. Click on the name of the charts, `2. Total transactions` or `3. Total transactions`, to see how they're built.",
+    "uiHelperValue" : "##CHARTID##_10",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -409,11 +409,11 @@
   "sf_cacheProgram" : true,
   "sf_page" : "FTUX",
   "sf_dashboard" : "Welcome to SignalFx - page 1 of 3",
-  "sf_chart" : "Total transactions",
+  "sf_chart" : "2. Total transactions",
   "marshallId" : 9,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 18,
+    "revisionNumber" : 19,
     "allPlots" : [ {
       "name" : "Total transactions",
       "type" : "plot",
@@ -463,7 +463,7 @@
     } ],
     "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_18",
+    "uiHelperValue" : "##CHARTID##_19",
     "chartMode" : "graph",
     "chartconfig" : {
       "range" : -300001,
@@ -488,8 +488,8 @@
   "sf_description" : "Total transactions across all customers and servers.",
   "sf_chartIndex" : 1432057339908,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_18=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_18',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_18')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_18=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_18',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_18')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_19=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_19',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_19')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_19=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_19',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_19')",
   "sf_jobResolution" : 5000,
   "marshallMemberOf" : [ 3 ]
 }, {
@@ -2184,7 +2184,7 @@
   "marshallId" : 27,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 14,
+    "revisionNumber" : 16,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -2201,8 +2201,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nWelcome to SignalFx! To get you started, let's go over some basics. \n\n#####**Pages**\nA SignalFx page is a way of grouping together one or more dashboards. Pages belong to a user or to a service, and right now, you're in your own user page, looking at a simple dashboard. If you send data to SignalFx from AWS, from a server, or from other sources we recognize, we'll auto-create pages with useful charts for you.\n\n#####**Dashboards**\nWhether you are monitoring SLAs for a cloud app, observing conversion rates from an online marketing program or seeing how a code push has affected your infrastructure, a dashboard is the place to organize and share charts and notes (e.g. runbooks) about the things that matter to you.\n\n#####**Charts**\nThe fundamental unit of a dashboard is a chart. Charts are constructed from data you send to SignalFx, transformed using analytical functions and visualized in a way that brings out useful insights. (You can also add text notes like this one to dashboards.)",
-    "uiHelperValue" : "##CHARTID##_14",
+    "markdownText" : "<br>\nWelcome to SignalFx! To get you started, let's go over some basics. \n\n#####**Pages**\nA page groups together one or more dashboards. Pages belong to a user or to a service, and right now, you're in your user page, looking at a dashboard. If you send data to SignalFx from AWS, a server, or other sources we recognize, we'll auto-create pages for you.\n\n#####**Dashboards**\nWhether you are monitoring SLAs for a cloud app, observing conversion rates from a marketing program or seeing how a code push impacts your infrastructure, a dashboard is the place to organize and share charts and notes (e.g. runbooks) about the things that matter to you.\n\n#####**Charts**\nThe fundamental unit of a dashboard is a chart. Charts are constructed from data you send to SignalFx, filtered and transformed using analytics functions to bring out useful insights. (You can also add text notes like this one to dashboards.)",
+    "uiHelperValue" : "##CHARTID##_16",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -2293,11 +2293,11 @@
   "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : true,
   "sf_dashboard" : "Demo data - page 3 of 3",
-  "sf_chart" : "Transactions by server",
+  "sf_chart" : "6. Transactions by server",
   "marshallId" : 29,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 12,
+    "revisionNumber" : 13,
     "allPlots" : [ {
       "name" : "No. transactions",
       "type" : "plot",
@@ -2359,7 +2359,7 @@
     } ],
     "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_12",
+    "uiHelperValue" : "##CHARTID##_13",
     "chartMode" : "list",
     "chartconfig" : {
       "range" : 900000,
@@ -2382,8 +2382,8 @@
   "sf_description" : "Number of transactions handled per host, not including those associated with samslack.com (which has consistently low latency).",
   "sf_chartIndex" : 1431969318054,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((NOT demo_customer:samslack.com))') -> fetch(maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_12=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((NOT demo_customer:samslack.com))') -> fetch(maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_12=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((NOT demo_customer:samslack.com))') -> fetch(maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((NOT demo_customer:samslack.com))') -> fetch(maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
   "sf_jobResolution" : 1000,
   "marshallMemberOf" : [ 28 ]
 }, {
@@ -2391,11 +2391,11 @@
   "sf_cacheProgram" : true,
   "sf_page" : "FTUX",
   "sf_dashboard" : "Demo data - page 3 of 3",
-  "sf_chart" : "Load balancing effectiveness",
+  "sf_chart" : "7. Load balancing effectiveness",
   "marshallId" : 30,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 9,
+    "revisionNumber" : 11,
     "allPlots" : [ {
       "name" : "demo.trans.count - Mean",
       "type" : "plot",
@@ -2509,10 +2509,10 @@
     } ],
     "currentUniqueKey" : 5,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_9",
+    "uiHelperValue" : "##CHARTID##_11",
     "chartMode" : "graph",
     "chartconfig" : {
-      "range" : -240000,
+      "range" : -300001,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -2532,8 +2532,8 @@
   "sf_description" : "Load balancing effectiveness is calculated as a ratio: standard deviation of the metric divided by its mean. Zero is ideal; higher is worse.",
   "sf_chartIndex" : 1431973818922,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_9=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');_SF_PLOT_KEY_##CHARTID##_2_9->?B:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_9->?A:_SF_PLOT_KEY_##CHARTID##_3_9_MACROBLOCK",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_11=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_11=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_2_11->?B:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_3_11_MACROBLOCK",
   "sf_jobResolution" : 1000,
   "marshallMemberOf" : [ 28 ]
 }, {
@@ -2635,7 +2635,7 @@
   "marshallId" : 33,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 7,
+    "revisionNumber" : 9,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -2652,8 +2652,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nGo back to `Your first dashboard` and see if you can recreate the charts above. Step-by-step tutorials are available for <a href=\"https://support.signalfx.com/hc/en-us/articles/204505169\" target=\"_blank\">chart 1</a> and <a href=\"https://support.signalfx.com/hc/en-us/articles/204505189\" target=\"_blank\">chart 2</a>. \n<br>\n\nWhen you’re done exploring, bring your own data into our system and see what insights you can find in it! For additional sample charts, go to the dashboard named `Welcome to SignalFx - Samples`.",
-    "uiHelperValue" : "##CHARTID##_7",
+    "markdownText" : "<br>\nGo back to `Your first dashboard` and see if you can recreate the charts above. Step-by-step tutorials are available for <a href=\"https://support.signalfx.com/hc/en-us/articles/204505169\" target=\"_blank\">chart 6</a> (Transactions by server) and <a href=\"https://support.signalfx.com/hc/en-us/articles/204505189\" target=\"_blank\">chart 7</a> (Load balancing effectiveness). \n<br>\n\nWhen you’re done exploring, <a href=\"https://support.signalfx.com/hc/en-us/articles/203762079\" target=\"_blank\">bring your own data into our system</a> and see what insights you can find in it! For additional sample charts, go to the dashboard named `Welcome to SignalFx - Samples`.",
+    "uiHelperValue" : "##CHARTID##_9",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -2672,6 +2672,7 @@
   "marshallMemberOf" : [ 28 ],
   "sf_chartIndex" : 1431973897380
 }, {
+  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Welcome to SignalFx - Part 2",
   "marshallId" : 34,
@@ -2679,7 +2680,7 @@
     "widgets" : [ {
       "col" : 0,
       "row" : 0,
-      "sizeX" : 5,
+      "sizeX" : 6,
       "sizeY" : 1,
       "type" : "chart",
       "options" : {
@@ -2689,9 +2690,9 @@
         "id" : 1
       }
     }, {
-      "col" : 5,
+      "col" : 6,
       "row" : 0,
-      "sizeX" : 7,
+      "sizeX" : 6,
       "sizeY" : 1,
       "type" : "chart",
       "options" : {
@@ -2703,7 +2704,7 @@
     }, {
       "col" : 0,
       "row" : 1,
-      "sizeX" : 5,
+      "sizeX" : 6,
       "sizeY" : 1,
       "type" : "chart",
       "options" : {
@@ -2713,16 +2714,16 @@
         "id" : 3
       }
     }, {
-      "col" : 5,
+      "col" : 6,
       "row" : 1,
-      "sizeX" : 7,
+      "sizeX" : 6,
       "sizeY" : 1,
       "type" : "chart",
       "options" : {
         "type" : "chart",
         "chartIndex" : 1432709203142,
         "name" : "",
-        "id" : 5
+        "id" : 4
       }
     }, {
       "col" : 0,
@@ -2734,7 +2735,7 @@
         "type" : "chart",
         "chartIndex" : 1431969165848,
         "name" : "",
-        "id" : 4
+        "id" : 5
       }
     } ],
     "version" : 1
@@ -2742,15 +2743,14 @@
   "marshallMemberOf" : [ 2 ],
   "sf_description" : ""
 }, {
-  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : true,
   "sf_page" : "FTUX",
   "sf_dashboard" : "Demo data - page 2 of 3",
-  "sf_chart" : "Total transactions vs. latency",
+  "sf_chart" : "4. Total transactions vs. latency",
   "marshallId" : 35,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 14,
+    "revisionNumber" : 15,
     "allPlots" : [ {
       "name" : "Total transactions",
       "type" : "plot",
@@ -2833,7 +2833,7 @@
     } ],
     "currentUniqueKey" : 4,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_14",
+    "uiHelperValue" : "##CHARTID##_15",
     "chartMode" : "graph",
     "chartconfig" : {
       "range" : -300000,
@@ -2864,18 +2864,18 @@
       "rangeEnd" : 0,
       "stackedChart" : false,
       "colorByMetric" : true,
-      "axisPrecision" : null
+      "axisPrecision" : null,
+      "updateInterval" : 5000
     }
   },
   "sf_description" : "Total transactions plotted vs. average latency, making use of 2 y-axes to highlight the correlation between the two metrics.",
   "sf_chartIndex" : 1431968929357,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_14=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_14=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_14=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_14=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
   "sf_jobResolution" : 1000,
   "marshallMemberOf" : [ 34 ]
 }, {
-  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : false,
   "sf_viewProgramText" : "",
   "sf_type" : "Chart",
@@ -2883,7 +2883,7 @@
   "marshallId" : 36,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 7,
+    "revisionNumber" : 10,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -2900,8 +2900,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nGo back to `Your first dashboard` and see if you can recreate the charts from this dashboard. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/205158165\" target=\"_blank\">chart 1</a> and <a href=\"https://support.signalfx.com/hc/en-us/articles/205158335\" target=\"_blank\">chart 2</a>. When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 3` to see how to build a more sophisticated analytics pipeline.",
-    "uiHelperValue" : "##CHARTID##_7",
+    "markdownText" : "<br>\nGo back to `Your first dashboard` and see if you can recreate the charts from this dashboard. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/205158165\" target=\"_blank\">chart 4</a> (Total transactions vs. latency) and <a href=\"https://support.signalfx.com/hc/en-us/articles/205158335\" target=\"_blank\">chart 5</a> (Average latency by customer). When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 3` to see how to build a more sophisticated analytics pipeline.",
+    "uiHelperValue" : "##CHARTID##_10",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -2914,13 +2914,14 @@
           "high" : null,
           "low" : null
         }
-      } ]
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false
     }
   },
   "marshallMemberOf" : [ 34 ],
   "sf_chartIndex" : 1431969165848
 }, {
-  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : false,
   "sf_viewProgramText" : "",
   "sf_type" : "Chart",
@@ -2959,19 +2960,20 @@
           "high" : null,
           "low" : null
         }
-      } ]
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false
     }
   },
   "marshallMemberOf" : [ 34 ],
   "sf_chartIndex" : 1431968886455
 }, {
-  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : true,
-  "sf_chart" : "Average latency by customer",
+  "sf_chart" : "5. Average latency by customer",
   "marshallId" : 38,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 4,
+    "revisionNumber" : 5,
     "currentUniqueKey" : 3,
     "allPlots" : [ {
       "name" : "Average latency by customer",
@@ -3023,7 +3025,7 @@
       "focusNext" : false
     } ],
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_4",
+    "uiHelperValue" : "##CHARTID##_5",
     "chartMode" : "graph",
     "chartconfig" : {
       "range" : -300001,
@@ -3040,18 +3042,19 @@
       } ],
       "absoluteStart" : null,
       "absoluteEnd" : null,
-      "rangeEnd" : 0
+      "rangeEnd" : 0,
+      "updateInterval" : 5000,
+      "colorByMetric" : false
     }
   },
   "sf_description" : "Average latency by customer, across hosts.",
   "sf_chartIndex" : 1432709203142,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
   "sf_jobResolution" : 1000,
   "marshallMemberOf" : [ 34 ]
 }, {
-  "sf_updatedBy" : "B1sTOsnAAAA",
   "sf_cacheProgram" : false,
   "sf_viewProgramText" : "",
   "sf_type" : "Chart",
@@ -3061,7 +3064,7 @@
   "marshallId" : 39,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 5,
+    "revisionNumber" : 6,
     "allPlots" : [ {
       "name" : "New Plot",
       "type" : "plot",
@@ -3078,8 +3081,8 @@
     } ],
     "currentUniqueKey" : 2,
     "allPlotConstructs" : [ ],
-    "markdownText" : "<br>\nYou can use metadata to slice and dice your data. Our analytics functions operate on any subset or grouping of metrics you can identify with tags, properties or dimensions.\n\nOne common path for us to follow while troubleshooting is to look at whether any particular customer is having a different experience than others.  In this case, we're calculating the average latency seen per customer.",
-    "uiHelperValue" : "##CHARTID##_5",
+    "markdownText" : "<br>\nYou can use metadata to slice and dice your data. Our analytics functions operate on any subset or grouping of metrics you can identify with tags, properties or dimensions.\n\nWhen troubleshooting, it's often worthwhile to determine whether any particular customer is having a different experience than others.  In this case, we're calculating the average latency per customer.",
+    "uiHelperValue" : "##CHARTID##_6",
     "chartMode" : "text",
     "chartconfig" : {
       "range" : 900000,
@@ -3092,7 +3095,9 @@
           "high" : null,
           "low" : null
         }
-      } ]
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false
     }
   },
   "marshallMemberOf" : [ 34 ],
