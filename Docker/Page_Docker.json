@@ -13,8 +13,9 @@
   "marshallMemberOf" : [ 1 ],
   "sf_description" : "Docker container statistics. Created by SignalFx through service discovery."
 }, {
+  "sf_discoverySelectors" : [ "_exists_:host" ],
   "sf_type" : "Dashboard",
-  "sf_dashboard" : "Containers",
+  "sf_dashboard" : "Host containers",
   "marshallId" : 3,
   "sf_uiModel" : {
     "widgets" : [ {
@@ -25,9 +26,9 @@
       "type" : "chart",
       "options" : {
         "type" : "chart",
-        "chartIndex" : 1431551262629,
+        "chartIndex" : 1442007529109,
         "name" : "",
-        "id" : 10
+        "id" : 1
       }
     }, {
       "col" : 4,
@@ -37,9 +38,9 @@
       "type" : "chart",
       "options" : {
         "type" : "chart",
-        "chartIndex" : 1430197962821,
+        "chartIndex" : 1442006142198,
         "name" : "",
-        "id" : 1
+        "id" : 2
       }
     }, {
       "col" : 8,
@@ -49,9 +50,9 @@
       "type" : "chart",
       "options" : {
         "type" : "chart",
-        "chartIndex" : 1430198105514,
+        "chartIndex" : 1430167294556,
         "name" : "",
-        "id" : 2
+        "id" : 3
       }
     }, {
       "col" : 0,
@@ -61,33 +62,21 @@
       "type" : "chart",
       "options" : {
         "type" : "chart",
-        "chartIndex" : 1430167294556,
+        "chartIndex" : 1442009970789,
         "name" : "",
-        "id" : 3
+        "id" : 9
       }
     }, {
-      "col" : 9,
+      "col" : 6,
       "row" : 1,
-      "sizeX" : 3,
+      "sizeX" : 6,
       "sizeY" : 1,
       "type" : "chart",
       "options" : {
         "type" : "chart",
         "chartIndex" : 1430173556141,
         "name" : "",
-        "id" : 4
-      }
-    }, {
-      "col" : 6,
-      "row" : 1,
-      "sizeX" : 3,
-      "sizeY" : 1,
-      "type" : "chart",
-      "options" : {
-        "type" : "chart",
-        "chartIndex" : 1431550348385,
-        "name" : "",
-        "id" : 5
+        "id" : 8
       }
     }, {
       "col" : 6,
@@ -99,7 +88,7 @@
         "type" : "chart",
         "chartIndex" : 1430196868210,
         "name" : "",
-        "id" : 7
+        "id" : 5
       }
     }, {
       "col" : 0,
@@ -111,7 +100,7 @@
         "type" : "chart",
         "chartIndex" : 1430196365726,
         "name" : "",
-        "id" : 6
+        "id" : 4
       }
     }, {
       "col" : 6,
@@ -123,7 +112,7 @@
         "type" : "chart",
         "chartIndex" : 1430196905913,
         "name" : "",
-        "id" : 9
+        "id" : 7
       }
     }, {
       "col" : 0,
@@ -135,24 +124,91 @@
         "type" : "chart",
         "chartIndex" : 1430196784237,
         "name" : "",
-        "id" : 8
+        "id" : 6
       }
     } ],
     "version" : 1
   },
   "marshallMemberOf" : [ 2 ],
-  "sf_description" : "Real-time statistics about running Docker containers"
+  "sf_description" : "Real-time statistics about Docker containers running on a host",
+  "sf_discoveryQuery" : "plugin:docker"
 }, {
-  "sf_cacheProgram" : false,
-  "sf_viewProgramText" : "",
-  "sf_type" : "Chart",
-  "sf_chart" : "About",
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Container memory utilization",
   "marshallId" : 4,
   "sf_uiModel" : {
+    "relatedDetectors" : [ ],
     "chartType" : "line",
-    "revisionNumber" : 5,
-    "currentUniqueKey" : 2,
+    "revisionNumber" : 14,
+    "currentUniqueKey" : 6,
     "allPlots" : [ {
+      "name" : "memory.usage.total",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "memory.usage.limit",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.usage.limit"
+      },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "Memory usage",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*A/C"
+    }, {
       "name" : "New Plot",
       "type" : "plot",
       "invisible" : false,
@@ -162,14 +218,109 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : { },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "valid" : false
+      "uniqueKey" : 5,
+      "valid" : false,
+      "focusNext" : false
     } ],
     "allPlotConstructs" : [ ],
-    "markdownText" : "---\nThis dashboard shows real-time metrics collected from all running [Docker](http://docker.com) containers in your environment. All hosts running Docker >= 1.5.0 along with [CollectD](http://collectd.org) and the [`docker-collectd-plugin`](https://github.com/signalfx/docker-collectd-plugin) will report all available container stats.",
-    "uiHelperValue" : "##CHARTID##_5",
-    "chartMode" : "text",
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901104,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 101,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "% of limit"
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : ""
+      } ],
+      "colorByMetric" : false,
+      "updateInterval" : 5000,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    }
+  },
+  "sf_description" : "Memory utilization of containers as % of limit",
+  "sf_chartIndex" : 1430173556141,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_14->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_14->?C:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14;find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_14;_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_14->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_14->?C:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Running containers",
+  "marshallId" : 5,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 2,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "cpu.usage.system - Count",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "COUNT",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.system"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "single",
     "chartconfig" : {
       "range" : 900000,
       "yAxisConfigurations" : [ {
@@ -182,40 +333,326 @@
           "low" : null
         }
       } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false
+      "sortPreference" : "",
+      "maxDecimalPlaces" : null
     }
   },
-  "marshallMemberOf" : [ 3 ],
-  "sf_chartIndex" : 1431551262629
+  "sf_description" : "Number of containers running",
+  "sf_chartIndex" : 1442007529109,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "marshallMemberOf" : [ 3 ]
 }, {
-  "sf_cacheProgram" : true,
-  "sf_dashboard" : "Docker containers",
-  "sf_chart" : "Containers",
-  "marshallId" : 5,
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Host memory usage",
+  "marshallId" : 6,
   "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 7,
+    "chartType" : "area",
+    "revisionNumber" : 4,
+    "currentUniqueKey" : 6,
     "allPlots" : [ {
-      "name" : "Containers",
+      "name" : "memory.free",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "COUNT"
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.free"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#05ce00"
+      }
+    }, {
+      "name" : "memory.cached",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.cached"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e5b312"
+      }
+    }, {
+      "name" : "memory.buffered",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.buffered"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#ab99bc"
+      }
+    }, {
+      "name" : "memory.used",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.used"
+      },
+      "uniqueKey" : 4,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
         }
       } ],
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "colorByMetric" : true
+    }
+  },
+  "sf_description" : "Details of memory usage on the host server",
+  "sf_chartIndex" : 1442009970789,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_4=id(report=1);find(query='(sf_metric:memory.free AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.cached AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.buffered AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_4=id(report=1);find(query='(sf_metric:memory.free AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.cached AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.buffered AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:memory.used AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Inbound traffic by container",
+  "marshallId" : 7,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 7,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "network.usage.rx_bytes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "network.usage.rx_bytes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -902286,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes received"
+      } ],
+      "colorByMetric" : false,
+      "updateInterval" : 5000,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true
+    }
+  },
+  "sf_description" : "Inbound network traffic",
+  "sf_chartIndex" : 1430196365726,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Outbound traffic by container",
+  "marshallId" : 8,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 8,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "network.usage.tx_bytes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "network.usage.tx_bytes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -902005,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes sent"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true
+    }
+  },
+  "sf_description" : "Outbound network traffic",
+  "sf_chartIndex" : 1430196868210,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Containers CPU usage",
+  "marshallId" : 9,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "line",
+    "revisionNumber" : 14,
+    "currentUniqueKey" : 7,
+    "allPlots" : [ {
+      "name" : "cpu.usage.total",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
       "yAxisIndex" : 0,
       "queryItems" : [ {
         "iconClass" : "icon-properties",
@@ -234,10 +671,335 @@
       "focusNext" : false,
       "valid" : false,
       "configuration" : {
-        "rollupPolicy" : null,
-        "extrapolationPolicy" : "AUTO",
-        "maxExtrapolations" : -1,
-        "colorOverride" : "#651aaa"
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "cpu.usage.system",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.system"
+      },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "CPU Utilization",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "A/B * 100"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901314,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "CPU Usage%"
+      } ],
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "updateInterval" : 5000,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : false
+    }
+  },
+  "sf_description" : "CPU utilization percentage",
+  "sf_chartIndex" : 1430167294556,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_14->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_14->?B:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14;find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_14;_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_14->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');_SF_PLOT_KEY_##CHARTID##_1_14->?A:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_14->?B:_SF_PLOT_KEY_##CHARTID##_4_14_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Host CPU usage",
+  "marshallId" : 10,
+  "sf_uiModel" : {
+    "chartType" : "area",
+    "revisionNumber" : 2,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "cpu.idle",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin_instance",
+        "propertyValue" : "cpu-average",
+        "query" : "plugin_instance:\"cpu-average\"",
+        "value" : "cpu-average",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.idle"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "100 - A",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : true,
+      "expressionText" : "100 - A"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901166,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "sortPreference" : "",
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_chartIndex" : 1442006142198,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK=[?A,!OUT]{100  -  ?A->!OUT};find(query='(sf_metric:cpu.idle AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin_instance:cpu\\\\-average))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_2->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_1_2->?A:_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK=[?A,!OUT]{100  -  ?A->!OUT};find(query='(sf_metric:cpu.idle AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin_instance:cpu\\\\-average))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2;_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_2->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2');_SF_PLOT_KEY_##CHARTID##_1_2->?A:_SF_PLOT_KEY_##CHARTID##_2_2_MACROBLOCK",
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Disk reads by container",
+  "marshallId" : 11,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 9,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "blkio.io_service_bytes_recursive*.read - Sum by plugin_instance",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "plugin_instance"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "blkio.io_service_bytes_recursive*.read"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901427,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes read"
+      } ],
+      "colorByMetric" : false,
+      "updateInterval" : 5000,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true
+    }
+  },
+  "sf_description" : "Bytes read from disk by container",
+  "sf_chartIndex" : 1430196784237,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Disk writes by container",
+  "marshallId" : 12,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 8,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "blkio.io_service_bytes_recursive*.write - Sum by plugin_instance",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "plugin_instance"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "blkio.io_service_bytes_recursive*.write"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
       }
     }, {
       "name" : "New Plot",
@@ -253,12 +1015,11 @@
       "valid" : false,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_7",
-    "chartMode" : "single",
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "graph",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -901721,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -267,27 +1028,402 @@
         "plotlines" : {
           "high" : null,
           "low" : null
-        }
+        },
+        "label" : "Bytes written"
       } ],
-      "updateInterval" : "60000",
-      "colorByMetric" : false
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true
     }
   },
-  "sf_description" : "Number of running containers",
-  "sf_chartIndex" : 1430197962821,
+  "sf_description" : "Bytes written to disk by container",
+  "sf_chartIndex" : 1430196905913,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_programTextRegex" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_7=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
-  "sf_jobResolution" : 60000,
-  "marshallMemberOf" : [ 3 ]
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallMemberOf" : [ 3 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_discoverySelectors" : [ "_exists_:plugin_instance" ],
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "Container metrics",
+  "marshallId" : 13,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430167294556,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 9,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430173556141,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431550348385,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196365726,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196868210,
+        "name" : "",
+        "id" : 5
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196784237,
+        "name" : "",
+        "id" : 6
+      }
+    }, {
+      "col" : 6,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196905913,
+        "name" : "",
+        "id" : 7
+      }
+    } ],
+    "version" : 1
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Real-time statistics from a running Docker container",
+  "sf_discoveryQuery" : "plugin:docker"
 }, {
   "sf_cacheProgram" : true,
-  "sf_dashboard" : "Docker tests",
-  "sf_chart" : "CPU usage",
-  "marshallId" : 6,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Disk writes",
+  "marshallId" : 14,
   "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 7,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "blkio.io_service_bytes_recursive*.write - Sum by plugin_instance",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "plugin_instance"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "blkio.io_service_bytes_recursive*.write"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#0077c2"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901255,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes written"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    }
+  },
+  "sf_description" : "Bytes written to disk by container",
+  "sf_chartIndex" : 1430196905913,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Network out",
+  "marshallId" : 15,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 6,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "network.usage.tx_bytes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "network.usage.tx_bytes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#0077c2",
+        "visualization" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -901004,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes sent"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    }
+  },
+  "sf_description" : "Outbound network traffic",
+  "sf_chartIndex" : 1430196868210,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "Memory usage",
+  "marshallId" : 16,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
     "chartType" : "line",
-    "revisionNumber" : 12,
+    "revisionNumber" : 4,
+    "allPlots" : [ {
+      "name" : "memory.usage.total",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "currentUniqueKey" : 4,
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -600003,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes"
+      } ],
+      "disableThrottle" : true,
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Memory usage of containers",
+  "sf_chartIndex" : 1431550348385,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_programTextRegex" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_chart" : "CPU usage",
+  "marshallId" : 17,
+  "sf_uiModel" : {
+    "relatedDetectors" : [ ],
+    "chartType" : "line",
+    "revisionNumber" : 13,
+    "currentUniqueKey" : 6,
     "allPlots" : [ {
       "name" : "cpu.usage.total",
       "type" : "plot",
@@ -368,12 +1504,11 @@
       "valid" : false,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 6,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_12",
+    "uiHelperValue" : "##CHARTID##_13",
     "chartMode" : "graph",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -902228,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -387,24 +1522,30 @@
       } ],
       "colorByMetric" : false,
       "disableThrottle" : true,
-      "updateInterval" : 5000
+      "updateInterval" : 5000,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
     }
   },
   "sf_description" : "CPU utilization percentage",
   "sf_chartIndex" : 1430167294556,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_12=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_12=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_12->?B:_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK",
-  "sf_programTextRegex" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_12=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_12=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');_SF_PLOT_KEY_##CHARTID##_1_12->?A:_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_12->?B:_SF_PLOT_KEY_##CHARTID##_4_12_MACROBLOCK",
+  "sf_viewProgramText" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_13=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
   "sf_jobResolution" : 1000,
-  "marshallMemberOf" : [ 3 ]
+  "sf_programTextRegex" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_13->?B:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
 }, {
   "sf_cacheProgram" : true,
-  "sf_dashboard" : "Docker tests",
+  "sf_jobMaxDelay" : 0,
   "sf_chart" : "Disk reads",
-  "marshallId" : 7,
+  "marshallId" : 18,
   "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 6,
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 8,
+    "currentUniqueKey" : 4,
     "allPlots" : [ {
       "name" : "blkio.io_service_bytes_recursive*.read - Sum by plugin_instance",
       "type" : "plot",
@@ -445,7 +1586,10 @@
       "focusNext" : false,
       "valid" : false,
       "configuration" : {
-        "rollupPolicy" : null
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
       }
     }, {
       "name" : "New Plot",
@@ -461,12 +1605,11 @@
       "valid" : false,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 4,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_6",
+    "uiHelperValue" : "##CHARTID##_8",
     "chartMode" : "graph",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -901466,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -480,199 +1623,38 @@
       } ],
       "colorByMetric" : false,
       "updateInterval" : 5000,
-      "disableThrottle" : true
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
     }
   },
   "sf_description" : "Bytes read from disk by container",
   "sf_chartIndex" : 1430196784237,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
-  "sf_programTextRegex" : "find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_6=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_8 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
   "sf_jobResolution" : 1000,
-  "marshallMemberOf" : [ 3 ]
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_8=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_8 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
 }, {
   "sf_cacheProgram" : true,
-  "sf_dashboard" : "Docker containers",
-  "sf_chart" : "Containers by host",
-  "marshallId" : 8,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 8,
-    "allPlots" : [ {
-      "name" : "",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ {
-        "name" : "New Aggregation",
-        "showMe" : false,
-        "direction" : {
-          "type" : "aggregation",
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          }
-        },
-        "fn" : {
-          "type" : "COUNT"
-        }
-      } ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ {
-        "iconClass" : "icon-properties",
-        "type" : "property",
-        "property" : "plugin",
-        "propertyValue" : "docker",
-        "query" : "plugin:docker",
-        "value" : "docker",
-        "NOT" : false
-      } ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "cpu.usage.total"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "valid" : false,
-      "configuration" : {
-        "rollupPolicy" : null
-      }
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 3,
-      "valid" : false,
-      "focusNext" : false
-    } ],
-    "currentUniqueKey" : 4,
-    "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_8",
-    "chartMode" : "list",
-    "chartconfig" : {
-      "range" : 900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ],
-      "updateInterval" : "60000",
-      "sortPreference" : "-value",
-      "colorByMetric" : false
-    }
-  },
-  "sf_description" : "Counts of containers by host",
-  "sf_chartIndex" : 1430198105514,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
-  "sf_programTextRegex" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
-  "sf_jobResolution" : 60000,
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_dashboard" : "Docker containers",
-  "sf_chart" : "Network out",
-  "marshallId" : 9,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 4,
-    "allPlots" : [ {
-      "name" : "network.usage.tx_bytes",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ {
-        "iconClass" : "icon-properties",
-        "type" : "property",
-        "property" : "plugin",
-        "propertyValue" : "docker",
-        "query" : "plugin:docker",
-        "value" : "docker",
-        "NOT" : false
-      } ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "network.usage.tx_bytes"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "valid" : false,
-      "configuration" : {
-        "rollupPolicy" : null
-      }
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 2,
-      "valid" : false,
-      "focusNext" : false
-    } ],
-    "currentUniqueKey" : 3,
-    "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_4",
-    "chartMode" : "graph",
-    "chartconfig" : {
-      "range" : 900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "label" : "Bytes sent"
-      } ],
-      "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "disableThrottle" : true
-    }
-  },
-  "sf_description" : "Outbound network traffic",
-  "sf_chartIndex" : 1430196868210,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "sf_programTextRegex" : "find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : true,
-  "sf_dashboard" : "Docker tests",
+  "sf_jobMaxDelay" : 0,
   "sf_chart" : "Memory utilization",
-  "marshallId" : 10,
+  "marshallId" : 19,
   "sf_uiModel" : {
+    "relatedDetectors" : [ ],
     "chartType" : "line",
-    "revisionNumber" : 11,
+    "revisionNumber" : 13,
+    "currentUniqueKey" : 6,
     "allPlots" : [ {
       "name" : "memory.usage.total",
       "type" : "plot",
       "invisible" : true,
       "transient" : false,
       "dataManipulations" : [ ],
-      "yAxisIndex" : 1,
+      "yAxisIndex" : 0,
       "queryItems" : [ {
         "iconClass" : "icon-properties",
         "type" : "property",
@@ -746,12 +1728,11 @@
       "valid" : false,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 6,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_11",
+    "uiHelperValue" : "##CHARTID##_13",
     "chartMode" : "graph",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -600003,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -776,100 +1757,31 @@
       } ],
       "colorByMetric" : false,
       "updateInterval" : 5000,
-      "disableThrottle" : true
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
     }
   },
   "sf_description" : "Memory utilization of containers as % of limit",
   "sf_chartIndex" : 1430173556141,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_11=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_11=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK",
-  "sf_programTextRegex" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_11=id(report=1);find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_11=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_11=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_11',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_11');_SF_PLOT_KEY_##CHARTID##_1_11->?A:_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_11->?C:_SF_PLOT_KEY_##CHARTID##_4_11_MACROBLOCK",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_13->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
   "sf_jobResolution" : 1000,
-  "marshallMemberOf" : [ 3 ]
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_13;find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_13;_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_13->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13');_SF_PLOT_KEY_##CHARTID##_1_13->?A:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_13->?C:_SF_PLOT_KEY_##CHARTID##_4_13_MACROBLOCK",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
 }, {
   "sf_cacheProgram" : false,
-  "sf_dashboard" : "Docker containers",
-  "sf_chart" : "Memory usage",
-  "marshallId" : 11,
-  "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 3,
-    "currentUniqueKey" : 4,
-    "allPlots" : [ {
-      "name" : "memory.usage.total",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : false,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ {
-        "iconClass" : "icon-properties",
-        "type" : "property",
-        "property" : "plugin",
-        "propertyValue" : "docker",
-        "query" : "plugin:docker",
-        "value" : "docker",
-        "NOT" : false
-      } ],
-      "metricDefinition" : { },
-      "seriesData" : {
-        "metric" : "memory.usage.total"
-      },
-      "uniqueKey" : 1,
-      "focusNext" : false,
-      "valid" : false,
-      "configuration" : {
-        "rollupPolicy" : null
-      }
-    }, {
-      "name" : "New Plot",
-      "type" : "plot",
-      "invisible" : false,
-      "transient" : true,
-      "dataManipulations" : [ ],
-      "yAxisIndex" : 0,
-      "queryItems" : [ ],
-      "metricDefinition" : { },
-      "seriesData" : { },
-      "uniqueKey" : 3,
-      "valid" : false,
-      "focusNext" : false
-    } ],
-    "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_3",
-    "chartMode" : "graph",
-    "chartconfig" : {
-      "range" : 900000,
-      "yAxisConfigurations" : [ {
-        "name" : "yAxis0",
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "label" : "Bytes"
-      } ],
-      "disableThrottle" : true,
-      "updateInterval" : 5000,
-      "colorByMetric" : false
-    }
-  },
-  "sf_description" : "Memory usage of containers",
-  "sf_chartIndex" : 1431550348385,
-  "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "sf_programTextRegex" : "find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
-  "marshallMemberOf" : [ 3 ]
-}, {
-  "sf_cacheProgram" : false,
-  "sf_dashboard" : "Docker tests",
+  "sf_jobMaxDelay" : 0,
   "sf_chart" : "Network in",
-  "marshallId" : 12,
+  "marshallId" : 20,
   "sf_uiModel" : {
-    "chartType" : "line",
-    "revisionNumber" : 4,
+    "relatedDetectors" : [ ],
+    "chartType" : "area",
+    "revisionNumber" : 6,
+    "currentUniqueKey" : 4,
     "allPlots" : [ {
       "name" : "network.usage.rx_bytes",
       "type" : "plot",
@@ -894,6 +1806,203 @@
       "focusNext" : false,
       "valid" : false,
       "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -900786,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes received"
+      } ],
+      "colorByMetric" : false,
+      "updateInterval" : 5000,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    }
+  },
+  "sf_description" : "Inbound network traffic",
+  "sf_chartIndex" : 1430196365726,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallMemberOf" : [ 13 ],
+  "sf_throttledProgramText" : ""
+}, {
+  "sf_discoverySelectors" : [ "sf_key:host", "plugin:docker" ],
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "Container infrastructure",
+  "marshallId" : 21,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431551262629,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 4,
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430197962821,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 8,
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430198105514,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430167294556,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430173556141,
+        "name" : "",
+        "id" : 5
+      }
+    }, {
+      "col" : 6,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196868210,
+        "name" : "",
+        "id" : 6
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1430196905913,
+        "name" : "",
+        "id" : 7
+      }
+    } ],
+    "version" : 1
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Real-time statistics about all running Docker containers in your infrastructure",
+  "sf_discoveryQuery" : "plugin:docker"
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Docker containers",
+  "sf_chart" : "Containers by host",
+  "marshallId" : 22,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 10,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
         "rollupPolicy" : null
       }
     }, {
@@ -910,12 +2019,11 @@
       "valid" : false,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 4,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_4",
-    "chartMode" : "graph",
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "list",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -900126,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
@@ -924,30 +2032,217 @@
         "plotlines" : {
           "high" : null,
           "low" : null
-        },
-        "label" : "Bytes received"
+        }
       } ],
+      "updateInterval" : "60000",
+      "sortPreference" : "-value",
       "colorByMetric" : false,
-      "updateInterval" : 5000,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
       "disableThrottle" : true
     }
   },
-  "sf_description" : "Inbound network traffic",
-  "sf_chartIndex" : 1430196365726,
+  "sf_description" : "Counts of containers by host",
+  "sf_chartIndex" : 1430198105514,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "sf_programTextRegex" : "find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
-  "marshallMemberOf" : [ 3 ]
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "sf_jobResolution" : 60000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('host') -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_10 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10')",
+  "marshallMemberOf" : [ 21 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Docker containers",
+  "sf_chart" : "Network traffic",
+  "marshallId" : 23,
+  "sf_uiModel" : {
+    "chartType" : "column",
+    "revisionNumber" : 9,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "Outbound",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 15,
+            "transformTimeRange" : "15s"
+          }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "network.usage.tx_bytes"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#0077c2"
+      }
+    }, {
+      "name" : "Inbound",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 15,
+            "transformTimeRange" : "15s"
+          }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "network.usage.rx_bytes"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -900398,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes sent (blue)"
+      }, {
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "Bytes received (red)"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : true,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "maxDecimalPlaces" : 3,
+      "forcedResolution" : "30000"
+    }
+  },
+  "sf_description" : "Outbound network traffic, in bytes",
+  "sf_chartIndex" : 1430196868210,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> window(15s) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> window(15s) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "sf_jobResolution" : 30000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_9=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_9=id(report=1);find(query='(sf_metric:network.usage.tx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> window(15s) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9');find(query='(sf_metric:network.usage.rx_bytes AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> split -> stats:!mean -> window(15s) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_9 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_9',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_9')",
+  "marshallMemberOf" : [ 21 ]
 }, {
   "sf_cacheProgram" : true,
   "sf_dashboard" : "Docker containers",
-  "sf_chart" : "Disk writes",
-  "marshallId" : 13,
+  "sf_chart" : "Containers",
+  "marshallId" : 24,
   "sf_uiModel" : {
     "chartType" : "line",
-    "revisionNumber" : 5,
+    "revisionNumber" : 8,
+    "currentUniqueKey" : 3,
     "allPlots" : [ {
-      "name" : "blkio.io_service_bytes_recursive*.write - Sum by plugin_instance",
+      "name" : "Containers",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -957,9 +2252,155 @@
         "direction" : {
           "type" : "aggregation",
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "plugin_instance"
-            } ],
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "COUNT"
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#651aaa"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_8",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "range" : -900245,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : "60000",
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0
+    }
+  },
+  "sf_description" : "Number of running containers",
+  "sf_chartIndex" : 1430197962821,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "sf_jobResolution" : 60000,
+  "sf_programTextRegex" : "find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!count -> _SF_PLOT_KEY_##CHARTID##_1_8=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_8',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_8')",
+  "marshallMemberOf" : [ 21 ]
+}, {
+  "sf_cacheProgram" : false,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Containers",
+  "sf_chart" : "",
+  "marshallId" : 25,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 7,
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "currentUniqueKey" : 2,
+    "allPlotConstructs" : [ ],
+    "markdownText" : "This dashboard shows real-time metrics collected from all running [Docker](http://docker.com) containers in your environment. All hosts running Docker >= 1.5.0 along with [CollectD](http://collectd.org) and the [`docker-collectd-plugin`](https://github.com/signalfx/docker-collectd-plugin) will report all available container stats.",
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : -900281,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    }
+  },
+  "sf_chartIndex" : 1431551262629,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "",
+  "marshallMemberOf" : [ 21 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Docker containers",
+  "sf_chart" : "Disk I/O",
+  "marshallId" : 26,
+  "sf_uiModel" : {
+    "chartType" : "column",
+    "revisionNumber" : 7,
+    "currentUniqueKey" : 4,
+    "allPlots" : [ {
+      "name" : "Writes",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           }
@@ -986,7 +2427,53 @@
       "focusNext" : false,
       "valid" : false,
       "configuration" : {
-        "rollupPolicy" : null
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#0077c2"
+      }
+    }, {
+      "name" : "Reads",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM"
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "blkio.io_service_bytes_recursive*.read"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
       }
     }, {
       "name" : "New Plot",
@@ -998,37 +2485,507 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : { },
-      "uniqueKey" : 2,
-      "valid" : false,
+      "uniqueKey" : 3,
       "focusNext" : false
     } ],
-    "currentUniqueKey" : 3,
     "allPlotConstructs" : [ ],
-    "uiHelperValue" : "##CHARTID##_5",
+    "uiHelperValue" : "##CHARTID##_7",
     "chartMode" : "graph",
     "chartconfig" : {
-      "range" : 900000,
+      "range" : -900443,
       "yAxisConfigurations" : [ {
         "name" : "yAxis0",
         "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Bytes written (blue)"
+      }, {
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "Bytes read (red)"
+      } ],
+      "updateInterval" : 5000,
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "forcedResolution" : "30000"
+    }
+  },
+  "sf_description" : "Aggregate view of contaitner disk I/O activity",
+  "sf_chartIndex" : 1430196905913,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_jobResolution" : 30000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_7=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_7=id(report=1);find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7');find(query='(sf_metric:blkio.io_service_bytes_recursive*.read AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch(maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_7 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallMemberOf" : [ 21 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Docker tests",
+  "sf_chart" : "Top 10 containers by CPU usage",
+  "marshallId" : 27,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 15,
+    "currentUniqueKey" : 6,
+    "allPlots" : [ {
+      "name" : "cpu.usage.total",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "cpu.usage.system",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "cpu.usage.system"
+      },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 15,
+            "transformTimeRange" : "15s"
+          }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "plugin_instance"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      }, {
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 10
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "A/B * 100"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_15",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "range" : -900304,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "CPU Usage%"
+      } ],
+      "colorByMetric" : false,
+      "disableThrottle" : true,
+      "updateInterval" : 5000,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "axisPrecision" : null,
+      "maxDecimalPlaces" : 3
+    }
+  },
+  "sf_description" : "CPU utilization percentage",
+  "sf_chartIndex" : 1430167294556,
+  "sf_type" : "Chart",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK:!OUT->window(15s)->stats:!mean->groupby('plugin_instance')->stats:!sum->groupby()->groupby()->select(count=10):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_4_15->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');_SF_PLOT_KEY_##CHARTID##_1_15->?A:_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_15->?B:_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK",
+  "sf_jobResolution" : 1000,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK=[?A,?B,!OUT]{?A / ?B  *  100->!OUT};find(query='(sf_metric:cpu.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15;find(query='(sf_metric:cpu.usage.system AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15;_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK:!OUT->window(15s)->stats:!mean->groupby('plugin_instance')->stats:!sum->groupby()->groupby()->select(count=10):!top->split() -> stats:!mean->_SF_PLOT_KEY_##CHARTID##_4_15->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');_SF_PLOT_KEY_##CHARTID##_1_15->?A:_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_15->?B:_SF_PLOT_KEY_##CHARTID##_4_15_MACROBLOCK",
+  "marshallMemberOf" : [ 21 ]
+}, {
+  "sf_cacheProgram" : true,
+  "sf_jobMaxDelay" : 0,
+  "sf_dashboard" : "Docker tests",
+  "sf_chart" : "Memory usage distribution",
+  "marshallId" : 28,
+  "sf_uiModel" : {
+    "chartType" : "area",
+    "revisionNumber" : 16,
+    "currentUniqueKey" : 10,
+    "allPlots" : [ {
+      "name" : "memory.usage.total",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.usage.total"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "memory.usage.limit",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "plugin",
+        "propertyValue" : "docker",
+        "query" : "plugin:docker",
+        "value" : "docker",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "memory.usage.limit"
+      },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "",
+      "type" : "ratio",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 15,
+            "transformTimeRange" : "15s"
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "100*A/C"
+    }, {
+      "name" : "P50 (Median)",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 5,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "D",
+      "configuration" : {
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#e9008a"
+      }
+    }, {
+      "name" : "P75",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 75
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 6,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "D",
+      "configuration" : {
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#f47e00"
+      }
+    }, {
+      "name" : "P95",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 95
+          }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 7,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "D",
+      "configuration" : {
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#05ce00"
+      }
+    }, {
+      "name" : "Average",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        },
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "showMe" : false
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 8,
+      "focusNext" : false,
+      "valid" : true,
+      "expressionText" : "D",
+      "configuration" : {
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "visualization" : "line",
+        "colorOverride" : "#0077c2"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 9,
+      "focusNext" : false
+    } ],
+    "allPlotConstructs" : [ ],
+    "uiHelperValue" : "##CHARTID##_16",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -900538,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : 101,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "% of limit"
+      }, {
         "max" : null,
         "min" : null,
         "plotlines" : {
           "high" : null,
           "low" : null
         },
-        "label" : "Bytes written"
+        "title" : {
+          "text" : ""
+        },
+        "label" : ""
       } ],
+      "colorByMetric" : true,
       "updateInterval" : 5000,
-      "colorByMetric" : false,
-      "disableThrottle" : true
+      "disableThrottle" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "maxDecimalPlaces" : 3
     }
   },
-  "sf_description" : "Bytes written to disk by container",
-  "sf_chartIndex" : 1430196905913,
+  "sf_description" : "Memory utilization of containers as % of limit",
+  "sf_chartIndex" : 1430173556141,
   "sf_type" : "Chart",
-  "sf_viewProgramText" : "find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
-  "sf_programTextRegex" : "find(query='(sf_metric:blkio.io_service_bytes_recursive*.write AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> groupby('plugin_instance') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_5=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_5',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_5')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_8_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_16 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->window(15s)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_4_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_16->?C:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p75->_SF_PLOT_KEY_##CHARTID##_6_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!p95->_SF_PLOT_KEY_##CHARTID##_7_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_8_16->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK",
   "sf_jobResolution" : 1000,
-  "marshallMemberOf" : [ 3 ]
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK=[?A,?C,!OUT]{100 * ?A / ?C->!OUT};_SF_PLOT_KEY_##CHARTID##_5_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_6_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_7_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};_SF_PLOT_KEY_##CHARTID##_8_16=id(report=1);_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK=[?D,!OUT]{?D->!OUT};find(query='(sf_metric:memory.usage.total AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_16;find(query='(sf_metric:memory.usage.limit AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((plugin:docker))') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_3_16;_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK:!OUT->window(15s)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_4_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_1_16->?A:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_16->?C:_SF_PLOT_KEY_##CHARTID##_4_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_5_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_5_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK:!OUT->groupby()->stats:!p75->_SF_PLOT_KEY_##CHARTID##_6_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_6_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK:!OUT->groupby()->stats:!p95->_SF_PLOT_KEY_##CHARTID##_7_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_7_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_7_16_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK:!OUT->groupby()->stats:!mean->_SF_PLOT_KEY_##CHARTID##_8_16->publish(metric='_SF_PLOT_KEY_##CHARTID##_8_16',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_16');_SF_PLOT_KEY_##CHARTID##_4_16->?D:_SF_PLOT_KEY_##CHARTID##_8_16_MACROBLOCK",
+  "marshallMemberOf" : [ 21 ]
 } ]
