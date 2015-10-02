@@ -1,0 +1,95 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_type" : "Service",
+  "marshallId" : 1,
+  "sf_service" : "testimportemail",
+  "sf_description" : ""
+}, {
+  "sf_type" : "Page",
+  "sf_page" : "testimportemail",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_type" : "Dashboard",
+  "sf_dashboard" : "testimportemail",
+  "sf_discoverySelectors" : "_exists_:sf_metric"
+  "marshallId" : 3,
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1443799389920,
+        "name" : ""
+      }
+    } ]
+  },
+  "marshallMemberOf" : [ 2 ],
+  "sf_description" : "Default dashboard."
+}, {
+  "sf_cacheProgram" : false,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttoken AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_type" : "Chart",
+  "sf_jobMaxDelay" : 0,
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttoken AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_chart" : "losttoken",
+  "marshallId" : 4,
+  "sf_uiModel" : {
+    "chartType" : "line",
+    "revisionNumber" : 2,
+    "currentUniqueKey" : 3,
+    "allPlots" : [ {
+      "name" : "testmetriclosttoken",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "testmetriclosttoken"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_2",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "sortPreference" : ""
+    }
+  },
+  "marshallMemberOf" : [ 3 ],
+  "sf_chartIndex" : 1443799389920
+} ]
