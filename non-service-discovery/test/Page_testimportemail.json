@@ -33,10 +33,10 @@
   "sf_description" : "Default dashboard."
 }, {
   "sf_cacheProgram" : false,
-  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttoken AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttokenservicediscovery AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
   "sf_type" : "Chart",
   "sf_jobMaxDelay" : 0,
-  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttoken AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_2=id(report=1);find(query='(sf_metric:testmetriclosttokenservicediscovery AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_2 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_2')",
   "sf_chart" : "losttoken",
   "marshallId" : 4,
   "sf_uiModel" : {
@@ -44,7 +44,7 @@
     "revisionNumber" : 2,
     "currentUniqueKey" : 3,
     "allPlots" : [ {
-      "name" : "testmetriclosttoken",
+      "name" : "testmetriclosttokenservicediscovery",
       "type" : "plot",
       "invisible" : false,
       "transient" : false,
@@ -53,7 +53,7 @@
       "queryItems" : [ ],
       "metricDefinition" : { },
       "seriesData" : {
-        "metric" : "testmetriclosttoken"
+        "metric" : "testmetriclosttokenservicediscovery"
       },
       "uniqueKey" : 1,
       "focusNext" : false,
