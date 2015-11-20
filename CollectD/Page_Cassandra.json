@@ -1612,7 +1612,7 @@
                 "colorByMetric": false, 
                 "range": -3600000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "max": null, 
@@ -1763,7 +1763,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -2830,7 +2830,7 @@
                 "colorByMetric": false, 
                 "range": -3600000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "max": null, 
@@ -2981,7 +2981,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -3103,7 +3103,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -3689,7 +3689,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -3949,7 +3949,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -4220,7 +4220,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -4436,7 +4436,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.cassandra-client-read-latency-mean AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_Bt1AQAjAgAA_1_8=id", 
@@ -4920,7 +4920,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -5258,7 +5258,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -5585,7 +5585,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.counter.cassandra-client-read-timeouts AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_4=id -> publish(defaultSource='_SF_PLOT_KEY_##CHARTID##_1_4',metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
@@ -5846,7 +5846,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='sf_metric:collectd.GenericJMX.gauge.cassandra-client-read-latency-mean AND sf_organizationID:##ORGID## AND NOT sf_metric:_*') -> fetch -> groupby('CASSANDRA_NAME') -> stats:!sum -> _SF_PLOT_KEY_Bt1AQAjAgAA_1_8=id", 

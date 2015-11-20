@@ -437,7 +437,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 7, 
             "uiHelperValue": "##CHARTID##_15", 
@@ -1912,7 +1912,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_16", 
@@ -2942,7 +2942,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_11", 
@@ -3272,7 +3272,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_18", 
@@ -3568,7 +3568,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_15", 
@@ -3726,7 +3726,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_9", 

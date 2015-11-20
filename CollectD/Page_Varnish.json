@@ -2878,7 +2878,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 12, 
             "uiHelperValue": "##CHARTID##_11", 
@@ -3107,7 +3107,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_7", 
@@ -3234,7 +3234,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 5, 
             "uiHelperValue": "##CHARTID##_5", 
@@ -3439,7 +3439,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 11, 
             "uiHelperValue": "##CHARTID##_11", 
@@ -3690,7 +3690,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_4", 
@@ -3801,7 +3801,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_5", 
@@ -3906,7 +3906,7 @@
                     }
                 ], 
                 "sortPreference": "+sf_originatingMetric", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_4", 
@@ -4016,7 +4016,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 7, 
             "uiHelperValue": "##CHARTID##_9", 
@@ -4252,7 +4252,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_3", 

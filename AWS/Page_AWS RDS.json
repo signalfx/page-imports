@@ -289,7 +289,7 @@
                 "colorByMetric": false, 
                 "range": -7200000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "max": null, 

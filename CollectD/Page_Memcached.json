@@ -356,7 +356,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 5, 
             "uiHelperValue": "##CHARTID##_7", 
@@ -526,7 +526,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 5, 
             "uiHelperValue": "##CHARTID##_9", 
@@ -702,7 +702,7 @@
                     }
                 ], 
                 "sortPreference": "-sf_metric", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_15", 
@@ -956,7 +956,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_10", 
@@ -1233,7 +1233,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 5, 
             "uiHelperValue": "##CHARTID##_11", 
@@ -1387,7 +1387,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_12", 
@@ -2626,7 +2626,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_7", 
@@ -2750,7 +2750,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_19", 
@@ -2931,7 +2931,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 6, 
             "uiHelperValue": "##CHARTID##_16", 
@@ -3141,7 +3141,7 @@
                     }
                 ], 
                 "sortPreference": "+value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 5, 
             "uiHelperValue": "##CHARTID##_9", 

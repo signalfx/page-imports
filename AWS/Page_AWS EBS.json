@@ -210,7 +210,7 @@
                 "range": -7200000, 
                 "maxDecimalPlaces": 3, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "max": null, 

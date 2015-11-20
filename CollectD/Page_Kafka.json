@@ -1795,7 +1795,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_9", 
@@ -2892,7 +2892,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_7", 
