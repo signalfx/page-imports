@@ -162,7 +162,7 @@
                 "colorByMetric": false, 
                 "range": -7200000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "id": "yAxis0", 
@@ -311,7 +311,7 @@
                 "colorByMetric": false, 
                 "range": -7200000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "id": "yAxis0", 
@@ -462,7 +462,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_12", 
@@ -594,7 +594,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_9", 
@@ -698,7 +698,7 @@
                 "colorByMetric": false, 
                 "range": -7200000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "id": "yAxis0", 
@@ -849,7 +849,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_12", 
@@ -981,7 +981,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_8", 
@@ -1168,7 +1168,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_12", 
@@ -1287,7 +1287,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 3, 
             "uiHelperValue": "##CHARTID##_12", 

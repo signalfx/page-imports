@@ -7942,7 +7942,7 @@
                 "range": -3600000, 
                 "maxDecimalPlaces": 3, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "name": "yAxis0", 
@@ -8959,7 +8959,7 @@
                 "range": -3600000, 
                 "maxDecimalPlaces": 3, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "name": "yAxis0", 

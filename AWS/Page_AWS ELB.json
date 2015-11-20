@@ -2468,7 +2468,7 @@
                 "absoluteStart": null, 
                 "colorByMetric": false, 
                 "range": -7200000, 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "id": "yAxis0", 

@@ -214,7 +214,7 @@
                 "colorByMetric": false, 
                 "range": -3600000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "name": "yAxis0", 
@@ -465,7 +465,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='(aws_service:quantizer) AND sf_metric:collectd.memory.memory.free AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3=id", 
@@ -949,7 +949,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='(aws_service:quantizer) AND sf_metric:collectd.aggregation.cpu-average.cpu.idle AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('aws_Name') -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_0_1_5=id", 
@@ -1480,7 +1480,7 @@
                 "colorByMetric": true, 
                 "range": -3600000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "name": "yAxis0", 
@@ -1741,7 +1741,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='(aws_service:quantizer) AND sf_metric:collectd.memory.memory.free AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3=id", 
@@ -2078,7 +2078,7 @@
                 "colorByMetric": false, 
                 "range": -3600000, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "name": "yAxis0", 
@@ -2274,7 +2274,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='(aws_service:quantizer) AND sf_metric:collectd.aggregation.cpu-average.cpu.idle AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('aws_Name') -> stats:!mean -> _SF_PLOT_KEY_SYNTH_CHART_ID_0_1_5=id", 
@@ -2639,7 +2639,7 @@
                     }
                 ], 
                 "sortPreference": "", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "currentUniqueKey": 4, 
             "uiHelperValue": "##CHARTID##_13", 
@@ -2740,7 +2740,7 @@
                 "range": -3600000, 
                 "maxDecimalPlaces": 3, 
                 "updateInterval": "", 
-                "disableThrottle": true, 
+                "disableThrottle": false, 
                 "yAxisConfigurations": [
                     {
                         "max": null, 
@@ -3326,7 +3326,7 @@
                     }
                 ], 
                 "sortPreference": "-value", 
-                "disableThrottle": true
+                "disableThrottle": false
             }, 
             "allPlotProgramText": [
                 "find(refresh=300000,query='(aws_service:quantizer) AND sf_metric:collectd.memory.memory.free AND sf_organizationID:SYNTH_ORG_ID AND NOT sf_metric:_*') -> fetch -> groupby('sf_source') -> stats:!max -> _SF_PLOT_KEY_SYNTH_CHART_ID_2_1_3=id", 
