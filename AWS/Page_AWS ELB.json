@@ -149,7 +149,7 @@
             ], 
             "version": 1
         }, 
-        "sf_discoveryQuery": "namespace:AWS/ELB", 
+        "sf_discoveryQuery": "namespace:\"AWS/ELB\"",
         "sf_discoverySelectors": [
             "_exists_:LoadBalancerName"
         ], 
@@ -1584,7 +1584,7 @@
             "version": 1
         }, 
         "sf_description": "Overview of the Amazon ELB service.", 
-        "sf_discoveryQuery": "namespace:AWS/ELB", 
+        "sf_discoveryQuery": "namespace:\"AWS/ELB\"",
         "sf_discoverySelectors": [
             "sf_key:LoadBalancerName", 
             "namespace:AWS/ELB"
