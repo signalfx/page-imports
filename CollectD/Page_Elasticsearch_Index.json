@@ -1,0 +1,2533 @@
+[
+    {
+        "marshallScope": 2
+    }, 
+    {
+        "marshallId": 1, 
+        "sf_type": "Service", 
+        "sf_description": "", 
+        "sf_service": "Elasticsearch Index"
+    }, 
+    {
+        "sf_page": "Elasticsearch Index", 
+        "marshallId": 2, 
+        "marshallMemberOf": [
+            1
+        ], 
+        "sf_type": "Page"
+    }, 
+    {
+        "marshallId": 3, 
+        "sf_uiModel": {
+            "widgets": [
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 4, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "New Text Block", 
+                        "chartIndex": 4, 
+                        "id": 1
+                    }, 
+                    "row": 0
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 2, 
+                    "col": 0, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "New Text Block", 
+                        "chartIndex": 16, 
+                        "id": 2
+                    }, 
+                    "row": 0
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 8, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1443032267071, 
+                        "id": 3
+                    }, 
+                    "row": 0
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 8, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1453768898394, 
+                        "id": 4
+                    }, 
+                    "row": 1
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 4, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "New Text Block", 
+                        "chartIndex": 2, 
+                        "id": 5
+                    }, 
+                    "row": 1
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 8, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1453772450892, 
+                        "id": 6
+                    }, 
+                    "row": 2
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 4, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1442525326269, 
+                        "id": 7
+                    }, 
+                    "row": 2
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 0, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "New Text Block", 
+                        "chartIndex": 1, 
+                        "id": 8
+                    }, 
+                    "row": 2
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 8, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1442525196684, 
+                        "id": 9
+                    }, 
+                    "row": 3
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 0, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 14, 
+                        "id": 10
+                    }, 
+                    "row": 3
+                }, 
+                {
+                    "sizeX": 4, 
+                    "sizeY": 1, 
+                    "col": 4, 
+                    "type": "chart", 
+                    "options": {
+                        "type": "chart", 
+                        "name": "", 
+                        "chartIndex": 1454955413455, 
+                        "id": 11
+                    }, 
+                    "row": 3
+                }
+            ], 
+            "version": 1
+        }, 
+        "sf_description": "", 
+        "sf_discoveryQuery": "plugin:elasticsearch", 
+        "sf_discoverySelectors": [
+            "_exists_:index", 
+            "sf_key:index"
+        ], 
+        "sf_type": "Dashboard", 
+        "marshallMemberOf": [
+            2
+        ], 
+        "sf_dashboard": "Elasticsearch Index"
+    }, 
+    {
+        "marshallId": 4, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "gauge.indices.total.docs.count - Mean by index", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.docs.count"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": 100, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 2, 
+                    "name": "A - Timeshift 1h", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 3600000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "A", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 3, 
+                    "name": "Growth %", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "(A-B)*100/B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 4, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 7, 
+            "uiHelperValue": "##CHARTID##_17", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "forcedResolution": "0", 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": true, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "growth %", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "", 
+                "absoluteEnd": null
+            }, 
+            "chartType": "area", 
+            "revisionNumber": 17
+        }, 
+        "sf_description": "last hour", 
+        "sf_chartIndex": 1, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK=[?A,?B,!OUT]{(?A - ?B) * 100 / ?B->!OUT};find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17;find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,offset=-3600000) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2;_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_17->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17');_SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2->?A:_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_17->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17');_SF_PLOT_KEY_##CHARTID##_1_17->?A:_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_17->?B:_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_17=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK=[?A,?B,!OUT]{(?A - ?B) * 100 / ?B->!OUT};find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17');find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,offset=-3600000) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2;_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_2_17->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17');_SF_PLOT_KEY_##CHARTID##_1_17_TIMESHIFTFOR2->?A:_SF_PLOT_KEY_##CHARTID##_2_17_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_17->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17');_SF_PLOT_KEY_##CHARTID##_1_17->?A:_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_17->?B:_SF_PLOT_KEY_##CHARTID##_3_17_MACROBLOCK", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Document Growth %", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 5, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.indexing.index-total - Maximum by index - Rate of Change", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.indexing.index-total"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }, 
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "RATEOFCHANGE", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "sf_programText": "", 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 3, 
+            "uiHelperValue": "##CHARTID##_19", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "forcedResolution": "0", 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": true, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "requests / sec", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "", 
+                "absoluteEnd": null
+            }, 
+            "chartType": "area", 
+            "revisionNumber": 19
+        }, 
+        "sf_chartIndex": 2, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_19=id(report=1);find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_19 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_19',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_19')", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_19=id(report=1);find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_19 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_19',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_19')", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Indexing Requests/sec", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 6, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.search.query-total - Maximum by index - Rate of Change", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.search.query-total"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }, 
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "RATEOFCHANGE", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "sf_programText": "", 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 3, 
+            "uiHelperValue": "##CHARTID##_21", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "forcedResolution": "0", 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": true, 
+                "colorByMetric": false, 
+                "absoluteEnd": null, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": 0, 
+                        "max": null, 
+                        "label": "requests / sec", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "", 
+                "disableThrottle": false
+            }, 
+            "chartType": "area", 
+            "revisionNumber": 21
+        }, 
+        "sf_chartIndex": 4, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_21=id(report=1);find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_21 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_21',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_21')", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_21=id(report=1);find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_21 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_21',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_21')", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Search Requests/sec", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 7, 
+        "sf_uiModel": {
+            "chartMode": "text", 
+            "chartconfig": {
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "yAxisConfigurations": [
+                    {
+                        "max": null, 
+                        "min": null, 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "name": "yAxis0", 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": ""
+            }, 
+            "currentUniqueKey": 2, 
+            "uiHelperValue": "##CHARTID##_8", 
+            "relatedDetectors": [], 
+            "allPlots": [
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 1, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "chartType": "line", 
+            "markdownText": "<br>\n**Optimization Tip**\n\nIf your fielddata cache and heap usage are high, consider using [doc values](https://www.elastic.co/guide/en/elasticsearch/guide/current/doc-values.html)!", 
+            "revisionNumber": 8
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1454955413455, 
+        "sf_viewProgramText": "", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Elasticsearch Tips", 
+        "sf_jobResolution": 10000, 
+        "sf_disallowCachedProgram": true, 
+        "marshallMemberOf": [
+            3
+        ]
+    }, 
+    {
+        "marshallId": 8, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.merges.total - Maximum by index - Rate of Change", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.merges.total"
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }, 
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "RATEOFCHANGE", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "visualization": "area", 
+                        "maxExtrapolations": 100, 
+                        "colorOverride": null, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 3, 
+            "uiHelperValue": "##CHARTID##_17", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": true, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": 0, 
+                        "max": null, 
+                        "label": "merges / sec", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "", 
+                "forcedResolution": "0"
+            }, 
+            "chartType": "area", 
+            "revisionNumber": 17
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1442525326269, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_17 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> rateofchange() -> _SF_PLOT_KEY_##CHARTID##_1_17 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Merges/sec", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 9, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "gauge.indices.total.docs.deleted - Mean by index", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.docs.deleted"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": 100, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "gauge.indices.total.docs.count - Mean by index", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.docs.count"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": 100, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "plugin_instance:elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 3, 
+                    "name": "% of Deleted Documents", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "A*100/B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 4, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 5, 
+            "uiHelperValue": "##CHARTID##_20", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "forcedResolution": "0", 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": false, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "deleted %", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "", 
+                "absoluteEnd": null
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 20
+        }, 
+        "sf_chartIndex": 14, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK=[?A,?B,!OUT]{?A * 100 / ?B->!OUT};find(query='(sf_metric:gauge.indices.total.docs.deleted AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_20;find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_20;_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_20->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_20',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_20');_SF_PLOT_KEY_##CHARTID##_1_20->?A:_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_20->?B:_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_20=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK=[?A,?B,!OUT]{?A * 100 / ?B->!OUT};find(query='(sf_metric:gauge.indices.total.docs.deleted AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_20 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_20',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_20');find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_20 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_20',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_20');_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_20->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_20',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_20');_SF_PLOT_KEY_##CHARTID##_1_20->?A:_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_20->?B:_SF_PLOT_KEY_##CHARTID##_3_20_MACROBLOCK", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Deleted Documents %", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 10, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.search.query-total - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.search.query-total"
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "counter.indices.total.search.query-time - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.search.query-time"
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 3, 
+                    "name": "A - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "A", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 4, 
+                    "name": "B - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "plugin_instance:elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 5, 
+                    "name": "Query Latency", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "(B-D)/(A-C)", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 6, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 21, 
+            "uiHelperValue": "##CHARTID##_35", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "maxDecimalPlaces": 3, 
+                "updateInterval": "", 
+                "disableThrottle": false, 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "Time (ms)", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "-value", 
+                "forcedResolution": "0"
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 35
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1443032267071, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35;find(query='(sf_metric:counter.indices.total.search.query\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35;find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK;find(query='(sf_metric:counter.indices.total.search.query\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35->?B:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_35->?D:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_35->?A:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_35->?C:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');find(query='(sf_metric:counter.indices.total.search.query\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');find(query='(sf_metric:counter.indices.total.search.query\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK;find(query='(sf_metric:counter.indices.total.search.query\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35->?B:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_35->?D:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_35->?A:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_35->?C:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Search Latency (ms)", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 11, 
+        "sf_uiModel": {
+            "chartMode": "list", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "Index Size", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.store.size"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": -1, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "gauge.indices.total.store.size - Mean by index - Timeshift 1d", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.store.size"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }, 
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 86400000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": -1, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "plugin_instance:elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 3, 
+                    "name": "Index Growth Rate", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "(A-B)*100/B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 4, 
+                    "name": "Index Document Count", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.docs.count", 
+                        "regExStyle": null
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": -1, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 5, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 6, 
+            "uiHelperValue": "##CHARTID##_24", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "hideDimensionsInList": false, 
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": true, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "maxDecimalPlaces": 3, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "Size (bytes)", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "+index", 
+                "forcedResolution": "0"
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 24
+        }, 
+        "sf_description": "General Index Statistics: Size, Growth Rate & Document Count", 
+        "sf_chartIndex": 16, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK=[?A,?B,!OUT]{(?A - ?B) * 100 / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_24=id(report=1);find(query='(sf_metric:gauge.indices.total.store.size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_24 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24');find(query='(sf_metric:gauge.indices.total.store.size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1,offset=-86400000) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_24;_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_24->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24');_SF_PLOT_KEY_##CHARTID##_1_24->?A:_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_24->?B:_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK;find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_24 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24')", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_24=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK=[?A,?B,!OUT]{(?A - ?B) * 100 / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_4_24=id(report=1);find(query='(sf_metric:gauge.indices.total.store.size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_24 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24');find(query='(sf_metric:gauge.indices.total.store.size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1,offset=-86400000) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_24 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24');_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_24->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24');_SF_PLOT_KEY_##CHARTID##_1_24->?A:_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_24->?B:_SF_PLOT_KEY_##CHARTID##_3_24_MACROBLOCK;find(query='(sf_metric:gauge.indices.total.docs.count AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_4_24 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_4_24',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_24')", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Index Statistics", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 10000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 12, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "Filter Cache", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.filter-cache.memory-size"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "visualization": "area", 
+                        "maxExtrapolations": -1, 
+                        "colorOverride": null, 
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "Field Cache", 
+                    "seriesData": {
+                        "metric": "gauge.indices.total.fielddata.memory-size"
+                    }, 
+                    "sf_programText": "", 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MEAN", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": null, 
+                        "extrapolationPolicy": "NULL_EXTRAPOLATION", 
+                        "rollupPolicy": null, 
+                        "maxExtrapolations": -1, 
+                        "aliases": {}
+                    }, 
+                    "type": "plot", 
+                    "valid": false, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 3, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 5, 
+            "uiHelperValue": "##CHARTID##_27", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "forcedResolution": "0", 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "stackedChart": false, 
+                "useKMG2": false, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "updateInterval": "", 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": 0, 
+                        "max": null, 
+                        "label": "size (bytes)", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }, 
+                    {
+                        "max": null, 
+                        "title": {
+                            "text": ""
+                        }, 
+                        "min": null, 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }
+                    }
+                ], 
+                "sortPreference": "", 
+                "absoluteEnd": null
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 27
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1442525196684, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_27=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_27=id(report=1);find(query='(sf_metric:gauge.indices.total.filter\\\\-cache.memory\\\\-size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_27 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_27',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_27');find(query='(sf_metric:gauge.indices.total.fielddata.memory\\\\-size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_27 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_27',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_27')", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_27=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_27=id(report=1);find(query='(sf_metric:gauge.indices.total.filter\\\\-cache.memory\\\\-size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_27 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_27',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_27');find(query='(sf_metric:gauge.indices.total.fielddata.memory\\\\-size AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('index') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_27 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_27',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_27')", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Cache Size (bytes)", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ], 
+        "sf_throttledProgramText": ""
+    }, 
+    {
+        "marshallId": 13, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.indexing.index-total - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.indexing.index-total", 
+                        "regExStyle": null
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "counter.indices.total.indexing.index-time - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.indexing.index-time", 
+                        "regExStyle": null
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 3, 
+                    "name": "A - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "A", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 4, 
+                    "name": "B - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "plugin_instance:elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 5, 
+                    "name": "Index Latency", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "(B-D)/(A-C)", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 6, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 21, 
+            "uiHelperValue": "##CHARTID##_35", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "maxDecimalPlaces": 3, 
+                "updateInterval": "", 
+                "disableThrottle": false, 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "Time (ms)", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "-value", 
+                "forcedResolution": "0"
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 35
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1453768898394, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35;find(query='(sf_metric:counter.indices.total.indexing.index\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35;find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK;find(query='(sf_metric:counter.indices.total.indexing.index\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_35->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35->?B:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_35->?D:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_35->?A:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_35->?C:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_35=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');find(query='(sf_metric:counter.indices.total.indexing.index\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');find(query='(sf_metric:counter.indices.total.indexing.index\\\\-total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_1_35_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_35_MACROBLOCK;find(query='(sf_metric:counter.indices.total.indexing.index\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_35->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_35',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_35');_SF_PLOT_KEY_##CHARTID##_2_35->?B:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_35->?D:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_35->?A:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_35->?C:_SF_PLOT_KEY_##CHARTID##_5_35_MACROBLOCK", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Index Latency (ms)", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ]
+    }, 
+    {
+        "marshallId": 14, 
+        "sf_uiModel": {
+            "chartMode": "graph", 
+            "allPlots": [
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 1, 
+                    "name": "counter.indices.total.merges.total - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.merges.total", 
+                        "regExStyle": null
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin:elasticsearch", 
+                            "property": "plugin", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "sf-icon-property", 
+                            "value": "elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }, 
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "i-0480a3a8_us-east-1_134183635603", 
+                            "propertyValue": "i-0480a3a8_us-east-1_134183635603", 
+                            "NOT": true, 
+                            "query": "NOT AWSUniqueId:\"i-0480a3a8_us-east-1_134183635603\"", 
+                            "property": "AWSUniqueId", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 2, 
+                    "name": "counter.indices.total.merges.total-time - Maximum by index", 
+                    "seriesData": {
+                        "metric": "counter.indices.total.merges.total-time", 
+                        "regExStyle": null
+                    }, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [
+                                        {
+                                            "value": "index"
+                                        }
+                                    ], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "MAX", 
+                                "options": {}
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "configuration": {
+                        "colorOverride": "#b04600", 
+                        "aliases": {}, 
+                        "rollupPolicy": "MAX_ROLLUP", 
+                        "maxExtrapolations": 100, 
+                        "extrapolationPolicy": "LAST_VALUE_EXTRAPOLATION"
+                    }, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 3, 
+                    "name": "A - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "A", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 4, 
+                    "name": "B - Timeshift 1m", 
+                    "seriesData": {}, 
+                    "dataManipulations": [
+                        {
+                            "direction": {
+                                "type": "aggregation", 
+                                "options": {
+                                    "aggregateGroupBy": [], 
+                                    "collapseGroups": false, 
+                                    "transformTimeRange": null
+                                }
+                            }, 
+                            "fn": {
+                                "type": "TIMESHIFT", 
+                                "options": {
+                                    "milliseconds": 60000
+                                }
+                            }, 
+                            "showMe": false
+                        }
+                    ], 
+                    "expressionText": "B", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": true, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [
+                        {
+                            "iconClass": "icon-properties", 
+                            "value": "plugin_instance:elasticsearch", 
+                            "propertyValue": "elasticsearch", 
+                            "NOT": false, 
+                            "query": "plugin_instance:elasticsearch", 
+                            "property": "plugin_instance", 
+                            "type": "property"
+                        }
+                    ], 
+                    "uniqueKey": 5, 
+                    "name": "Merge Latency", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "expressionText": "(B-D)/(A-C)", 
+                    "transient": false, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "ratio", 
+                    "valid": true, 
+                    "metricDefinition": {}
+                }, 
+                {
+                    "queryItems": [], 
+                    "uniqueKey": 6, 
+                    "name": "New Plot", 
+                    "seriesData": {}, 
+                    "dataManipulations": [], 
+                    "transient": true, 
+                    "yAxisIndex": 0, 
+                    "invisible": false, 
+                    "focusNext": false, 
+                    "type": "plot", 
+                    "metricDefinition": {}
+                }
+            ], 
+            "currentUniqueKey": 21, 
+            "uiHelperValue": "##CHARTID##_36", 
+            "relatedDetectors": [], 
+            "chartconfig": {
+                "absoluteEnd": null, 
+                "rangeEnd": 0, 
+                "absoluteStart": null, 
+                "colorByMetric": false, 
+                "range": -7200000, 
+                "maxDecimalPlaces": 3, 
+                "updateInterval": "", 
+                "disableThrottle": false, 
+                "yAxisConfigurations": [
+                    {
+                        "name": "yAxis0", 
+                        "min": null, 
+                        "max": null, 
+                        "label": "Time (ms)", 
+                        "plotlines": {
+                            "high": null, 
+                            "low": null
+                        }, 
+                        "id": "yAxis0"
+                    }
+                ], 
+                "sortPreference": "-value", 
+                "forcedResolution": "0"
+            }, 
+            "chartType": "line", 
+            "revisionNumber": 36
+        }, 
+        "sf_description": "", 
+        "sf_chartIndex": 1453772450892, 
+        "sf_programTextRegex": "_SF_PLOT_KEY_##CHARTID##_1_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_36;find(query='(sf_metric:counter.indices.total.merges.total\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_36;find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_36->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK;find(query='(sf_metric:counter.indices.total.merges.total\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_36->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_36->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_2_36->?B:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_36->?D:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_36->?A:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_36->?C:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK", 
+        "sf_viewProgramText": "_SF_PLOT_KEY_##CHARTID##_1_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK=[?B,!OUT]{?B->!OUT};_SF_PLOT_KEY_##CHARTID##_5_36=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK=[?B,?D,?A,?C,!OUT]{(?B - ?D) / (?A - ?C)->!OUT};find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_36 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');find(query='(sf_metric:counter.indices.total.merges.total\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP') -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_36 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');find(query='(sf_metric:counter.indices.total.merges.total AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3;_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_36->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_1_36_TIMESHIFTFOR3->?A:_SF_PLOT_KEY_##CHARTID##_3_36_MACROBLOCK;find(query='(sf_metric:counter.indices.total.merges.total\\\\-time AND _missing_:sf_programId) AND ((plugin:elasticsearch) AND (plugin_instance:elasticsearch) AND (NOT AWSUniqueId:i\\\\-0480a3a8_us\\\\-east\\\\-1_134183635603))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=100,rollup='MAX_ROLLUP',offset=-60000) -> groupby('index') -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4;_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_4_36->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_2_36_TIMESHIFTFOR4->?B:_SF_PLOT_KEY_##CHARTID##_4_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_5_36->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_36',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_36');_SF_PLOT_KEY_##CHARTID##_2_36->?B:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_36->?D:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_36->?A:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_36->?C:_SF_PLOT_KEY_##CHARTID##_5_36_MACROBLOCK", 
+        "sf_jobMaxDelay": 0, 
+        "sf_cacheProgram": false, 
+        "sf_type": "Chart", 
+        "sf_chart": "Merge Latency (ms)", 
+        "sf_disallowCachedProgram": true, 
+        "sf_jobResolution": 1000, 
+        "marshallMemberOf": [
+            3
+        ]
+    }
+]
