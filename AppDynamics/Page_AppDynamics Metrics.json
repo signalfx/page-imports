@@ -4,14 +4,14 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "AppDynamics metrics",
-  "sf_description" : "AppDynamics metrics. Created by SignalFx through service discovery."
+  "sf_description" : "Metrics from AppDynamics."
 }, {
   "sf_updatedBy" : "CHpFkniAAAA",
   "sf_type" : "Page",
   "sf_page" : "AppDynamics Metrics",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "AppDynamics Metrics. Created by SignalFx through service discovery."
+  "sf_description" : "Dashboards about AppDynamics."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "AppDynamics Metrics",

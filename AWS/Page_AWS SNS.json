@@ -23,7 +23,8 @@
             1, 
             2
         ], 
-        "sf_type": "Page"
+        "sf_type": "Page",
+        "sf_description": "Dashboards about Amazon Simple Notification Service (SNS)."
     }, 
     {
         "marshallId": 4, 

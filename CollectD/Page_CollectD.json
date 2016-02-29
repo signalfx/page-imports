@@ -13,7 +13,7 @@
     {
         "marshallId": 2,
         "sf_type": "Service",
-        "sf_description": "",
+        "sf_description": "Metrics about infrastructure as measured by collectd.",
         "sf_service": "Infrastructure"
     },
     {

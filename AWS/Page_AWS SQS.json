@@ -5,7 +5,7 @@
     {
         "marshallId": 1, 
         "sf_type": "Service", 
-        "sf_description": "", 
+        "sf_description": "Metrics about Amazon Simple Queue Service (SQS).", 
         "sf_service": "AWS SQS"
     }, 
     {
@@ -14,7 +14,8 @@
         "marshallMemberOf": [
             1
         ], 
-        "sf_type": "Page"
+        "sf_type": "Page",
+        "sf_description": "Dashboards about Amazon Simple Queue Service (SQS)."
     }, 
     {
         "marshallId": 3, 

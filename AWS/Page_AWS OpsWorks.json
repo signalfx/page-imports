@@ -5,8 +5,8 @@
     {
         "marshallId": 1, 
         "sf_type": "Service", 
-        "sf_description": "", 
-        "sf_service": "Amazon OopsWorks"
+        "sf_description": "Metrics about AWS OpsWorks.", 
+        "sf_service": "AWS OpsWorks"
     }, 
     {
         "sf_tags": [
@@ -24,7 +24,7 @@
             2
         ], 
         "sf_type": "Page", 
-        "sf_description": ""
+        "sf_description": "Dashboards about AWS OpsWorks."
     }, 
     {
         "marshallId": 4, 
