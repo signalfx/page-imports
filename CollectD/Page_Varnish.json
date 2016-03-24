@@ -13,7 +13,7 @@
     {
         "marshallId": 2, 
         "sf_type": "Service", 
-        "sf_description": "", 
+        "sf_description": "Metrics about Varnish.", 
         "sf_service": "Varnish"
     }, 
     {
@@ -24,7 +24,7 @@
             2
         ], 
         "sf_type": "Page", 
-        "sf_description": ""
+        "sf_description": "Dashboards about Varnish."
     }, 
     {
         "marshallId": 4, 

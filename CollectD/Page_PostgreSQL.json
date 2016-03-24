@@ -5,8 +5,8 @@
     {
         "marshallId": 1,
         "sf_type": "Service",
-        "sf_description": "Postgresql metrics.", 
-        "sf_service": "Postgresql"
+        "sf_description": "Metrics about PostgreSQL.", 
+        "sf_service": "PostgreSQL"
     },
     {
         "sf_tags": [

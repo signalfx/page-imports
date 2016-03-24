@@ -3,9 +3,9 @@
         "marshallScope": 2
     }, 
     {
-        "marshallId": 1, 
-        "sf_type": "Service", 
-        "sf_description": "Kafka metrics. Created by SignalFx through service discovery.", 
+        "marshallId": 1,
+        "sf_type": "Service",
+        "sf_description": "Metrics about Kafka.",
         "sf_service": "Kafka"
     }, 
     {

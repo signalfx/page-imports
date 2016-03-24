@@ -13,7 +13,7 @@
     {
         "marshallId": 2,
         "sf_type": "Service",
-        "sf_description": "",
+        "sf_description": "Metrics about Amazon Auto Scaling.",
         "sf_service": "Amazon AutoScaling"
     },
     {
@@ -24,7 +24,7 @@
             2
         ],
         "sf_type": "Page",
-        "sf_description": ""
+        "sf_description": "Dashboards about Amazon Auto Scaling."
     },
     {
         "marshallId": 4,

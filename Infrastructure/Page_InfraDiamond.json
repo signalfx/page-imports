@@ -4,14 +4,14 @@
   "sf_type" : "Service",
   "marshallId" : 1,
   "sf_service" : "Infrastructure - Diamond",
-  "sf_description" : "Diamond metrics for infrastructure. Created by SignalFx through service discovery."
+  "sf_description" : "Dashboards about infrastructure as measured by Diamond."
 }, {
   "sf_updatedBy" : "BrpzFeSAYAA",
   "sf_type" : "Page",
   "sf_page" : "Infrastructure - Diamond",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_description" : "Diamond metrics for infrastructure. Created by SignalFx through service discovery."
+  "sf_description" : "Dashboards about infrastructure as measured by Diamond."
 }, {
   "sf_type" : "Dashboard",
   "sf_dashboard" : "Infrastructure - Diamond",

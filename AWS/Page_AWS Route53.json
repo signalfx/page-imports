@@ -13,7 +13,7 @@
     {
         "marshallId": 2,
         "sf_type": "Service",
-        "sf_description": "",
+        "sf_description": "Metrics about Amazon Route 53.",
         "sf_service": "Amazon Route53"
     },
     {
@@ -23,7 +23,8 @@
             1,
             2
         ],
-        "sf_type": "Page"
+        "sf_type": "Page",
+        "sf_description": "Dashboards about Amazon Route 53."
     },
     {
         "marshallId": 4,
