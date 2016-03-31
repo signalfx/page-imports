@@ -126,6 +126,17 @@
     "version" : 1
   },
   "sf_discoverySelectors" : [ "_exists_:LoadBalancerName" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "LoadBalancerName",
+      "alias" : "LoadBalancerName",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "namespace:\"AWS/ELB\"",
   "marshallId" : 3,

@@ -4534,6 +4534,17 @@
         "sf_discoverySelectors": [
             "_exists_:DBInstanceIdentifier"
         ], 
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "DBInstanceIdentifier",
+            "alias" : "DBInstanceIdentifier",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard", 
         "marshallMemberOf": [
             3

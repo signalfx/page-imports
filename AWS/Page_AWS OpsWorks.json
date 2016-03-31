@@ -143,6 +143,17 @@
             "_exists_:InstanceId", 
             "_exists_:StackId"
         ], 
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "InstanceId",
+            "alias" : "InstanceId",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard", 
         "marshallMemberOf": [
             3

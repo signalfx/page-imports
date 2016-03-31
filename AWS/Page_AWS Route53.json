@@ -898,6 +898,17 @@
         "sf_discoverySelectors": [
             "_exists_:HealthCheckId"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "HealthCheckId",
+            "alias" : "HealthCheckId",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             3
