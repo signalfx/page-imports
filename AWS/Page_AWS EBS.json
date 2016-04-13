@@ -162,6 +162,17 @@
     "version" : 1
   },
   "sf_discoverySelectors" : [ "_exists_:VolumeId" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "VolumeId",
+      "alias" : "VolumeId",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "namespace:\"AWS/EBS\" AND _exists_:VolumeId",
   "marshallId" : 3,

@@ -158,6 +158,17 @@
         "sf_discoverySelectors": [
             "_exists_:host"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "host",
+            "alias" : "host",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             2
@@ -4450,6 +4461,17 @@
         "sf_discoverySelectors": [
             "_exists_:plugin_instance"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "plugin_instance",
+            "alias" : "plugin_instance",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             2
@@ -5816,6 +5838,17 @@
         "sf_discoverySelectors": [
             "_exists_:plugin_instance"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "plugin_instance",
+            "alias" : "plugin_instance",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             2

@@ -342,6 +342,17 @@
     "version" : 1
   },
   "sf_discoverySelectors" : [ "_exists_:CacheClusterId" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "CacheClusterId",
+      "alias" : "CacheClusterId",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "1 AND namespace:\"AWS/ElastiCache\"",
   "marshallId" : 3,
@@ -6765,6 +6776,17 @@
     "version" : 1
   },
   "sf_discoverySelectors" : [ "_exists_:CacheNodeId" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "CacheNodeId",
+      "alias" : "CacheNodeId",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "1 AND namespace:\"AWS/ElastiCache\"",
   "marshallId" : 32,

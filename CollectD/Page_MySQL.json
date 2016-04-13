@@ -2903,6 +2903,17 @@
         "sf_discoverySelectors": [
             "_exists_:host"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "host",
+            "alias" : "host",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             3

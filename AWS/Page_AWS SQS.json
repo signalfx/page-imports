@@ -1396,6 +1396,17 @@
     "version" : 1
   },
   "sf_discoverySelectors" : [ "_exists_:QueueName" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "dimension" : "QueueName",
+      "alias" : "QueueName",
+      "globalScope" : true,
+      "required" : true,
+      "description" : "",
+      "restricted" : false,
+      "preferredSuggestions" : [ ]
+    } ]
+  },
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "namespace:\"AWS/SQS\" AND _exists_:QueueName",
   "marshallId" : 13,

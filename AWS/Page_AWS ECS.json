@@ -90,6 +90,17 @@
         "sf_discoverySelectors": [
             "_exists_:ServiceName"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "ServiceName",
+            "alias" : "ServiceName",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             3
@@ -2165,6 +2176,17 @@
         "sf_discoverySelectors": [
             "_exists_:ClusterName"
         ],
+        "sf_filterAlias" : {
+          "variables" : [ {
+            "dimension" : "ClusterName",
+            "alias" : "ClusterName",
+            "globalScope" : true,
+            "required" : true,
+            "description" : "",
+            "restricted" : false,
+            "preferredSuggestions" : [ ]
+          } ]
+        },
         "sf_type": "Dashboard",
         "marshallMemberOf": [
             3
