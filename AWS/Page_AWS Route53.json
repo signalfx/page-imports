@@ -902,6 +902,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "HealthCheckId",
+              "alias" : "health check",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Route53 Health Check",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Route53 HealthCheck"
     },
     {

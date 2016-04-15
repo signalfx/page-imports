@@ -2125,6 +2125,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "broker",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Kafka broker",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Kafka Broker"
     }, 
     {

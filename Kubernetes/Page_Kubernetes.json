@@ -824,7 +824,17 @@
   "marshallMemberOf" : [ 3 ]
 }, {
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [
+      {
+        "dimension" : "node",
+        "alias" : "node",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s node",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
   },
   "sf_dashboard" : "K8s Node",
   "sf_uiModel" : {
@@ -2113,7 +2123,17 @@
   "marshallMemberOf" : [ 10 ]
 }, {
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [
+      {
+        "dimension" : "cluster",
+        "alias" : "cluster",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s cluster",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
   },
   "sf_dashboard" : "K8s Cluster",
   "sf_uiModel" : {
@@ -4353,7 +4373,17 @@
   "marshallMemberOf" : [ 20 ]
 }, {
   "sf_filterAlias" : {
-    "variables" : [ ]
+    "variables" : [
+      {
+        "dimension" : "kubernetes_pod_name",
+        "alias" : "pod",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s pod",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
   },
   "sf_dashboard" : "K8s Pod",
   "sf_uiModel" : {

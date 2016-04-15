@@ -94,6 +94,28 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "ServiceName",
+              "alias" : "service",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "ECS service",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            },
+            {
+              "dimension" : "ClusterName",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : false,
+              "description" : "ECS cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "ECS Service"
     },
     {
@@ -2169,6 +2191,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "ClusterName",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "ECS cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "ECS Cluster"
     },
     {

@@ -177,6 +177,28 @@
         "marshallMemberOf": [
             2
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "index",
+              "alias" : "index",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Elasticsearch index",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            },
+            {
+              "dimension" : "plugin_instance",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : false,
+              "description" : "Elasticsearch cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Elasticsearch Index"
     },
     {
