@@ -188,6 +188,19 @@
         "marshallMemberOf": [
             2
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "node",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "RabbitMQ node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "RabbitMQ Node"
     },
     {

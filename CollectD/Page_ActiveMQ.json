@@ -12,6 +12,19 @@
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "host",
+        "alias" : "host",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ActiveMQ broker",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ActiveMQ host",
   "sf_uiModel" : {
     "widgets" : [ {
@@ -1536,6 +1549,19 @@
   "marshallId" : 13,
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "plugin_instance",
+        "alias" : "topic",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ActiveMQ topic",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ActiveMQ topic",
   "sf_uiModel" : {
     "widgets" : [ {
@@ -2388,6 +2414,19 @@
   "sf_discoveryQuery" : "hostHasService:\"activemq\" AND _exists_:host",
   "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_14=id(report=1);find(query='(sf_metric:gauge.amq.topic.ConsumerCount AND _missing_:sf_programId) AND ((plugin_instance:broker1\\\\-TEST.TOPIC1) AND (hostHasService:activemq) AND (plugin:GenericJMX))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> window(1h) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14');find(query='(sf_metric:gauge.amq.topic.ConsumerCount AND _missing_:sf_programId) AND ((plugin_instance:broker1\\\\-TEST.TOPIC1) AND (hostHasService:activemq) AND (plugin:GenericJMX))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_2_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')"
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "plugin_instance",
+        "alias" : "queue",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ActiveMQ queue",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ActiveMQ queue",
   "sf_uiModel" : {
     "widgets" : [ {
@@ -4993,6 +5032,19 @@
   "marshallId" : 40,
   "marshallMemberOf" : [ 30 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "broker",
+        "alias" : "broker",
+        "globalScope" : true,
+        "required" : false,
+        "description" : "ActiveMQ broker",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ActiveMQ message age",
   "sf_uiModel" : {
     "widgets" : [ {

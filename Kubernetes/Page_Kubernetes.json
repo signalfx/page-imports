@@ -826,6 +826,19 @@
   "sf_filterAlias" : {
     "variables" : [ ]
   },
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "node",
+        "alias" : "node",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s node",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "K8s Node",
   "sf_uiModel" : {
     "widgets" : [ {
@@ -2114,6 +2127,19 @@
 }, {
   "sf_filterAlias" : {
     "variables" : [ ]
+  },
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "cluster",
+        "alias" : "cluster",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s cluster",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
   },
   "sf_dashboard" : "K8s Cluster",
   "sf_uiModel" : {
@@ -4354,6 +4380,19 @@
 }, {
   "sf_filterAlias" : {
     "variables" : [ ]
+  },
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "kubernetes_pod_name",
+        "alias" : "pod",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "K8s pod",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
   },
   "sf_dashboard" : "K8s Pod",
   "sf_uiModel" : {

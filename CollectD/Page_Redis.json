@@ -158,6 +158,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "plugin_instance",
+              "alias" : "instance",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Redis instance",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Redis Instance"
     },
     {
@@ -1766,6 +1779,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "host",
+              "globalScope" : true,
+              "required" : false,
+              "description" : "Redis host",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Redis Instances"
     },
     {

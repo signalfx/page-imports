@@ -3393,6 +3393,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "host",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Cassandra host",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Cassandra Node"
     },
     {

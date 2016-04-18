@@ -12,6 +12,19 @@
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "CacheClusterId",
+        "alias" : "cluster",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ElastiCache cluster",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ElastiCache Cluster",
   "sf_uiModel" : {
     "widgets" : [ {
@@ -6615,6 +6628,28 @@
   "sf_jobResolution" : 1000,
   "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_4_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_4_10_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_5_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_5_10_MACROBLOCK=[?A,!OUT]{?A->!OUT};_SF_PLOT_KEY_##CHARTID##_6_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_6_10_MACROBLOCK=[?A,!OUT]{?A->!OUT};find(query='(sf_metric:FreeableMemory AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((namespace:AWS\\\\/ElastiCache) AND (CacheNodeId:*) AND (stat:mean) AND (CacheClusterId:memcached2))') -> fetch(extrapolation='LAST_VALUE_EXTRAPOLATION',maxExtrapolations=5) -> split -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_2_10_MACROBLOCK:!OUT->groupby()->stats:!min->_SF_PLOT_KEY_##CHARTID##_2_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_2_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK:!OUT->groupby()->stats:!p10->_SF_PLOT_KEY_##CHARTID##_3_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_4_10_MACROBLOCK:!OUT->groupby()->stats:!p50->_SF_PLOT_KEY_##CHARTID##_4_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_4_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_4_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_5_10_MACROBLOCK:!OUT->groupby()->stats:!p90->_SF_PLOT_KEY_##CHARTID##_5_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_5_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_5_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_6_10_MACROBLOCK:!OUT->groupby()->stats:!max->_SF_PLOT_KEY_##CHARTID##_6_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_6_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_6_10_MACROBLOCK"
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "CacheNodeId",
+        "alias" : "node",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ElastiCache node",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      },
+      {
+        "dimension" : "CacheClusterId",
+        "alias" : "cluster",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "ElastiCache cluster",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ElastiCache Node",
   "sf_uiModel" : {
     "widgets" : [ {

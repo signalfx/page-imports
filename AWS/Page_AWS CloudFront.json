@@ -12,6 +12,19 @@
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "DistributionId",
+        "alias" : "distribution",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "CloudFront distribution",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "CloudFront Distribution",
   "sf_uiModel" : {
     "widgets" : [ {

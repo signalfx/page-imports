@@ -170,6 +170,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "node",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "PostgreSQL node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "PostgreSQL Node"
     },
     {

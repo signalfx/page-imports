@@ -4538,6 +4538,19 @@
         "marshallMemberOf": [
             3
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "DBInstanceIdentifier",
+              "alias" : "instance",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "RDS DB Instance",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "RDS Instance"
     }, 
     {

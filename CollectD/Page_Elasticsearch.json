@@ -189,6 +189,19 @@
         "marshallMemberOf": [
             2
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "host",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Elasticsearch node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Elasticsearch Node"
     },
     {
@@ -3066,6 +3079,19 @@
         "marshallMemberOf": [
             2
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "plugin_instance",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Elasticsearch cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Elasticsearch Cluster"
     },
     {
