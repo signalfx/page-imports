@@ -2432,6 +2432,19 @@
   "marshallId" : 15,
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "host",
+        "alias" : "host",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "Host running CollectD",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "Collectd",
   "sf_uiModel" : {
     "widgets" : [ {

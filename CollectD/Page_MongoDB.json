@@ -4231,6 +4231,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "cluster",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "MongoDB cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "MongoDB Cluster"
     },
     {
@@ -8530,6 +8543,19 @@
         "marshallMemberOf": [
             3
         ],
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "host",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "MongoDB host",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "MongoDB Host"
     },
     {

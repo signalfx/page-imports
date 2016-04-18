@@ -12,6 +12,19 @@
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "LoadBalancerName",
+        "alias" : "load balancer",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "Load Balancer",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "ELB Instance",
   "sf_uiModel" : {
     "widgets" : [ {

@@ -2639,6 +2639,19 @@
   "sf_jobResolution" : 10000,
   "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:load.midterm AND _missing_:sf_programId) AND ((plugin:load))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> window(1m) -> stats:!mean -> groupby('host') -> stats:!mean -> groupby() -> groupby() -> select(count=10):!top -> split -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')"
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "host",
+        "alias" : "host",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "Host running CollectD",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "Collectd",
   "sf_uiModel" : {
     "widgets" : [ {

@@ -1306,6 +1306,19 @@
   "marshallId" : 12,
   "marshallMemberOf" : [ 3 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "QueueName",
+        "alias" : "queue name",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "SQS Queue name",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "SQS Queue",
   "sf_uiModel" : {
     "widgets" : [ {

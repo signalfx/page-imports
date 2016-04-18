@@ -12,6 +12,19 @@
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
+  "sf_filterAlias" : {
+    "variables" : [
+      {
+        "dimension" : "VolumeId",
+        "alias" : "volume",
+        "globalScope" : true,
+        "required" : true,
+        "description" : "EBS volume",
+        "restricted" : false,
+        "preferredSuggestions" : []
+      }
+    ]
+  },
   "sf_dashboard" : "EBS Volume",
   "sf_uiModel" : {
     "widgets" : [ {

@@ -184,6 +184,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "cluster",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : false,
+              "description" : "Couchbase cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Couchbase Buckets"
     }, 
     {
@@ -1615,6 +1628,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "bucket",
+              "alias" : "bucket",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Couchbase bucket",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Couchbase Bucket"
     }, 
     {
@@ -3762,6 +3788,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "node",
+              "alias" : "node",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Couchbase node",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Couchbase Node"
     }, 
     {
@@ -5528,6 +5567,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "cluster",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : false,
+              "description" : "Couchbase cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Couchbase Nodes"
     }, 
     {

@@ -254,6 +254,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "cluster",
+              "alias" : "cluster",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Mesos cluster",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Mesos Cluster"
     }, 
     {
@@ -3744,6 +3757,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "master",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Mesos master",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Mesos Master"
     }, 
     {
@@ -7682,6 +7708,19 @@
         "marshallMemberOf": [
             2
         ], 
+        "sf_filterAlias" : {
+          "variables" : [
+            {
+              "dimension" : "host",
+              "alias" : "slave",
+              "globalScope" : true,
+              "required" : true,
+              "description" : "Mesos slave",
+              "restricted" : false,
+              "preferredSuggestions" : []
+            }
+          ]
+        },
         "sf_dashboard": "Mesos Slave"
     }, 
     {
