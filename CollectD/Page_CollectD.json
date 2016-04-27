@@ -3,10 +3,10 @@
 }, {
   "sf_description" : "",
   "sf_type" : "Service",
-  "sf_service" : "Infrastructure",
+  "sf_service" : "Infrastructure (no SignalFx plugin)",
   "marshallId" : 1
 }, {
-  "sf_page" : "Infrastructure",
+  "sf_page" : "Infrastructure (no SignalFx plugin)",
   "sf_description" : "Dashboards about infrastructure as measured by collectd.",
   "sf_type" : "Page",
   "marshallId" : 2,
