@@ -7,7 +7,7 @@
   "marshallId" : 1
 }, {
   "sf_page" : "Infrastructure",
-  "sf_description" : "Dashboards about infrastructure as measured by collectd and the SignalFx collectd plugin.",
+  "sf_description" : "Dashboards about infrastructure as measured by collectd and the SignalFx collectd plugin. ",
   "sf_type" : "Page",
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
