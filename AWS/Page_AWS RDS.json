@@ -1317,7 +1317,7 @@
         "sf_jobMaxDelay": 0, 
         "sf_cacheProgram": false, 
         "sf_type": "Chart", 
-        "sf_chart": "#DBs by Class", 
+        "sf_chart": "Classes for all DB instances", 
         "sf_disallowCachedProgram": true, 
         "sf_jobResolution": 10000, 
         "marshallMemberOf": [
