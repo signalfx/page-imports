@@ -1,0 +1,3149 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "sf_description" : "",
+  "sf_type" : "Service",
+  "sf_service" : "Demo Data Revision",
+  "marshallId" : 1
+}, {
+  "sf_page" : "Sample Data",
+  "sf_description" : "Tutorial dashboards using sample data",
+  "sf_type" : "Page",
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ]
+}, {
+  "sf_dashboard" : "Welcome to SignalFx - Part 2",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968886455,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968929357,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968995923,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432709203142,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 12,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431969165848,
+        "name" : "",
+        "id" : 5
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "SignalFx provides the data exploration tools that help you find patterns and outliers in your data. On this dashboard, we illustrate these capabilities with some sample data.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Now it's your turn",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "markdownText" : "<br>\nSee if you can recreate the charts from this dashboard. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/205158165\" target=\"_blank\">chart 4</a> (Total transactions vs. latency) and <a href=\"https://support.signalfx.com/hc/en-us/articles/205158335\" target=\"_blank\">chart 5</a> (Average latency by customer). When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 3` to see how to build a more sophisticated analytics pipeline.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431969165848,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_chart" : "Using metadata to enhance analysis",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "markdownText" : "<br>\nYou can use metadata to slice and dice your data. Our analytics functions operate on any subset or grouping of metrics you can identify with tags, properties or dimensions.\n\nWhen troubleshooting, it's often worthwhile to determine whether any particular customer is having a different experience than others.  In this case, we're calculating the average latency per customer.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431968995923,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 4,
+    "allPlotConstructs" : [ ],
+    "chartType" : "line",
+    "allPlots" : [ {
+      "name" : "demo.trans.latency - Mean by demo_customer",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_customer"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -300001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_description" : "Average latency by customer, across hosts.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "5. Average latency by customer",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1432709203142,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_customer') -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 15,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "Total no. of transactions",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "Avg. latency of transactions",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_15",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -300000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Transactions"
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : false,
+      "colorByMetric" : true,
+      "axisPrecision" : null,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_15=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_description" : "Total transactions plotted vs. average latency, making use of 2 y-axes to highlight the correlation between the two metrics.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "4. Total transactions vs. latency",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431968929357,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_15=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')"
+}, {
+  "sf_chart" : "Flexible charts",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "markdownText" : "<br>\nSignalFx lets you visualize plots for different metrics on the same chart so that you can easily correlate different signals.\n \nIn the chart to the right, we’ve added an average latency metric to the same chart, and set up a second y-axis for it.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431968886455,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ]
+}, {
+  "sf_dashboard" : "Welcome to SignalFx - Samples",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431989962458,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 3,
+      "row" : 0,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431992305202,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 2,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431989848818,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431990535830,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 6,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431990078831,
+        "name" : "",
+        "id" : 5
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431990296816,
+        "name" : "",
+        "id" : 6
+      }
+    }, {
+      "col" : 6,
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431989587398,
+        "name" : "",
+        "id" : 7
+      }
+    }, {
+      "col" : 0,
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431992663185,
+        "name" : "",
+        "id" : 8
+      }
+    }, {
+      "col" : 6,
+      "row" : 4,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431992807317,
+        "name" : "",
+        "id" : 9
+      }
+    }, {
+      "col" : 0,
+      "row" : 4,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431993039268,
+        "name" : "",
+        "id" : 10
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "A dashboard full of sample charts that show you more of the wide range of visualizations possible with SignalFx.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_chart" : "Latency per transaction by customer",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.latency - Sum by demo_customer",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_customer"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "demo.trans.count - Sum by demo_customer",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_customer"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "Latency per transaction",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "A/B"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "colorByMetric" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK=[?A,?B,!OUT]{?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_3=id(report=1)->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_1_3->?A:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_3->?B:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431993039268,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK=[?A,?B,!OUT]{?A / ?B->!OUT};_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_3=id(report=1)->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_1_3->?A:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_3->?B:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK",
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 9 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Mean(10m) - Sum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "m",
+            "amount" : 10,
+            "transformTimeRange" : "10m"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(10m) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_description" : "Moving average over previous 10 minutes",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Total no. transactions",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431992305202,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> split -> stats:!mean -> window(10m) -> stats:!mean -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.latency - Maximum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MAX",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "demo.trans.latency - P50",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : {
+            "percentile" : 50
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!max -> _SF_PLOT_KEY___OBJECT_ID___2_2=id(report=1) -> publish(metric='_SF_PLOT_KEY___OBJECT_ID___2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='__OBJECT_ID___2')"
+    }, {
+      "name" : "demo.trans.latency - Minimum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MIN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 3,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!p99 -> _SF_PLOT_KEY___OBJECT_ID___3_2=id(report=1) -> publish(metric='_SF_PLOT_KEY___OBJECT_ID___3_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='__OBJECT_ID___2')"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -300001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "colorByMetric" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!p50 -> _SF_PLOT_KEY_##CHARTID##_2_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!min -> _SF_PLOT_KEY_##CHARTID##_3_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_description" : "Comparison in max, min and P50 latencies.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Max, P50 and min latency",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431990535830,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_6=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!max -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!p50 -> _SF_PLOT_KEY_##CHARTID##_2_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!min -> _SF_PLOT_KEY_##CHARTID##_3_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_3_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Mean",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "demo.trans.count - Mean - Timeshift 10m",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TIMESHIFT",
+          "options" : {
+            "milliseconds" : 600000
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY___OBJECT_ID___2_2=id(report=1) -> publish(metric='_SF_PLOT_KEY___OBJECT_ID___2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='__OBJECT_ID___2')"
+    }, {
+      "name" : "A/B-1 - Scale:100 - Mean(10m)",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SCALE",
+          "options" : {
+            "scaleAmount" : 100
+          }
+        }
+      }, {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "m",
+            "amount" : 10,
+            "transformTimeRange" : "10m"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "A/B-1"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "% change"
+      } ],
+      "colorByMetric" : true,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK=[?A,?B,!OUT]{?A / ?B - 1->!OUT};find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3;find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-600000) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3;_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->window(10m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_3->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_1_3->?A:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_3->?B:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK",
+  "sf_description" : "Percent change in no. transactions vs. 10 minutes prior.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Percent change from 10 min ago",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431992663185,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_3=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK=[?A,?B,!OUT]{?A / ?B - 1->!OUT};find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-600000) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_2_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK:!OUT->{ ?in * 100 -> !out }->window(10m)->stats:!mean->_SF_PLOT_KEY_##CHARTID##_3_3->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3');_SF_PLOT_KEY_##CHARTID##_1_3->?A:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_2_3->?B:_SF_PLOT_KEY_##CHARTID##_3_3_MACROBLOCK"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 4,
+    "chartType" : "area",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.latency - Mean",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#00b9ff"
+      }
+    }, {
+      "name" : "demo.trans.count - Sum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 1,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "visualization" : "column",
+        "colorOverride" : "#e9008a"
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_4",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      }, {
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        },
+        "label" : "Transactions"
+      } ],
+      "forcedResolution" : "10000",
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
+  "sf_description" : "Latency vs. transaction count on separate axes. Custom plot and chart type selected in plot B's plot actions menu.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Latency vs. transction count",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431990296816,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 10000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_4=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4');find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_2_4 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Sum by demo_customer - Mean(1m)",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_customer"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      }, {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "m",
+            "amount" : 1,
+            "transformTimeRange" : "1m"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_customer') -> stats:!sum -> window(1m) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_description" : "Total transactions by customer, with smoothing function applied (mean:transformation 1m).",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "No. transactions per customer (1m mean)",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431992807317,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_customer') -> stats:!sum -> window(1m) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')"
+}, {
+  "sf_chart" : "Total no. transactions",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "chartType" : "column",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -900001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Transactions"
+      } ],
+      "stackedChart" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "colorByMetric" : false,
+      "forcedResolution" : "30000",
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_6 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "Total transactions, visualized as stacked column charts with minimum resolution of 10s.",
+  "sf_chartIndex" : 1431990078831,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 9 ]
+}, {
+  "sf_chart" : "Latency heatmap",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "heatmap",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.latency",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_cacheProgram" : false,
+  "sf_description" : "Spread of latency values across time.",
+  "sf_chartIndex" : 1431989587398,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 9 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.lb.hosts - Sum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.lb.hosts"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.lb.hosts AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
+  "sf_description" : "Total no. hosts seen by load balancers.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Total no. hosts",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431989962458,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:demo.lb.hosts AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')"
+}, {
+  "sf_chart" : "Top 10 hosts by transactions per second",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_host"
+            }, {
+              "value" : "demo_customer"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TOPN",
+          "options" : {
+            "count" : 10,
+            "mode" : "count"
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "maxDecimalPlaces" : 1,
+      "sortPreference" : "-value"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> groupby() -> groupby('demo_host','demo_customer') -> select(count=10):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431989848818,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_jobResolution" : 1000,
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "find(query='(sf_metric:demo.trans.count AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch(maxExtrapolations=-1) -> groupby() -> groupby('demo_host','demo_customer') -> select(count=10):!top -> split() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_7=id(report=1) -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_7',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_7')",
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 9 ]
+}, {
+  "sf_dashboard" : "Welcome to SignalFx - Part 1",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431967768065,
+        "name" : "",
+        "id" : 1
+      },
+      "sizeX" : 6
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968266619,
+        "name" : "",
+        "id" : 2
+      },
+      "sizeX" : 6
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968323162,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432057339908,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 9,
+      "row" : 1,
+      "sizeX" : 3,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968413124,
+        "name" : "",
+        "id" : 5
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 12,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431968783266,
+        "name" : "",
+        "id" : 6
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "SignalFx gives you real-time visualization and interactive analytics for systems, applications and business metrics. On this dashboard, we illustrate these capabilities with some sample data.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 15,
+    "chartType" : "area",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Mean(30s)",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 30,
+            "transformTimeRange" : "30s"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_15",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -300000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Transactions"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : true,
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')",
+  "sf_description" : "Transaction count metrics with a smoothing function (mean:transformation for 30s) applied.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "1. Raw metrics on transaction count",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431968266619,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_15=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> window(30s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_15 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_15',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_15')"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 17,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Sum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_17",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -300001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : ""
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : true,
+      "forcedResolution" : "5000",
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_17 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')",
+  "sf_description" : "Total transactions across all customers and servers.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "2. Total transactions",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1432057339908,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 5000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_17=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_17 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_17',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_17')"
+}, {
+  "sf_chart" : "Now it's your turn",
+  "sf_uiModel" : {
+    "revisionNumber" : 15,
+    "markdownText" : "<br>\nSee if you can recreate the charts above. You can start by creating new charts in your user dashboard group (get there by clicking on the green `fx` logo in the upper left hand corner) or by cloning the charts. Step-by-step tutorials are available in our documentation for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504469\" target=\"_blank\">chart 1</a> (Raw metrics on transaction count) and for <a href=\"https://support.signalfx.com/hc/en-us/articles/204504479\" target=\"_blank\">charts 2 and 3</a> (Total transactions). When you’re done exploring, go to the next dashboard named `Welcome to SignalFx - Part 2` to see how to take advantage of our rich analytics functionality.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_15",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431968783266,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 20 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 14,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Sum",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_14",
+    "chartMode" : "single",
+    "chartconfig" : {
+      "range" : -300001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : ""
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : true,
+      "updateInterval" : "5000",
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_14 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')",
+  "sf_description" : "Total transactions across all customers and servers.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "3. Total transactions",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431968413124,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 5000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_14=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_14 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_14',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_14')"
+}, {
+  "sf_chart" : "Interactive analytics",
+  "sf_uiModel" : {
+    "revisionNumber" : 11,
+    "markdownText" : "<br>\nSignalFx lets you interact with your data to discover new insights, by applying analytics functions to it and by filtering or aggregating it using metadata. \n\nIn the charts to the right, we’ve added up the transactions from all the servers in the chart above. Click on the name of the charts, `2. Total transactions` or `3. Total transactions`, to see how they're built.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_11",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431968323162,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 20 ]
+}, {
+  "sf_chart" : "Real time visibility",
+  "sf_uiModel" : {
+    "revisionNumber" : 24,
+    "markdownText" : "<br>\nSignalFx lets you look at systems, application and business metrics with up to one second resolution. Sometimes, looking at one minute data just isn’t good enough. \n\nTo the right, you can see some sample data, which reports the number of transactions per second that a demo app is processing. The data started streaming when your company first signed on to SignalFx, so you won't see any data before then.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_24",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431967768065,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 20 ]
+}, {
+  "sf_dashboard" : "Welcome to SignalFx - Part 3",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431969260428,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431969318054,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 0,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431973693304,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431973818922,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 12,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1431973897380,
+        "name" : "",
+        "id" : 5
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "SignalFx's sophisticated streaming analytics lets you look at the signals that actually matter, not just the raw data that your instrumentation sends in. On this dashboard, we illustrate these capabilities using sample data.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 10,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "demo.trans.count - Mean",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "demo_datacenter",
+        "propertyValue" : "Tokyo",
+        "query" : "demo_datacenter:Tokyo",
+        "value" : "Tokyo",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "demo.trans.count - Standard Deviation",
+      "type" : "plot",
+      "invisible" : true,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "STDDEV",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "demo_datacenter",
+        "propertyValue" : "Tokyo",
+        "query" : "demo_datacenter:Tokyo",
+        "value" : "Tokyo",
+        "NOT" : false
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "sf_programText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*) AND ((demo_datacenter:Tokyo))') -> fetch -> groupby() -> stats:!mean -> _SF_PLOT_KEY___OBJECT_ID___2_4=id(report=1) -> publish(metric='_SF_PLOT_KEY___OBJECT_ID___2_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='__OBJECT_ID___4')"
+    }, {
+      "name" : "Load balancing ratio",
+      "type" : "ratio",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : true,
+      "focusNext" : false,
+      "expressionText" : "B/A"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 4,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_10",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -240000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Load balancing ratio"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 5
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((demo_datacenter:Tokyo))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10;find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((demo_datacenter:Tokyo))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_10;_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_10->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK",
+  "sf_description" : "Load balancing effectiveness is calculated as a ratio: standard deviation of the metric divided by its mean. Zero is ideal; higher is worse.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 27 ],
+  "sf_chart" : "7. Load balancing effectiveness",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431973818922,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10=id(report=1);_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK=[?B,?A,!OUT]{?B / ?A->!OUT};find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((demo_datacenter:Tokyo))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((demo_datacenter:Tokyo))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!stddev -> _SF_PLOT_KEY_##CHARTID##_2_10 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK:!OUT->_SF_PLOT_KEY_##CHARTID##_3_10->groupby() -> sample(100) -> split->publish(metric='_SF_PLOT_KEY_##CHARTID##_3_10',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_10');_SF_PLOT_KEY_##CHARTID##_2_10->?B:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK;_SF_PLOT_KEY_##CHARTID##_1_10->?A:_SF_PLOT_KEY_##CHARTID##_3_10_MACROBLOCK"
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 13,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "No. transactions",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ {
+        "iconClass" : "icon-properties",
+        "type" : "property",
+        "property" : "demo_customer",
+        "propertyValue" : "samslack.com",
+        "query" : "NOT demo_customer:samslack.com",
+        "value" : "samslack.com",
+        "NOT" : true
+      } ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_13",
+    "chartMode" : "list",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "colorByMetric" : false,
+      "maxDecimalPlaces" : 4,
+      "sortPreference" : "+value"
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((NOT demo_customer:samslack.com))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')",
+  "sf_description" : "Number of transactions handled per host, not including those associated with samslack.com (which has consistently low latency).",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 27 ],
+  "sf_chart" : "6. Transactions by server",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1431969318054,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_13=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId) AND ((NOT demo_customer:samslack.com))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_host') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_13 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_13',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_13')"
+}, {
+  "sf_chart" : "Now it's your turn",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "markdownText" : "<br>\nSee if you can recreate the charts above. Step-by-step tutorials are available for <a href=\"https://support.signalfx.com/hc/en-us/articles/204505169\" target=\"_blank\">chart 6</a> (Transactions by server) and <a href=\"https://support.signalfx.com/hc/en-us/articles/204505189\" target=\"_blank\">chart 7</a> (Load balancing effectiveness).  For additional sample charts, go to the dashboard named `Welcome to SignalFx - Samples`.\n<br>\n\nWhen you’re done exploring, go to the Integrations tab to check out the many way you can <a href=\"https://support.signalfx.com/hc/en-us/articles/203762079\" target=\"_blank\">bring your own data</a> into our system, or learn <a href=\"https://support.signalfx.com/hc/en-us/articles/203824569\" target=\"_blank\">how to create detectors</a> and alerts on anomalies in your applications or infrastructure.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431973897380,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 27 ]
+}, {
+  "sf_chart" : "Sophisticated analysis",
+  "sf_uiModel" : {
+    "revisionNumber" : 3,
+    "markdownText" : "<br>\nYou can build analytics pipelines in SignalFx that take the output of an analytics function and use it as the input for another calculation.\n\nIn this case, we construct a load balancing effectiveness ratio that shows us that the latencies seen above are correlated with a high (and therefore poor) ratio. If we had been watching this ratio earlier, we would have known a problem existed.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_3",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431973693304,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 27 ]
+}, {
+  "sf_chart" : "Using metadata to drill down",
+  "sf_uiModel" : {
+    "revisionNumber" : 6,
+    "markdownText" : "<br>\nMetadata is also useful for filtering your metrics so that you can focus on the most relevant segments of a population.\n\nWe’ve filtered out the transactions for the customer who wasn't seeing high latencies, and further grouped by servers. It seems that some are processing a lower number of transactions, which could indicate a load balancing problem.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_6",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1431969260428,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 27 ]
+}, {
+  "sf_dashboard" : "Welcome to SignalFx - Intro",
+  "sf_uiModel" : {
+    "widgets" : [ {
+      "col" : 0,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 2,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432181084550,
+        "name" : "",
+        "id" : 1
+      }
+    }, {
+      "col" : 6,
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432181656840,
+        "name" : "",
+        "id" : 2
+      }
+    }, {
+      "col" : 6,
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432184539715,
+        "name" : "",
+        "id" : 3
+      }
+    }, {
+      "col" : 0,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 2,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432184931342,
+        "name" : "",
+        "id" : 4
+      }
+    }, {
+      "col" : 6,
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 2,
+      "type" : "chart",
+      "options" : {
+        "type" : "chart",
+        "chartIndex" : 1432744084282,
+        "name" : "",
+        "id" : 5
+      }
+    } ],
+    "version" : 1
+  },
+  "sf_description" : "A dashboard that introduces users to basic navigation in SignalFx. To explore SignalFx's features and benefits, please continue on to Part 1.",
+  "sf_type" : "Dashboard",
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 2 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 25,
+    "chartType" : "area",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "Transactions",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "demo_host"
+            }, {
+              "value" : "demo_datacenter"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "SUM",
+          "options" : { }
+        }
+      }, {
+        "name" : "New Transform",
+        "showMe" : false,
+        "direction" : {
+          "type" : "transformation",
+          "options" : {
+            "unit" : "s",
+            "amount" : 15,
+            "transformTimeRange" : "15s"
+          }
+        },
+        "fn" : {
+          "type" : "MEAN",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.count"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null
+      }
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 2,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_25",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -60001,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Transactions"
+      } ],
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "stackedChart" : true,
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 3
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_25=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_host','demo_datacenter') -> stats:!sum -> window(15s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_25 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_25',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_25')",
+  "sf_description" : "No. of transactions per host and datacenter, with moving average applied as smoothing function.",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "Transaction count",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1432181656840,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_25=id(report=1);find(query='(sf_metric:demo.trans.count AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('demo_host','demo_datacenter') -> stats:!sum -> window(15s) -> stats:!mean -> _SF_PLOT_KEY_##CHARTID##_1_25 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_25',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_25')"
+}, {
+  "sf_chart" : "Exploring SignalFx",
+  "sf_uiModel" : {
+    "revisionNumber" : 9,
+    "markdownText" : "<br>We've created a few built-in dashboards for you and injected some sample data into your SignalFx environment. To start checking it out, go to the sub navigation menu (see screenshot to the right) in the upper left hand part of the screen and select `Welcome to SignalFx - Part 1`.\n<br>\n\nOr, if you already know what you want to do, go ahead and create a new dashboard by going to the Dashboards tab and selecting New Dashboard from the dashboard actions menu (the hamburger menu in the upper right hand corner), and start making your own charts. If you get stuck or need any help, check out our <a href=\"https://support.signalfx.com/hc\" target=\"_blank\">documentation</a> or ask us a question anytime at [support@signalfx.com](mailto:support@signalfx.com).",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_9",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1432184931342,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 33 ]
+}, {
+  "sf_chart" : "The Basics",
+  "sf_uiModel" : {
+    "revisionNumber" : 23,
+    "markdownText" : "<br>\nWelcome to SignalFx! To get you started, let's go over some basics. \n\n#####**Charts and Dashboards**\nThe main thing you work with in SignalFx is a <a href=\"https://support.signalfx.com/hc/en-us/articles/201198545\" target=\"_blank\">chart</a>. SignalFx charts update in real time as data streams in or as analytics are applied, so they're a great way to understand, analyze and troubleshoot your infrastructure and applications. A <a href=\"https://support.signalfx.com/hc/en-us/articles/200753059\" target=\"_blank\">dashboard</a> is a place to organize and share charts and notes, and can themselves can be organized in groups.\n\n#####**Detectors and Alerts**\n<a href=\"https://support.signalfx.com/hc/en-us/articles/203824569\" target=\"_blank\">Detectors</a> compare the metrics you are sending into SignalFx with a threshold, and generate alerts when the threshold conditions are met. Thresholds can be static values or dynamically calculated (e.g. compared to historical data or populations).\n\n#####**Built-In Dashboards and Detectors**\nSignalFx includes a lot of built-in content to get you started. If you send data from <a href=\"https://signalfx.com/integrations/\" target=\"_blank\">supported integrations</a>, SignalFx automatically creates dashboards and detectors for you so that you can get up and running with monitoring in no time at all.",
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_23",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1432181084550,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 33 ]
+}, {
+  "sf_uiModel" : {
+    "revisionNumber" : 12,
+    "chartType" : "line",
+    "allPlotConstructs" : [ ],
+    "allPlots" : [ {
+      "name" : "95th percentile of latency",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : { }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#a747ff"
+      }
+    }, {
+      "name" : "95th percentile of latency - 3 minutes ago",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : false,
+      "dataManipulations" : [ {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "PERCENTILE",
+          "options" : { }
+        }
+      }, {
+        "name" : "New Aggregation",
+        "showMe" : false,
+        "direction" : {
+          "type" : "aggregation",
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          }
+        },
+        "fn" : {
+          "type" : "TIMESHIFT",
+          "options" : {
+            "milliseconds" : 180000
+          }
+        }
+      } ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : {
+        "metric" : "demo.trans.latency"
+      },
+      "uniqueKey" : 2,
+      "focusNext" : false,
+      "valid" : false,
+      "configuration" : {
+        "rollupPolicy" : null,
+        "extrapolationPolicy" : "AUTO",
+        "maxExtrapolations" : -1,
+        "colorOverride" : "#00b9ff"
+      },
+      "sf_programText" : "find(query='(sf_metric:demo.trans.latency AND NOT sf_metric:_SF_PLOT_KEY_*)') -> fetch -> groupby('demo_customer') -> stats:!p95 -> _SF_PLOT_KEY___OBJECT_ID___2_2=id(report=1) -> publish(metric='_SF_PLOT_KEY___OBJECT_ID___2_2',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='__OBJECT_ID___2')"
+    }, {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 3,
+      "valid" : false,
+      "focusNext" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_12",
+    "chartMode" : "graph",
+    "chartconfig" : {
+      "range" : -180000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "label" : "Latency (ms)"
+      } ],
+      "colorByMetric" : true,
+      "absoluteStart" : null,
+      "absoluteEnd" : null,
+      "rangeEnd" : 0,
+      "sortPreference" : ""
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 4
+  },
+  "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_12=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!p95 -> _SF_PLOT_KEY_##CHARTID##_1_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-180000) -> groupby() -> stats:!p95 -> _SF_PLOT_KEY_##CHARTID##_2_12 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')",
+  "sf_description" : "95th percentile of latency per transaction, compared against historical data (3 minutes ago)",
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "Transaction latency (now vs. -3m)",
+  "sf_cacheProgram" : true,
+  "sf_chartIndex" : 1432184539715,
+  "sf_jobMaxDelay" : 0,
+  "sf_jobResolution" : 1000,
+  "sf_viewProgramText" : "_SF_PLOT_KEY_##CHARTID##_1_12=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_12=id(report=1);find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby() -> stats:!p95 -> _SF_PLOT_KEY_##CHARTID##_1_12 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12');find(query='(sf_metric:demo.trans.latency AND _missing_:sf_programId)') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1,offset=-180000) -> groupby() -> stats:!p95 -> _SF_PLOT_KEY_##CHARTID##_2_12 -> groupby() -> sample(100) -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_12',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_12')"
+}, {
+  "sf_chart" : "The Sub-Navigation Menu",
+  "sf_uiModel" : {
+    "revisionNumber" : 7,
+    "markdownText" : "<br>\n![alt text][subnav]\n\n[subnav]: https://s3.amazonaws.com/public-sites--signalfx-com/sample_data/subnav_menu.png \"Sub-navigation menu\"",
+    "allPlotConstructs" : [ ],
+    "chartType" : "line",
+    "allPlots" : [ {
+      "name" : "New Plot",
+      "type" : "plot",
+      "invisible" : false,
+      "transient" : true,
+      "dataManipulations" : [ ],
+      "yAxisIndex" : 0,
+      "queryItems" : [ ],
+      "metricDefinition" : { },
+      "seriesData" : { },
+      "uniqueKey" : 1,
+      "focusNext" : false,
+      "valid" : false
+    } ],
+    "uiHelperValue" : "##CHARTID##_7",
+    "chartMode" : "text",
+    "chartconfig" : {
+      "range" : 900000,
+      "yAxisConfigurations" : [ {
+        "name" : "yAxis0",
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ],
+      "colorByMetric" : false
+    },
+    "relatedDetectors" : [ ],
+    "currentUniqueKey" : 2
+  },
+  "sf_cacheProgram" : false,
+  "sf_chartIndex" : 1432744084282,
+  "sf_jobMaxDelay" : 0,
+  "sf_type" : "Chart",
+  "sf_throttledProgramText" : "",
+  "sf_viewProgramText" : "",
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 33 ]
+} ]
