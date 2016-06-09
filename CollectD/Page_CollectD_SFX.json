@@ -14,14 +14,14 @@
 }, {
   "marshallId" : 3,
   "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "Collectd",
+  "sf_dashboard" : "collectd",
   "sf_description" : "",
   "sf_discoveryQuery" : "plugin:signalfx-metadata AND sf_metric:cpu.utilization",
   "sf_discoverySelectors" : [ "_exists_:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "host",
-      "description" : "Host running CollectD",
+      "description" : "Host running collectd",
       "dimension" : "host",
       "globalScope" : true,
       "preferredSuggestions" : [ ],
@@ -1982,7 +1982,7 @@
 }, {
   "marshallId" : 16,
   "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "Collectd (a)",
+  "sf_dashboard" : "collectd (a)",
   "sf_description" : "",
   "sf_discoveryQuery" : "plugin:signalfx-metadata AND sf_metric:cpu.utilization",
   "sf_discoverySelectors" : [ "_exists_:aws_region", "_exists_:aws_availability_zone", "sf_key:host", "_exists_:aws_instance_type" ],
