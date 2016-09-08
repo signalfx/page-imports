@@ -64,8 +64,8 @@
     }, {
       "col" : 8,
       "options" : {
-        "chartIndex" : 1442469648973,
-        "id" : 3,
+        "chartIndex" : 1473294782514,
+        "id" : 7,
         "name" : "",
         "type" : "chart"
       },
@@ -76,20 +76,8 @@
     }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1442470147385,
-        "id" : 4,
-        "name" : "",
-        "type" : "chart"
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1,
-      "type" : "chart"
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1442470299071,
-        "id" : 5,
+        "chartIndex" : 1442469648973,
+        "id" : 3,
         "name" : "",
         "type" : "chart"
       },
@@ -110,10 +98,22 @@
       "sizeY" : 1,
       "type" : "chart"
     }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1442470147385,
+        "id" : 4,
+        "name" : "",
+        "type" : "chart"
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1,
+      "type" : "chart"
+    }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1473294782514,
-        "id" : 8,
+        "chartIndex" : 1442470299071,
+        "id" : 5,
         "name" : "",
         "type" : "chart"
       },
@@ -125,7 +125,7 @@
       "col" : 4,
       "options" : {
         "chartIndex" : 1443740409781,
-        "id" : 7,
+        "id" : 8,
         "name" : "",
         "type" : "chart"
       },
@@ -1145,7 +1145,7 @@
       "col" : 4,
       "options" : {
         "chartIndex" : 1442465275381,
-        "id" : 5,
+        "id" : 4,
         "name" : "",
         "type" : "chart"
       },
@@ -1157,7 +1157,7 @@
       "col" : 0,
       "options" : {
         "chartIndex" : 1442007919876,
-        "id" : 4,
+        "id" : 5,
         "name" : "",
         "type" : "chart"
       },
@@ -1181,7 +1181,7 @@
       "col" : 6,
       "options" : {
         "chartIndex" : 1442468501458,
-        "id" : 10,
+        "id" : 7,
         "name" : "",
         "type" : "chart"
       },
@@ -1193,7 +1193,7 @@
       "col" : 0,
       "options" : {
         "chartIndex" : 1442465915580,
-        "id" : 9,
+        "id" : 8,
         "name" : "",
         "type" : "chart"
       },
@@ -1205,7 +1205,7 @@
       "col" : 0,
       "options" : {
         "chartIndex" : 1442465738391,
-        "id" : 8,
+        "id" : 9,
         "name" : "",
         "type" : "chart"
       },
@@ -1217,7 +1217,7 @@
       "col" : 6,
       "options" : {
         "chartIndex" : 1442465444962,
-        "id" : 7,
+        "id" : 10,
         "name" : "",
         "type" : "chart"
       },
