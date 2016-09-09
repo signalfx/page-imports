@@ -1032,7 +1032,7 @@
 }, {
   "marshallId" : 11,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Age of oldest message (s)",
+  "sf_chart" : "Age of oldest message (secs)",
   "sf_chartIndex" : 1473294782514,
   "sf_jobMaxDelay" : 0,
   "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_4=id(report=1);find(query='(sf_metric:ApproximateAgeOfOldestMessage AND (_missing_:sf_programId AND _missing_:computationId)) AND ((stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_4 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_4',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_4')",
@@ -1564,7 +1564,7 @@
 }, {
   "marshallId" : 16,
   "marshallMemberOf" : [ 12 ],
-  "sf_chart" : "Age of oldest message (s)",
+  "sf_chart" : "Age of oldest message (secs)",
   "sf_chartIndex" : 1473294423561,
   "sf_jobMaxDelay" : 0,
   "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_3=id(report=1);find(query='(sf_metric:ApproximateAgeOfOldestMessage AND (_missing_:sf_programId AND _missing_:computationId)) AND ((namespace:AWS\\\\/SQS) AND (stat:mean))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> groupby('QueueName') -> stats:!sum -> _SF_PLOT_KEY_##CHARTID##_1_3 -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_3',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_3')",
