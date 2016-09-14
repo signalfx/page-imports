@@ -36,8 +36,7 @@
       "end" : "Now",
       "relative" : true,
       "start" : "-15m"
-    },
-    "variables" : [ "IIS server=sf_source:WIN-NVC0V0HBR7Q" ]
+    }
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
@@ -1385,8 +1384,7 @@
       "globalScope" : true,
       "preferredSuggestions" : [ ],
       "required" : true,
-      "restricted" : false,
-      "value" : "WIN-8DN747LAEBM"
+      "restricted" : false
     }, {
       "alias" : "site",
       "description" : "site served by this host",
@@ -1405,8 +1403,7 @@
       "end" : "Now",
       "relative" : true,
       "start" : "-15m"
-    },
-    "variables" : [ "IIS server=host:WIN-8DN747LAEBM" ]
+    }
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
