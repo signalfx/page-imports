@@ -3318,7 +3318,7 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "<br>\n**Optimization Tip**\n\nIf your fielddata cache and heap usage are high, consider using [doc values](https://www.elastic.co/guide/en/elasticsearch/guide/current/doc-values.html)!",
+    "markdownText" : "<br>\n**Optimization Tip**\n\nIf your fielddata cache and heap usage are high, consider using [doc values](https://www.elastic.co/guide/en/elasticsearch/reference/current/doc-values.html)!",
     "relatedDetectors" : [ ],
     "revisionNumber" : 8,
     "uiHelperValue" : "##CHARTID##_8"
