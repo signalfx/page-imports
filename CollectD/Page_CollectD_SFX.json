@@ -33,7 +33,7 @@
     "density" : null,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:charliemp2" ]
+    "variables" : null
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {

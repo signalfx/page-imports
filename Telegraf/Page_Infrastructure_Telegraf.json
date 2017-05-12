@@ -33,7 +33,7 @@
     "density" : null,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:telegraf_test_prop_7" ]
+    "variables" : null
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
