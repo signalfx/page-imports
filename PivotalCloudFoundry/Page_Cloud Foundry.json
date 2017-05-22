@@ -3903,6 +3903,7 @@
   "sf_dashboard" : "Cloud Controller Overview",
   "sf_description" : "Overview of the cloud controller component.",
   "sf_discoveryQuery" : "job:cloud_controller_worker metric_source:cloudfoundry",
+  "sf_discoverySelectors" : [ "_exists_:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
