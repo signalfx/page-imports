@@ -9,6 +9,7 @@
   "sf_page" : "Sample Data",
   "sf_description" : "Tutorial dashboards using sample data",
   "sf_type" : "Page",
+  "sf_serviceDiscoveryVersion": ""
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ]
 }, {
