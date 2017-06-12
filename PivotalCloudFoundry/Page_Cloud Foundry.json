@@ -16,7 +16,7 @@
   "sf_dashboard" : "Router",
   "sf_description" : "Details of the router component.",
   "sf_discoveryQuery" : "metric_source:cloudfoundry AND job:router",
-  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_savedFilters" : {
     "density" : null,
     "sources" : null,
@@ -2390,7 +2390,7 @@
   "sf_dashboard" : "Diego Cell",
   "sf_description" : "Details of the Diego component.",
   "sf_discoveryQuery" : "metric_source:cloudfoundry AND job:diego_cell",
-  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "Host IP",
@@ -3543,7 +3543,7 @@
   "sf_dashboard" : "Cloud Controller",
   "sf_description" : "Details of the cloud controller component.",
   "sf_discoveryQuery" : "metric_source:cloudfoundry AND job:cloud_controller",
-  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -3903,6 +3903,7 @@
   "sf_dashboard" : "Cloud Controller Overview",
   "sf_description" : "Overview of the cloud controller component.",
   "sf_discoveryQuery" : "job:cloud_controller_worker metric_source:cloudfoundry",
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -4876,7 +4877,7 @@
   "sf_dashboard" : "Doppler",
   "sf_description" : "Details of the Doppler component.",
   "sf_discoveryQuery" : "metric_source:cloudfoundry AND job:doppler",
-  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_savedFilters" : {
     "density" : null,
     "sources" : null,
