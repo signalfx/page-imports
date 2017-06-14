@@ -981,7 +981,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Cloud Controller",
   "sf_description" : "Overview of the cloud controller component.",
-  "sf_discoveryQuery" : "job:cloud_controller_worker metric_source:cloudfoundry",
+  "sf_discoveryQuery" : "job:cloud_controller_worker AND metric_source:cloudfoundry",
   "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
@@ -8421,6 +8421,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Diego",
   "sf_description" : "Key Performance Indicators related to Diego",
+  "sf_discoveryQuery" : "metric_source:cloudfoundry AND (job:diego_cell OR job:diego_brain OR job:diego_database)",
+  "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
