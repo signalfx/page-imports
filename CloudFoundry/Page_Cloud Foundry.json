@@ -4377,7 +4377,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "Host IP=host:10.0.16.21" ]
+    "variables" : null
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
@@ -7863,7 +7863,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "Host=host:10.0.16.11" ]
+    "variables" : null
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
@@ -8027,16 +8027,7 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "name" : "Health",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "host",
-        "propertyValue" : "10.0.16.11",
-        "query" : "host:10.0.16.11",
-        "type" : "property",
-        "value" : "10.0.16.11"
-      } ],
+      "queryItems" : [],
       "seriesData" : {
         "metric" : "system.healthy"
       },
@@ -8054,16 +8045,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "optional" : false,
-        "property" : "host",
-        "propertyValue" : "10.0.16.11",
-        "query" : "host:10.0.16.11",
-        "type" : "property",
-        "value" : "10.0.16.11"
-      } ],
+      "queryItems" : [],
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
