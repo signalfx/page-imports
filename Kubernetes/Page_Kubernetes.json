@@ -1232,7 +1232,7 @@
   "marshallId" : 13,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Pod",
-  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores",
+  "sf_discoveryQuery" : "metric_source:kubernetes",
   "sf_discoverySelectors" : [ "_exists_:kubernetes_pod_name" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -2789,25 +2789,7 @@
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_container_name"
-            }, {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
+      "dataManipulations" : [{
         "direction" : {
           "options" : {
             "amount" : 1,
