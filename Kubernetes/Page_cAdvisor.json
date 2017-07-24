@@ -91,7 +91,7 @@
   },
   "sf_discoverySelectors" : [ "sf_key:cluster", "metric_source:kubernetes" ],
   "sf_type" : "Dashboard",
-  "sf_discoveryQuery" : "metric_source:kubernetes",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND _missing_:kubernetes_cluster",
   "sf_savedFilters" : {
     "sources" : null,
     "variables" : null,
@@ -954,7 +954,7 @@
   },
   "sf_discoverySelectors" : [ "_exists_:node" ],
   "sf_type" : "Dashboard",
-  "sf_discoveryQuery" : "metric_source:kubernetes",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND _missing_:kubernetes_cluster",
   "sf_savedFilters" : {
     "sources" : null,
     "variables" : null,
@@ -2314,9 +2314,9 @@
     } ],
     "version" : 1
   },
-  "sf_discoverySelectors" : [ "_exists_:cluster" ],
+  "sf_discoverySelectors" : [ "_exists_:cluster"],
   "sf_type" : "Dashboard",
-  "sf_discoveryQuery" : "metric_source:kubernetes",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND _missing_:kubernetes_cluster",
   "sf_savedFilters" : {
     "sources" : null,
     "variables" : null,
@@ -4509,7 +4509,7 @@
   },
   "sf_discoverySelectors" : [ "_exists_:kubernetes_pod_name" ],
   "sf_type" : "Dashboard",
-  "sf_discoveryQuery" : "metric_source:kubernetes",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND _missing_:kubernetes_cluster",
   "sf_savedFilters" : {
     "sources" : null,
     "variables" : null,
