@@ -15,7 +15,7 @@
   "marshallId" : 3,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Node",
-  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores AND _exists_:kubernetes_cluster",
   "sf_discoverySelectors" : [ "_exists_:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -1232,7 +1232,7 @@
   "marshallId" : 13,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Pod",
-  "sf_discoveryQuery" : "metric_source:kubernetes",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND _exists_:kubernetes_cluster",
   "sf_discoverySelectors" : [ "_exists_:kubernetes_pod_name" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -2400,7 +2400,7 @@
   "marshallId" : 22,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Clusters",
-  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores AND _exists_:kubernetes_cluster",
   "sf_discoverySelectors" : [ "_exists_:kubernetes_cluster" ],
   "sf_isLocked" : false,
   "sf_savedFilters" : {
