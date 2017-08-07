@@ -2472,7 +2472,7 @@
 }, {
   "marshallId" : 25,
   "marshallMemberOf" : [ 20 ],
-  "sf_chart" : "Diego Cell Memory Capacity - Nate",
+  "sf_chart" : "Diego Cell Memory Capacity",
   "sf_chartIndex" : 1495558195200,
   "sf_description" : "Percentage of RAM available for containers",
   "sf_type" : "Chart",
