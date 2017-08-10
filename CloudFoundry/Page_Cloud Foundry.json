@@ -456,7 +456,7 @@
 }, {
   "marshallId" : 8,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Untitled Chart",
+  "sf_chart" : "",
   "sf_chartIndex" : 1497381954422,
   "sf_description" : "Doppler Server Metrics",
   "sf_type" : "Chart",
@@ -8731,7 +8731,7 @@
 }, {
   "marshallId" : 72,
   "marshallMemberOf" : [ 70 ],
-  "sf_chart" : "Untitled Chart",
+  "sf_chart" : "",
   "sf_chartIndex" : 1497381299770,
   "sf_description" : "",
   "sf_type" : "Chart",
