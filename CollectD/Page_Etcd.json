@@ -15,7 +15,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "etcd instance",
   "sf_description" : "An overview of an etcd instance",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin:etcd",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
@@ -2461,7 +2461,7 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "etcd cluster",
   "sf_description" : "An overview of your etcd cluster",
-  "sf_discoveryQuery" : "",
+  "sf_discoveryQuery" : "plugin:etcd",
   "sf_discoverySelectors" : [ "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
