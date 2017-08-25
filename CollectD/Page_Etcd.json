@@ -45,7 +45,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : null
+    "variables" : [ "cluster=cluster:", "instance=plugin_instance:" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -820,9 +820,9 @@
   "sf_discoverySelectors" : [ "_exists_:host", "sf_key:host" ],
   "sf_filterAlias" : {
     "variables" : [ {
-      "alias" : "host",
-      "description" : "host you want to monitor",
-      "dimension" : "host",
+      "alias" : "cluster",
+      "description" : "",
+      "dimension" : "cluster",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
@@ -830,9 +830,9 @@
       "restricted" : false,
       "value" : ""
     }, {
-      "alias" : "cluster",
-      "description" : "",
-      "dimension" : "cluster",
+      "alias" : "host",
+      "description" : "host you want to monitor",
+      "dimension" : "host",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
@@ -846,7 +846,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "host=host:", "cluster=cluster:" ]
+    "variables" : [ "cluster=cluster:", "host=host:" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -2466,12 +2466,12 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "cluster",
-      "description" : "choose the cluster you want to monitor",
+      "description" : "null",
       "dimension" : "cluster",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : true,
+      "required" : false,
       "restricted" : false,
       "value" : ""
     } ]
@@ -2481,7 +2481,7 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : null
+    "variables" : [ "cluster=cluster:" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
@@ -2494,16 +2494,16 @@
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 3,
+      "col" : 6,
       "options" : {
-        "chartIndex" : 1502581619546,
+        "chartIndex" : 1501353788669,
         "id" : 0
       },
       "row" : 0,
-      "sizeX" : 3,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 6,
@@ -2511,43 +2511,25 @@
         "chartIndex" : 1502672898840,
         "id" : 0
       },
-      "row" : 0,
-      "sizeX" : 3,
+      "row" : 1,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 9,
+      "col" : 0,
       "options" : {
-        "chartIndex" : 1501353788669,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 3,
-      "sizeY" : 1
-    }, {
-      "col" : 2,
-      "options" : {
-        "chartIndex" : 1501353788666,
+        "chartIndex" : 1502581619546,
         "id" : 0
       },
       "row" : 1,
       "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1502673275674,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 2
-    }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1502815255549,
         "id" : 0
       },
-      "row" : 1,
+      "row" : 2,
       "sizeX" : 2,
       "sizeY" : 2
     }, {
@@ -2560,40 +2542,22 @@
       "sizeX" : 6,
       "sizeY" : 1
     }, {
-      "col" : 0,
+      "col" : 8,
       "options" : {
-        "chartIndex" : 1502816619444,
+        "chartIndex" : 1502673275674,
         "id" : 0
       },
-      "row" : 3,
-      "sizeX" : 2,
-      "sizeY" : 3
-    }, {
-      "col" : 7,
-      "options" : {
-        "chartIndex" : 1502236921137,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 5,
-      "sizeY" : 1
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 2
     }, {
       "col" : 2,
       "options" : {
-        "chartIndex" : 1502236844514,
+        "chartIndex" : 1501353788666,
         "id" : 0
       },
       "row" : 3,
-      "sizeX" : 5,
-      "sizeY" : 1
-    }, {
-      "col" : 7,
-      "options" : {
-        "chartIndex" : 1502236888973,
-        "id" : 0
-      },
-      "row" : 4,
-      "sizeX" : 5,
+      "sizeX" : 6,
       "sizeY" : 1
     }, {
       "col" : 2,
@@ -2607,6 +2571,24 @@
     }, {
       "col" : 7,
       "options" : {
+        "chartIndex" : 1502236921137,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 5,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1502816619444,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 2,
+      "sizeY" : 3
+    }, {
+      "col" : 7,
+      "options" : {
         "chartIndex" : 1502237033804,
         "id" : 0
       },
@@ -2616,10 +2598,28 @@
     }, {
       "col" : 2,
       "options" : {
-        "chartIndex" : 1502237004390,
+        "chartIndex" : 1502236844514,
         "id" : 0
       },
       "row" : 5,
+      "sizeX" : 5,
+      "sizeY" : 1
+    }, {
+      "col" : 2,
+      "options" : {
+        "chartIndex" : 1502236888973,
+        "id" : 0
+      },
+      "row" : 6,
+      "sizeX" : 5,
+      "sizeY" : 1
+    }, {
+      "col" : 7,
+      "options" : {
+        "chartIndex" : 1502237004390,
+        "id" : 0
+      },
+      "row" : 6,
       "sizeX" : 5,
       "sizeY" : 1
     }, {
@@ -2628,7 +2628,7 @@
         "chartIndex" : 1502817295191,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 7,
       "sizeX" : 2,
       "sizeY" : 2
     }, {
@@ -2637,7 +2637,7 @@
         "chartIndex" : 1502291089367,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 7,
       "sizeX" : 5,
       "sizeY" : 1
     }, {
@@ -2646,7 +2646,7 @@
         "chartIndex" : 1502294384412,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 7,
       "sizeX" : 5,
       "sizeY" : 1
     }, {
@@ -2655,7 +2655,7 @@
         "chartIndex" : 1502292155388,
         "id" : 0
       },
-      "row" : 7,
+      "row" : 8,
       "sizeX" : 5,
       "sizeY" : 1
     }, {
@@ -2664,7 +2664,7 @@
         "chartIndex" : 1502298615582,
         "id" : 0
       },
-      "row" : 7,
+      "row" : 8,
       "sizeX" : 5,
       "sizeY" : 1
     } ]
@@ -2672,7 +2672,7 @@
 }, {
   "marshallId" : 22,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Charts with RPC stats",
+  "sf_chart" : "RPC stats",
   "sf_chartIndex" : 1502815255549,
   "sf_description" : "The charts on the right show information about RPC requests",
   "sf_type" : "Chart",
@@ -2714,8 +2714,8 @@
     },
     "currentUniqueKey" : 2,
     "markdownText" : "These charts: ```Total RPC Requests (successful/failed)```, ```Per Member Failed RPCs``` and ```Top RPC Requests```, together can be used to gain insights regarding the overall ratio of successful and failed RPC requests. Also, it gives an idea of how the followers compare to each other in terms in failed RPC requests per second and which followers contribute more the RPC failures.",
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
   "marshallId" : 23,
@@ -3021,7 +3021,7 @@
 }, {
   "marshallId" : 25,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Stacked charts with ops per second",
+  "sf_chart" : "Ops stats",
   "sf_chartIndex" : 1502816619444,
   "sf_description" : "",
   "sf_type" : "Chart",
@@ -3063,8 +3063,8 @@
     },
     "currentUniqueKey" : 2,
     "markdownText" : "```Creates (successful/failed)```, ```Sets (successful/failed)```, ```Updates (successful/failed)```, ```Deletes (successful/failed)```, ```Compare-and-Swaps (successful/failed)``` and ```Compare-and-Deletes (successful/failed)``` charts visualize the ratio of successful to failed operations for each of the mentioned types. These operations are on the store and hence common to all the members in the cluster.",
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 26,
@@ -3659,7 +3659,7 @@
         "showMe" : false
       } ],
       "invisible" : false,
-      "name" : "Followers with top 5 latency",
+      "name" : "Followers with top 3 latency",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "sf-icon-property",
@@ -3736,6 +3736,9 @@
       }, {
         "enabled" : false,
         "property" : "state"
+      }, {
+        "enabled" : true,
+        "property" : "AWSUniqueId"
       } ],
       "range" : 900000,
       "rangeEnd" : null,
@@ -3756,8 +3759,8 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 22,
-    "uiHelperValue" : "##CHARTID##_22"
+    "revisionNumber" : 23,
+    "uiHelperValue" : "##CHARTID##_23"
   }
 }, {
   "marshallId" : 31,
@@ -4333,7 +4336,7 @@
 }, {
   "marshallId" : 34,
   "marshallMemberOf" : [ 21 ],
-  "sf_chart" : "Packet rate and Append requests",
+  "sf_chart" : "Packet stats",
   "sf_chartIndex" : 1502817295191,
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -4374,8 +4377,8 @@
     },
     "currentUniqueKey" : 2,
     "markdownText" : "```Receive Packet Rate``` and  ```Send Packet Rate```  show the number of packets sent (by the leader) and received (by the followers) per second. In an ideal scenario, the number of packets sent by the leader should be equal to the number of packets received by all the followers put together. The two charts can be compared to analyze if there is discrepancy. \n```Receive Append Requests``` and ```Send Append Requests``` show the number of append requests sent (by the leader) and received (by the followers) per second. In an ideal scenario, the number of append requests sent by the leader should be equal to the number of append requests received by all the followers put together. The two charts can be compared to analyze if there is discrepancy.",
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
   "marshallId" : 35,
