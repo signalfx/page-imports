@@ -982,7 +982,7 @@
   "sf_dashboard" : "Cloud Controller",
   "sf_description" : "Overview of the cloud controller component.",
   "sf_discoveryQuery" : "job:(cloud_controller cloud_controller_worker) AND metric_source:cloudfoundry",
-  "sf_discoverySelectors" : [ "job:(cloud_controller cloud_controller_worker)" ],
+  "sf_discoverySelectors" : [ "job:(cloud_controller cloud_controller_worker)", "_exists_:host" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
