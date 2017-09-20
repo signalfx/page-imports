@@ -3206,6 +3206,7 @@
       "range" : -7200000,
       "rangeEnd" : null,
       "sortPreference" : "-value",
+      "useKMG2" : true,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
