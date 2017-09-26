@@ -1962,7 +1962,7 @@
 }, {
   "marshallId" : 18,
   "marshallMemberOf" : [ 13 ],
-  "sf_chart" : "Disk Read/Write Duration (ns)",
+  "sf_chart" : "Disk Read/Write Duration (ms)",
   "sf_chartIndex" : 1473293357565,
   "sf_jobMaxDelay" : 0,
   "sf_programTextRegex" : "_SF_PLOT_KEY_##CHARTID##_1_6=id(report=1);_SF_PLOT_KEY_##CHARTID##_2_6=id(report=1);find(query='(sf_metric:physicaldisk.avg_disk_sec_read.Duration\\\\-Mean\\\\-us AND (_missing_:sf_programId AND _missing_:computationId)) AND ((NOT instance:_total))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_1_6 -> groupby() -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_1_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6');find(query='(sf_metric:physicaldisk.avg_disk_sec_write.Duration\\\\-Mean\\\\-us AND (_missing_:sf_programId AND _missing_:computationId)) AND ((NOT instance:_total))') -> fetch(extrapolation='NULL_EXTRAPOLATION',maxExtrapolations=-1) -> split -> _SF_PLOT_KEY_##CHARTID##_2_6 -> groupby() -> split -> publish(metric='_SF_PLOT_KEY_##CHARTID##_2_6',sf_uiAnalyticsDerivedMetric=1,sf_uiHelper='##CHARTID##_6')",
@@ -2066,7 +2066,7 @@
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
-        "label" : "avg. nanosec per read - RED",
+        "label" : "avg. millisec per read - RED",
         "max" : null,
         "min" : null,
         "name" : "yAxis0",
@@ -2075,7 +2075,7 @@
           "low" : null
         }
       }, {
-        "label" : "avg. nanosec per write - BLUE",
+        "label" : "avg. millisec per write - BLUE",
         "max" : null,
         "min" : null,
         "plotlines" : {
