@@ -14,6 +14,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "AWS Redshift",
   "sf_description" : "",
+  "sf_discoveryQuery" : "namespace:\"AWS/Redshift\"",
+  "sf_discoverySelectors" : [ "namespace:AWS/Redshift", "sf_key:namespace" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -38,18 +40,18 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 4,
+      "col" : 8,
       "options" : {
-        "chartIndex" : 1505230592168,
+        "chartIndex" : 1505230592169,
         "id" : 0
       },
       "row" : 0,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 8,
+      "col" : 4,
       "options" : {
-        "chartIndex" : 1505230592169,
+        "chartIndex" : 1505230592168,
         "id" : 0
       },
       "row" : 0,
