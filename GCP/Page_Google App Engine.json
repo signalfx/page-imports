@@ -1,0 +1,2364 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "marshallId" : 1,
+  "sf_description" : "",
+  "sf_service" : "GCP App Engine",
+  "sf_type" : "Service",
+  "sf_version" : 0
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "Google App Engine is a fully managed platform that completely abstracts away infrastructure",
+  "sf_page" : "Google App Engine",
+  "sf_type" : "Page",
+  "sf_version" : 1
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "App Engine HTTP",
+  "sf_description" : "An overview of HTTP based metrics from Google App Engine",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
+      "alias" : "version_id",
+      "description" : "",
+      "dimension" : "version_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:", "version_id=version_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507658225265,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 12,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507658226045,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507658227988,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507658227358,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507658228935,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  },
+  "sf_version" : 14
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "HTTP Response Count by Code",
+  "sf_chartIndex" : 1507658227988,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "area"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "project_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "5xx response",
+      "queryItems" : [ {
+        "property" : "response_code",
+        "propertyValue" : "5*",
+        "type" : "property"
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "area"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "project_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "3xx response",
+      "queryItems" : [ {
+        "property" : "response_code",
+        "propertyValue" : "3*",
+        "type" : "property"
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "area"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "project_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "4xx response",
+      "queryItems" : [ {
+        "property" : "response_code",
+        "propertyValue" : "4*",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0dba8f",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "area"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "project_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "2xx response",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "response_code",
+        "propertyValue" : "2*",
+        "query" : "response_code:2*",
+        "type" : "dimension",
+        "value" : "response_code:2*"
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "sf_metric",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : false,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 4
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Cached vs Non-cached Responses",
+  "sf_chartIndex" : 1507658226045,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "non-cached",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "cached",
+        "propertyValue" : "false",
+        "query" : "cached:false",
+        "type" : "dimension",
+        "value" : "false"
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_style_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "cached",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "cached",
+        "propertyValue" : "true",
+        "query" : "cached:false",
+        "type" : "dimension",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "http/server/response_style_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  },
+  "sf_version" : 2
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "HTTP Response Latency (ms)",
+  "sf_chartIndex" : 1507658225265,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "latency",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "http/server/response_latencies",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Server DoS Interceptions",
+  "sf_chartIndex" : 1507658227358,
+  "sf_description" : "Delta count of interceptions performed to prevent DoS attacks",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "interceptions",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "http/server/dos_intercept_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : false,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 4
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "HTTP Denied From Over Quota",
+  "sf_chartIndex" : 1507658228935,
+  "sf_description" : "Delta count of requests that failed due to the app being over quota.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "denied",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "http/server/quota_denial_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "App Engine Memcache",
+  "sf_description" : "App Engine includes a memory cache service for an in-memory data cache.",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
+      "alias" : "version_id",
+      "description" : "",
+      "dimension" : "version_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:", "version_id=version_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507667534332,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 12,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507667535707,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507667536235,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507667536775,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  },
+  "sf_version" : 12
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Memcache Operations by Command",
+  "sf_chartIndex" : 1507667534332,
+  "sf_description" : "Count of memcache key operations, grouped by command",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "command"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "ops",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "memcache/operation_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "command",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Memcache Received Bytes",
+  "sf_chartIndex" : 1507667535707,
+  "sf_description" : "Number of bytes received by app from the memcache API, grouped by version",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "bytes received",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "memcache/received_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 4
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Memcache Sent Bytes",
+  "sf_chartIndex" : 1507667536235,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "sent bytes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "memcache/sent_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Memcache MCU Count",
+  "sf_chartIndex" : 1507667536775,
+  "sf_description" : "Memcache utilization in one hundredth of Memcache Compute Unit grouped by command.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "command"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "mcu count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "memcache/centi_mcu_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "command",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  },
+  "sf_version" : 1
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "App Engine System",
+  "sf_description" : "An overview of GCP App Engine system metrics",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
+      "alias" : "version_id",
+      "description" : "",
+      "dimension" : "version_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:", "version_id=version_id:" ]
+  },
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507649024702,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1507649026348,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1507649029471,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507649031071,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507664271192,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  },
+  "sf_version" : 25
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "System Memory Usage",
+  "sf_chartIndex" : 1507649029471,
+  "sf_description" : "memory used by running instances.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "memory usage",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "system/memory/usage",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+}, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Instance Count by State",
+  "sf_chartIndex" : 1507649024702,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "state"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "system/instance_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "state",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 4
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "System CPU Usage",
+  "sf_chartIndex" : 1507649026348,
+  "sf_description" : "CPU usage in megacycles",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "cpu usage",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "system/cpu/usage",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "System Network Bytes In",
+  "sf_chartIndex" : 1507649031071,
+  "sf_description" : "Delta count of incoming network bandwidth",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "bytes in",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "system/network/received_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "System Network Bytes Out",
+  "sf_chartIndex" : 1507664271192,
+  "sf_description" : "Delta count of outgoing network bandwidth",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "bytes out",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "system/network/sent_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "App Engine Flex",
+  "sf_description" : "App Engine flexible environment automatically scales your app up and down while balancing the load.",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
+      "alias" : "version_id",
+      "description" : "",
+      "dimension" : "version_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:", "version_id=version_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507666518104,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507666518845,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507666521832,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507666522420,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507666522955,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507666523454,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  },
+  "sf_version" : 8
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "Network Bytes Received",
+  "sf_chartIndex" : 1507666522955,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "bytes received",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/network/received_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  },
+  "sf_version" : 2
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "Network Bytes Sent",
+  "sf_chartIndex" : 1507666523454,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "bytes sent",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/network/sent_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "Flex Disk Byes Read",
+  "sf_chartIndex" : 1507666521832,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "bytes read",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/disk/read_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 3
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "Reserved CPU Cores",
+  "sf_chartIndex" : 1507666518104,
+  "sf_description" : "Total number of CPU cores allocated to an App Engine flexible environment version",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "reserved cores",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/cpu/reserved_cores",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "cores",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  },
+  "sf_version" : 2
+}, {
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "Flex Disk Bytes Written",
+  "sf_chartIndex" : 1507666522420,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "written bytes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/disk/write_bytes_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  },
+  "sf_version" : 2
+}, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 20 ],
+  "sf_chart" : "CPU Utilization",
+  "sf_chartIndex" : 1507666518845,
+  "sf_description" : "Some machine types allow bursting above 1.0",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "version_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "scaleAmount" : 100
+          },
+          "type" : "SCALE"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "cpu %",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "flex/cpu/utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "version_id",
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : false,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "cpu %",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+} ]

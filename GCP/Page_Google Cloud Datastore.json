@@ -1,0 +1,464 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "marshallId" : 1,
+  "sf_description" : "",
+  "sf_service" : "GCP Cloud Datastore",
+  "sf_type" : "Service",
+  "sf_version" : 0
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "Google Cloud Datastore is a NoSQL document database built for automatic scaling, high performance, and ease of application development.",
+  "sf_page" : "Google Cloud Datastore",
+  "sf_type" : "Page",
+  "sf_version" : 1
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Datastore Overview",
+  "sf_description" : "A project level overview of Google Cloud Datastore metrics",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:datastore", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:" ]
+  },
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507581986005,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507581987296,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507581989854,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507581988611,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  },
+  "sf_version" : 14
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "# Requests per API Method Call",
+  "sf_chartIndex" : 1507581986005,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "api_method"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "requests",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "monitored_resource",
+        "propertyValue" : "datastore_request",
+        "query" : "monitored_resource:datastore_request",
+        "type" : "dimension",
+        "value" : "datastore_request"
+      } ],
+      "seriesData" : {
+        "metric" : "api/request_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "api_method",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Read Sizes by Type of Read",
+  "sf_chartIndex" : 1507581987296,
+  "sf_description" : "Average sizes of read entities, by type",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "type"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "read size",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "entity/read_sizes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "type",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 5
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Write Sizes by Operation Type",
+  "sf_chartIndex" : 1507581988611,
+  "sf_description" : "Average sizes of written entities, grouped by op.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "op"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "write size",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "entity/write_sizes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : null,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "valid" : false,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "dimensionInLegend" : "op",
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  },
+  "sf_version" : 4
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Number of Writes",
+  "sf_chartIndex" : 1507581989854,
+  "sf_description" : "Count of Datastore index writes.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "writes",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "monitored_resource",
+        "propertyValue" : "datastore_request",
+        "query" : "monitored_resource:datastore_request",
+        "type" : "dimension",
+        "value" : "datastore_request"
+      } ],
+      "seriesData" : {
+        "metric" : "index/write_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "showDots" : false,
+      "showLegend" : false,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  },
+  "sf_version" : 3
+} ]

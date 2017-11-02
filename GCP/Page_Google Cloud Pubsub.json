@@ -1,0 +1,1901 @@
+[ {
+  "marshallScope" : 2
+}, {
+  "marshallId" : 1,
+  "sf_description" : "",
+  "sf_service" : "GCP Cloud Pub/Sub",
+  "sf_type" : "Service"
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_description" : "Google Cloud Pub/Sub is a fully-managed real-time messaging service that allows you to send and receive messages between independent applications.",
+  "sf_page" : "Google Cloud PubSub",
+  "sf_type" : "Page"
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Pub/Sub Subscription",
+  "sf_description" : "Subscription metrics from Google Cloud Pub/Sub",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "subscription_id",
+      "description" : "",
+      "dimension" : "subscription_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "subscription_id=subscription_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507840417974,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507840420512,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507840423557,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507840421856,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507840424623,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Outstanding Messages",
+  "sf_chartIndex" : 1507840421856,
+  "sf_description" : "Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "num messages",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/num_outstanding_messages",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Backlog Size",
+  "sf_chartIndex" : 1507840417974,
+  "sf_description" : "Total byte size of the unacknowledged messages in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "size",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/backlog_bytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Cost per Operation",
+  "sf_chartIndex" : 1507840420512,
+  "sf_description" : "Cumulative cost of operations per subscription, measured in bytes. This is used to measure utilization for quotas.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "byte cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/byte_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : true,
+        "property" : "operation_type"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "response_code"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Oldest Unacknowledged Message (s)",
+  "sf_chartIndex" : 1507840424623,
+  "sf_description" : "Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message) in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "oldest msg (s)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/oldest_unacked_message_age",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : true,
+        "property" : "subscription_id"
+      } ],
+      "maxDecimalPlaces" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Undelivered Messages",
+  "sf_chartIndex" : 1507840423557,
+  "sf_description" : "Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "num messages",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/num_undelivered_messages",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : null,
+      "range" : -3600001,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Pub/Sub Topic",
+  "sf_description" : "Topic metrics from Google Cloud Pub/Sub.",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "topic_id",
+      "description" : "",
+      "dimension" : "topic_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "topic_id=topic_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507837239906,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507837240901,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507837242984,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1507837242242,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Bytes per Operation",
+  "sf_chartIndex" : 1507837242984,
+  "sf_description" : "Cost of operations per topic, measured in bytes. This is used to measure utilization for quotas.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "byte cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "topic/byte_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : true,
+        "property" : "operation_type"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "response_code"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : true,
+        "property" : "topic_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Average Message Size",
+  "sf_chartIndex" : 1507837242242,
+  "sf_description" : "average of publish message sizes (in bytes).",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "topic_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "msg sizes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "topic/message_sizes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : true,
+        "property" : "topic_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Send Message Ops",
+  "sf_chartIndex" : 1507837240901,
+  "sf_description" : "Cumulative count of publish message operations",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "msg op count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "topic/send_message_operation_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "response_code"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : true,
+        "property" : "topic_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 9 ],
+  "sf_chart" : "Send Requests",
+  "sf_chartIndex" : 1507837239906,
+  "sf_description" : "Cumulative count of publish requests",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "# requests",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "topic/send_request_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "gcp_id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "monitored_resource"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "response_class"
+      }, {
+        "enabled" : false,
+        "property" : "response_code"
+      }, {
+        "enabled" : false,
+        "property" : "service"
+      }, {
+        "enabled" : true,
+        "property" : "topic_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "Pub/Sub Overview",
+  "sf_description" : "Google Cloud Pub/Sub is a messaging service for exchanging event data among applications and services.",
+  "sf_discoveryQuery" : "_exists_:gcp_id",
+  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "project_id",
+      "description" : "",
+      "dimension" : "project_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "project_id=project_id:" ]
+  },
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507318351586,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1507318350736,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1507318353208,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1507318358154,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507318353903,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1507318352583,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1507836180157,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507318356322,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1507836182270,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1507836181327,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Push Request Latencies (us)",
+  "sf_chartIndex" : 1507836181327,
+  "sf_description" : "push request latencies (in microseconds)",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "AVERAGE_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "request latency",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/push_request_latencies",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Backlog Size",
+  "sf_chartIndex" : 1507318353903,
+  "sf_description" : "Total byte size of the unacknowledged messages (a.k.a. backlog messages) in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/backlog_bytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "updateInterval" : 60000,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Subscription Pull Requests",
+  "sf_chartIndex" : 1507836180157,
+  "sf_description" : "Cumulative count of pull requests",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/pull_request_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Push Request Count",
+  "sf_chartIndex" : 1507836182270,
+  "sf_description" : "Cumulative count of push attempts",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "request count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/push_request_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Unacknowledged Messages Count",
+  "sf_chartIndex" : 1507318351586,
+  "sf_description" : "Number of unacknowledged messages (a.k.a. backlog messages) in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/num_undelivered_messages",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "markdownText" : "",
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Subscription Pull Ack. Requests",
+  "sf_chartIndex" : 1507318358154,
+  "sf_description" : "Cumulative count of acknowledge requests",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/pull_ack_request_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Oustanding Messages Count",
+  "sf_chartIndex" : 1507318350736,
+  "sf_description" : "Number of messages delivered to a subscription's push endpoint, but not yet acknowledged.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "outstanding messages",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/num_outstanding_messages",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "forcedResolution" : 60000,
+      "hideTimestamp" : false,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Subscription Pull Message Ops",
+  "sf_chartIndex" : 1507318356322,
+  "sf_description" : "Cumulative count of pull message operations",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/pull_message_operation_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Subscription Pull Ack. Message Ops",
+  "sf_chartIndex" : 1507318352583,
+  "sf_description" : "Cumulative count of acknowledge message operations",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/pull_ack_message_operation_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Oldest Unacknowledged Message (s)",
+  "sf_chartIndex" : 1507318353208,
+  "sf_description" : "Age (in seconds) of the oldest unacknowledged message (a.k.a. backlog message) in a subscription.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "subscription_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "subscription/oldest_unacked_message_age",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+} ]
