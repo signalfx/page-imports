@@ -21,12 +21,12 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "Cluster",
-      "description" : null,
+      "description" : "null",
       "dimension" : "Cluster",
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : false,
+      "required" : true,
       "restricted" : false,
       "value" : ""
     } ]
@@ -2549,7 +2549,7 @@
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : false,
+      "required" : true,
       "restricted" : false,
       "value" : ""
     }, {
@@ -2559,7 +2559,7 @@
       "globalScope" : false,
       "preferredSuggestions" : [ ],
       "replaceOnly" : false,
-      "required" : false,
+      "required" : true,
       "restricted" : false,
       "value" : ""
     } ]
