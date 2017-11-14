@@ -3341,15 +3341,7 @@
         "query" : "namespace:\"AWS/ECS\"",
         "property" : "namespace",
         "type" : "property"
-      }, {
-        "iconClass" : "icon-properties",
-        "value" : "ClusterName:*",
-        "propertyValue" : "*",
-        "NOT" : false,
-        "query" : "ClusterName:*",
-        "property" : "ClusterName",
-        "type" : "property"
-      }, {
+      },{
         "iconClass" : "icon-properties",
         "value" : "mean",
         "propertyValue" : "mean",
@@ -3357,15 +3349,7 @@
         "query" : "stat:mean",
         "property" : "stat",
         "type" : "property"
-      }, {
-        "iconClass" : "icon-properties",
-        "value" : "*",
-        "propertyValue" : "*",
-        "key" : "!ServiceName",
-        "query" : "!ServiceName:*",
-        "property" : "!ServiceName",
-        "type" : "property"
-      } ],
+      }],
       "uniqueKey" : 1,
       "name" : "",
       "seriesData" : {
