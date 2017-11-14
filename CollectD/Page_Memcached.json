@@ -1309,7 +1309,7 @@
 }, {
   "marshallId" : 13,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Network bits/sec",
+  "sf_chart" : "Network Bits/sec",
   "sf_chartIndex" : 1440941057408,
   "sf_jobMaxDelay" : 0,
   "sf_jobResolution" : 1000,
@@ -1397,7 +1397,9 @@
           "type" : "aggregation"
         },
         "fn" : {
-          "options" : { },
+          "options" : {
+            "scaleAmount" : 8
+          },
           "type" : "SCALE"
         },
         "showMe" : false
