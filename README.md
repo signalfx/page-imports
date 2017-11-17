@@ -5,4 +5,4 @@ considered for automatic import via SignalFx's Service Discovery
 feature.
 
 For more information on how to use dashboards, see
-https://signalfx.zendesk.com/hc/en-us/articles/200753059
+https://docs.signalfx.com/en/latest/dashboards/dashboard-basics.html
