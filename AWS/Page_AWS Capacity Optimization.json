@@ -33,7 +33,7 @@
   },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
-    "density" : 0.0,
+    "density" : 4.0,
     "sources" : null,
     "time" : {
       "end" : "Now",
@@ -42,10 +42,20 @@
     },
     "variables" : [ "AWS Account ID=aws_account_id:" ]
   },
+  "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,
     "widgets" : [ {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1510282012032,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1468018693067,
@@ -57,15 +67,6 @@
     }, {
       "col" : 4,
       "options" : {
-        "chartIndex" : 1479456721779,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
         "chartIndex" : 1510282012025,
         "id" : 0
       },
@@ -75,91 +76,64 @@
     }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1510290356945,
+        "chartIndex" : 1479456721779,
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 12,
       "sizeY" : 1
     }, {
       "col" : 4,
-      "options" : {
-        "chartIndex" : 1510290464399,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
       "options" : {
         "chartIndex" : 1510290986202,
         "id" : 0
       },
-      "row" : 1,
+      "row" : 2,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 0,
+      "col" : 8,
       "options" : {
-        "chartIndex" : 1510282012032,
+        "chartIndex" : 1510799579415,
         "id" : 0
       },
       "row" : 2,
-      "sizeX" : 12,
+      "sizeX" : 4,
       "sizeY" : 1
     }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1510291789013,
+        "chartIndex" : 1510290356945,
         "id" : 0
       },
-      "row" : 3,
+      "row" : 2,
       "sizeX" : 4,
-      "sizeY" : 3
+      "sizeY" : 1
     }, {
-      "col" : 4,
+      "col" : 0,
       "options" : {
-        "chartIndex" : 1510291881638,
+        "chartIndex" : 1510290464399,
         "id" : 0
       },
       "row" : 3,
-      "sizeX" : 4,
-      "sizeY" : 3
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1510170647361,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 4,
+      "sizeX" : 12,
       "sizeY" : 1
     }, {
       "col" : 8,
       "options" : {
-        "chartIndex" : 1496247941583,
+        "chartIndex" : 1479492853549,
         "id" : 0
       },
       "row" : 4,
       "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1496247914335,
-        "id" : 0
-      },
-      "row" : 5,
-      "sizeX" : 4,
-      "sizeY" : 1
+      "sizeY" : 3
     }, {
       "col" : 4,
       "options" : {
         "chartIndex" : 1510290356959,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 4,
       "sizeX" : 4,
       "sizeY" : 3
     }, {
@@ -168,39 +142,102 @@
         "chartIndex" : 1510596508138,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 4,
       "sizeX" : 4,
       "sizeY" : 3
     }, {
-      "col" : 8,
+      "col" : 0,
       "options" : {
-        "chartIndex" : 1479492853549,
+        "chartIndex" : 1496247941583,
         "id" : 0
       },
-      "row" : 6,
+      "row" : 7,
       "sizeX" : 4,
-      "sizeY" : 3
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1510170647361,
+        "id" : 0
+      },
+      "row" : 7,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1496247914335,
+        "id" : 0
+      },
+      "row" : 7,
+      "sizeX" : 4,
+      "sizeY" : 1
     } ]
   }
 }, {
   "marshallId" : 4,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Used Reservations in units of \"small\" (by InstanceFamily)",
-  "sf_chartIndex" : 1510291881638,
-  "sf_description" : "This list shows the number of \"small\" instances that are reserved for each instance family.",
+  "sf_chart" : "Cost by Usage Type",
+  "sf_chartIndex" : 1510799579415,
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null,
+        "visualization" : null
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "scope"
+            }, {
               "value" : "aws_instance_family"
             } ],
             "collapseGroups" : false,
@@ -213,7 +250,215 @@
           "type" : "SUM"
         },
         "showMe" : false
-      }, {
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "scope"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_region",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 9,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "scope"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 10,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 2,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "scope"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ ],
@@ -223,35 +468,91 @@
           "type" : "aggregation"
         },
         "fn" : {
-          "options" : {
-            "action" : "drop",
-            "inclusive" : true,
-            "low" : 0,
-            "mode" : "below"
-          },
-          "type" : "EXCLUDE"
+          "options" : { },
+          "type" : "SUM"
         },
         "showMe" : false
       } ],
-      "focusNext" : false,
+      "expressionText" : "A*I*60*24*30",
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : ""
-      } ],
+      "name" : "On-demand Instance Cost",
+      "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "reserved_instance.normalized_count",
-        "regExStyle" : null
+        "metric" : null
       },
       "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 4,
+      "type" : "ratio",
+      "uniqueKey" : 12,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "B*J*60*24*30",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 13,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "H*K*60*24*30",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 14,
+      "valid" : true,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -260,7 +561,6 @@
         "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
-      "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
@@ -268,51 +568,28 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 5,
+      "uniqueKey" : 16,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "list",
-    "chartType" : "line",
+    "chartMode" : "graph",
+    "chartType" : "area",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValueScale" : [ ],
-      "groupBy" : [ ],
-      "heatmapAutoGradients" : 5,
-      "heatmapColorOverride" : "#05ce00",
-      "heatmapColorRange" : { },
-      "heatmapSortBy" : {
-        "asc" : true,
-        "value" : { }
-      },
-      "heatmapUnitsPerRow" : 0,
-      "heatmapUseValueAsColor" : false,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
       "hideDimensionsInList" : false,
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "aws_instance_type"
-      }, {
-        "enabled" : false,
-        "property" : "aws_region"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "aws_availability_zone"
-      }, {
-        "enabled" : true,
-        "property" : "aws_instance_family"
-      } ],
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
       "range" : -604800000,
       "rangeEnd" : 0,
+      "showDots" : false,
+      "showLegend" : false,
       "sortPreference" : "-value",
+      "stackedChart" : true,
       "updateInterval" : null,
+      "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -322,12 +599,22 @@
           "high" : null,
           "low" : null
         }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
       } ]
     },
-    "currentUniqueKey" : 6,
+    "currentUniqueKey" : 17,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 34,
-    "uiHelperValue" : "##CHARTID##_34"
+    "revisionNumber" : 37,
+    "uiHelperValue" : "##CHARTID##_37"
   }
 }, {
   "marshallId" : 5,
@@ -530,7 +817,7 @@
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
         "maxExtrapolations" : 10,
-        "rollupPolicy" : "SUM_ROLLUP"
+        "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -551,15 +838,15 @@
       }, {
         "direction" : {
           "options" : {
-            "amount" : 7,
-            "transformTimeRange" : "7d",
-            "unit" : "d"
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
           },
-          "type" : "transformation"
+          "type" : "aggregation"
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "DELTA"
         },
         "showMe" : false
       }, {
@@ -580,6 +867,20 @@
             "mode" : "below"
           },
           "type" : "EXCLUDE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 7,
+            "transformTimeRange" : "7d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
         },
         "showMe" : false
       } ],
@@ -663,8 +964,8 @@
       } ]
     },
     "currentUniqueKey" : 6,
-    "revisionNumber" : 13,
-    "uiHelperValue" : "##CHARTID##_13"
+    "revisionNumber" : 14,
+    "uiHelperValue" : "##CHARTID##_14"
   }
 }, {
   "marshallId" : 7,
@@ -1276,7 +1577,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
+        "maxExtrapolations" : 2,
         "rollupPolicy" : null,
         "visualization" : null
       },
@@ -1322,7 +1623,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
+        "maxExtrapolations" : 2,
         "rollupPolicy" : null
       },
       "dataManipulations" : [ {
@@ -1433,7 +1734,7 @@
       "range" : -604800000,
       "rangeEnd" : 0,
       "sortPreference" : "-value",
-      "stackedChart" : true,
+      "stackedChart" : false,
       "updateInterval" : null,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
@@ -1449,8 +1750,8 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 37,
-    "uiHelperValue" : "##CHARTID##_37"
+    "revisionNumber" : 39,
+    "uiHelperValue" : "##CHARTID##_39"
   }
 }, {
   "marshallId" : 11,
@@ -1566,8 +1867,8 @@
       "configuration" : {
         "aliases" : { },
         "colorOverride" : "#e5b312",
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
       "dataManipulations" : [ {
@@ -1627,7 +1928,7 @@
       "range" : -604800000,
       "rangeEnd" : 0,
       "sortPreference" : "",
-      "stackedChart" : true,
+      "stackedChart" : false,
       "updateInterval" : "3600000",
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
@@ -1643,15 +1944,15 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 29,
-    "uiHelperValue" : "##CHARTID##_29"
+    "revisionNumber" : 31,
+    "uiHelperValue" : "##CHARTID##_31"
   }
 }, {
   "marshallId" : 13,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Used Reservations (by InstanceType)",
-  "sf_chartIndex" : 1510291789013,
-  "sf_description" : "This list shows the number of \".small\" instances that are reserved for each instance family.",
+  "sf_chart" : "Instances stopped in last 1 week",
+  "sf_chartIndex" : 1510170647361,
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -1659,7 +1960,7 @@
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
         "maxExtrapolations" : 10,
-        "rollupPolicy" : null
+        "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -1687,6 +1988,20 @@
           "type" : "aggregation"
         },
         "fn" : {
+          "options" : { },
+          "type" : "DELTA"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
           "options" : {
             "action" : "drop",
             "inclusive" : true,
@@ -1694,134 +2009,6 @@
             "mode" : "below"
           },
           "type" : "EXCLUDE"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : ""
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 5,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValueScale" : [ ],
-      "groupBy" : [ ],
-      "heatmapAutoGradients" : 5,
-      "heatmapColorOverride" : "#05ce00",
-      "heatmapColorRange" : { },
-      "heatmapSortBy" : {
-        "asc" : true,
-        "value" : { }
-      },
-      "heatmapUnitsPerRow" : 0,
-      "heatmapUseValueAsColor" : false,
-      "hideDimensionsInList" : false,
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : true,
-        "property" : "aws_instance_type"
-      }, {
-        "enabled" : true,
-        "property" : "aws_region"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "aws_availability_zone"
-      }, {
-        "enabled" : false,
-        "property" : "aws_instance_family"
-      } ],
-      "range" : -604800000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "updateInterval" : null,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 6,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 33,
-    "uiHelperValue" : "##CHARTID##_33"
-  }
-}, {
-  "marshallId" : 14,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Instances stopped in last 1 week",
-  "sf_chartIndex" : 1510170647361,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : "SUM_ROLLUP"
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
         },
         "showMe" : false
       }, {
@@ -1836,25 +2023,6 @@
         "fn" : {
           "options" : { },
           "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "action" : "drop",
-            "inclusive" : true,
-            "low" : 0,
-            "mode" : "below"
-          },
-          "type" : "EXCLUDE"
         },
         "showMe" : false
       } ],
@@ -1939,11 +2107,11 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 13,
-    "uiHelperValue" : "##CHARTID##_13"
+    "revisionNumber" : 14,
+    "uiHelperValue" : "##CHARTID##_14"
   }
 }, {
-  "marshallId" : 15,
+  "marshallId" : 14,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Cost by InstanceType ($)",
   "sf_chartIndex" : 1510596508138,
@@ -2178,7 +2346,7 @@
     "uiHelperValue" : "##CHARTID##_39"
   }
 }, {
-  "marshallId" : 16,
+  "marshallId" : 15,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Cost by Usage Type",
   "sf_chartIndex" : 1510290986202,
@@ -2618,7 +2786,7 @@
     "uiHelperValue" : "##CHARTID##_34"
   }
 }, {
-  "marshallId" : 17,
+  "marshallId" : 16,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instances started in last 1 week",
   "sf_chartIndex" : 1496247941583,
@@ -2630,7 +2798,7 @@
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
         "maxExtrapolations" : 10,
-        "rollupPolicy" : "SUM_ROLLUP"
+        "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -2651,15 +2819,15 @@
       }, {
         "direction" : {
           "options" : {
-            "amount" : 7,
-            "transformTimeRange" : "7d",
-            "unit" : "d"
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
           },
-          "type" : "transformation"
+          "type" : "aggregation"
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "DELTA"
         },
         "showMe" : false
       }, {
@@ -2680,6 +2848,20 @@
             "mode" : "below"
           },
           "type" : "EXCLUDE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 7,
+            "transformTimeRange" : "7d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
         },
         "showMe" : false
       } ],
@@ -2763,11 +2945,11 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 12,
-    "uiHelperValue" : "##CHARTID##_12"
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
-  "marshallId" : 18,
+  "marshallId" : 17,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instance Count by Usage Type (Trend)",
   "sf_chartIndex" : 1510282012032,
@@ -2948,7 +3130,7 @@
       "yAxisIndex" : 0
     } ],
     "chartMode" : "graph",
-    "chartType" : "line",
+    "chartType" : "area",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
@@ -2960,9 +3142,9 @@
       "maxDecimalPlaces" : 3,
       "range" : -604800000,
       "rangeEnd" : 0,
-      "showDots" : true,
+      "showDots" : false,
       "sortPreference" : "-value",
-      "stackedChart" : false,
+      "stackedChart" : true,
       "updateInterval" : null,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
@@ -2988,11 +3170,11 @@
     },
     "currentUniqueKey" : 11,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 30,
-    "uiHelperValue" : "##CHARTID##_30"
+    "revisionNumber" : 31,
+    "uiHelperValue" : "##CHARTID##_31"
   }
 }, {
-  "marshallId" : 19,
+  "marshallId" : 18,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "3. EC2 Cost & Usage Patterns",
   "sf_description" : "",
@@ -3009,6 +3191,16 @@
       "required" : false,
       "restricted" : false,
       "value" : ""
+    }, {
+      "alias" : "aws_instance_type",
+      "description" : "",
+      "dimension" : "aws_instance_type",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
     } ]
   },
   "sf_isLocked" : false,
@@ -3016,37 +3208,55 @@
     "density" : 0.0,
     "sources" : null,
     "time" : null,
-    "variables" : [ "AWS Account ID=aws_account_id:" ]
+    "variables" : [ "AWS Account ID=aws_account_id:", "aws_instance_type=aws_instance_type:" ]
   },
   "sf_selectedEventOverlays" : [ ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,
     "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1511318980221,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 12,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1511319366617,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 12,
+      "sizeY" : 1
+    }, {
       "col" : 6,
       "options" : {
         "chartIndex" : 1510287381553,
         "id" : 0
       },
-      "row" : 0,
+      "row" : 2,
       "sizeX" : 6,
-      "sizeY" : 2
+      "sizeY" : 1
     }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1510286223415,
         "id" : 0
       },
-      "row" : 0,
+      "row" : 2,
       "sizeX" : 6,
-      "sizeY" : 2
+      "sizeY" : 1
     }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1510288990910,
         "id" : 0
       },
-      "row" : 2,
+      "row" : 3,
       "sizeX" : 6,
       "sizeY" : 1
     }, {
@@ -3055,7 +3265,7 @@
         "chartIndex" : 1510289083224,
         "id" : 0
       },
-      "row" : 2,
+      "row" : 3,
       "sizeX" : 6,
       "sizeY" : 1
     }, {
@@ -3064,14 +3274,14 @@
         "chartIndex" : 1510597029916,
         "id" : 0
       },
-      "row" : 3,
+      "row" : 4,
       "sizeX" : 12,
       "sizeY" : 1
     } ]
   }
 }, {
-  "marshallId" : 20,
-  "marshallMemberOf" : [ 19 ],
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 18 ],
   "sf_chart" : "Instances Started/Stopped/Terminated in last 1 week",
   "sf_chartIndex" : 1510597029916,
   "sf_description" : "",
@@ -3332,8 +3542,241 @@
     "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 18 ],
+  "sf_chart" : "Instance Count by UsageType/InstanceType",
+  "sf_chartIndex" : 1511318980221,
+  "sf_description" : "Filtering by InstanceType provides the breakup of On-demand/Reserved-Used/Reserved-UnUsed",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Total Running Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 9,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 10,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideDimensionsInList" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "showDots" : false,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 11,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
+  }
+}, {
   "marshallId" : 21,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 18 ],
   "sf_chart" : "Count of On-demand instances (by Instance Type)",
   "sf_chartIndex" : 1510288990910,
   "sf_description" : "",
@@ -3474,7 +3917,7 @@
   }
 }, {
   "marshallId" : 22,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 18 ],
   "sf_chart" : "Monthly Cost per Instance (by Instance Type)",
   "sf_chartIndex" : 1510286223415,
   "sf_description" : "Sub-grouped by AZ",
@@ -3592,7 +4035,7 @@
       "heatmapUnitsPerRow" : 0,
       "heatmapUseValueAsColor" : false,
       "hideTimestamp" : true,
-      "maxDelay" : 120000,
+      "maxDelay" : null,
       "range" : -604800000,
       "rangeEnd" : 0,
       "sortPreference" : "",
@@ -3609,12 +4052,12 @@
     },
     "currentUniqueKey" : 5,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
   "marshallId" : 23,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 18 ],
   "sf_chart" : "Instance Count (by Instance Type)",
   "sf_chartIndex" : 1510287381553,
   "sf_description" : "Sub-grouped by AZ",
@@ -3754,7 +4197,508 @@
   }
 }, {
   "marshallId" : 24,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 18 ],
+  "sf_chart" : "Monthly Cost by UsageType/InstanceType ($)",
+  "sf_chartIndex" : 1511319366617,
+  "sf_description" : "Filtering by InstanceType provides the breakup of On-demand/Reserved-Used/Reserved-UnUsed",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Total Running Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 9,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 10,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 12,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 13,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A*J*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 14,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "B*K*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 15,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "H*L*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 16,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "I*M*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "# Total Running Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 17,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 18,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideDimensionsInList" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "showDots" : false,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 19,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 34,
+    "uiHelperValue" : "##CHARTID##_34"
+  }
+}, {
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 18 ],
   "sf_chart" : "Count of Instances with RIs Applied (by Instance Type)",
   "sf_chartIndex" : 1510289083224,
   "sf_description" : "",
@@ -3899,7 +4843,7 @@
     "uiHelperValue" : "##CHARTID##_18"
   }
 }, {
-  "marshallId" : 25,
+  "marshallId" : 26,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "1. EC2 Cost Optimization",
   "sf_description" : "Default dashboard.",
@@ -3952,15 +4896,6 @@
       "sizeX" : 4,
       "sizeY" : 2
     }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1496246735283,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1510278679115,
@@ -3973,6 +4908,15 @@
       "col" : 4,
       "options" : {
         "chartIndex" : 1496247074261,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1496246735283,
         "id" : 0
       },
       "row" : 2,
@@ -4089,11 +5033,11 @@
     } ]
   }
 }, {
-  "marshallId" : 26,
-  "marshallMemberOf" : [ 25 ],
-  "sf_chart" : "On-demand Instances (min value over 30 days)",
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 26 ],
+  "sf_chart" : "On-demand Instances by InstanceFamily (units of \"small\")",
   "sf_chartIndex" : 1510278679115,
-  "sf_description" : "Potential saving opportunity (by purchasing RI's for On-demand use)",
+  "sf_description" : "On-demand Instances normalized by Instance family for flexible RI conversion. Reports by InstanceFamily for flexibility - https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -4106,22 +5050,8 @@
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "amount" : 30,
-            "transformTimeRange" : "30d",
-            "unit" : "d"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MIN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
+              "value" : "aws_instance_family"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4139,7 +5069,7 @@
       "name" : "aws_usage.ec2.instances.unreserved.count - Sum by aws_instance_type,aws_availability_zone",
       "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "on_demand_instance.count",
+        "metric" : "on_demand_instance.normalized_count",
         "regExStyle" : null
       },
       "transient" : false,
@@ -4171,7 +5101,7 @@
       "colorByMetric" : false,
       "hideDimensionsInList" : false,
       "legendColumnConfiguration" : [ {
-        "enabled" : true,
+        "enabled" : false,
         "property" : "aws_instance_type"
       }, {
         "enabled" : false,
@@ -4180,7 +5110,7 @@
         "enabled" : false,
         "property" : "sf_metric"
       }, {
-        "enabled" : true,
+        "enabled" : false,
         "property" : "aws_availability_zone"
       }, {
         "enabled" : false,
@@ -4195,7 +5125,7 @@
         "enabled" : false,
         "property" : "cloud_provider"
       }, {
-        "enabled" : false,
+        "enabled" : true,
         "property" : "aws_instance_family"
       }, {
         "enabled" : false,
@@ -4225,15 +5155,15 @@
     },
     "currentUniqueKey" : 9,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 42,
-    "uiHelperValue" : "##CHARTID##_42"
+    "revisionNumber" : 46,
+    "uiHelperValue" : "##CHARTID##_46"
   }
 }, {
-  "marshallId" : 27,
-  "marshallMemberOf" : [ 25 ],
-  "sf_chart" : "Unused Regional Reservations",
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 26 ],
+  "sf_chart" : "Unused Regional Reservations by InstanceFamily",
   "sf_chartIndex" : 1507248875862,
-  "sf_description" : "Chart may be blank if there are no unused reservations of scope Region",
+  "sf_description" : "Chart may be blank if there are no unused reservations of scope Region. Reports Unused Reservations based on Instance size flexibility https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -4302,7 +5232,7 @@
         "value" : "unused"
       } ],
       "seriesData" : {
-        "metric" : "reserved_instance.count",
+        "metric" : "reserved_instance.normalized_count",
         "regExStyle" : null
       },
       "transient" : false,
@@ -4346,7 +5276,7 @@
       }, {
         "color" : "#05ce00"
       } ],
-      "groupBy" : [ ],
+      "groupBy" : [ "aws_instance_family" ],
       "heatmapAutoGradients" : 5,
       "heatmapColorOverride" : "#05ce00",
       "heatmapColorRange" : { },
@@ -4394,12 +5324,12 @@
     },
     "currentUniqueKey" : 6,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 33,
-    "uiHelperValue" : "##CHARTID##_33"
+    "revisionNumber" : 34,
+    "uiHelperValue" : "##CHARTID##_34"
   }
 }, {
-  "marshallId" : 28,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "",
   "sf_chartIndex" : 1510279733503,
   "sf_description" : "",
@@ -4448,8 +5378,8 @@
     "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
-  "marshallId" : 29,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Number of Under-utilized Instances",
   "sf_chartIndex" : 1510284112625,
   "sf_description" : "Instances with 30 day mean cpu, memory, and disk utilization < 50%",
@@ -4751,8 +5681,8 @@
     "uiHelperValue" : "##CHARTID##_19"
   }
 }, {
-  "marshallId" : 30,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Percentage of Under-utilized Instances",
   "sf_chartIndex" : 1510355307049,
   "sf_description" : "Instances with 30 day mean cpu, memory, and disk utilization < 50%",
@@ -5108,8 +6038,8 @@
     "uiHelperValue" : "##CHARTID##_20"
   }
 }, {
-  "marshallId" : 31,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Amount Lost Per Month to Unused RIs ($)",
   "sf_chartIndex" : 1496248648487,
   "sf_description" : "Calculatation based on minimum unused RIs over the last month",
@@ -5313,9 +6243,9 @@
     "uiHelperValue" : "##CHARTID##_51"
   }
 }, {
-  "marshallId" : 32,
-  "marshallMemberOf" : [ 25 ],
-  "sf_chart" : "On-demand Instances (as of now)",
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 26 ],
+  "sf_chart" : "On-demand Instances by InstanceType",
   "sf_chartIndex" : 1507094210267,
   "sf_description" : "Fractions may exist if an RI applies only partially to a running instance",
   "sf_type" : "Chart",
@@ -5417,12 +6347,12 @@
     },
     "currentUniqueKey" : 9,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 30,
-    "uiHelperValue" : "##CHARTID##_30"
+    "revisionNumber" : 31,
+    "uiHelperValue" : "##CHARTID##_31"
   }
 }, {
-  "marshallId" : 33,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "RI Utilization (%) - Trend",
   "sf_chartIndex" : 1510099435398,
   "sf_description" : "Percentage of RI that are being actively used.",
@@ -5599,20 +6529,147 @@
     "uiHelperValue" : "##CHARTID##_27"
   }
 }, {
-  "marshallId" : 34,
-  "marshallMemberOf" : [ 25 ],
-  "sf_chart" : "Total # of On-demand Instances",
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 26 ],
+  "sf_chart" : "Potential Monthly Savings",
   "sf_chartIndex" : 1496247074261,
-  "sf_description" : "",
+  "sf_description" : "By Purchasing Reservations for num of On-demand Instances",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
         "rollupPolicy" : "MIN_ROLLUP",
         "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "name" : "# OnDemand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_platform,aws_region,aws_tenancy",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 13,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.global_cost - Mean by aws_instance_type,aws_platform,aws_region,aws_tenancy",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "reserved_instance.global_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 14,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
       },
       "dataManipulations" : [ {
         "direction" : {
@@ -5629,27 +6686,82 @@
         },
         "showMe" : false
       } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "name" : "# OnDemand Instances",
+      "expressionText" : "A*M * 60 * 24 * 30",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "A*M * 60 * 24 * 30 - Sum",
       "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "on_demand_instance.count",
-        "regExStyle" : null
+        "metric" : null
       },
       "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
+      "type" : "ratio",
+      "uniqueKey" : 15,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A*N * 60 * 24 * 30",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "A*N * 60 * 24 * 30 - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 16,
+      "valid" : true,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
-        "visualization" : null
+        "unit" : "",
+        "unitPosition" : ""
       },
       "dataManipulations" : [ ],
-      "focusNext" : false,
+      "expressionText" : "O-P",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "O-P",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 17,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
@@ -5657,7 +6769,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 13,
+      "uniqueKey" : 18,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "single",
@@ -5682,12 +6794,12 @@
       "hideDimensionsInList" : false,
       "hideTimestamp" : false,
       "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : 3,
+      "maxDecimalPlaces" : 5,
       "range" : -604800000,
       "rangeEnd" : 0,
       "sortPreference" : "-value",
       "stackedChart" : false,
-      "updateInterval" : 3600000,
+      "updateInterval" : 300000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -5710,14 +6822,14 @@
         }
       } ]
     },
-    "currentUniqueKey" : 14,
+    "currentUniqueKey" : 19,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 44,
-    "uiHelperValue" : "##CHARTID##_44"
+    "revisionNumber" : 50,
+    "uiHelperValue" : "##CHARTID##_50"
   }
 }, {
-  "marshallId" : 35,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "RI Coverage (%)",
   "sf_chartIndex" : 1496246735283,
   "sf_description" : "Percentage of Instances with Reservations applied.",
@@ -5966,8 +7078,8 @@
     "uiHelperValue" : "##CHARTID##_29"
   }
 }, {
-  "marshallId" : 36,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "",
   "sf_chartIndex" : 1510279580370,
   "sf_type" : "Chart",
@@ -6014,8 +7126,8 @@
     "uiHelperValue" : "##CHARTID##_22"
   }
 }, {
-  "marshallId" : 37,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "RI Utilization (%)",
   "sf_chartIndex" : 1496968749385,
   "sf_description" : "Percentage of RI that are being actively used.",
@@ -6191,8 +7303,8 @@
     "uiHelperValue" : "##CHARTID##_24"
   }
 }, {
-  "marshallId" : 38,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 39,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "",
   "sf_chartIndex" : 1510282098948,
   "sf_description" : "",
@@ -6241,8 +7353,8 @@
     "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
-  "marshallId" : 39,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 40,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Unused Zonal Reservations",
   "sf_chartIndex" : 1468249582986,
   "sf_description" : "Chart may be blank if there are no unused reservations of scope Zone",
@@ -6407,8 +7519,8 @@
     "uiHelperValue" : "##CHARTID##_32"
   }
 }, {
-  "marshallId" : 40,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 41,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Under-Utilized Instances",
   "sf_chartIndex" : 1510355613064,
   "sf_description" : "Underutlized instance heat-map, red being most underutilized",
@@ -6745,8 +7857,8 @@
     "uiHelperValue" : "##CHARTID##_18"
   }
 }, {
-  "marshallId" : 41,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 42,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "Under-Utilized Instances by hostname",
   "sf_chartIndex" : 1510353571268,
   "sf_description" : "",
@@ -7040,8 +8152,8 @@
     "uiHelperValue" : "##CHARTID##_15"
   }
 }, {
-  "marshallId" : 42,
-  "marshallMemberOf" : [ 25 ],
+  "marshallId" : 43,
+  "marshallMemberOf" : [ 26 ],
   "sf_chart" : "RI Coverage (%) - Trend",
   "sf_chartIndex" : 1510099352664,
   "sf_description" : "Percentage of Instances that are reserved",
@@ -7050,8 +8162,9 @@
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
         "rollupPolicy" : null,
         "visualization" : null
       },
@@ -7086,8 +8199,8 @@
     }, {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
       "dataManipulations" : [ {
@@ -7268,7 +8381,7 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 31,
-    "uiHelperValue" : "##CHARTID##_31"
+    "revisionNumber" : 33,
+    "uiHelperValue" : "##CHARTID##_33"
   }
 } ]
