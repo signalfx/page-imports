@@ -124,7 +124,7 @@
     } ],
     "version" : 1
   },
-  "sf_discoverySelectors" : [ "sf_key:TopicName", "namespace:AWS/SNS" ],
+  "sf_discoverySelectors" : [ "sf_key:TopicName", "namespace:AWS/SNS", "_exists_:TopicName" ],
   "sf_description" : "",
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "namespace:\"AWS/SNS\" AND _exists_:TopicName",
