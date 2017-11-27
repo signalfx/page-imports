@@ -14,6 +14,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "AWS DynamoDB",
   "sf_description" : "Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. DynamoDB lets you offload the administrative burdens of operating and scaling a distributed database, so that you don't have to worry about hardware provisioning, setup and configuration, replication, software patching, or cluster scaling.",
+  "sf_discoveryQuery" : "namespace:\"AWS/DynamoDB\" AND _exists_:TableName",
+  "sf_discoverySelectors" : [ "_exists_:TableName" ],
   "sf_filterAlias" : {
     "variables" : [ ]
   },
@@ -168,43 +170,28 @@
 }, {
   "marshallId" : 4,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Throttled Requests",
-  "sf_chartIndex" : 1506710477990,
-  "sf_description" : "Requests to DynamoDB that exceed the provisioned throughput limits on a resource (such as a table or an index).",
+  "sf_chart" : "Consumed Read Capacity Units",
+  "sf_chartIndex" : 1506366186562,
+  "sf_description" : "The number of read capacity units consumed over the specified time period, so you can track how much of your provisioned throughput is used.",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#e5b312",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : "SUM_ROLLUP"
       },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
+      "dataManipulations" : [ ],
       "invisible" : false,
-      "name" : "ThrottledRequests - Sum",
+      "name" : "ConsumedReadCapacityUnits",
       "queryItems" : [ {
         "NOT" : false,
-        "iconClass" : "icon-properties",
+        "iconClass" : "sf-icon-property",
         "property" : "namespace",
         "propertyValue" : "AWS/DynamoDB",
         "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "dimension",
+        "type" : "property",
         "value" : "AWS/DynamoDB"
       }, {
         "NOT" : false,
@@ -214,9 +201,17 @@
         "query" : "stat:sum",
         "type" : "dimension",
         "value" : "sum"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "TableName",
+        "propertyValue" : "*",
+        "query" : "TableName:*",
+        "type" : "dimension",
+        "value" : "TableName:*"
       } ],
       "seriesData" : {
-        "metric" : "ThrottledRequests"
+        "metric" : "ConsumedReadCapacityUnits"
       },
       "transient" : false,
       "type" : "plot",
@@ -239,14 +234,13 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "single",
-    "chartType" : "line",
+    "chartMode" : "graph",
+    "chartType" : "area",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
-      "dimensionInLegend" : "Operation",
-      "hideTimestamp" : false,
+      "dimensionInLegend" : "TableName",
       "legendColumnConfiguration" : [ {
         "enabled" : false,
         "property" : "AWSUniqueId"
@@ -256,9 +250,6 @@
       }, {
         "enabled" : false,
         "property" : "namespace"
-      }, {
-        "enabled" : true,
-        "property" : "Operation"
       }, {
         "enabled" : false,
         "property" : "sf_metric"
@@ -274,6 +265,7 @@
       "showDots" : true,
       "showLegend" : true,
       "sortPreference" : "",
+      "stackedChart" : true,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -288,7 +280,7 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 6
+    "revisionNumber" : 4
   }
 }, {
   "marshallId" : 5,
@@ -405,235 +397,6 @@
 }, {
   "marshallId" : 6,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Consumed Read Capacity Units",
-  "sf_chartIndex" : 1506366186562,
-  "sf_description" : "The number of read capacity units consumed over the specified time period, so you can track how much of your provisioned throughput is used.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "SUM_ROLLUP"
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "ConsumedReadCapacityUnits",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "namespace",
-        "propertyValue" : "AWS/DynamoDB",
-        "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "stat",
-        "propertyValue" : "sum",
-        "query" : "stat:sum",
-        "type" : "dimension",
-        "value" : "sum"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "TableName",
-        "propertyValue" : "*",
-        "query" : "TableName:*",
-        "type" : "dimension",
-        "value" : "TableName:*"
-      } ],
-      "seriesData" : {
-        "metric" : "ConsumedReadCapacityUnits"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "dimensionInLegend" : "TableName",
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "stat"
-      }, {
-        "enabled" : true,
-        "property" : "TableName"
-      } ],
-      "range" : 3600000,
-      "rangeEnd" : 0,
-      "showDots" : true,
-      "showLegend" : true,
-      "sortPreference" : "",
-      "stackedChart" : true,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 4
-  }
-}, {
-  "marshallId" : 7,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Average Provisioned Read Capacity Units",
-  "sf_chartIndex" : 1506366186565,
-  "sf_description" : "The average number of provisioned read capacity units for a table or a global secondary index.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "ProvisionedReadCapacityUnits",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "namespace",
-        "propertyValue" : "AWS/DynamoDB",
-        "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "stat",
-        "propertyValue" : "mean",
-        "query" : "stat:mean",
-        "type" : "dimension",
-        "value" : "mean"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "TableName",
-        "propertyValue" : "*",
-        "query" : "TableName:*",
-        "type" : "dimension",
-        "value" : "TableName:*"
-      } ],
-      "seriesData" : {
-        "metric" : "ProvisionedReadCapacityUnits"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "dimensionInLegend" : "TableName",
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "stat"
-      }, {
-        "enabled" : true,
-        "property" : "TableName"
-      } ],
-      "range" : 3600000,
-      "rangeEnd" : 0,
-      "showDots" : true,
-      "showLegend" : true,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 3
-  }
-}, {
-  "marshallId" : 8,
-  "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Read Throttle Events",
   "sf_chartIndex" : 1506449271869,
   "sf_description" : "Requests to DynamoDB that exceed the provisioned read capacity units for a table or a global secondary index.",
@@ -722,7 +485,115 @@
     "revisionNumber" : 5
   }
 }, {
-  "marshallId" : 9,
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Average Request Latency (ms)",
+  "sf_chartIndex" : 1506366186567,
+  "sf_description" : "Successful requests to DynamoDB or Amazon DynamoDB Streams during the specified time period.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "SuccessfulRequestLatency",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/DynamoDB",
+        "query" : "namespace:\"AWS/DynamoDB\"",
+        "type" : "property",
+        "value" : "AWS/DynamoDB"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "query" : "stat:mean",
+        "type" : "dimension",
+        "value" : "mean"
+      } ],
+      "seriesData" : {
+        "metric" : "SuccessfulRequestLatency"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "dimensionInLegend" : "Operation",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "Operation"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "TableName"
+      } ],
+      "range" : 3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6
+  }
+}, {
+  "marshallId" : 8,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Average Request Latency (ms)",
   "sf_chartIndex" : 1506710358149,
@@ -849,219 +720,7 @@
     "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
-  "marshallId" : 10,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "System Errors",
-  "sf_chartIndex" : 1506723879732,
-  "sf_description" : "Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during the specified time period.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "SUM_ROLLUP"
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "SystemErrors",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "namespace",
-        "propertyValue" : "AWS/DynamoDB",
-        "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "stat",
-        "propertyValue" : "sum",
-        "query" : "stat:sum",
-        "type" : "property",
-        "value" : "sum"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "TableName",
-        "propertyValue" : "*",
-        "query" : "TableName:*",
-        "type" : "property",
-        "value" : "TableName:*"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "Operation",
-        "propertyValue" : "*",
-        "query" : "Operation:*",
-        "type" : "property",
-        "value" : "Operation:*"
-      } ],
-      "seriesData" : {
-        "metric" : "SystemErrors"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "hideTimestamp" : false,
-      "range" : 900000,
-      "rangeEnd" : null,
-      "showLegend" : true,
-      "sortPreference" : "",
-      "stackedChart" : true,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 3
-  }
-}, {
-  "marshallId" : 11,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Average Request Latency (ms)",
-  "sf_chartIndex" : 1506366186567,
-  "sf_description" : "Successful requests to DynamoDB or Amazon DynamoDB Streams during the specified time period.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "SuccessfulRequestLatency",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "namespace",
-        "propertyValue" : "AWS/DynamoDB",
-        "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "stat",
-        "propertyValue" : "mean",
-        "query" : "stat:mean",
-        "type" : "dimension",
-        "value" : "mean"
-      } ],
-      "seriesData" : {
-        "metric" : "SuccessfulRequestLatency"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "dimensionInLegend" : "Operation",
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "namespace"
-      }, {
-        "enabled" : true,
-        "property" : "Operation"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "stat"
-      }, {
-        "enabled" : true,
-        "property" : "TableName"
-      } ],
-      "range" : 3600000,
-      "rangeEnd" : 0,
-      "showDots" : true,
-      "showLegend" : true,
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 6
-  }
-}, {
-  "marshallId" : 12,
+  "marshallId" : 9,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Average Provisioned Write Capacity Units",
   "sf_chartIndex" : 1506366186564,
@@ -1176,7 +835,111 @@
     "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
-  "marshallId" : 13,
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "System Errors",
+  "sf_chartIndex" : 1506723879732,
+  "sf_description" : "Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during the specified time period.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "SystemErrors",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/DynamoDB",
+        "query" : "namespace:\"AWS/DynamoDB\"",
+        "type" : "property",
+        "value" : "AWS/DynamoDB"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "sum",
+        "query" : "stat:sum",
+        "type" : "property",
+        "value" : "sum"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "TableName",
+        "propertyValue" : "*",
+        "query" : "TableName:*",
+        "type" : "property",
+        "value" : "TableName:*"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "Operation",
+        "propertyValue" : "*",
+        "query" : "Operation:*",
+        "type" : "property",
+        "value" : "Operation:*"
+      } ],
+      "seriesData" : {
+        "metric" : "SystemErrors"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "hideTimestamp" : false,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 3
+  }
+}, {
+  "marshallId" : 11,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Consumed Write Capacity Units",
   "sf_chartIndex" : 1506366186563,
@@ -1292,142 +1055,46 @@
     "revisionNumber" : 6
   }
 }, {
-  "marshallId" : 14,
+  "marshallId" : 12,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "System Errors",
-  "sf_chartIndex" : 1506378087627,
-  "sf_description" : "Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during the specified time period.",
+  "sf_chart" : "Throttled Requests",
+  "sf_chartIndex" : 1506710477990,
+  "sf_description" : "Requests to DynamoDB that exceed the provisioned throughput limits on a resource (such as a table or an index).",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
+        "colorOverride" : "#e5b312",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : "SUM_ROLLUP"
       },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "SystemErrors",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "sf-icon-property",
-        "property" : "namespace",
-        "propertyValue" : "AWS/DynamoDB",
-        "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "stat",
-        "propertyValue" : "sum",
-        "query" : "stat:sum",
-        "type" : "property",
-        "value" : "sum"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "TableName",
-        "propertyValue" : "*",
-        "query" : "TableName:*",
-        "type" : "property",
-        "value" : "TableName:*"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "Operation",
-        "propertyValue" : "*",
-        "query" : "Operation:*",
-        "type" : "property",
-        "value" : "Operation:*"
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
       } ],
-      "seriesData" : {
-        "metric" : "SystemErrors"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
       "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "range" : 900000,
-      "rangeEnd" : null,
-      "showLegend" : true,
-      "sortPreference" : "",
-      "stackedChart" : true,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 2
-  }
-}, {
-  "marshallId" : 15,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "User Errors",
-  "sf_chartIndex" : 1506724247972,
-  "sf_description" : "Requests to DynamoDB or DynamoDB Streams that generate an HTTP 400 status code during the specified time period.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "SUM_ROLLUP"
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "UserErrors",
+      "name" : "ThrottledRequests - Sum",
       "queryItems" : [ {
         "NOT" : false,
-        "iconClass" : "sf-icon-property",
+        "iconClass" : "icon-properties",
         "property" : "namespace",
         "propertyValue" : "AWS/DynamoDB",
         "query" : "namespace:\"AWS/DynamoDB\"",
-        "type" : "property",
-        "value" : "AWS/DynamoDB"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "sf_metric",
-        "propertyValue" : "UserErrors",
-        "query" : "sf_metric:UserErrors",
         "type" : "dimension",
-        "value" : "UserErrors"
+        "value" : "AWS/DynamoDB"
       }, {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -1438,8 +1105,7 @@
         "value" : "sum"
       } ],
       "seriesData" : {
-        "metric" : "UserErrors",
-        "regExStyle" : null
+        "metric" : "ThrottledRequests"
       },
       "transient" : false,
       "type" : "plot",
@@ -1468,11 +1134,34 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
+      "dimensionInLegend" : "Operation",
       "hideTimestamp" : false,
-      "legendColumnConfiguration" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : true,
+        "property" : "Operation"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "TableName"
+      } ],
       "range" : 3600000,
       "rangeEnd" : 0,
       "showDots" : true,
+      "showLegend" : true,
       "sortPreference" : "",
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
@@ -1488,10 +1177,124 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 6
   }
 }, {
-  "marshallId" : 16,
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Average Provisioned Read Capacity Units",
+  "sf_chartIndex" : 1506366186565,
+  "sf_description" : "The average number of provisioned read capacity units for a table or a global secondary index.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "ProvisionedReadCapacityUnits",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/DynamoDB",
+        "query" : "namespace:\"AWS/DynamoDB\"",
+        "type" : "property",
+        "value" : "AWS/DynamoDB"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "mean",
+        "query" : "stat:mean",
+        "type" : "dimension",
+        "value" : "mean"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "TableName",
+        "propertyValue" : "*",
+        "query" : "TableName:*",
+        "type" : "dimension",
+        "value" : "TableName:*"
+      } ],
+      "seriesData" : {
+        "metric" : "ProvisionedReadCapacityUnits"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "TableName",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "stat"
+      }, {
+        "enabled" : true,
+        "property" : "TableName"
+      } ],
+      "range" : 3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 3
+  }
+}, {
+  "marshallId" : 14,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Returned Item Count",
   "sf_chartIndex" : 1506376966165,
@@ -1616,7 +1419,7 @@
     "revisionNumber" : 4
   }
 }, {
-  "marshallId" : 17,
+  "marshallId" : 15,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Write Throttle Events",
   "sf_chartIndex" : 1506378087628,
@@ -1713,7 +1516,7 @@
     "revisionNumber" : 3
   }
 }, {
-  "marshallId" : 18,
+  "marshallId" : 16,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "User Errors",
   "sf_chartIndex" : 1506366186566,
@@ -1807,5 +1610,204 @@
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
     "revisionNumber" : 3
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "User Errors",
+  "sf_chartIndex" : 1506724247972,
+  "sf_description" : "Requests to DynamoDB or DynamoDB Streams that generate an HTTP 400 status code during the specified time period.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "UserErrors",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/DynamoDB",
+        "query" : "namespace:\"AWS/DynamoDB\"",
+        "type" : "property",
+        "value" : "AWS/DynamoDB"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "UserErrors",
+        "query" : "sf_metric:UserErrors",
+        "type" : "dimension",
+        "value" : "UserErrors"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "sum",
+        "query" : "stat:sum",
+        "type" : "dimension",
+        "value" : "sum"
+      } ],
+      "seriesData" : {
+        "metric" : "UserErrors",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : null,
+      "range" : 3600000,
+      "rangeEnd" : 0,
+      "showDots" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "System Errors",
+  "sf_chartIndex" : 1506378087627,
+  "sf_description" : "Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during the specified time period.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "SystemErrors",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "namespace",
+        "propertyValue" : "AWS/DynamoDB",
+        "query" : "namespace:\"AWS/DynamoDB\"",
+        "type" : "property",
+        "value" : "AWS/DynamoDB"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "stat",
+        "propertyValue" : "sum",
+        "query" : "stat:sum",
+        "type" : "property",
+        "value" : "sum"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "TableName",
+        "propertyValue" : "*",
+        "query" : "TableName:*",
+        "type" : "property",
+        "value" : "TableName:*"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "Operation",
+        "propertyValue" : "*",
+        "query" : "Operation:*",
+        "type" : "property",
+        "value" : "Operation:*"
+      } ],
+      "seriesData" : {
+        "metric" : "SystemErrors"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 2
   }
 } ]
