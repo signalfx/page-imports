@@ -1700,9 +1700,10 @@
         "iconClass" : "icon-properties",
         "value" : "*",
         "propertyValue" : "*",
-        "key" : "!ServiceName",
-        "query" : "!ServiceName:*",
-        "property" : "!ServiceName",
+        "key" : "ServiceName",
+        "NOT": true,
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
         "type" : "property"
       }, {
         "iconClass" : "icon-properties",
@@ -2214,9 +2215,10 @@
         "iconClass" : "icon-properties",
         "value" : "*",
         "propertyValue" : "*",
-        "key" : "!ServiceName",
-        "query" : "!ServiceName:*",
-        "property" : "!ServiceName",
+        "key" : "ServiceName",
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "NOT": true,
         "type" : "property"
       }, {
         "iconClass" : "icon-properties",
@@ -2441,9 +2443,10 @@
         "iconClass" : "icon-properties",
         "value" : "*",
         "propertyValue" : "*",
-        "key" : "!ServiceName",
-        "query" : "!ServiceName:*",
-        "property" : "!ServiceName",
+        "key" : "ServiceName",
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "NOT": true,
         "type" : "property"
       } ],
       "uniqueKey" : 1,
@@ -3223,9 +3226,10 @@
         "iconClass" : "icon-properties",
         "value" : "*",
         "propertyValue" : "*",
-        "key" : "!ServiceName",
-        "query" : "!ServiceName:*",
-        "property" : "!ServiceName",
+        "key" : "ServiceName",
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "NOT": true,
         "type" : "property"
       } ],
       "uniqueKey" : 1,
@@ -3349,7 +3353,16 @@
         "query" : "stat:mean",
         "property" : "stat",
         "type" : "property"
-      }],
+      }, {
+        "iconClass" : "icon-properties",
+        "value" : "*",
+        "propertyValue" : "*",
+        "key" : "ServiceName",
+        "query" : "ServiceName:*",
+        "property" : "ServiceName",
+        "NOT": true,
+        "type" : "property"
+      } ],
       "uniqueKey" : 1,
       "name" : "",
       "seriesData" : {
