@@ -83,24 +83,6 @@
       "sizeX" : 12,
       "sizeY" : 1
     }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1510290986202,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1510799579415,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
       "col" : 0,
       "options" : {
         "chartIndex" : 1510290356945,
@@ -110,14 +92,41 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1511829516707,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1511829844897,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1510290464399,
+        "chartIndex" : 1511827593924,
         "id" : 0
       },
       "row" : 3,
       "sizeX" : 12,
       "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1510596508138,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 3
     }, {
       "col" : 8,
       "options" : {
@@ -139,25 +148,7 @@
     }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1510596508138,
-        "id" : 0
-      },
-      "row" : 4,
-      "sizeX" : 4,
-      "sizeY" : 3
-    }, {
-      "col" : 0,
-      "options" : {
         "chartIndex" : 1496247941583,
-        "id" : 0
-      },
-      "row" : 7,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1510170647361,
         "id" : 0
       },
       "row" : 7,
@@ -172,452 +163,19 @@
       "row" : 7,
       "sizeX" : 4,
       "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1510170647361,
+        "id" : 0
+      },
+      "row" : 7,
+      "sizeX" : 4,
+      "sizeY" : 1
     } ]
   }
 }, {
   "marshallId" : 4,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Cost by Usage Type",
-  "sf_chartIndex" : 1510799579415,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
-            }, {
-              "value" : "aws_region"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "name" : "# Unreserved On-demand Instances",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "on_demand_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#f47e00",
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "# Reserved Instances",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : "used"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "# Unused Reserved Instances",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "unused",
-        "type" : "property",
-        "value" : "unused"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 8,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
-            }, {
-              "value" : "aws_region"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_region",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "on_demand_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 9,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : "used"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 10,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "unused",
-        "type" : "property",
-        "value" : ""
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 11,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "A*I*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "On-demand Instance Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 12,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "B*J*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Used RI Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 13,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "H*K*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Unused RI Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 14,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 16,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : true,
-      "colorByValue" : false,
-      "dimensionInLegend" : "sf_metric",
-      "hideDimensionsInList" : false,
-      "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : 3,
-      "range" : -604800000,
-      "rangeEnd" : 0,
-      "showDots" : false,
-      "showLegend" : false,
-      "sortPreference" : "-value",
-      "stackedChart" : true,
-      "updateInterval" : null,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 17,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 37,
-    "uiHelperValue" : "##CHARTID##_37"
-  }
-}, {
-  "marshallId" : 5,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instance Count by Usage Type",
   "sf_chartIndex" : 1510282012025,
@@ -806,7 +364,7 @@
     "revisionNumber" : 24
   }
 }, {
-  "marshallId" : 6,
+  "marshallId" : 5,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instances terminated in last 1 week",
   "sf_chartIndex" : 1496247914335,
@@ -968,7 +526,7 @@
     "uiHelperValue" : "##CHARTID##_14"
   }
 }, {
-  "marshallId" : 7,
+  "marshallId" : 6,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Cost by InstanceType (%)",
   "sf_chartIndex" : 1510290356959,
@@ -1285,7 +843,7 @@
     "uiHelperValue" : "##CHARTID##_39"
   }
 }, {
-  "marshallId" : 8,
+  "marshallId" : 7,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Instance Count",
   "sf_chartIndex" : 1468018693067,
@@ -1378,7 +936,7 @@
     "uiHelperValue" : "##CHARTID##_36"
   }
 }, {
-  "marshallId" : 9,
+  "marshallId" : 8,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Monthly Cost ($)",
   "sf_chartIndex" : 1510290356945,
@@ -1406,6 +964,8 @@
               "value" : "aws_tenancy"
             }, {
               "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -1451,6 +1011,8 @@
               "value" : "aws_tenancy"
             }, {
               "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -1465,7 +1027,7 @@
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "instance.count - Sum by aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy,aws_account_id",
+      "name" : "instance.count - Sum by aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy,aws_account_id,aws_master_account_id",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "instance.count",
@@ -1496,10 +1058,10 @@
         },
         "showMe" : false
       } ],
-      "expressionText" : "D*E*60*24*30",
-      "invisible" : false,
+      "expressionText" : "D*E*60*24*30.42",
+      "invisible" : true,
       "metricDefinition" : { },
-      "name" : "D*E*60*24*30 - Sum",
+      "name" : "Monthly Cost of Running Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -1507,6 +1069,346 @@
       "transient" : false,
       "type" : "ratio",
       "uniqueKey" : 6,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : null,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.count - Sum by aws_availability_zone,aws_platform,aws_tenancy,aws_account_id,aws_instance_type,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 7,
+      "valid" : false,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "aws_usage.ec2.instances.cost_per_minute - Scale:43200",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "G*H*60*24*30.42",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Monthly Cost of Unused RI (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 9,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "F+I+M",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "F+I+M",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 10,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : null,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_count - Sum by aws_platform,aws_tenancy,aws_account_id,aws_master_account_id,aws_instance_family,aws_master_account_id,aws_region",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "valid" : false,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "aws_usage.ec2.instances.cost_per_minute - Scale:43200",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 12,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "K*L*60*24*30.42",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Monthly Cost of Unused RI (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 13,
       "valid" : true,
       "yAxisIndex" : 0
     }, {
@@ -1523,7 +1425,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 7,
+      "uniqueKey" : 14,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "single",
@@ -1547,7 +1449,7 @@
       "rangeEnd" : 0,
       "sortPreference" : "-value",
       "stackedChart" : false,
-      "updateInterval" : null,
+      "updateInterval" : 300000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -1560,16 +1462,16 @@
         }
       } ]
     },
-    "currentUniqueKey" : 8,
+    "currentUniqueKey" : 15,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 35,
-    "uiHelperValue" : "##CHARTID##_35"
+    "revisionNumber" : 38,
+    "uiHelperValue" : "##CHARTID##_38"
   }
 }, {
-  "marshallId" : 10,
+  "marshallId" : 9,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Monthly Cost ($)",
-  "sf_chartIndex" : 1510290464399,
+  "sf_chartIndex" : 1511827593924,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -1577,7 +1479,7 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
+        "maxExtrapolations" : 10,
         "rollupPolicy" : null,
         "visualization" : null
       },
@@ -1594,6 +1496,8 @@
               "value" : "aws_tenancy"
             }, {
               "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -1623,15 +1527,13 @@
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 2,
+        "maxExtrapolations" : 10,
         "rollupPolicy" : null
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "aws_account_id"
-            }, {
               "value" : "aws_availability_zone"
             }, {
               "value" : "aws_instance_type"
@@ -1639,6 +1541,10 @@
               "value" : "aws_platform"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -1653,7 +1559,7 @@
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "instance.count - Sum by aws_account_id,aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy",
+      "name" : "instance.count - Sum by aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy,aws_account_id,aws_master_account_id",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "instance.count",
@@ -1684,10 +1590,10 @@
         },
         "showMe" : false
       } ],
-      "expressionText" : "D*E*60*24*30",
-      "invisible" : false,
+      "expressionText" : "D*E*60*24*30.42",
+      "invisible" : true,
       "metricDefinition" : { },
-      "name" : "D*E*60*24*30 - Sum",
+      "name" : "Monthly Cost of Running Instances",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -1695,6 +1601,346 @@
       "transient" : false,
       "type" : "ratio",
       "uniqueKey" : 6,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : null,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.count - Sum by aws_availability_zone,aws_platform,aws_tenancy,aws_account_id,aws_instance_type,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 7,
+      "valid" : false,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "aws_usage.ec2.instances.cost_per_minute - Scale:43200",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "G*H*60*24*30.42",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Monthly Cost of Unused RI (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 9,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "F+I+M",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "F+I+M",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 10,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : null,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_count - Sum by aws_platform,aws_tenancy,aws_account_id,aws_master_account_id,aws_instance_family,aws_master_account_id,aws_region",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "valid" : false,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "aws_usage.ec2.instances.cost_per_minute - Scale:43200",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 12,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "K*L*60*24*30.42",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Monthly Cost of Unused RI (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 13,
       "valid" : true,
       "yAxisIndex" : 0
     }, {
@@ -1711,7 +1957,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 7,
+      "uniqueKey" : 14,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "graph",
@@ -1735,7 +1981,7 @@
       "rangeEnd" : 0,
       "sortPreference" : "-value",
       "stackedChart" : false,
-      "updateInterval" : null,
+      "updateInterval" : 300000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -1748,13 +1994,13 @@
         }
       } ]
     },
-    "currentUniqueKey" : 8,
+    "currentUniqueKey" : 15,
     "relatedDetectors" : [ ],
     "revisionNumber" : 39,
     "uiHelperValue" : "##CHARTID##_39"
   }
 }, {
-  "marshallId" : 11,
+  "marshallId" : 10,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "EC2 Instance Count by InstanceType",
   "sf_chartIndex" : 1479492853549,
@@ -1856,7 +2102,7 @@
     "uiHelperValue" : "##CHARTID##_30"
   }
 }, {
-  "marshallId" : 12,
+  "marshallId" : 11,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Total EC2 Instance Count Trend",
   "sf_chartIndex" : 1479456721779,
@@ -1889,7 +2135,14 @@
       "focusNext" : false,
       "invisible" : false,
       "name" : "Used Instances",
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "aws_master_account_id",
+        "propertyValue" : "*",
+        "type" : "property",
+        "value" : "*"
+      } ],
       "seriesData" : {
         "metric" : "instance.count",
         "regExStyle" : null
@@ -1944,11 +2197,11 @@
     },
     "currentUniqueKey" : 8,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 31,
-    "uiHelperValue" : "##CHARTID##_31"
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
   }
 }, {
-  "marshallId" : 13,
+  "marshallId" : 12,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instances stopped in last 1 week",
   "sf_chartIndex" : 1510170647361,
@@ -2109,6 +2362,868 @@
     "relatedDetectors" : [ ],
     "revisionNumber" : 14,
     "uiHelperValue" : "##CHARTID##_14"
+  }
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Monthly Cost by Usage Type",
+  "sf_chartIndex" : 1511829516707,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : "Region"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_master_account_id,aws_tenancy,aws_platform,aws_region",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 9,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_cost - Mean by aws_region,aws_instance_family,aws_account_id,aws_tenancy,aws_platform,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : "Region"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 10,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy,aws_account_id,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A*I*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "On-demand Instance Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 12,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "B*J",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 13,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(R+S)*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 14,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 16,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_cost - Mean by aws_platform,aws_tenancy,aws_account_id,aws_master_account_id,aws_instance_family,aws_region",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 17,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "H*K",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 18,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "P*Q",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 19,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 20,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 21,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "T*U",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 22,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(M+V)*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 23,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 24,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideDimensionsInList" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 25,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 38,
+    "uiHelperValue" : "##CHARTID##_38"
   }
 }, {
   "marshallId" : 14,
@@ -2348,446 +3463,6 @@
 }, {
   "marshallId" : 15,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Cost by Usage Type",
-  "sf_chartIndex" : 1510290986202,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
-            }, {
-              "value" : "aws_region"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "name" : "# Unreserved On-demand Instances",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "on_demand_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#f47e00",
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "# Reserved Instances",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : "used"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null,
-        "visualization" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "# Unused Reserved Instances",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "unused",
-        "type" : "property",
-        "value" : "unused"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 8,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_instance_type"
-            }, {
-              "value" : "aws_region"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_region",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "on_demand_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 9,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "used",
-        "type" : "property",
-        "value" : "used"
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 10,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 10,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "aws_region"
-            }, {
-              "value" : "scope"
-            }, {
-              "value" : "aws_instance_family"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_region,scope,aws_instance_family",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "utilization",
-        "propertyValue" : "unused",
-        "type" : "property",
-        "value" : ""
-      } ],
-      "seriesData" : {
-        "metric" : "reserved_instance.cost",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 11,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "A*I*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "On-demand Instance Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 12,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "B*J*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Used RI Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 13,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "H*K*60*24*30",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Unused RI Cost",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 14,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 16,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : true,
-      "colorByValue" : false,
-      "dimensionInLegend" : "sf_metric",
-      "hideDimensionsInList" : false,
-      "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : 3,
-      "range" : -604800000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "stackedChart" : false,
-      "updateInterval" : null,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 17,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 34,
-    "uiHelperValue" : "##CHARTID##_34"
-  }
-}, {
-  "marshallId" : 16,
-  "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instances started in last 1 week",
   "sf_chartIndex" : 1496247941583,
   "sf_description" : "",
@@ -2949,6 +3624,868 @@
     "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Monthly Cost by Usage Type",
+  "sf_chartIndex" : 1511829844897,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "name" : "# Unreserved On-demand Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : "Region"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "on_demand_instance.cost - Mean by aws_instance_type,aws_master_account_id,aws_tenancy,aws_platform,aws_region",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "on_demand_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 9,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_cost - Mean by aws_region,aws_instance_family,aws_account_id,aws_tenancy,aws_platform,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : "Region"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 10,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.cost - Mean by aws_availability_zone,aws_instance_type,aws_platform,aws_tenancy,aws_account_id,aws_master_account_id",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 11,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A*I*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "On-demand Instance Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 12,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "B*J",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 13,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(R+S)*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 14,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Unused Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 16,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_region"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_cost - Mean by aws_platform,aws_tenancy,aws_account_id,aws_master_account_id,aws_instance_family,aws_region",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : ""
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 17,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "H*K",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 18,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "P*Q",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Unused RI Cost (Regional)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 19,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 20,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null,
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_instance_type"
+            }, {
+              "value" : "aws_availability_zone"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "# Reserved Instances",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "used",
+        "type" : "property",
+        "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 21,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "T*U",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost (Zonal)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 22,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(M+V)*60*24*30.42",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used RI Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 23,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 24,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideDimensionsInList" : false,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 25,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 39,
+    "uiHelperValue" : "##CHARTID##_39"
+  }
+}, {
   "marshallId" : 17,
   "marshallMemberOf" : [ 3 ],
   "sf_chart" : "Instance Count by Usage Type (Trend)",
@@ -2982,7 +4519,14 @@
       "focusNext" : false,
       "invisible" : false,
       "name" : "# Unreserved On-demand Instances",
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "aws_master_account_id",
+        "propertyValue" : "*",
+        "type" : "property",
+        "value" : "*"
+      } ],
       "seriesData" : {
         "metric" : "on_demand_instance.count",
         "regExStyle" : null
@@ -3026,6 +4570,13 @@
         "propertyValue" : "used",
         "type" : "property",
         "value" : "used"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "aws_master_account_id",
+        "propertyValue" : "*",
+        "type" : "property",
+        "value" : "*"
       } ],
       "seriesData" : {
         "metric" : "reserved_instance.count",
@@ -3069,6 +4620,13 @@
         "propertyValue" : "unused",
         "type" : "property",
         "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "aws_master_account_id",
+        "propertyValue" : "*",
+        "type" : "property",
+        "value" : "*"
       } ],
       "seriesData" : {
         "metric" : "reserved_instance.count",
@@ -3103,7 +4661,14 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "# Total Running Instances",
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "aws_master_account_id",
+        "propertyValue" : "*",
+        "type" : "property",
+        "value" : "*"
+      } ],
       "seriesData" : {
         "metric" : "instance.count",
         "regExStyle" : null
@@ -3170,8 +4735,8 @@
     },
     "currentUniqueKey" : 11,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 31,
-    "uiHelperValue" : "##CHARTID##_31"
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
   }
 }, {
   "marshallId" : 18,
@@ -4262,6 +5827,8 @@
               "value" : "aws_region"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "scope"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4311,6 +5878,8 @@
               "value" : "aws_region"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "scope"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4437,6 +6006,8 @@
               "value" : "aws_region"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "scope"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4451,7 +6022,7 @@
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy,scope",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4484,6 +6055,8 @@
               "value" : "aws_region"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "scope"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4498,7 +6071,7 @@
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy",
+      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_region,aws_tenancy,scope",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4693,8 +6266,8 @@
     },
     "currentUniqueKey" : 19,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 34,
-    "uiHelperValue" : "##CHARTID##_34"
+    "revisionNumber" : 35,
+    "uiHelperValue" : "##CHARTID##_35"
   }
 }, {
   "marshallId" : 25,
@@ -6070,11 +7643,17 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "aws_instance_family"
+              "value" : "aws_availability_zone"
             }, {
-              "value" : "aws_region"
+              "value" : "aws_instance_type"
             }, {
-              "value" : "scope"
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -6097,6 +7676,13 @@
         "propertyValue" : "unused",
         "type" : "property",
         "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
       } ],
       "seriesData" : {
         "metric" : "reserved_instance.count",
@@ -6117,11 +7703,15 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "aws_instance_family"
+              "value" : "aws_instance_type"
             }, {
-              "value" : "aws_region"
+              "value" : "aws_availability_zone"
             }, {
-              "value" : "scope"
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -6136,7 +7726,7 @@
       } ],
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "reserved_instance.cost - Mean by aws_instance_family,aws_region,scope",
+      "name" : "reserved_instance.cost - Mean by aws_instance_type,aws_availability_zone,aws_platform,aws_tenancy,aws_account_id",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -6144,6 +7734,13 @@
         "propertyValue" : "unused",
         "type" : "property",
         "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Availability Zone",
+        "type" : "property",
+        "value" : "Availability Zone"
       } ],
       "seriesData" : {
         "metric" : "reserved_instance.cost",
@@ -6174,8 +7771,8 @@
         },
         "showMe" : false
       } ],
-      "expressionText" : "L*M*60*24*30",
-      "invisible" : false,
+      "expressionText" : "L*M*60*24*30.42",
+      "invisible" : true,
       "metricDefinition" : { },
       "name" : "Zonal Unused-RI Total Cost",
       "queryItems" : [ ],
@@ -6185,6 +7782,192 @@
       "transient" : false,
       "type" : "ratio",
       "uniqueKey" : 14,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : "MIN_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "amount" : 30,
+            "transformTimeRange" : "30d",
+            "unit" : "d"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MIN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            }, {
+              "value" : "aws_master_account_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "aws_usage.ec2.reserved.unused.cost_per_minute - Sum - Scale:60",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 19,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 10,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "aws_platform"
+            }, {
+              "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_account_id"
+            }, {
+              "value" : "aws_region"
+            }, {
+              "value" : "aws_instance_family"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "reserved_instance.normalized_cost - Mean by aws_platform,aws_tenancy,aws_account_id,aws_region,aws_instance_family",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "utilization",
+        "propertyValue" : "unused",
+        "type" : "property",
+        "value" : "unused"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "scope",
+        "propertyValue" : "Region",
+        "type" : "property",
+        "value" : ""
+      } ],
+      "seriesData" : {
+        "metric" : "reserved_instance.normalized_cost",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 20,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "S*T*60*24*30.42",
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Regional Unused-RI Total Cost",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 21,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "N+U",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Unused-RI Total Count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 22,
       "valid" : true,
       "yAxisIndex" : 0
     }, {
@@ -6201,7 +7984,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 19,
+      "uniqueKey" : 23,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "single",
@@ -6237,10 +8020,10 @@
         }
       } ]
     },
-    "currentUniqueKey" : 20,
+    "currentUniqueKey" : 24,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 51,
-    "uiHelperValue" : "##CHARTID##_51"
+    "revisionNumber" : 54,
+    "uiHelperValue" : "##CHARTID##_54"
   }
 }, {
   "marshallId" : 33,
@@ -6555,6 +8338,8 @@
               "value" : "aws_region"
             }, {
               "value" : "aws_tenancy"
+            }, {
+              "value" : "aws_master_account_id"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -6686,10 +8471,10 @@
         },
         "showMe" : false
       } ],
-      "expressionText" : "A*M * 60 * 24 * 30",
+      "expressionText" : "A*M * 60 * 24 * 30.42",
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "A*M * 60 * 24 * 30 - Sum",
+      "name" : "A*M * 60 * 24 * 30.42 - Sum",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -6720,10 +8505,10 @@
         },
         "showMe" : false
       } ],
-      "expressionText" : "A*N * 60 * 24 * 30",
+      "expressionText" : "A*N * 60 * 24 * 30.42",
       "invisible" : true,
       "metricDefinition" : { },
-      "name" : "A*N * 60 * 24 * 30 - Sum",
+      "name" : "A*N * 60 * 24 * 30.42 - Sum",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : null
@@ -6824,8 +8609,8 @@
     },
     "currentUniqueKey" : 19,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 50,
-    "uiHelperValue" : "##CHARTID##_50"
+    "revisionNumber" : 51,
+    "uiHelperValue" : "##CHARTID##_51"
   }
 }, {
   "marshallId" : 36,
