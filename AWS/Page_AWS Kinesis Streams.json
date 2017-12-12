@@ -1026,7 +1026,7 @@
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
-        "rollupPolicy" : "COUNT_ROLLUP"
+        "rollupPolicy" : "LATEST_ROLLUP"
       },
       "dataManipulations" : [ ],
       "invisible" : false,
