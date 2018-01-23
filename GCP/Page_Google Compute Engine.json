@@ -16,7 +16,7 @@
   "sf_dashboard" : "Compute Engine Instances",
   "sf_description" : "Overview of GCP Compute Engine metrics",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "_exists_:instance_id", "service:compute", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:compute", "sf_key:gcp_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
@@ -2319,7 +2319,7 @@
   "sf_dashboard" : "Compute Engine Instance",
   "sf_description" : "Metrics for a single compute engine instance",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "_exists_:instance_id", "service:compute", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "_exists_:instance_name", "service:compute", "sf_key:gcp_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
