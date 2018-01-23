@@ -674,8 +674,8 @@
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "Spanner Instance",
   "sf_description" : "Metrics for a specific instance of Google Cloud Spanner",
-  "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:spanner", "sf_key:gcp_id" ],
+  "sf_discoveryQuery" : "_exists_:gcp_id AND service:spanner",
+  "sf_discoverySelectors" : [ "_exists_:instance_id", "service:spanner", "sf_key:gcp_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
