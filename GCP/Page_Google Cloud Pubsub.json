@@ -17,7 +17,7 @@
   "sf_dashboard" : "Pub/Sub Subscription",
   "sf_description" : "Subscription metrics from Google Cloud Pub/Sub",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id", "_exists_:subscription_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "subscription_id",
@@ -500,7 +500,7 @@
   "sf_dashboard" : "Pub/Sub Topic",
   "sf_description" : "Topic metrics from Google Cloud Pub/Sub.",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:pubsub", "sf_key:gcp_id", "_exists_:topic_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "topic_id",

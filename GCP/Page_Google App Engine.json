@@ -17,7 +17,7 @@
   "sf_dashboard" : "App Engine System",
   "sf_description" : "An overview of GCP App Engine system metrics",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id", "_exists_:module_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
@@ -529,7 +529,7 @@
   "sf_dashboard" : "App Engine Flex",
   "sf_description" : "App Engine flexible environment automatically scales your app up and down while balancing the load.",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id", "_exists_:module_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
@@ -1191,7 +1191,7 @@
   "sf_dashboard" : "App Engine Memcache",
   "sf_description" : "App Engine includes a memory cache service for an in-memory data cache.",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id", "_exists_:module_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
@@ -1628,7 +1628,7 @@
   "sf_dashboard" : "App Engine HTTP",
   "sf_description" : "An overview of HTTP based metrics from Google App Engine",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:appengine", "sf_key:gcp_id", "_exists_:module_id" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
