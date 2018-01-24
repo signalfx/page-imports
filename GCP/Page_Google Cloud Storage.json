@@ -17,7 +17,7 @@
   "sf_dashboard" : "Cloud Storage Bucket",
   "sf_description" : "Metrics for a specific bucket in Google Cloud Storage",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "service:storage", "sf_key:gcp_id" ],
+  "sf_discoverySelectors" : [ "service:storage", "sf_key:gcp_id", "_exists_:bucket_name" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",

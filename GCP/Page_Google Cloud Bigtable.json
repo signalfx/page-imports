@@ -17,7 +17,7 @@
   "sf_dashboard" : "Bigtable Cluster",
   "sf_description" : "Cluster level metrics for Google Cloud Bigtable",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "sf_key:gcp_id", "service:bigtable" ],
+  "sf_discoverySelectors" : [ "sf_key:gcp_id", "service:bigtable", "_exists_:cluster" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "cluster",

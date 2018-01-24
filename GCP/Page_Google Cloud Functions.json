@@ -17,7 +17,7 @@
   "sf_dashboard" : "Cloud Function",
   "sf_description" : "Metrics for a specific Cloud Function",
   "sf_discoveryQuery" : "_exists_:gcp_id",
-  "sf_discoverySelectors" : [ "sf_key:gcp_id", "service:cloudfunctions" ],
+  "sf_discoverySelectors" : [ "sf_key:gcp_id", "_exists_:function_name" ],
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "project_id",
