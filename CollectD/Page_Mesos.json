@@ -284,15 +284,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -325,15 +316,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -456,15 +438,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -489,15 +462,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -543,15 +507,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -616,15 +571,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -705,15 +651,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 6, 
@@ -758,15 +695,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -816,15 +744,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -937,15 +856,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -978,15 +888,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -1109,15 +1010,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -1162,15 +1054,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -1278,15 +1161,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -1316,15 +1190,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 2, 
@@ -1353,15 +1218,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -1452,15 +1308,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -1588,15 +1435,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -1645,15 +1483,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -1816,15 +1645,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -1946,15 +1766,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -2078,15 +1889,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -2389,15 +2191,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -2698,15 +2491,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -3009,15 +2793,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -3123,15 +2898,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -3240,15 +3006,6 @@
                             "query": "plugin:mesos", 
                             "property": "plugin", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -3355,15 +3112,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -3489,15 +3237,6 @@
                             "NOT": false, 
                             "query": "plugin:mesos", 
                             "property": "plugin", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "cluster-0", 
-                            "propertyValue": "cluster-0", 
-                            "NOT": false, 
-                            "query": "cluster:\"cluster-0\"", 
-                            "property": "cluster", 
                             "type": "property"
                         }
                     ], 
@@ -3796,15 +3535,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -3907,15 +3637,6 @@
                             "NOT": false, 
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -4020,15 +3741,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4132,15 +3844,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4240,15 +3943,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4347,15 +4041,6 @@
                             "NOT": false, 
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -4460,15 +4145,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4571,15 +4247,6 @@
                             "NOT": false, 
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -4684,15 +4351,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4734,15 +4392,6 @@
                             "NOT": false, 
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -4859,15 +4508,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -4910,15 +4550,6 @@
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 2, 
@@ -4960,15 +4591,6 @@
                             "NOT": false, 
                             "query": "plugin_type:master", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "master-0", 
-                            "propertyValue": "master-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"master-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -7747,15 +7369,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -7855,15 +7468,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -7962,15 +7566,6 @@
                             "NOT": false, 
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -8075,15 +7670,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -8183,15 +7769,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -8234,15 +7811,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 2, 
@@ -8284,15 +7852,6 @@
                             "NOT": false, 
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
@@ -8397,15 +7956,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -8509,15 +8059,6 @@
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
                             "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
-                            "type": "property"
                         }
                     ], 
                     "uniqueKey": 1, 
@@ -8620,15 +8161,6 @@
                             "NOT": false, 
                             "query": "plugin_type:slave", 
                             "property": "plugin_type", 
-                            "type": "property"
-                        }, 
-                        {
-                            "iconClass": "icon-properties", 
-                            "value": "slave-0", 
-                            "propertyValue": "slave-0", 
-                            "NOT": false, 
-                            "query": "plugin_instance:\"slave-0\"", 
-                            "property": "plugin_instance", 
                             "type": "property"
                         }
                     ], 
