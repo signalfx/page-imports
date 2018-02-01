@@ -8,7 +8,6 @@
 }, {
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_authorizedUserWriters" : [ "DGXPnisAcAA" ],
   "sf_dashboard" : "Application",
   "sf_description" : "Determine how well an application is performing in a Hadoop Cluster",
   "sf_discoveryQuery" : "",
