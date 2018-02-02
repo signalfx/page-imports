@@ -2306,7 +2306,7 @@
   "sf_dashboard" : "Varnish (a)",
   "sf_description" : "Multiple varnish servers",
   "sf_discoveryQuery" : "plugin:varnish",
-  "sf_discoverySelectors" : [ "_exists_:aws_region", "sf_hostHasService:varnish", "_exists_:aws_availability_zone", "_exists_:aws_instance_type", "plugin:varnish" ],
+  "sf_discoverySelectors" : [ "sf_hostHasService:varnish", "plugin:varnish" ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,

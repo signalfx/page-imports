@@ -1878,7 +1878,7 @@
     } ],
     "version" : 1
   },
-  "sf_discoverySelectors" : [ "_exists_:aws_region", "_exists_:aws_availability_zone", "sf_key:host", "namespace:AWS/EC2", "_exists_:aws_instance_type", "sf_key:InstanceId" ],
+  "sf_discoverySelectors" : [ "sf_key:host", "namespace:AWS/EC2", "sf_key:InstanceId" ],
   "sf_description" : "",
   "sf_type" : "Dashboard",
   "sf_discoveryQuery" : "namespace:\"AWS/EC2\" AND _exists_:InstanceId",

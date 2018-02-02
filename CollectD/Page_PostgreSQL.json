@@ -1985,10 +1985,7 @@
         "sf_discoveryQuery": "plugin:postgresql",
         "sf_discoverySelectors": [
             "plugin:postgresql",
-            "sf_hostHasService:postgresql",
-            "_exists_:aws_region",
-            "_exists_:aws_availability_zone",
-            "_exists_:aws_instance_type"
+            "sf_hostHasService:postgresql"
         ],
         "sf_type": "Dashboard",
         "marshallMemberOf": [

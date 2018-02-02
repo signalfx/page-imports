@@ -1880,10 +1880,7 @@
         "sf_description": "",
         "sf_discoveryQuery": "plugin:mysql",
         "sf_discoverySelectors": [
-            "_exists_:aws_region",
-            "_exists_:aws_availability_zone",
             "sf_hostHasService:mysql",
-            "_exists_:aws_instance_type",
             "plugin:mysql"
         ],
         "sf_type": "Dashboard",
