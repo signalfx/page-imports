@@ -1769,10 +1769,7 @@
         "sf_discoveryQuery": "plugin:redis_info",
         "sf_discoverySelectors": [
             "plugin:redis_info",
-            "_exists_:aws_region",
             "_exists_:host",
-            "_exists_:aws_availability_zone",
-            "_exists_:aws_instance_type",
             "sf_hostHasService:redis_info"
         ],
         "sf_type": "Dashboard",

@@ -232,10 +232,7 @@
         "sf_discoverySelectors": [
             "plugin:zookeeper",
             "sf_hostHasService:zookeeper",
-            "_exists_:aws_region",
-            "_exists_:aws_availability_zone",
-            "hostHasService:zookeeper",
-            "_exists_:aws_instance_type"
+            "hostHasService:zookeeper"
         ],
         "sf_type": "Dashboard",
         "marshallMemberOf": [

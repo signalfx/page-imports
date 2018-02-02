@@ -260,9 +260,6 @@
         "sf_discoveryQuery": "plugin:mongo",
         "sf_discoverySelectors": [
             "plugin:mongo",
-            "_exists_:aws_region",
-            "_exists_:aws_availability_zone",
-            "_exists_:aws_instance_type",
             "sf_hostHasService:mongo"
         ],
         "sf_type": "Dashboard",

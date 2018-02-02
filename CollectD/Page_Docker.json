@@ -2167,7 +2167,7 @@
   "sf_dashboard" : "Docker Hosts",
   "sf_description" : "Real-time statistics about all running Docker containers in your infrastructure.",
   "sf_discoveryQuery" : "plugin:docker",
-  "sf_discoverySelectors" : [ "_exists_:aws_region", "plugin:docker", "_exists_:aws_availability_zone", "sf_hostHasService:docker", "namespace:AWS/EC2", "_exists_:aws_instance_type" ],
+  "sf_discoverySelectors" : [ "plugin:docker", "sf_hostHasService:docker" ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,

@@ -2293,7 +2293,7 @@
   "sf_dashboard" : "telegraf (a)",
   "sf_description" : "Dashboards about infrastructure as measured by Telegraf.",
   "sf_discoveryQuery" : "plugin:signalfx-metadata AND sf_metric:cpu.utilization AND agent:telegraf",
-  "sf_discoverySelectors" : [ "agent:telegraf", "_exists_:aws_region", "_exists_:aws_availability_zone", "sf_key:host", "_exists_:aws_instance_type" ],
+  "sf_discoverySelectors" : [ "agent:telegraf", "sf_key:host" ],
   "sf_savedFilters" : {
     "density" : null,
     "sources" : null,

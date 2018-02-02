@@ -17,7 +17,7 @@
   "sf_dashboard" : "Memcached (a)",
   "sf_description" : "",
   "sf_discoveryQuery" : "plugin:memcached",
-  "sf_discoverySelectors" : [ "_exist_:aws_availability_zone", "plugin:memcached", "_exists_:aws_region", "sf_hostHasService:memcached", "_exists_:aws_instance_type" ],
+  "sf_discoverySelectors" : [ "plugin:memcached", "sf_hostHasService:memcached" ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,

@@ -25,10 +25,7 @@
         "sf_dashboard": "NGINX Servers",
         "sf_discoveryQuery": "plugin:nginx",
         "sf_discoverySelectors": [
-            "_exists_:aws_region",
-            "_exists_:aws_availability_zone",
             "sf_hostHasService:nginx",
-            "_exists_:aws_instance_type",
             "plugin:nginx"
         ],
         "sf_type": "Dashboard",

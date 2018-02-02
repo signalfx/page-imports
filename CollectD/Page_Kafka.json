@@ -222,9 +222,6 @@
         "sf_discoveryQuery": "sf_hostHasService:kafka", 
         "sf_discoverySelectors": [
             "sf_hostHasService:kafka", 
-            "_exists_:aws_region", 
-            "_exists_:aws_availability_zone", 
-            "_exists_:aws_instance_type",
             "sf_key:host"
         ], 
         "sf_type": "Dashboard", 

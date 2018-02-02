@@ -2175,7 +2175,7 @@
   "sf_dashboard" : "collectd (a)",
   "sf_description" : "",
   "sf_discoveryQuery" : "plugin:signalfx-metadata AND sf_metric:cpu.utilization AND _missing_:agent",
-  "sf_discoverySelectors" : [ "_missing_:agent", "_exists_:aws_region", "_exists_:aws_availability_zone", "sf_key:host", "_exists_:aws_instance_type" ],
+  "sf_discoverySelectors" : [ "_missing_:agent", "sf_key:host" ],
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
     "version" : 1,
