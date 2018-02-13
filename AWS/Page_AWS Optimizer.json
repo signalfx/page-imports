@@ -32,7 +32,7 @@
     } ]
   },
   "sf_isLocked" : false,
-  "sf_maxDelayOverride" : 0,
+  "sf_maxDelayOverride" : -1,
   "sf_savedFilters" : {
     "density" : 0.0,
     "sources" : null,
@@ -832,12 +832,6 @@
           "options" : {
             "aggregateGroupBy" : [ {
               "value" : "aws_instance_family"
-            }, {
-              "value" : "aws_account_id"
-            }, {
-              "value" : "aws_tenancy"
-            }, {
-              "value" : "aws_platform"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -875,12 +869,6 @@
           "options" : {
             "aggregateGroupBy" : [ {
               "value" : "aws_instance_family"
-            }, {
-              "value" : "aws_account_id"
-            }, {
-              "value" : "aws_tenancy"
-            }, {
-              "value" : "aws_platform"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -928,6 +916,25 @@
         "fn" : {
           "options" : { },
           "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "action" : "set to limit",
+            "high" : 100,
+            "low" : 0,
+            "mode" : "out of range"
+          },
+          "type" : "EXCLUDE"
         },
         "showMe" : false
       } ],
@@ -1088,8 +1095,8 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 47,
-    "uiHelperValue" : "##CHARTID##_47"
+    "revisionNumber" : 49,
+    "uiHelperValue" : "##CHARTID##_49"
   }
 }, {
   "marshallId" : 9,
@@ -2985,8 +2992,8 @@
     },
     "currentUniqueKey" : 13,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 42,
-    "uiHelperValue" : "##CHARTID##_42"
+    "revisionNumber" : 44,
+    "uiHelperValue" : "##CHARTID##_44"
   }
 }, {
   "marshallId" : 20,
@@ -3200,7 +3207,7 @@
     } ]
   },
   "sf_isLocked" : false,
-  "sf_maxDelayOverride" : 0,
+  "sf_maxDelayOverride" : -1,
   "sf_savedFilters" : {
     "density" : 0.0,
     "sources" : null,
@@ -4909,7 +4916,7 @@
     } ]
   },
   "sf_isLocked" : false,
-  "sf_maxDelayOverride" : 0,
+  "sf_maxDelayOverride" : -1,
   "sf_savedFilters" : {
     "density" : 0.0,
     "sources" : null,
