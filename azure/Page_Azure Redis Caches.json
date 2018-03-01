@@ -1,0 +1,3765 @@
+[ {
+  "marshallScope" : 1
+}, {
+  "marshallId" : 1,
+  "sf_description" : "Dashboards for Azure Redis Cache",
+  "sf_page" : "Azure Redis Caches",
+  "sf_type" : "Page"
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Azure Redis Cache",
+  "sf_description" : "Charts for metrics to monitor an individual Azure Redis Cache",
+  "sf_discoveryQuery" : "_exists_:azure_resource_name AND resource_type:\"Microsoft.Cache/Redis\"",
+  "sf_discoverySelectors" : [ "_exists_:azure_resource_name" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "azure_resource_name",
+      "applyIfExists" : false,
+      "description" : "",
+      "dimension" : "azure_resource_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    }, {
+      "alias" : "azure_resource_id",
+      "applyIfExists" : false,
+      "description" : "",
+      "dimension" : "azure_resource_id",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : false,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "azure_resource_name=azure_resource_name:", "azure_resource_id=azure_resource_id:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518107041085,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 8,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518555538782,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518106574657,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518106575686,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518106559192,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518558804234,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518106579304,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518115618843,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518106578164,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518106560656,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518106561671,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518106562801,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518114110530,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518106577039,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518106557059,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1518106558077,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Cache Hit Rate",
+  "sf_chartIndex" : 1518555538782,
+  "sf_description" : "Cache hit rate for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "action" : "drop",
+            "inclusive" : true,
+            "low" : 0,
+            "mode" : "below"
+          },
+          "type" : "EXCLUDE"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "hits",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:Microsoft.Cache/Redis",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cachehits",
+        "type" : "property",
+        "value" : "cachehits"
+      } ],
+      "seriesData" : {
+        "metric" : "cachehits*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_id"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "misses",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:Microsoft.Cache/Redis",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cachemisses",
+        "type" : "property",
+        "value" : "cachemisses"
+      } ],
+      "seriesData" : {
+        "metric" : "cachemisses*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(A) / (A+B) * 100",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:Microsoft.Cache/Redis",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "azure_resource_name",
+        "propertyValue" : "sfx-redis",
+        "query" : "azure_resource_name:sfx-redis",
+        "type" : "property",
+        "value" : "sfx-redis"
+      } ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#6bd37e",
+        "gt" : 95,
+        "lte" : 100
+      }, {
+        "color" : "#acef7f",
+        "gt" : 90,
+        "lte" : 95
+      }, {
+        "color" : "#e5e517",
+        "gt" : 85,
+        "lte" : 90
+      }, {
+        "color" : "#eac24b",
+        "gt" : 80,
+        "lte" : 85
+      }, {
+        "color" : "#ea1849",
+        "gte" : 0,
+        "lte" : 80
+      } ],
+      "dimensionInLegend" : "sf_metric",
+      "groupBy" : [ ],
+      "heatmapAutoGradients" : 5,
+      "heatmapColorOverride" : "#05ce00",
+      "heatmapColorRange" : { },
+      "heatmapSortBy" : {
+        "asc" : true,
+        "value" : { }
+      },
+      "heatmapUnitsPerRow" : 0,
+      "heatmapUseValueAsColor" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "RADIAL",
+      "showLegend" : false,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "hit rate",
+        "max" : 110,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 24,
+    "uiHelperValue" : "##CHARTID##_24"
+  }
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Expired Keys",
+  "sf_chartIndex" : 1518106561671,
+  "sf_description" : "Number of expired keys for an instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "expired keys per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "expiredkeys",
+        "type" : "property",
+        "value" : "expiredkeys"
+      } ],
+      "seriesData" : {
+        "metric" : "expiredkeys*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# keys",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Total Keys",
+  "sf_chartIndex" : 1518106578164,
+  "sf_description" : "Total # of keys in an instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "total keys per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "totalkeys",
+        "type" : "property",
+        "value" : "totalkeys"
+      } ],
+      "seriesData" : {
+        "metric" : "totalkeys*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Cache Hit Rate Trend",
+  "sf_chartIndex" : 1518107041085,
+  "sf_description" : "Cache hit rate for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_id"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "action" : "drop",
+            "inclusive" : true,
+            "low" : 0,
+            "mode" : "below"
+          },
+          "type" : "EXCLUDE"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "hits",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cachehits",
+        "type" : "property",
+        "value" : "cachehits"
+      } ],
+      "seriesData" : {
+        "metric" : "cachehits*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "misses",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cachemisses",
+        "type" : "property",
+        "value" : "cachemisses"
+      } ],
+      "seriesData" : {
+        "metric" : "cachemisses*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(A) / (A+B) * 100",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Cache hit ratio trend",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ {
+        "color" : "#6bd37e",
+        "gt" : 95,
+        "lte" : 100
+      }, {
+        "color" : "#acef7f",
+        "gt" : 90,
+        "lte" : 95
+      }, {
+        "color" : "#e5e517",
+        "gt" : 85,
+        "lte" : 90
+      }, {
+        "color" : "#eac24b",
+        "gt" : 80,
+        "lte" : 85
+      }, {
+        "color" : "#ea1849",
+        "gte" : 75,
+        "lte" : 80
+      } ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "groupBy" : [ ],
+      "heatmapAutoGradients" : 5,
+      "heatmapColorOverride" : "#05ce00",
+      "heatmapColorRange" : { },
+      "heatmapSortBy" : {
+        "asc" : true,
+        "value" : { }
+      },
+      "heatmapUnitsPerRow" : 0,
+      "heatmapUseValueAsColor" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "RADIAL",
+      "showLegend" : true,
+      "sortPreference" : "+sf_originatingMetric",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "hit rate",
+        "max" : 110,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 21,
+    "uiHelperValue" : "##CHARTID##_21"
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Server Load",
+  "sf_chartIndex" : 1518106575686,
+  "sf_description" : "Server load % for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "server load per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "serverLoad",
+        "type" : "property",
+        "value" : "serverLoad"
+      } ],
+      "seriesData" : {
+        "metric" : "serverLoad*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 80,
+        "lte" : 100
+      }, {
+        "color" : "#eac24b",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#e5e517",
+        "gt" : 40,
+        "lte" : 60
+      }, {
+        "color" : "#acef7f",
+        "gt" : 20,
+        "lte" : 40
+      }, {
+        "color" : "#6bd37e",
+        "gte" : 0,
+        "lte" : 20
+      } ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "LINEAR",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Evicted Keys",
+  "sf_chartIndex" : 1518106560656,
+  "sf_description" : "# of keys evicted due to hitting max memory limit",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "evicted keys per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "evictedkeys",
+        "type" : "property",
+        "value" : "evictedkeys"
+      } ],
+      "seriesData" : {
+        "metric" : "evictedkeys*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : false,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Cache Reads",
+  "sf_chartIndex" : 1518106557059,
+  "sf_description" : "amount of data read from the each of the shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "AVERAGE_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_id"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "cache reads per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cacheRead",
+        "type" : "property",
+        "value" : "cacheRead"
+      } ],
+      "seriesData" : {
+        "metric" : "cacheRead*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes read",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
+  }
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Used RSS Memory",
+  "sf_chartIndex" : 1518106579304,
+  "sf_description" : "RSS memory used by each shard",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "usedmemoryRss*",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "usedmemoryRss",
+        "type" : "property",
+        "value" : "usedmemoryRss"
+      } ],
+      "seriesData" : {
+        "metric" : "usedmemoryRss*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : false,
+      "sortPreference" : "+sf_originatingMetric",
+      "stackedChart" : false,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "memory (bytes)",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Get Commands",
+  "sf_chartIndex" : 1518106562801,
+  "sf_description" : "Number of get commands for an instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gets per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "getcommands",
+        "type" : "property",
+        "value" : "getcommands"
+      } ],
+      "seriesData" : {
+        "metric" : "getcommands*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -60000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "+sf_originatingMetric",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# cmds",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "# Connections",
+  "sf_chartIndex" : 1518106559192,
+  "sf_description" : "Number of connections for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "connected clients per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "connectedclients",
+        "type" : "property",
+        "value" : "connectedclients"
+      } ],
+      "seriesData" : {
+        "metric" : "connectedclients*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# connections",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Set Commands",
+  "sf_chartIndex" : 1518106577039,
+  "sf_description" : "Number of set commands for an instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_id"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "sets per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "setcommands",
+        "type" : "property",
+        "value" : "setcommands"
+      } ],
+      "seriesData" : {
+        "metric" : "setcommands*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      } ],
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "+sf_originatingMetric",
+      "stackedChart" : true,
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# cmds",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "CPU %",
+  "sf_chartIndex" : 1518106574657,
+  "sf_description" : "CPU % for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "percent processor time per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "percentProcessorTime",
+        "type" : "property",
+        "value" : "percentProcessorTime"
+      } ],
+      "seriesData" : {
+        "metric" : "percentProcessorTime*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 80,
+        "lte" : 100
+      }, {
+        "color" : "#eac24b",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#e5e517",
+        "gt" : 40,
+        "lte" : 60
+      }, {
+        "color" : "#acef7f",
+        "gt" : 20,
+        "lte" : 40
+      }, {
+        "color" : "#6bd37e",
+        "gte" : 0,
+        "lte" : 20
+      } ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "LINEAR",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "percent cpu used",
+        "max" : 110,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Total Commands Processed",
+  "sf_chartIndex" : 1518114110530,
+  "sf_description" : "Number of commands processed for instance and shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "total commands processed per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "totalcommandsprocessed",
+        "type" : "property",
+        "value" : "totalcommandsprocessed"
+      } ],
+      "seriesData" : {
+        "metric" : "totalcommandsprocessed*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : 5,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "SPARKLINE",
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Cache Writes",
+  "sf_chartIndex" : 1518106558077,
+  "sf_description" : "Amount of data written to each of the shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_id"
+            }, {
+              "value" : "azure_resource_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "cache writes per shard",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cacheWrite",
+        "type" : "property",
+        "value" : "cacheWrite"
+      } ],
+      "seriesData" : {
+        "metric" : "cacheWrite*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes written",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Used Memory",
+  "sf_chartIndex" : 1518558804234,
+  "sf_description" : "Memory used by each shard",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "usedmemory*",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "usedmemory",
+        "type" : "property",
+        "value" : "usedmemory"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "usedmemoryRss*",
+        "type" : "property",
+        "value" : "usedmemoryRss*"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:Microsoft.Cache/Redis",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      } ],
+      "seriesData" : {
+        "metric" : "usedmemory*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:Microsoft.Cache/Redis",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "optional" : false,
+        "property" : "azure_resource_name",
+        "propertyValue" : "sfx-redis",
+        "query" : "azure_resource_name:sfx-redis",
+        "type" : "property",
+        "value" : "sfx-redis"
+      } ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_originatingMetric",
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : null,
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : false,
+      "sortPreference" : "+sf_originatingMetric",
+      "stackedChart" : false,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "memory (bytes)",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Memory Fragmentation Ratio",
+  "sf_chartIndex" : 1518115618843,
+  "sf_description" : "When rss >> used, a large difference means there is memory fragmentation.  When used >> rss, it means part of Redis memory has been swapped off by the operating system: expect some significant latencies",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "used memory",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "usedmemory",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "used memory RSS",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "usedmemoryRss",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(B+1)/(A+1)",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "ratio",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "axisPrecision" : null,
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "mem ratio",
+        "max" : 2,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : 1.5,
+          "highLabel" : "significant fragmentation (1.5)",
+          "low" : 1,
+          "lowLabel" : "ideal (~1)"
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Azure Redis Caches",
+  "sf_description" : "An overview of multiple Azure Redis Caches",
+  "sf_discoveryQuery" : "resource_type:\"Microsoft.Cache/Redis\"",
+  "sf_discoverySelectors" : [ "resource_type:Microsoft.Cache/Redis" ],
+  "sf_filterAlias" : {
+    "variables" : [ ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : null
+  },
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1518041486418,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518105409182,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518104243056,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518040233235,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1518105626325,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1518105013403,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 8,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1518474906644,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "Used Memory per Cache",
+  "sf_chartIndex" : 1518105626325,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5,
+            "mode" : "count"
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "used memory",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "usedmemoryRss*",
+        "type" : "property",
+        "value" : "usedmemoryRss*"
+      } ],
+      "seriesData" : {
+        "metric" : "usedmemory",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : 60000,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "Server Load %",
+  "sf_chartIndex" : 1518104243056,
+  "sf_description" : "Top caches by server load",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "sf_metric"
+            }, {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5,
+            "mode" : "count"
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "server load %",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "serverLoad",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "Total Keys per Cache",
+  "sf_chartIndex" : 1518105013403,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "total keys",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "totalkeys",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "Total Keys",
+  "sf_chartIndex" : 1518474906644,
+  "sf_description" : "Total keys across all caches",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "totalkeys"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "maxDecimalPlaces" : 5,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "# Caches",
+  "sf_chartIndex" : 1518105409182,
+  "sf_description" : "Total number of caches including shards",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "sf-icon-property",
+        "property" : "resource_type",
+        "propertyValue" : "Microsoft.Cache/Redis",
+        "query" : "resource_type:\"Microsoft.Cache/Redis\"",
+        "type" : "property",
+        "value" : "Microsoft.Cache/Redis"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      }, {
+        "NOT" : true,
+        "iconClass" : "icon-properties",
+        "property" : "sf_metric",
+        "propertyValue" : "cachehits",
+        "type" : "property",
+        "value" : "cachehits"
+      } ],
+      "seriesData" : {
+        "metric" : "cachehits*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "Lowest Cache Hit Rates",
+  "sf_chartIndex" : 1518041486418,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : "AVERAGE_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "hits",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "cachehits",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : "AVERAGE_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "misses",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "cachemisses",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "(A) / (A+B) * 100",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "cache hit ratio",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#6bd37e",
+        "gt" : 95,
+        "lte" : 100
+      }, {
+        "color" : "#acef7f",
+        "gt" : 90,
+        "lte" : 95
+      }, {
+        "color" : "#e5e517",
+        "gt" : 85,
+        "lte" : 90
+      }, {
+        "color" : "#eac24b",
+        "gt" : 80,
+        "lte" : 85
+      }, {
+        "color" : "#ea1849",
+        "gte" : 0,
+        "lte" : 80
+      } ],
+      "dimensionInLegend" : "sf_metric",
+      "groupBy" : [ ],
+      "heatmapAutoGradients" : 5,
+      "heatmapColorOverride" : "#05ce00",
+      "heatmapColorRange" : { },
+      "heatmapSortBy" : {
+        "asc" : true,
+        "value" : { }
+      },
+      "heatmapUnitsPerRow" : 0,
+      "heatmapUseValueAsColor" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "RADIAL",
+      "showLegend" : false,
+      "sortPreference" : "+value",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "hit rate",
+        "max" : 110,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 19,
+    "uiHelperValue" : "##CHARTID##_19"
+  }
+}, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 19 ],
+  "sf_chart" : "# Connections",
+  "sf_chartIndex" : 1518040233235,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : null,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "azure_resource_name"
+            }, {
+              "value" : "azure_resource_id"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "# connections",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "primary_aggregation_type",
+        "propertyValue" : "true",
+        "type" : "property",
+        "value" : "true"
+      } ],
+      "seriesData" : {
+        "metric" : "connectedclients",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_originatingMetric",
+      "forcedResolution" : 60000,
+      "histogramColor" : "#EA1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "azure_resource_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "primary_aggregation_type"
+      }, {
+        "enabled" : false,
+        "property" : "region"
+      }, {
+        "enabled" : false,
+        "property" : "resource_group_id"
+      }, {
+        "enabled" : false,
+        "property" : "resource_type"
+      }, {
+        "enabled" : false,
+        "property" : "subscription_id"
+      }, {
+        "enabled" : false,
+        "property" : "unit"
+      }, {
+        "enabled" : false,
+        "property" : "azure_resource_id"
+      } ],
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : false,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "# conns",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+} ]
