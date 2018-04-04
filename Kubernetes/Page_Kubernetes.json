@@ -14,9 +14,22 @@
 }, {
   "marshallId" : 3,
   "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "K8s Clusters",
+  "sf_dashboard" : "K8s Node",
   "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores AND _exists_:kubernetes_cluster",
-  "sf_discoverySelectors" : [ "_exists_:kubernetes_cluster" ],
+  "sf_discoverySelectors" : [ "_exists_:host" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "host",
+      "description" : "K8s node",
+      "dimension" : "host",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
   "sf_isLocked" : false,
   "sf_savedFilters" : {
     "density" : 0.0,
@@ -26,7 +39,7 @@
       "relative" : true,
       "start" : "-1h"
     },
-    "variables" : null
+    "variables" : [ "host=" ]
   },
   "sf_type" : "Dashboard",
   "sf_uiModel" : {
@@ -34,16 +47,7 @@
     "widgets" : [ {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1458317097334,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1458501499296,
+        "chartIndex" : 1458313290939,
         "id" : 0
       },
       "row" : 0,
@@ -52,7 +56,7 @@
     }, {
       "col" : 4,
       "options" : {
-        "chartIndex" : 1458501808727,
+        "chartIndex" : 1458409586006,
         "id" : 0
       },
       "row" : 0,
@@ -61,37 +65,73 @@
     }, {
       "col" : 8,
       "options" : {
-        "chartIndex" : 1458502325166,
+        "chartIndex" : 1458418158282,
         "id" : 0
       },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1458675384013,
-        "id" : 0
-      },
-      "row" : 1,
+      "row" : 0,
       "sizeX" : 4,
       "sizeY" : 1
     }, {
       "col" : 0,
       "options" : {
-        "chartIndex" : 1459359184905,
+        "chartIndex" : 1458427057873,
         "id" : 0
       },
       "row" : 1,
-      "sizeX" : 4,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1458314739641,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1458318231023,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1458427414608,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1458317740707,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1458427696376,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
       "sizeY" : 1
     } ]
   }
 }, {
   "marshallId" : 4,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "# Nodes per Cluster",
-  "sf_chartIndex" : 1458501808727,
+  "sf_chart" : "Total Memory (bytes)",
+  "sf_chartIndex" : 1458418158282,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -105,11 +145,7 @@
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            }, {
-              "value" : "host"
-            } ],
+            "aggregateGroupBy" : [ ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           },
@@ -120,41 +156,11 @@
           "type" : "SUM"
         },
         "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "amount" : 1,
-            "transformTimeRange" : "1m",
-            "unit" : "m"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
       } ],
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "",
+      "name" : "machine_memory_bytes - Sum",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -165,7 +171,7 @@
         "value" : "kubernetes"
       } ],
       "seriesData" : {
-        "metric" : "container_cpu_utilization",
+        "metric" : "machine_memory_bytes",
         "regExStyle" : null
       },
       "transient" : false,
@@ -179,159 +185,17 @@
         "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
+      "expressionText" : "A/1024/1024",
       "focusNext" : false,
-      "invisible" : false,
+      "invisible" : true,
       "metricDefinition" : { },
-      "name" : "New Plot",
+      "name" : "A/1024/1024",
       "queryItems" : [ ],
       "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : null,
-      "range" : -7200000,
-      "rangeEnd" : null,
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
-  }
-}, {
-  "marshallId" : 5,
-  "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Mean and Max CPU Use %",
-  "sf_chartIndex" : 1459359184905,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            }, {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MAX"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "max",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
       "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            }, {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "mean",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
+      "type" : "ratio",
       "uniqueKey" : 2,
+      "valid" : true,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -351,17 +215,17 @@
       "uniqueKey" : 3,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "list",
+    "chartMode" : "single",
     "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -7200000,
-      "rangeEnd" : null,
+      "hideTimestamp" : false,
+      "maxDecimalPlaces" : 4,
+      "range" : -3600001,
+      "rangeEnd" : 0,
       "sortPreference" : "",
-      "updateInterval" : "",
-      "useKMG2" : false,
+      "useKMG2" : true,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -373,15 +237,15 @@
         }
       } ]
     },
-    "currentUniqueKey" : 7,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
-  "marshallId" : 6,
+  "marshallId" : 5,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "# Containers per Cluster",
-  "sf_chartIndex" : 1458501499296,
+  "sf_chart" : "Total # CPU Cores",
+  "sf_chartIndex" : 1458409586006,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -395,6 +259,20 @@
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
             "amount" : 1,
             "transformTimeRange" : "1m",
             "unit" : "m"
@@ -406,27 +284,11 @@
           "type" : "MEAN"
         },
         "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
       } ],
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "",
+      "name" : "cpu cores",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -437,7 +299,7 @@
         "value" : "kubernetes"
       } ],
       "seriesData" : {
-        "metric" : "container_cpu_utilization",
+        "metric" : "machine_cpu_cores",
         "regExStyle" : null
       },
       "transient" : false,
@@ -462,15 +324,15 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "list",
+    "chartMode" : "single",
     "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -7200000,
-      "rangeEnd" : null,
-      "sortPreference" : "-value",
+      "hideTimestamp" : false,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -482,21 +344,22 @@
         }
       } ]
     },
-    "currentUniqueKey" : 5,
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
-  "marshallId" : 7,
+  "marshallId" : 6,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Memory Use (Bytes)",
-  "sf_chartIndex" : 1458675384013,
+  "sf_chart" : "Highest Memory Use per Pod (bytes)",
+  "sf_chartIndex" : 1458317740707,
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
@@ -504,7 +367,7 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
+              "value" : "kubernetes_pod_name"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -516,12 +379,50 @@
           "type" : "SUM"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 10
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
       } ],
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "",
-      "queryItems" : [ ],
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
       "seriesData" : {
         "metric" : "container_memory_usage_bytes",
         "regExStyle" : null
@@ -553,9 +454,154 @@
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
+      "maxDecimalPlaces" : 4,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Highest CPU Use per Pod (%)",
+  "sf_chartIndex" : 1458318231023,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_pod_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 10
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A",
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 2,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
       "legendColumnConfiguration" : null,
-      "range" : -7200000,
-      "rangeEnd" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
       "sortPreference" : "-value",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -568,15 +614,15 @@
         }
       } ]
     },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
   }
 }, {
   "marshallId" : 8,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "Network Errors per cluster",
-  "sf_chartIndex" : 1458502325166,
+  "sf_chart" : "CPU Use per Pod (%)",
+  "sf_chartIndex" : 1458427414608,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -591,7 +637,7 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
+              "value" : "kubernetes_pod_name"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -607,7 +653,104 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Rx (Bytes)",
+      "name" : "CPU %",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "range" : -3600001,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "%",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Pod Network Errors by Interface",
+  "sf_chartIndex" : 1458314739641,
+  "sf_description" : "Network receive and transmit errors from pods on this node",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "interface"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Rx",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -628,6 +771,7 @@
     }, {
       "configuration" : {
         "aliases" : { },
+        "colorOverride" : "#0077c2",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
@@ -636,7 +780,7 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
+              "value" : "interface"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -652,7 +796,7 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Tx (Bytes)",
+      "name" : "Tx",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -694,9 +838,9 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "legendColumnConfiguration" : null,
-      "range" : -7200000,
-      "rangeEnd" : null,
-      "sortPreference" : "+cluster",
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -708,15 +852,15 @@
         }
       } ]
     },
-    "currentUniqueKey" : 6,
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
   }
 }, {
-  "marshallId" : 9,
+  "marshallId" : 10,
   "marshallMemberOf" : [ 3 ],
-  "sf_chart" : "# Clusters",
-  "sf_chartIndex" : 1458317097334,
+  "sf_chart" : "Memory Use per Pod (bytes)",
+  "sf_chartIndex" : 1458427696376,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -731,7 +875,105 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
+              "value" : "kubernetes_pod_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "memory use (bytes)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_memory_usage_bytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 3 ],
+  "sf_chart" : "Total # Pods",
+  "sf_chartIndex" : 1458313290939,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_pod_name"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -775,7 +1017,7 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "",
+      "name" : "container_cpu_utilization - Sum by kubernetes_pod_name - Mean(1m) - Count",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -817,9 +1059,8 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "hideTimestamp" : false,
-      "maxDecimalPlaces" : 3,
-      "range" : -7200000,
-      "rangeEnd" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
       "sortPreference" : "",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -833,11 +1074,11 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
   }
 }, {
-  "marshallId" : 10,
+  "marshallId" : 12,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Pod",
   "sf_discoveryQuery" : "metric_source:kubernetes AND _exists_:kubernetes_cluster",
@@ -845,6 +1086,7 @@
   "sf_filterAlias" : {
     "variables" : [ {
       "alias" : "pod",
+      "applyIfExists" : false,
       "description" : "K8s pod",
       "dimension" : "kubernetes_pod_name",
       "globalScope" : false,
@@ -856,6 +1098,7 @@
     } ]
   },
   "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
   "sf_savedFilters" : {
     "density" : 0.0,
     "sources" : null,
@@ -924,15 +1167,6 @@
       "sizeX" : 4,
       "sizeY" : 1
     }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1458251304009,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
       "col" : 4,
       "options" : {
         "chartIndex" : 1458250918748,
@@ -941,20 +1175,29 @@
       "row" : 2,
       "sizeX" : 4,
       "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1522868212503,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
     } ]
   }
 }, {
-  "marshallId" : 11,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "Memory Used per Container (Bytes)",
-  "sf_chartIndex" : 1458248490790,
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "% CPU Used per Container",
+  "sf_chartIndex" : 1458250918748,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
@@ -971,7 +1214,7 @@
         },
         "fn" : {
           "options" : { },
-          "type" : "MEAN"
+          "type" : "SUM"
         },
         "showMe" : false
       } ],
@@ -989,7 +1232,7 @@
         "value" : "kubernetes"
       } ],
       "seriesData" : {
-        "metric" : "container_memory_usage_bytes",
+        "metric" : "container_cpu_utilization",
         "regExStyle" : null
       },
       "transient" : false,
@@ -1025,7 +1268,6 @@
       "rangeEnd" : 0,
       "sortPreference" : "-value",
       "updateInterval" : "",
-      "useKMG2" : true,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -1037,13 +1279,160 @@
         }
       } ]
     },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 19,
+    "uiHelperValue" : "##CHARTID##_19"
   }
 }, {
-  "marshallId" : 12,
-  "marshallMemberOf" : [ 10 ],
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "Network Errors / sec",
+  "sf_chartIndex" : 1458249567362,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Rx",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_receive_errors_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Tx",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_transmit_errors_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "+sf_metric",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 7,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 12 ],
   "sf_chart" : "Major Page Faults per Container",
   "sf_chartIndex" : 1458309595352,
   "sf_description" : "",
@@ -1146,8 +1535,598 @@
     "uiHelperValue" : "##CHARTID##_13"
   }
 }, {
-  "marshallId" : 13,
-  "marshallMemberOf" : [ 10 ],
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "Network Throughput (bytes/sec)",
+  "sf_chartIndex" : 1458250298509,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Rx (bytes/sec)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_receive_bytes_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Tx (bytes/sec)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_transmit_bytes_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 1
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "column",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Rx Bytes /sec (RED)",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "Tx Bytes /sec (BLUE)",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "Memory Used per Container (Bytes)",
+  "sf_chartIndex" : 1458248490790,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "container_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_memory_usage_bytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "updateInterval" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "% CPU Limit Used per Container",
+  "sf_chartIndex" : 1522868212503,
+  "sf_description" : "Based on Pod spec's resources.limits.cpu value if present, otherwise chart will be blank.",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "container_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Centicores used",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "line"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "container_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "CFS quota",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_spec_cpu_quota",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "container_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "CFS period",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_spec_cpu_period",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "D",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "container_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A/(B/C)",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "% of Limit",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 4,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : 3,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : 80,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 23,
+    "uiHelperValue" : "__OBJECT_ID___23"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 12 ],
+  "sf_chart" : "# Active Containers",
+  "sf_chartIndex" : 1458248282528,
+  "sf_description" : "This may include \"pause\" containers used internally by K8s",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "container_cpu_utilization - Mean(1m) - Count",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "range" : -3600000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
+  }
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 12 ],
   "sf_chart" : "% Memory Used per Container",
   "sf_chartIndex" : 1458248905408,
   "sf_description" : "Based on Kubernetes resource limits.  If no limits, will be blank.",
@@ -1336,676 +2315,7 @@
     "uiHelperValue" : "##CHARTID##_17"
   }
 }, {
-  "marshallId" : 14,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "% CPU Used per Container",
-  "sf_chartIndex" : 1458250918748,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "container_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : 3,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "revisionNumber" : 19,
-    "uiHelperValue" : "##CHARTID##_19"
-  }
-}, {
-  "marshallId" : 15,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "Network Errors / sec",
-  "sf_chartIndex" : 1458249567362,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Rx",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_receive_errors_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Tx",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_transmit_errors_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "+sf_metric",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 7,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
-  }
-}, {
-  "marshallId" : 16,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "% CPU Limit Used per Container",
-  "sf_chartIndex" : 1458251304009,
-  "sf_description" : "Based on Kubernetes resource limits per container.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "container_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "container",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#e5b312",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null,
-        "visualization" : "line"
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "container_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "limit",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_spec_cpu_shares",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "expressionText" : "A/B*100",
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "maxDecimalPlaces" : 3,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 6,
-    "revisionNumber" : 18,
-    "uiHelperValue" : "##CHARTID##_18"
-  }
-}, {
-  "marshallId" : 17,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "# Active Containers",
-  "sf_chartIndex" : 1458248282528,
-  "sf_description" : "This may include \"pause\" containers used internally by K8s",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "amount" : 1,
-            "transformTimeRange" : "1m",
-            "unit" : "m"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "container_cpu_utilization - Mean(1m) - Count",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "hideTimestamp" : false,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "revisionNumber" : 17,
-    "uiHelperValue" : "##CHARTID##_17"
-  }
-}, {
-  "marshallId" : 18,
-  "marshallMemberOf" : [ 10 ],
-  "sf_chart" : "Network Throughput (bytes/sec)",
-  "sf_chartIndex" : 1458250298509,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Rx (bytes/sec)",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_receive_bytes_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#0077c2",
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Tx (bytes/sec)",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_transmit_bytes_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 1
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "column",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "Rx Bytes /sec (RED)",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "label" : "Tx Bytes /sec (BLUE)",
-        "max" : null,
-        "min" : 0,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
-  }
-}, {
-  "marshallId" : 19,
+  "marshallId" : 21,
   "marshallMemberOf" : [ 2 ],
   "sf_dashboard" : "K8s Operations",
   "sf_description" : "",
@@ -2137,541 +2447,8 @@
     } ]
   }
 }, {
-  "marshallId" : 20,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Net Pods Desired by Replica Set",
-  "sf_chartIndex" : 1504984341541,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "available pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.replica_set.available",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "desired pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.replica_set.desired",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "expressionText" : "B-A",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "pods desired but not available",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "kubernetes_cluster"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_name"
-      }, {
-        "enabled" : false,
-        "property" : "kubernetes_namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "metric_source"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "uid"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "-value",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
-  }
-}, {
-  "marshallId" : 21,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Available Pods by Deployment",
-  "sf_chartIndex" : 1505086092502,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "available pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.deployment.available"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "desired pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.deployment.desired"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "kubernetes_cluster"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_name"
-      }, {
-        "enabled" : false,
-        "property" : "kubernetes_namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "metric_source"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "uid"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "+kubernetes_name",
-      "updateInterval" : 60000,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
-  }
-}, {
   "marshallId" : 22,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Deployments Not at Spec",
-  "sf_chartIndex" : 1504983431707,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "available pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.deployment.available"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "desired pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.deployment.desired"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "action" : "drop",
-            "inclusive" : true,
-            "low" : 0,
-            "mode" : "below"
-          },
-          "type" : "EXCLUDE"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "B-A",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "pods desired but not available",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : true,
-      "colorByValueScale" : [ {
-        "color" : "#ea1849",
-        "gt" : 0
-      }, {
-        "color" : "#05ce00"
-      } ],
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "kubernetes_cluster"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_name"
-      }, {
-        "enabled" : false,
-        "property" : "kubernetes_namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "metric_source"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "uid"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "",
-      "updateInterval" : 60000,
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "relatedDetectors" : [ "DJZmOKnAYAA" ],
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
-  }
-}, {
-  "marshallId" : 23,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Container Restarts by Node",
-  "sf_chartIndex" : 1504981442309,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "SUM_ROLLUP"
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "name" : "kubernetes.container_restart_count - Sum by host",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.container_restart_count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : true,
-        "property" : "kubernetes_cluster"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_pod_name"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_node"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_role"
-      }, {
-        "enabled" : true,
-        "property" : "container_image"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_namespace"
-      }, {
-        "enabled" : true,
-        "property" : "metric_source"
-      }, {
-        "enabled" : true,
-        "property" : "container_spec_name"
-      }, {
-        "enabled" : true,
-        "property" : "host"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_pod_uid"
-      }, {
-        "enabled" : true,
-        "property" : "container_id"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "-value",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "restarts",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
-  }
-}, {
-  "marshallId" : 24,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 21 ],
   "sf_chart" : "Daemon Sets by Stage",
   "sf_chartIndex" : 1504985320971,
   "sf_type" : "Chart",
@@ -2872,8 +2649,270 @@
     "uiHelperValue" : "##CHARTID##_3"
   }
 }, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Net Pods Desired by Replication Controller",
+  "sf_chartIndex" : 1504985040860,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "available pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.replication_controller.available",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "desired pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.replication_controller.desired",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "B-A",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "pods desired but not available",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "kubernetes_cluster"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_name"
+      }, {
+        "enabled" : false,
+        "property" : "kubernetes_namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "metric_source"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "uid"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Net Pods Desired by Replica Set",
+  "sf_chartIndex" : 1504984341541,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "available pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.replica_set.available",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "desired pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.replica_set.desired",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "B-A",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "pods desired but not available",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "kubernetes_cluster"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_name"
+      }, {
+        "enabled" : false,
+        "property" : "kubernetes_namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "metric_source"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "uid"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
   "marshallId" : 25,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 21 ],
   "sf_chart" : "Container Restarts by Pod",
   "sf_chartIndex" : 1504983743195,
   "sf_description" : "",
@@ -2972,25 +3011,75 @@
   }
 }, {
   "marshallId" : 26,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Container Restarts",
-  "sf_chartIndex" : 1504981590087,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Deployments Not at Spec",
+  "sf_chartIndex" : 1504983431707,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "available pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.deployment.available"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "desired pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.deployment.desired"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "SUM_ROLLUP"
+        "maxExtrapolations" : -1
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_cluster"
-            } ],
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "action" : "drop",
+            "inclusive" : true,
+            "low" : 0,
+            "mode" : "below"
+          },
+          "type" : "EXCLUDE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           },
@@ -2998,19 +3087,22 @@
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "COUNT"
         },
         "showMe" : false
       } ],
+      "expressionText" : "B-A",
       "invisible" : false,
-      "name" : "kubernetes.container_restart_count - Sum by kubernetes_cluster",
+      "metricDefinition" : { },
+      "name" : "pods desired but not available",
       "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "kubernetes.container_restart_count"
+        "metric" : null
       },
       "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -3026,7 +3118,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 2,
+      "uniqueKey" : 4,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "single",
@@ -3038,24 +3130,37 @@
       "colorByValue" : true,
       "colorByValueScale" : [ {
         "color" : "#ea1849",
-        "gt" : 1
+        "gt" : 0
       }, {
         "color" : "#05ce00"
       } ],
       "hideTimestamp" : false,
       "legendColumnConfiguration" : [ {
-        "enabled" : true,
+        "enabled" : false,
         "property" : "kubernetes_cluster"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_name"
+      }, {
+        "enabled" : false,
+        "property" : "kubernetes_namespace"
       }, {
         "enabled" : false,
         "property" : "sf_originatingMetric"
       }, {
         "enabled" : false,
+        "property" : "metric_source"
+      }, {
+        "enabled" : false,
         "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "uid"
       } ],
       "range" : 900000,
       "rangeEnd" : null,
       "sortPreference" : "",
+      "updateInterval" : 60000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -3068,14 +3173,14 @@
         }
       } ]
     },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ "DJZmOKnAYAA" ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
   "marshallId" : 27,
-  "marshallMemberOf" : [ 19 ],
+  "marshallMemberOf" : [ 21 ],
   "sf_chart" : "Pods by Phase",
   "sf_chartIndex" : 1504982002981,
   "sf_description" : "",
@@ -3388,9 +3493,10 @@
   }
 }, {
   "marshallId" : 28,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Desired Pods by Deployment",
-  "sf_chartIndex" : 1504982762234,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Available Pods by Deployment",
+  "sf_chartIndex" : 1505086092502,
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
@@ -3400,7 +3506,7 @@
         "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
-      "invisible" : true,
+      "invisible" : false,
       "name" : "available pods",
       "queryItems" : [ ],
       "seriesData" : {
@@ -3417,7 +3523,7 @@
         "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
-      "invisible" : false,
+      "invisible" : true,
       "name" : "desired pods",
       "queryItems" : [ ],
       "seriesData" : {
@@ -3449,6 +3555,7 @@
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
+      "colorByMetric" : false,
       "legendColumnConfiguration" : [ {
         "enabled" : false,
         "property" : "kubernetes_cluster"
@@ -3488,143 +3595,13 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
-  }
-}, {
-  "marshallId" : 29,
-  "marshallMemberOf" : [ 19 ],
-  "sf_chart" : "Net Pods Desired by Replication Controller",
-  "sf_chartIndex" : 1504985040860,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "available pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.replication_controller.available",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : true,
-      "name" : "desired pods",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "kubernetes.replication_controller.desired",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "expressionText" : "B-A",
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "pods desired but not available",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : null
-      },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "kubernetes_cluster"
-      }, {
-        "enabled" : true,
-        "property" : "kubernetes_name"
-      }, {
-        "enabled" : false,
-        "property" : "kubernetes_namespace"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "metric_source"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "uid"
-      } ],
-      "range" : 900000,
-      "rangeEnd" : null,
-      "sortPreference" : "-value",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
     "relatedDetectors" : [ ],
     "revisionNumber" : 7,
     "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
-  "marshallId" : 30,
-  "marshallMemberOf" : [ 19 ],
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 21 ],
   "sf_chart" : "Pods by Phase",
   "sf_chartIndex" : 1504982415444,
   "sf_description" : "",
@@ -3941,141 +3918,25 @@
     "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
-  "marshallId" : 31,
-  "marshallMemberOf" : [ 2 ],
-  "sf_dashboard" : "K8s Node",
-  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores AND _exists_:kubernetes_cluster",
-  "sf_discoverySelectors" : [ "_exists_:host" ],
-  "sf_filterAlias" : {
-    "variables" : [ {
-      "alias" : "host",
-      "description" : "K8s node",
-      "dimension" : "host",
-      "globalScope" : false,
-      "preferredSuggestions" : [ ],
-      "replaceOnly" : false,
-      "required" : true,
-      "restricted" : false,
-      "value" : ""
-    } ]
-  },
-  "sf_isLocked" : false,
-  "sf_savedFilters" : {
-    "density" : 0.0,
-    "sources" : null,
-    "time" : {
-      "end" : "Now",
-      "relative" : true,
-      "start" : "-1h"
-    },
-    "variables" : [ "host=" ]
-  },
-  "sf_type" : "Dashboard",
-  "sf_uiModel" : {
-    "version" : 1,
-    "widgets" : [ {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1458313290939,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1458409586006,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1458418158282,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1458427057873,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 6,
-      "sizeY" : 1
-    }, {
-      "col" : 6,
-      "options" : {
-        "chartIndex" : 1458314739641,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 6,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1458318231023,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 6,
-      "sizeY" : 1
-    }, {
-      "col" : 6,
-      "options" : {
-        "chartIndex" : 1458427414608,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 6,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1458317740707,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 6,
-      "sizeY" : 1
-    }, {
-      "col" : 6,
-      "options" : {
-        "chartIndex" : 1458427696376,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 6,
-      "sizeY" : 1
-    } ]
-  }
-}, {
-  "marshallId" : 32,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Highest Memory Use per Pod (bytes)",
-  "sf_chartIndex" : 1458317740707,
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Container Restarts by Node",
+  "sf_chartIndex" : 1504981442309,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
         "maxExtrapolations" : -1,
-        "rollupPolicy" : null
+        "rollupPolicy" : "SUM_ROLLUP"
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_pod_name"
+              "value" : "host"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4087,34 +3948,412 @@
           "type" : "SUM"
         },
         "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "kubernetes.container_restart_count - Sum by host",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.container_restart_count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "kubernetes_cluster"
       }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_pod_name"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_node"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_role"
+      }, {
+        "enabled" : true,
+        "property" : "container_image"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_namespace"
+      }, {
+        "enabled" : true,
+        "property" : "metric_source"
+      }, {
+        "enabled" : true,
+        "property" : "container_spec_name"
+      }, {
+        "enabled" : true,
+        "property" : "host"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_pod_uid"
+      }, {
+        "enabled" : true,
+        "property" : "container_id"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "restarts",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Container Restarts",
+  "sf_chartIndex" : 1504981590087,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "SUM_ROLLUP"
+      },
+      "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "amount" : 1,
-            "transformTimeRange" : "1m",
-            "unit" : "m"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           },
           "type" : "aggregation"
         },
         "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "kubernetes.container_restart_count - Sum by kubernetes_cluster",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.container_restart_count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 1
+      }, {
+        "color" : "#05ce00"
+      } ],
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "kubernetes_cluster"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 21 ],
+  "sf_chart" : "Desired Pods by Deployment",
+  "sf_chartIndex" : 1504982762234,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "name" : "available pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.deployment.available"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "desired pods",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "kubernetes.deployment.desired"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "kubernetes_cluster"
+      }, {
+        "enabled" : true,
+        "property" : "kubernetes_name"
+      }, {
+        "enabled" : false,
+        "property" : "kubernetes_namespace"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "metric_source"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "uid"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "sortPreference" : "+kubernetes_name",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 2 ],
+  "sf_dashboard" : "K8s Clusters",
+  "sf_discoveryQuery" : "metric_source:kubernetes AND sf_metric:machine_cpu_cores AND _exists_:kubernetes_cluster",
+  "sf_discoverySelectors" : [ "_exists_:kubernetes_cluster" ],
+  "sf_isLocked" : false,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : {
+      "end" : "Now",
+      "relative" : true,
+      "start" : "-1h"
+    },
+    "variables" : null
+  },
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1458317097334,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1458501499296,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1458501808727,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1458502325166,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1458675384013,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1459359184905,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "Memory Use (Bytes)",
+  "sf_chartIndex" : 1458675384013,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
           "options" : {
-            "count" : 10
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
           },
-          "type" : "TOPN"
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
         },
         "showMe" : false
       } ],
@@ -4122,15 +4361,7 @@
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
+      "queryItems" : [ ],
       "seriesData" : {
         "metric" : "container_memory_usage_bytes",
         "regExStyle" : null
@@ -4162,11 +4393,10 @@
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "maxDecimalPlaces" : 4,
-      "range" : -3600000,
-      "rangeEnd" : 0,
+      "legendColumnConfiguration" : null,
+      "range" : -7200000,
+      "rangeEnd" : null,
       "sortPreference" : "-value",
-      "useKMG2" : true,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -4178,23 +4408,22 @@
         }
       } ]
     },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 12,
-    "uiHelperValue" : "##CHARTID##_12"
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
-  "marshallId" : 33,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Total # Pods",
-  "sf_chartIndex" : 1458313290939,
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "Mean and Max CPU Use %",
+  "sf_chartIndex" : 1459359184905,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#0077c2",
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
@@ -4202,7 +4431,418 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_pod_name"
+              "value" : "host"
+            }, {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MAX"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "max",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            }, {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "mean",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -7200000,
+      "rangeEnd" : null,
+      "sortPreference" : "",
+      "updateInterval" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 7,
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "# Containers per Cluster",
+  "sf_chartIndex" : 1458501499296,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "container_cpu_utilization",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -7200000,
+      "rangeEnd" : null,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "Network Errors per cluster",
+  "sf_chartIndex" : 1458502325166,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Rx (Bytes)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_receive_errors_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Tx (Bytes)",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "metric_source",
+        "propertyValue" : "kubernetes",
+        "query" : "metric_source:kubernetes",
+        "type" : "property",
+        "value" : "kubernetes"
+      } ],
+      "seriesData" : {
+        "metric" : "pod_network_transmit_errors_total",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -7200000,
+      "rangeEnd" : null,
+      "sortPreference" : "+cluster",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "# Clusters",
+  "sf_chartIndex" : 1458317097334,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4246,7 +4886,7 @@
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "container_cpu_utilization - Sum by kubernetes_pod_name - Mean(1m) - Count",
+      "name" : "",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4288,8 +4928,9 @@
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "hideTimestamp" : false,
-      "range" : -3600000,
-      "rangeEnd" : 0,
+      "maxDecimalPlaces" : 3,
+      "range" : -7200000,
+      "rangeEnd" : null,
       "sortPreference" : "",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -4303,14 +4944,14 @@
       } ]
     },
     "currentUniqueKey" : 4,
-    "revisionNumber" : 10,
-    "uiHelperValue" : "##CHARTID##_10"
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
   }
 }, {
-  "marshallId" : 34,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "CPU Use per Pod (%)",
-  "sf_chartIndex" : 1458427414608,
+  "marshallId" : 39,
+  "marshallMemberOf" : [ 33 ],
+  "sf_chart" : "# Nodes per Cluster",
+  "sf_chartIndex" : 1458501808727,
   "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
@@ -4325,7 +4966,9 @@
         "direction" : {
           "options" : {
             "aggregateGroupBy" : [ {
-              "value" : "kubernetes_pod_name"
+              "value" : "kubernetes_cluster"
+            }, {
+              "value" : "host"
             } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
@@ -4337,11 +4980,41 @@
           "type" : "SUM"
         },
         "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "amount" : 1,
+            "transformTimeRange" : "1m",
+            "unit" : "m"
+          },
+          "type" : "transformation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "kubernetes_cluster"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
       } ],
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "CPU %",
+      "name" : "",
       "queryItems" : [ {
         "NOT" : false,
         "iconClass" : "icon-properties",
@@ -4377,115 +5050,18 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
+    "chartMode" : "list",
+    "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "range" : -3600001,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "stackedChart" : true,
+      "legendColumnConfiguration" : null,
+      "maxDecimalPlaces" : null,
+      "range" : -7200000,
+      "rangeEnd" : null,
+      "sortPreference" : "-value",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
-        "label" : "%",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 11,
-    "uiHelperValue" : "##CHARTID##_11"
-  }
-}, {
-  "marshallId" : 35,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Memory Use per Pod (bytes)",
-  "sf_chartIndex" : 1458427696376,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_pod_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "memory use (bytes)",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_memory_usage_bytes",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "stackedChart" : true,
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "bytes",
         "max" : null,
         "min" : null,
         "name" : "yAxis0",
@@ -4498,663 +5074,5 @@
     "currentUniqueKey" : 4,
     "revisionNumber" : 9,
     "uiHelperValue" : "##CHARTID##_9"
-  }
-}, {
-  "marshallId" : 36,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Highest CPU Use per Pod (%)",
-  "sf_chartIndex" : 1458318231023,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "container_cpu_utilization",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "kubernetes_pod_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "amount" : 1,
-            "transformTimeRange" : "1m",
-            "unit" : "m"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 10
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "expressionText" : "A",
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 2,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 12,
-    "uiHelperValue" : "##CHARTID##_12"
-  }
-}, {
-  "marshallId" : 37,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Total Memory (bytes)",
-  "sf_chartIndex" : 1458418158282,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "machine_memory_bytes - Sum",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "machine_memory_bytes",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "expressionText" : "A/1024/1024",
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "A/1024/1024",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 2,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "hideTimestamp" : false,
-      "maxDecimalPlaces" : 4,
-      "range" : -3600001,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
-  }
-}, {
-  "marshallId" : 38,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Pod Network Errors by Interface",
-  "sf_chartIndex" : 1458314739641,
-  "sf_description" : "Network receive and transmit errors from pods on this node",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "interface"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Rx",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_receive_errors_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#0077c2",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "interface"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Tx",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_transmit_errors_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "revisionNumber" : 8,
-    "uiHelperValue" : "##CHARTID##_8"
-  }
-}, {
-  "marshallId" : 39,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Total # CPU Cores",
-  "sf_chartIndex" : 1458409586006,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "amount" : 1,
-            "transformTimeRange" : "1m",
-            "unit" : "m"
-          },
-          "type" : "transformation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "cpu cores",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "machine_cpu_cores",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "hideTimestamp" : false,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 7,
-    "uiHelperValue" : "##CHARTID##_7"
-  }
-}, {
-  "marshallId" : 40,
-  "marshallMemberOf" : [ 31 ],
-  "sf_chart" : "Pod Network Throughput",
-  "sf_chartIndex" : 1458427057873,
-  "sf_description" : "Network bytes received and transmitted by pods on this node",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#b04600",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Rx bytes/sec",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_receive_bytes_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#00b9ff",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Tx bytes/sec",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "metric_source",
-        "propertyValue" : "kubernetes",
-        "query" : "metric_source:kubernetes",
-        "type" : "property",
-        "value" : "kubernetes"
-      } ],
-      "seriesData" : {
-        "metric" : "pod_network_transmit_bytes_total",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 1
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "column",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "legendColumnConfiguration" : null,
-      "range" : -3600000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "Rx Bytes /sec (RED)",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "label" : "Tx Bytes /sec (BLUE)",
-        "max" : null,
-        "min" : 0,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 6,
-    "revisionNumber" : 13,
-    "uiHelperValue" : "##CHARTID##_13"
   }
 } ]
