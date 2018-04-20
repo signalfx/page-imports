@@ -2796,14 +2796,28 @@
         },
         "fn" : {
           "options" : { },
-          "type" : "MEAN"
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
         },
         "showMe" : false
       } ],
       "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "gauge.kafka-active-controllers - Mean by hostHasService",
+      "name" : "gauge.kafka-active-controllers - Sum by hostHasService - Count",
       "queryItems" : [ ],
       "seriesData" : {
         "metric" : "gauge.kafka-active-controllers"
@@ -2838,7 +2852,6 @@
       "colorByMetric" : false,
       "colorByValue" : false,
       "disableThrottle" : false,
-      "forcedResolution" : "0",
       "hideTimestamp" : false,
       "histogramColor" : "#ea1849",
       "range" : -900000,
@@ -2859,8 +2872,8 @@
     },
     "currentUniqueKey" : 3,
     "relatedDetectors" : [ ],
-    "revisionNumber" : 13,
-    "uiHelperValue" : "##CHARTID##_13"
+    "revisionNumber" : 15,
+    "uiHelperValue" : "##CHARTID##_15"
   }
 }, {
   "marshallId" : 28,
