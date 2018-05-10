@@ -10,7 +10,7 @@
   "marshallMemberOf" : [ 1 ],
   "sf_dashboard" : "Azure Storage Account",
   "sf_description" : "An Azure storage account provides a unique namespace to store and access your Azure Storage data objects",
-  "sf_discoveryQuery" : "_exists_:azure_resource_name AND resource_type:\"Microsoft.Storage/storageAccounts\"",
+  "sf_discoveryQuery" : "resource_type:\"Microsoft.Storage/storageAccounts\"",
   "sf_discoverySelectors" : [ "_exists_:azure_resource_name" ],
   "sf_filterAlias" : {
     "variables" : [ {
