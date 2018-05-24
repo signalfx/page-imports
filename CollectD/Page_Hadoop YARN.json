@@ -8,519 +8,6 @@
 }, {
   "marshallId" : 2,
   "marshallMemberOf" : [ 1 ],
-  "sf_dashboard" : "Application",
-  "sf_description" : "Determine how well an application is performing in a Hadoop Cluster",
-  "sf_discoveryQuery" : "",
-  "sf_discoverySelectors" : [ "plugin:apache_hadoop" ],
-  "sf_filterAlias" : {
-    "variables" : [ {
-      "alias" : "app_name",
-      "description" : "",
-      "dimension" : "app_name",
-      "globalScope" : false,
-      "preferredSuggestions" : [ ],
-      "replaceOnly" : false,
-      "required" : true,
-      "restricted" : false,
-      "value" : ""
-    } ]
-  },
-  "sf_isLocked" : false,
-  "sf_maxDelayOverride" : 0,
-  "sf_savedFilters" : {
-    "density" : 0.0,
-    "sources" : null,
-    "time" : null,
-    "variables" : [ "app_name=app_name:" ]
-  },
-  "sf_selectedEventOverlays" : [ ],
-  "sf_type" : "Dashboard",
-  "sf_uiModel" : {
-    "version" : 1,
-    "widgets" : [ {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1515606424796,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1515606424804,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1515606424803,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1515606424795,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1515606424794,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1515606424805,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    } ]
-  }
-}, {
-  "marshallId" : 3,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Cluster Usage %",
-  "sf_chartIndex" : 1515606424796,
-  "sf_description" : "The percentage of resources of the cluster that the app is using.",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "cluster usage %",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.clusterUsagePercentage"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
-  }
-}, {
-  "marshallId" : 4,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Application Progress %",
-  "sf_chartIndex" : 1515606424803,
-  "sf_description" : "The progress of the application as a percent",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "LATEST_ROLLUP"
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "gauge.hadoop.resource.manager.apps.progress",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.progress",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "% complete",
-        "max" : 100,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 5,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Allocated Memory (bytes)",
-  "sf_chartIndex" : 1515606424794,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "gauge.hadoop.resource.manager.apps.allocatedMB",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.allocatedMB"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
-  }
-}, {
-  "marshallId" : 6,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Allocated VCores",
-  "sf_chartIndex" : 1515606424795,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "gauge.hadoop.resource.manager.apps.allocatedVCores",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.allocatedVCores"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
-  }
-}, {
-  "marshallId" : 7,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Queue Usage %",
-  "sf_chartIndex" : 1515606424804,
-  "sf_description" : "The percentage of resources of the queue that the app is using",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : "LATEST_ROLLUP"
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "queue usage %",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.queueUsagePercentage",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
-  }
-}, {
-  "marshallId" : 8,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Running Containers",
-  "sf_chartIndex" : 1515606424805,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "name" : "gauge.hadoop.resource.manager.apps.runningContainers",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.runningContainers"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 2,
-    "uiHelperValue" : "##CHARTID##_2"
-  }
-}, {
-  "marshallId" : 9,
-  "marshallMemberOf" : [ 1 ],
   "sf_dashboard" : "Resource Manager",
   "sf_description" : "",
   "sf_discoveryQuery" : "",
@@ -633,8 +120,8 @@
     } ]
   }
 }, {
-  "marshallId" : 10,
-  "marshallMemberOf" : [ 9 ],
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
   "sf_chart" : "Jobs Running By Type",
   "sf_chartIndex" : 1517494271371,
   "sf_type" : "Chart",
@@ -721,189 +208,8 @@
     "uiHelperValue" : "##CHARTID##_2"
   }
 }, {
-  "marshallId" : 11,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Apps Completed",
-  "sf_chartIndex" : 1517496031102,
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "name" : "gauge.hadoop.cluster.metrics.apps_completed - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.cluster.metrics.apps_completed"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
-  }
-}, {
-  "marshallId" : 12,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Failed Apps",
-  "sf_chartIndex" : 1510584097930,
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#e9008a",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "gauge.hadoop.cluster.metrics.apps_failed - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.hadoop.cluster.metrics.apps_failed",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "groupBy" : [ ],
-      "heatmapAutoGradients" : 5,
-      "heatmapColorOverride" : "#05ce00",
-      "heatmapColorRange" : { },
-      "heatmapSortBy" : {
-        "asc" : true,
-        "value" : { }
-      },
-      "heatmapUnitsPerRow" : 0,
-      "heatmapUseValueAsColor" : false,
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "useKMG2" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
-  }
-}, {
-  "marshallId" : 13,
-  "marshallMemberOf" : [ 9 ],
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 2 ],
   "sf_chart" : "Cluster Nodes",
   "sf_chartIndex" : 1510842136881,
   "sf_description" : "Node Resources",
@@ -1083,23 +389,26 @@
     "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
-  "marshallId" : 14,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Apps Submitted",
-  "sf_chartIndex" : 1510584858770,
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Queue Used Capacity",
+  "sf_chartIndex" : 1510414835976,
+  "sf_description" : "Used queue capacity in percentage",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#0077c2",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ ],
+            "aggregateGroupBy" : [ {
+              "value" : "queue_name"
+            } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           },
@@ -1112,10 +421,18 @@
         "showMe" : false
       } ],
       "invisible" : false,
-      "name" : "gauge.hadoop.cluster.metrics.apps_submitted - Sum",
-      "queryItems" : [ ],
+      "name" : "used queue %",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin",
+        "propertyValue" : "apache_hadoop",
+        "type" : "property",
+        "value" : "apache_hadoop"
+      } ],
       "seriesData" : {
-        "metric" : "gauge.hadoop.cluster.metrics.apps_submitted"
+        "metric" : "gauge.hadoop.resource.manager.scheduler.leaf.queue.usedCapacity",
+        "regExStyle" : null
       },
       "transient" : false,
       "type" : "plot",
@@ -1138,21 +455,23 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "single",
+    "chartMode" : "graph",
     "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "colorByMetric" : false,
+      "colorByMetric" : true,
       "colorByValue" : false,
-      "hideTimestamp" : false,
-      "range" : -900000,
-      "rangeEnd" : null,
+      "legendColumnConfiguration" : null,
+      "range" : -3600000,
+      "rangeEnd" : 0,
       "secondaryVisualization" : "NONE",
       "sortPreference" : "",
+      "stackedChart" : true,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
+        "label" : "% used",
         "max" : null,
         "min" : null,
         "name" : "yAxis0",
@@ -1163,12 +482,12 @@
       } ]
     },
     "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
-  "marshallId" : 15,
-  "marshallMemberOf" : [ 9 ],
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 2 ],
   "sf_chart" : "Virtual Cores",
   "sf_chartIndex" : 1510406790160,
   "sf_description" : "Virtual Core Usage",
@@ -1304,50 +623,28 @@
     "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
-  "marshallId" : 16,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Queue Used Capacity",
-  "sf_chartIndex" : 1510414835976,
-  "sf_description" : "Used queue capacity in percentage",
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Application Progress",
+  "sf_chartIndex" : 1510406677280,
+  "sf_description" : "YARN Application Progress",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "extrapolationPolicy" : "ZERO_EXTRAPOLATION",
         "maxExtrapolations" : -1,
-        "rollupPolicy" : null
+        "rollupPolicy" : "LATEST_ROLLUP",
+        "suffix" : "%",
+        "unitType" : null
       },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "queue_name"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
+      "dataManipulations" : [ ],
       "invisible" : false,
-      "name" : "used queue %",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "apache_hadoop",
-        "type" : "property",
-        "value" : "apache_hadoop"
-      } ],
+      "name" : "App Progress",
+      "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.scheduler.leaf.queue.usedCapacity",
-        "regExStyle" : null
+        "metric" : "gauge.hadoop.resource.manager.apps.progress"
       },
       "transient" : false,
       "type" : "plot",
@@ -1370,23 +667,73 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "graph",
+    "chartMode" : "list",
     "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "colorByMetric" : true,
+      "colorByMetric" : false,
       "colorByValue" : false,
-      "legendColumnConfiguration" : null,
-      "range" : -3600000,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : true,
+        "property" : "hadoop_app_name"
+      }, {
+        "enabled" : true,
+        "property" : "hadoop_queue_name"
+      }, {
+        "enabled" : true,
+        "property" : "hadoop_user"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "queue"
+      }, {
+        "enabled" : false,
+        "property" : "user"
+      }, {
+        "enabled" : true,
+        "property" : "applicationType"
+      }, {
+        "enabled" : true,
+        "property" : "plugin_instance"
+      }, {
+        "enabled" : true,
+        "property" : "queue_name"
+      }, {
+        "enabled" : true,
+        "property" : "app_name"
+      } ],
+      "range" : -60000,
       "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "stackedChart" : true,
+      "secondaryVisualization" : "SPARKLINE",
+      "sortPreference" : "-value",
+      "updateInterval" : 60000,
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
-        "label" : "% used",
         "max" : null,
         "min" : null,
         "name" : "yAxis0",
@@ -1397,12 +744,394 @@
       } ]
     },
     "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7,
+    "uiHelperValue" : "##CHARTID##_7"
+  }
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Failed Apps",
+  "sf_chartIndex" : 1510584097930,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "gauge.hadoop.cluster.metrics.apps_failed - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.cluster.metrics.apps_failed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "groupBy" : [ ],
+      "heatmapAutoGradients" : 5,
+      "heatmapColorOverride" : "#05ce00",
+      "heatmapColorRange" : { },
+      "heatmapSortBy" : {
+        "asc" : true,
+        "value" : { }
+      },
+      "heatmapUnitsPerRow" : 0,
+      "heatmapUseValueAsColor" : false,
+      "hideTimestamp" : false,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
     "revisionNumber" : 4,
     "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
-  "marshallId" : 17,
-  "marshallMemberOf" : [ 9 ],
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Running Apps",
+  "sf_chartIndex" : 1510583468237,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "gauge.hadoop.cluster.metrics.apps_running - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.cluster.metrics.apps_running",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "eventLines" : false,
+      "hideTimestamp" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : true,
+        "property" : "queue_name"
+      }, {
+        "enabled" : false,
+        "property" : "queue_state"
+      }, {
+        "enabled" : false,
+        "property" : "queue_type"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Apps Completed",
+  "sf_chartIndex" : 1517496031102,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gauge.hadoop.cluster.metrics.apps_completed - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.cluster.metrics.apps_completed"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Apps Submitted",
+  "sf_chartIndex" : 1510584858770,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gauge.hadoop.cluster.metrics.apps_submitted - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.cluster.metrics.apps_submitted"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "hideTimestamp" : false,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 2 ],
   "sf_chart" : "YARN Memory (mb)",
   "sf_chartIndex" : 1510406677284,
   "sf_description" : "",
@@ -1581,25 +1310,131 @@
     "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
-  "marshallId" : 18,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Application Progress",
-  "sf_chartIndex" : 1510406677280,
-  "sf_description" : "YARN Application Progress",
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Application",
+  "sf_description" : "Determine how well an application is performing in a Hadoop Cluster",
+  "sf_discoveryQuery" : "",
+  "sf_discoverySelectors" : [ "plugin:apache_hadoop" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "app_name",
+      "description" : "",
+      "dimension" : "app_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : 0,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "app_name=app_name:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1515606424796,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1515606424804,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1515606424803,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1515606424795,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1515606424794,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1515606424805,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Application Progress %",
+  "sf_chartIndex" : 1515606424803,
+  "sf_description" : "The progress of the application as a percent",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
       },
-      "dataManipulations" : [ ],
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
       "invisible" : false,
-      "name" : "App Progress",
+      "name" : "gauge.hadoop.resource.manager.apps.progress - Mean by app_name",
       "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "gauge.hadoop.resource.manager.apps.progress"
+        "metric" : "gauge.hadoop.resource.manager.apps.progress",
+        "regExStyle" : null
       },
       "transient" : false,
       "type" : "plot",
@@ -1622,54 +1457,112 @@
       "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
-    "chartMode" : "list",
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "% complete",
+        "max" : 100,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Queue Usage %",
+  "sf_chartIndex" : 1515606424804,
+  "sf_description" : "The percentage of resources of the queue that the app is using",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP",
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "queue usage %",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.resource.manager.apps.queueUsagePercentage",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
     "chartType" : "line",
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
       "colorByMetric" : false,
       "colorByValue" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : true,
-        "property" : "hadoop_app_name"
-      }, {
-        "enabled" : true,
-        "property" : "hadoop_queue_name"
-      }, {
-        "enabled" : true,
-        "property" : "hadoop_user"
-      }, {
-        "enabled" : false,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "name"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : false,
-        "property" : "queue"
-      }, {
-        "enabled" : false,
-        "property" : "user"
-      } ],
-      "range" : -60000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "updateInterval" : 60000,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
       "useKMG2" : false,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
@@ -1688,24 +1581,28 @@
     "uiHelperValue" : "##CHARTID##_4"
   }
 }, {
-  "marshallId" : 19,
-  "marshallMemberOf" : [ 9 ],
-  "sf_chart" : "Running Apps",
-  "sf_chartIndex" : 1510583468237,
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Cluster Usage %",
+  "sf_chartIndex" : 1515606424796,
+  "sf_description" : "The percentage of resources of the cluster that the app is using.",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#0077c2",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
-        "rollupPolicy" : null
+        "rollupPolicy" : "LATEST_ROLLUP",
+        "suffix" : "%",
+        "unitType" : null
       },
       "dataManipulations" : [ {
         "direction" : {
           "options" : {
-            "aggregateGroupBy" : [ ],
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
             "collapseGroups" : false,
             "transformTimeRange" : null
           },
@@ -1713,21 +1610,19 @@
         },
         "fn" : {
           "options" : { },
-          "type" : "SUM"
+          "type" : "MEAN"
         },
         "showMe" : false
       } ],
       "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "gauge.hadoop.cluster.metrics.apps_running - Sum",
+      "name" : "cluster usage %",
       "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "gauge.hadoop.cluster.metrics.apps_running",
-        "regExStyle" : null
+        "metric" : "gauge.hadoop.resource.manager.apps.clusterUsagePercentage"
       },
       "transient" : false,
       "type" : "plot",
-      "uniqueKey" : 2,
+      "uniqueKey" : 1,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -1743,7 +1638,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 3,
+      "uniqueKey" : 2,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "single",
@@ -1753,36 +1648,9 @@
       "absoluteStart" : null,
       "colorByMetric" : false,
       "colorByValue" : false,
-      "eventLines" : false,
+      "colorByValueScale" : [ ],
       "hideTimestamp" : false,
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : false,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : true,
-        "property" : "queue_name"
-      }, {
-        "enabled" : false,
-        "property" : "queue_state"
-      }, {
-        "enabled" : false,
-        "property" : "queue_type"
-      } ],
+      "histogramColor" : "#ea1849",
       "range" : -900000,
       "rangeEnd" : null,
       "secondaryVisualization" : "NONE",
@@ -1799,7 +1667,282 @@
         }
       } ]
     },
-    "currentUniqueKey" : 4,
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Allocated VCores",
+  "sf_chartIndex" : 1515606424795,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gauge.hadoop.resource.manager.apps.allocatedVCores - Mean by app_name",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.resource.manager.apps.allocatedVCores"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 3,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Running Containers",
+  "sf_chartIndex" : 1515606424805,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : "LATEST_ROLLUP"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gauge.hadoop.resource.manager.apps.runningContainers - Mean by app_name",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.resource.manager.apps.runningContainers"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 4,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 13 ],
+  "sf_chart" : "Allocated Memory (bytes)",
+  "sf_chartIndex" : 1515606424794,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "app_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "gauge.hadoop.resource.manager.apps.allocatedMB - Mean by app_name",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.hadoop.resource.manager.apps.allocatedMB"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
     "revisionNumber" : 4,
     "uiHelperValue" : "##CHARTID##_4"
   }
