@@ -1,0 +1,5232 @@
+[ {
+  "marshallScope" : 1
+}, {
+  "marshallId" : 1,
+  "sf_description" : "Dashboards about OpenStack.",
+  "sf_page" : "OpenStack",
+  "sf_type" : "Page"
+}, {
+  "marshallId" : 2,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Tenant",
+  "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:openstack",
+  "sf_discoverySelectors" : [ "_exists_:project_name", "_exists_:hypervisor_hostname" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "Tenant",
+      "applyIfExists" : false,
+      "description" : "Project Name",
+      "dimension" : "project_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "Tenant=project_name:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1506664747923,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1525781962874,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1525781377238,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1525780765406,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1525782847771,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1525781152510,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1527152761848,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1527152846683,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1527153040354,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1506663265655,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1525782591049,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 3,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Top Instances by VCPUs",
+  "sf_chartIndex" : 1527152761848,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5,
+            "mode" : "count"
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Count by instance_name - Top 5",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "instance_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 2,
+    "uiHelperValue" : "__OBJECT_ID___2"
+  }
+}, {
+  "marshallId" : 4,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Volumes Available vs Used",
+  "sf_chartIndex" : 1525782591049,
+  "sf_description" : "Max available volumes and total volumes used in the project at cinder client",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used Volumes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.totalVolumesUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Max Available Volumes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.maxTotalVolumes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "includeZero" : true,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Volumes Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 12
+  }
+}, {
+  "marshallId" : 5,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Disk utilization (%)",
+  "sf_chartIndex" : 1525781962874,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "gauge.openstack.cinder.limit.maxTotalVolumeGigabytes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.maxTotalVolumeGigabytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "gauge.openstack.cinder.limit.totalGigabytesUsed",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.totalGigabytesUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "B/A*100",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "B/A*100",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 80,
+        "lte" : 100
+      }, {
+        "color" : "#eac24b",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#e5e517",
+        "gt" : 40,
+        "lte" : 60
+      }, {
+        "color" : "#acef7f",
+        "gt" : 20,
+        "lte" : 40
+      }, {
+        "color" : "#6bd37e",
+        "gte" : 0,
+        "lte" : 20
+      } ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "LINEAR",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 6,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Disk Usage",
+  "sf_chartIndex" : 1525782847771,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Gigibyte",
+        "visualization" : "line"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Total Disk Space",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.maxTotalVolumeGigabytes",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Gigibyte"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A-C",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Available Disk Space",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 2,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Gigibyte",
+        "visualization" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used Disk Space",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.cinder.limit.totalGigabytesUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "includeZero" : true,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Disk",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Top Instances by Memory Used",
+  "sf_chartIndex" : 1527153040354,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : null,
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5,
+            "mode" : "count"
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "In Use",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.memory-actual"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "instance_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : false,
+      "sortPreference" : "-value",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Memory in MB",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 18,
+    "uiHelperValue" : "##CHARTID##_18"
+  }
+}, {
+  "marshallId" : 8,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "VCPUs Available vs Used",
+  "sf_chartIndex" : 1506663265655,
+  "sf_description" : "Max available VCPUs and total VCPUs used in the project",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Used VCPUs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.totalCoresUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Total VCPUs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxTotalCores",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "VCPUs Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 24
+  }
+}, {
+  "marshallId" : 9,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Instances Available vs Used",
+  "sf_chartIndex" : 1525781152510,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "visualization" : "line"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Total Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxTotalInstances",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A-B",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Available instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.totalInstancesUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Instances Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
+  }
+}, {
+  "marshallId" : 10,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Top Instances by CPU %",
+  "sf_chartIndex" : 1527152846683,
+  "sf_description" : "Average CPU utilization of the instance",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "scaleAmount" : 1.0E-7
+          },
+          "type" : "SCALE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Scale:1e-7 - Sum by instance_name",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Count by instance_name",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5,
+            "mode" : "count"
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "expressionText" : "A/B",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "A/B - Top 5",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "disableThrottle" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : true,
+        "property" : "instance_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "SPARKLINE",
+      "sortPreference" : "-value",
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
+  }
+}, {
+  "marshallId" : 11,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Memory Usage",
+  "sf_chartIndex" : 1525780765406,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Mebibyte",
+        "visualization" : "line"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Total Memory",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxTotalRAMSize",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Mebibyte"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A-C",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Available Memory",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 2,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Mebibyte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used Memory",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.totalRAMUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Memory",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 16,
+    "uiHelperValue" : "##CHARTID##_16"
+  }
+}, {
+  "marshallId" : 12,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Memory utilization (%)",
+  "sf_chartIndex" : 1525781377238,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "gauge.openstack.nova.limit.maxTotalRAMSize",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxTotalRAMSize",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "gauge.openstack.nova.limit.totalRAMUsed",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.totalRAMUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "E",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "B/A*100",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "B/A*100",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 5,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 6,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 80,
+        "lte" : 100
+      }, {
+        "color" : "#eac24b",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#e5e517",
+        "gt" : 40,
+        "lte" : 60
+      }, {
+        "color" : "#acef7f",
+        "gt" : 20,
+        "lte" : 40
+      }, {
+        "color" : "#6bd37e",
+        "gte" : 0,
+        "lte" : 20
+      } ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "project_name"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "LINEAR",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 7,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 13,
+  "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "# Used Instances",
+  "sf_chartIndex" : 1506664747923,
+  "sf_description" : "Total number of instances used in the project",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : " used instances",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Instances",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.totalInstancesUsed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "VCPUs",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 23,
+    "uiHelperValue" : "##CHARTID##_23"
+  }
+}, {
+  "marshallId" : 14,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Instance",
+  "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:openstack",
+  "sf_discoverySelectors" : [ "_exists_:hypervisor_hostname", "_exists_:instance_name" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "Instance",
+      "applyIfExists" : false,
+      "description" : "null",
+      "dimension" : "instance_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "Instance=instance_name:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1506646221071,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1527063212723,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1527061972458,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1506646221067,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1526376743887,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1506633839730,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1525783994699,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1506645913975,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1506646221070,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 15,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Total bytes sent/received",
+  "sf_chartIndex" : 1506646221071,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : "DELTA_ROLLUP",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Transmitted Octets",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.tx",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 1
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : "DELTA_ROLLUP",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Received Octets",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.rx",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "received total",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "transmitted total",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 12,
+    "uiHelperValue" : "##CHARTID##_12"
+  }
+}, {
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Received vs Transmitted Packets/sec",
+  "sf_chartIndex" : 1506646221067,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Received Packets",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.rx_packets",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Transmitted Packets",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.tx_packets",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 1
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "packets received/sec",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "packets transmitted/sec",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8,
+    "uiHelperValue" : "##CHARTID##_8"
+  }
+}, {
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Virtual Disk Read vs Write Requests",
+  "sf_chartIndex" : 1525783994699,
+  "sf_description" : "Number of virtual disk reads vs write requests",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "DELTA"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Read Requests",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.vda_read_req",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#a747ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "DELTA"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Write Requests",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.vda_write_req",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 1
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Read Requests",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "Write Requests",
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 10,
+    "uiHelperValue" : "##CHARTID##_10"
+  }
+}, {
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Packets Dropped/sec",
+  "sf_chartIndex" : 1506646221070,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#b04600",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Received dropped",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.rx_drop",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Transmitted dropped",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.tx_drop",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 1
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "packets/sec",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "packets/sec",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "CPU Used (%)",
+  "sf_chartIndex" : 1527061972458,
+  "sf_description" : "Average CPU utilization of the instance",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "scaleAmount" : 1.0E-7
+          },
+          "type" : "SCALE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Scale:1e-7 - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A/B",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "A/B",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : true,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 80
+      }, {
+        "color" : "#eac24b",
+        "gt" : 60,
+        "lte" : 80
+      }, {
+        "color" : "#e5e517",
+        "gt" : 30,
+        "lte" : 60
+      }, {
+        "color" : "#6bd37e",
+        "lte" : 30
+      } ],
+      "disableThrottle" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 3,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : null,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 15,
+    "uiHelperValue" : "##CHARTID##_15"
+  }
+}, {
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "CPU %",
+  "sf_chartIndex" : 1526376743887,
+  "sf_description" : "Average CPU utilization in the instance",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "scaleAmount" : 1.0E-7
+          },
+          "type" : "SCALE"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Scale:1e-7 - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "C",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "%",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "A/B",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "CPU utilization",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "disableThrottle" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -900001,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "CPU Usage %",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
+  }
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Memory",
+  "sf_chartIndex" : 1506633839730,
+  "sf_description" : "Memory used in the instance",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Mebibyte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "Provisioned",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.memory"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "In Use",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.memory-actual"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "instance_name"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "In Use (Not Incl. Disk Pages)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.memory-rss"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 7,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "instance_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "user_domain_name"
+      }, {
+        "enabled" : true,
+        "property" : "project_name"
+      }, {
+        "enabled" : true,
+        "property" : "project_id"
+      }, {
+        "enabled" : true,
+        "property" : "host"
+      }, {
+        "enabled" : true,
+        "property" : "id"
+      }, {
+        "enabled" : true,
+        "property" : "availability_zone"
+      }, {
+        "enabled" : true,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : true,
+        "property" : "hostId"
+      }, {
+        "enabled" : true,
+        "property" : "flavor"
+      }, {
+        "enabled" : true,
+        "property" : "hypervisor_hostname"
+      }, {
+        "enabled" : true,
+        "property" : "plugin"
+      }, {
+        "enabled" : true,
+        "property" : "user_id"
+      }, {
+        "enabled" : true,
+        "property" : "dsname"
+      }, {
+        "enabled" : true,
+        "property" : "status"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Memory in MB",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 8,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 19,
+    "uiHelperValue" : "##CHARTID##_19"
+  }
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "VCPUs",
+  "sf_chartIndex" : 1527063212723,
+  "sf_description" : "Number of vCPUs",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "allocated vcpus",
+        "unitType" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "counter.openstack.nova.server.cpu* - Count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.openstack.nova.server.cpu*",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "disableThrottle" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : 60000,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 15,
+    "uiHelperValue" : "##CHARTID##_15"
+  }
+}, {
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 14 ],
+  "sf_chart" : "Size of VDA Reads and Writes",
+  "sf_chartIndex" : 1506645913975,
+  "sf_description" : "Size of Virtual Disk reads and writes",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "DELTA"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Virtual Disk Reads",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.vda_read"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Byte"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "DELTA"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Virtual Disk Writes",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.vda_write",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 1
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Virtual disk errors",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.server.vda_errors",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 7,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 8,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "availability_zone"
+      }, {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "flavor"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "hostId"
+      }, {
+        "enabled" : false,
+        "property" : "hypervisor_hostname"
+      }, {
+        "enabled" : false,
+        "property" : "id"
+      }, {
+        "enabled" : false,
+        "property" : "instance_name"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "status"
+      }, {
+        "enabled" : false,
+        "property" : "tenant_id"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : 0,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 9,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Neutron",
+  "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:openstack",
+  "sf_discoverySelectors" : [ "_exists_:project_name", "_exists_:hypervisor_hostname" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "Tenant",
+      "applyIfExists" : false,
+      "description" : "",
+      "dimension" : "project_name",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "Tenant=project_name:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1527152187792,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1526382127360,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1527152256799,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1526380798730,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1525783149728,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "# Subnets",
+  "sf_chartIndex" : 1527152256799,
+  "sf_description" : "Overall subnet resources used",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "subnets",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Subnets",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.neutron.subnet.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "resource count",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 15,
+    "uiHelperValue" : "##CHARTID##_15"
+  }
+}, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "# Networks",
+  "sf_chartIndex" : 1527152187792,
+  "sf_description" : "Overall network resources used",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "networks",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Networks",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.neutron.network.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "resource count",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
+  }
+}, {
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "# Routers",
+  "sf_chartIndex" : 1526382127360,
+  "sf_description" : "Overall router resources used",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "routers",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Routers",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.neutron.router.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "resource count",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 15,
+    "uiHelperValue" : "##CHARTID##_15"
+  }
+}, {
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "Security Groups Available vs Used",
+  "sf_chartIndex" : 1526380798730,
+  "sf_description" : "Overall security group resources available vs used",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Available Security Groups",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxSecurityGroups",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used Security Groups",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.neutron.securitygroup.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "SG Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 24 ],
+  "sf_chart" : "Floating IPs Available vs Used",
+  "sf_chartIndex" : 1525783149728,
+  "sf_description" : "Overall floating ip resources available vs used",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Available Floating IPs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.limit.maxTotalFloatingIps",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "_originalLabel" : "B",
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Used Floating IPs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.neutron.floatingip.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "SPARKLINE",
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "FloatingIPs Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Hypervisor",
+  "sf_description" : "",
+  "sf_discoveryQuery" : "plugin:openstack",
+  "sf_discoverySelectors" : [ "_exists_:hypervisor_hostname" ],
+  "sf_filterAlias" : {
+    "variables" : [ {
+      "alias" : "Hypervisor",
+      "applyIfExists" : false,
+      "description" : "Host hypervisor where the opnestack is running",
+      "dimension" : "hypervisor_hostname",
+      "globalScope" : false,
+      "preferredSuggestions" : [ ],
+      "replaceOnly" : false,
+      "required" : true,
+      "restricted" : false,
+      "value" : ""
+    } ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : [ "Hypervisor=hypervisor_hostname:" ]
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1527157556377,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1506617333221,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1525779203770,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1506634282602,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1506617209631,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1525779750774,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1506634258064,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1506634277566,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "CPUs and VCPUs",
+  "sf_chartIndex" : 1506617333221,
+  "sf_description" : "Number of CPU cores available and used VPCUs at hypervisor",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Host CPUs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.vcpus"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#00b9ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Used VCPUs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.vcpus_used"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Count",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 18,
+    "uiHelperValue" : "##CHARTID##_18"
+  }
+}, {
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "Total Disk",
+  "sf_chartIndex" : 1525779750774,
+  "sf_description" : "Overall Disk used at Hypervisor",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#bd468d",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Gigabit"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "Used VCPUs",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.local_gb",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "project_name"
+      } ],
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "VCPUs",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 28,
+    "uiHelperValue" : "##CHARTID##_28"
+  }
+}, {
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "Load Average (1, 5 and 15m)",
+  "sf_chartIndex" : 1506634258064,
+  "sf_description" : "Average load on hypervisor in past 1min, 5min, and 15min",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Load 1m",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.load_average_1m",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Load 5m",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.load_average_5m",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "Load 15m",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.load_average_15m"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8
+  }
+}, {
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "# Physical CPUs",
+  "sf_chartIndex" : 1527157556377,
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "_originalLabel" : "A",
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0dba8f",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null,
+        "suffix" : "cores",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "gauge.openstack.nova.hypervisor.vcpus",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.vcpus",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "Disk Usage",
+  "sf_chartIndex" : 1506634277566,
+  "sf_description" : "Overall disk usage at hypservisor in GB",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "Total Host Disk",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.local_gb"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0dba8f",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Gigabit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Free",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.free_disk_gb",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e5b312",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Gigabit"
+      },
+      "dataManipulations" : [ ],
+      "expressionText" : "C-D+B",
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Provisioned",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : null
+      },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 5,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Gigabit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "In Use",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.local_gb_used"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "Available (Worst Case)",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.disk_available_least",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 6,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : true,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showLegend" : true,
+      "sortPreference" : "-sf_metric",
+      "stackedChart" : true,
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Disk in GB",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 7,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 14,
+    "uiHelperValue" : "##CHARTID##_14"
+  }
+}, {
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "Memory Usage",
+  "sf_chartIndex" : 1506634282602,
+  "sf_description" : "Overall usage of memory at hypervisor in GB",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : true,
+      "name" : "gauge.openstack.nova.hypervisor.memory_mb - Mean by hypervisor_hostname",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.memory_mb"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Megabit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Free",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.free_ram_mb",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "suffix" : "",
+        "unitType" : "Megabit"
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "hypervisor_hostname"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "name" : "In Use",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.memory_mb_used"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 7,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "histogramColor" : "#ea1849",
+      "includeZero" : false,
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "host_ip"
+      }, {
+        "enabled" : true,
+        "property" : "hypervisor_hostname"
+      }, {
+        "enabled" : false,
+        "property" : "hypervisor_type"
+      }, {
+        "enabled" : false,
+        "property" : "hypervisor_version"
+      }, {
+        "enabled" : false,
+        "property" : "id"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "state"
+      }, {
+        "enabled" : false,
+        "property" : "status"
+      }, {
+        "enabled" : false,
+        "property" : "tenant_id"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      }, {
+        "enabled" : true,
+        "property" : "project_id"
+      }, {
+        "enabled" : true,
+        "property" : "role"
+      } ],
+      "maxDecimalPlaces" : 3,
+      "range" : 900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showDots" : false,
+      "showLegend" : true,
+      "sortPreference" : "-value",
+      "stackedChart" : true,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Memory in GB",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 8,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 20,
+    "uiHelperValue" : "##CHARTID##_20"
+  }
+}, {
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "# Running VMs",
+  "sf_chartIndex" : 1506617209631,
+  "sf_description" : "Total number of VMs running in hypervisor",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#876ff3",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "suffix" : "VMs Running",
+        "unitType" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "gauge.openstack.nova.hypervisor.running_vms",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.running_vms"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : null,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "VMs",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 20,
+    "uiHelperValue" : "##CHARTID##_20"
+  }
+}, {
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 30 ],
+  "sf_chart" : "Total Memory",
+  "sf_chartIndex" : 1525779203770,
+  "sf_description" : "Overall memory available at Hypervisor in GB",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0077c2",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "prefix" : "",
+        "rollupPolicy" : null,
+        "suffix" : "",
+        "unitType" : "Megabit"
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.openstack.nova.hypervisor.memory_mb",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ {
+        "color" : "#ea1849",
+        "gt" : 20
+      }, {
+        "color" : "#6bd37e",
+        "lte" : 20
+      } ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : true,
+        "property" : "project_name"
+      }, {
+        "enabled" : false,
+        "property" : "user_domain_name"
+      }, {
+        "enabled" : false,
+        "property" : "project_id"
+      }, {
+        "enabled" : false,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "id"
+      }, {
+        "enabled" : false,
+        "property" : "state"
+      }, {
+        "enabled" : false,
+        "property" : "host_ip"
+      }, {
+        "enabled" : false,
+        "property" : "project_domain_name"
+      }, {
+        "enabled" : true,
+        "property" : "hypervisor_hostname"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : false,
+        "property" : "hypervisor_version"
+      }, {
+        "enabled" : false,
+        "property" : "hypervisor_type"
+      }, {
+        "enabled" : false,
+        "property" : "status"
+      } ],
+      "maxDecimalPlaces" : 2,
+      "range" : -604800000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "useKMG2" : false,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 32,
+    "uiHelperValue" : "##CHARTID##_32"
+  }
+} ]
