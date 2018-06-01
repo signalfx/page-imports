@@ -539,6 +539,82 @@
 }, {
   "marshallId" : 6,
   "marshallMemberOf" : [ 2 ],
+  "sf_chart" : "Consumer Fetches/sec",
+  "sf_chartIndex" : 1440793931539,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "fetches/sec",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "host",
+        "propertyValue" : "integration-test-kafka-0.8.2.1-2",
+        "query" : "host:\"integration-test-kafka-0.8.2.1-2\"",
+        "type" : "property",
+        "value" : "integration-test-kafka-0.8.2.1-2"
+      } ],
+      "seriesData" : {
+        "metric" : "counter.kafka.fetch-consumer.total-time.count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "disableThrottle" : false,
+      "forcedResolution" : "0",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "fetches",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 10
+  }
+}, {
+  "marshallId" : 7,
+  "marshallMemberOf" : [ 2 ],
   "sf_chart" : "Messages In/sec",
   "sf_chartIndex" : 4,
   "sf_description" : "",
@@ -620,7 +696,7 @@
     "uiHelperValue" : "##CHARTID##_16"
   }
 }, {
-  "marshallId" : 7,
+  "marshallId" : 8,
   "marshallMemberOf" : [ 2 ],
   "sf_chart" : "Kafka Bytes/sec",
   "sf_chartIndex" : 6,
@@ -751,82 +827,6 @@
     "revisionNumber" : 23,
     "sf_detectorDecorators" : [ ],
     "uiHelperValue" : "##CHARTID##_23"
-  }
-}, {
-  "marshallId" : 8,
-  "marshallMemberOf" : [ 2 ],
-  "sf_chart" : "Consumer Fetches/sec",
-  "sf_chartIndex" : 1440793931539,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "fetches/sec",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "host",
-        "propertyValue" : "integration-test-kafka-0.8.2.1-2",
-        "query" : "host:\"integration-test-kafka-0.8.2.1-2\"",
-        "type" : "property",
-        "value" : "integration-test-kafka-0.8.2.1-2"
-      } ],
-      "seriesData" : {
-        "metric" : "counter.kafka.fetch-consumer.total-time.count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "disableThrottle" : false,
-      "forcedResolution" : "0",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "fetches",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 10
   }
 }, {
   "marshallId" : 9,
@@ -1412,2084 +1412,6 @@
 }, {
   "marshallId" : 15,
   "marshallMemberOf" : [ 1 ],
-  "sf_dashboard" : "Kafka",
-  "sf_description" : "",
-  "sf_discoveryQuery" : "sf_hostHasService:kafka",
-  "sf_discoverySelectors" : [ "sf_hostHasService:kafka", "sf_key:host" ],
-  "sf_filterAlias" : {
-    "variables" : [ ]
-  },
-  "sf_isLocked" : false,
-  "sf_maxDelayOverride" : -1,
-  "sf_savedFilters" : {
-    "density" : 0.0,
-    "sources" : null,
-    "time" : null,
-    "variables" : null
-  },
-  "sf_selectedEventOverlays" : [ ],
-  "sf_type" : "Dashboard",
-  "sf_uiModel" : {
-    "version" : 1,
-    "widgets" : [ {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1440707458222,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1440706746767,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1440799109405,
-        "id" : 0
-      },
-      "row" : 0,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1440706577801,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1519130201067,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1443988084636,
-        "id" : 0
-      },
-      "row" : 1,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1443988555069,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1443988451417,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1440803652686,
-        "id" : 0
-      },
-      "row" : 2,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1443988806621,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1443988705261,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1443988869697,
-        "id" : 0
-      },
-      "row" : 3,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1443989550070,
-        "id" : 0
-      },
-      "row" : 4,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1443989413030,
-        "id" : 0
-      },
-      "row" : 4,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1440794092709,
-        "id" : 0
-      },
-      "row" : 4,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 0,
-      "options" : {
-        "chartIndex" : 1519046613545,
-        "id" : 0
-      },
-      "row" : 5,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 4,
-      "options" : {
-        "chartIndex" : 1519132456179,
-        "id" : 0
-      },
-      "row" : 5,
-      "sizeX" : 4,
-      "sizeY" : 1
-    }, {
-      "col" : 8,
-      "options" : {
-        "chartIndex" : 1519132661491,
-        "id" : 0
-      },
-      "row" : 5,
-      "sizeX" : 4,
-      "sizeY" : 1
-    } ]
-  }
-}, {
-  "marshallId" : 16,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Request Queue Size",
-  "sf_chartIndex" : 1440794092709,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MAX"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-request-queue"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "disableThrottle" : false,
-      "forcedResolution" : "0",
-      "maxDecimalPlaces" : 4,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 6
-  }
-}, {
-  "marshallId" : 17,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Producer Requests/sec",
-  "sf_chartIndex" : 1443988869697,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka.produce.total-time.count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "forcedResolution" : "0",
-      "histogramColor" : "#ea1849",
-      "maxDecimalPlaces" : 2,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
-  }
-}, {
-  "marshallId" : 18,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Consumer Fetch Time p99 (ms)",
-  "sf_chartIndex" : 1443989550070,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka.fetch-consumer.total-time.99th"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "forcedResolution" : "0",
-      "maxDecimalPlaces" : 4,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 8
-  }
-}, {
-  "marshallId" : 19,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Avg Bytes/Message",
-  "sf_chartIndex" : 1440706577801,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "counter.kafka-bytes-in - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-bytes-in"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "counter.kafka-messages-in - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-messages-in"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#f47e00",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "expressionText" : "A / B",
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "bytes/message",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "disableThrottle" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "bytes",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 9,
-    "uiHelperValue" : "##CHARTID##_9"
-  }
-}, {
-  "marshallId" : 20,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Producer Request Time p99 (ms)",
-  "sf_chartIndex" : 1443989413030,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka.produce.total-time.99th"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "forcedResolution" : "0",
-      "maxDecimalPlaces" : 4,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 7
-  }
-}, {
-  "marshallId" : 21,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Zookeper Request Latency (ms)",
-  "sf_chartIndex" : 1519132661491,
-  "sf_description" : "Request Latency Percentile Distribution (Available from 1.x.x)",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#e9008a",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Median",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka.zk.request-latency.median",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "99th Percentile",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka.zk.request-latency.99th",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "dimensionInLegend" : "sf_metric",
-      "histogramColor" : "#ea1849",
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "showLegend" : true,
-      "sortPreference" : "",
-      "stackedChart" : false,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "milli seconds",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 22,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Total Messages In/sec",
-  "sf_chartIndex" : 1443988084636,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#0dba8f",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "message in/sec",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-messages-in"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
-  }
-}, {
-  "marshallId" : 23,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Total Producer Requests/sec",
-  "sf_chartIndex" : 1443988451417,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#a747ff",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "requests/sec",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka.produce.total-time.count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "requests",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 24,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Total Consumer Fetches/sec",
-  "sf_chartIndex" : 1443988555069,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#e9008a",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "requests/sec",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka.fetch-consumer.total-time.count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "fetches",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 25,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "# Partitions",
-  "sf_chartIndex" : 1440706746767,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "under replicated partitions",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-underreplicated-partitions"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 5,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "partitions",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-partition-count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 3,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "disableThrottle" : false,
-      "histogramColor" : "#ea1849",
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : true,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "hostHasService"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : true,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      }, {
-        "enabled" : true,
-        "property" : "plugin_instance"
-      }, {
-        "enabled" : true,
-        "property" : "env"
-      }, {
-        "enabled" : true,
-        "property" : "container_image"
-      }, {
-        "enabled" : true,
-        "property" : "container_name"
-      } ],
-      "maxDecimalPlaces" : null,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "+sf_metric",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 4,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 17,
-    "uiHelperValue" : "##CHARTID##_17"
-  }
-}, {
-  "marshallId" : 26,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "# Brokers",
-  "sf_chartIndex" : 1440799109405,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 5,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "counter.kafka-bytes-out - Count",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-bytes-out"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
-      "disableThrottle" : false,
-      "groupBy" : [ ],
-      "heatmapAutoGradients" : 5,
-      "heatmapColorOverride" : "#05ce00",
-      "heatmapColorRange" : { },
-      "heatmapSortBy" : {
-        "asc" : true,
-        "value" : { }
-      },
-      "heatmapUnitsPerRow" : 0,
-      "heatmapUseValueAsColor" : false,
-      "hideTimestamp" : false,
-      "histogramColor" : "#ea1849",
-      "maxDecimalPlaces" : 3,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 11,
-    "uiHelperValue" : "##CHARTID##_11"
-  }
-}, {
-  "marshallId" : 27,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "# Kafka Clusters",
-  "sf_chartIndex" : 1440707458222,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
-        "maxExtrapolations" : 5,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "hostHasService"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "COUNT"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "gauge.kafka-active-controllers - Sum by hostHasService - Count",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-active-controllers"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "disableThrottle" : false,
-      "hideTimestamp" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 15,
-    "uiHelperValue" : "##CHARTID##_15"
-  }
-}, {
-  "marshallId" : 28,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Messages In/sec",
-  "sf_chartIndex" : 1443988705261,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-messages-in"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "forcedResolution" : "0",
-      "histogramColor" : "#ea1849",
-      "maxDecimalPlaces" : 2,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
-  }
-}, {
-  "marshallId" : 29,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Consumer Fetches/sec",
-  "sf_chartIndex" : 1443988806621,
-  "sf_description" : "",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ {
-              "value" : "host"
-            } ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      }, {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : {
-            "count" : 5
-          },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka.fetch-consumer.total-time.count"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "forcedResolution" : "0",
-      "histogramColor" : "#ea1849",
-      "maxDecimalPlaces" : 2,
-      "range" : -900000,
-      "rangeEnd" : 0,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "-value",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "messages",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 30,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Read Amplification",
-  "sf_chartIndex" : 1440803652686,
-  "sf_description" : "ratio of bytes out : bytes in",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "counter.kafka-bytes-in - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-bytes-in"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "SUM"
-        },
-        "showMe" : false
-      } ],
-      "focusNext" : false,
-      "invisible" : true,
-      "metricDefinition" : { },
-      "name" : "counter.kafka-bytes-out - Sum",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka-bytes-out"
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "expressionText" : "B / A",
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "bytes_out/bytes_in",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : false,
-      "type" : "ratio",
-      "uniqueKey" : 3,
-      "valid" : true,
-      "yAxisIndex" : 0
-    }, {
-      "dataManipulations" : [ ],
-      "focusNext" : false,
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 4,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "area",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "disableThrottle" : false,
-      "forcedResolution" : "0",
-      "range" : -7200000,
-      "rangeEnd" : 0,
-      "sortPreference" : "",
-      "updateInterval" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "ratio",
-        "max" : null,
-        "min" : 0,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 5,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 7
-  }
-}, {
-  "marshallId" : 31,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Top Brokers with Max Replication Lag",
-  "sf_chartIndex" : 1519046613545,
-  "sf_description" : "Maximum lag in messages between the follower and leader replicas in milliseconds",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "TOPN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "gauge.kafka-max-lag - Top 5",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-max-lag",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "list",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
-      "histogramColor" : "#ea1849",
-      "legendColumnConfiguration" : [ {
-        "enabled" : false,
-        "property" : "AWSUniqueId"
-      }, {
-        "enabled" : false,
-        "property" : "dsname"
-      }, {
-        "enabled" : true,
-        "property" : "host"
-      }, {
-        "enabled" : false,
-        "property" : "hostHasService"
-      }, {
-        "enabled" : false,
-        "property" : "sf_originatingMetric"
-      }, {
-        "enabled" : false,
-        "property" : "sf_metric"
-      }, {
-        "enabled" : false,
-        "property" : "plugin"
-      } ],
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 3,
-    "uiHelperValue" : "##CHARTID##_3"
-  }
-}, {
-  "marshallId" : 32,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "Zookeper Request Latency",
-  "sf_chartIndex" : 1519132456179,
-  "sf_description" : "Zookeeper request latency in milliseconds (Available from 1.x.x)",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ {
-        "direction" : {
-          "options" : {
-            "aggregateGroupBy" : [ ],
-            "collapseGroups" : false,
-            "transformTimeRange" : null
-          },
-          "type" : "aggregation"
-        },
-        "fn" : {
-          "options" : { },
-          "type" : "MEAN"
-        },
-        "showMe" : false
-      } ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "counter.kafka.zk.request-latency.count - Mean",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "counter.kafka.zk.request-latency.count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "histogramColor" : "#ea1849",
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "milli seconds",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 4,
-    "uiHelperValue" : "##CHARTID##_4"
-  }
-}, {
-  "marshallId" : 33,
-  "marshallMemberOf" : [ 15 ],
-  "sf_chart" : "# Topics",
-  "sf_chartIndex" : 1519130201067,
-  "sf_description" : "Number of Topics in Kafka cluster (Available from 1.x.x)",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#bd468d",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "gauge.kafka-topic-count",
-      "queryItems" : [ ],
-      "seriesData" : {
-        "metric" : "gauge.kafka-topic-count",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 2,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "single",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "colorByValueScale" : [ ],
-      "hideTimestamp" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "sortPreference" : "",
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      } ]
-    },
-    "currentUniqueKey" : 3,
-    "revisionNumber" : 5,
-    "uiHelperValue" : "##CHARTID##_5"
-  }
-}, {
-  "marshallId" : 34,
-  "marshallMemberOf" : [ 1 ],
   "sf_dashboard" : "JVM",
   "sf_description" : "JVM Performance monitoring",
   "sf_filterAlias" : {
@@ -3510,7 +1432,7 @@
   "sf_maxDelayOverride" : -1,
   "sf_savedFilters" : {
     "density" : 0.0,
-    "sources" : [ "host:" ],
+    "sources" : null,
     "time" : null,
     "variables" : [ "Host=host:" ]
   },
@@ -3602,8 +1524,8 @@
     } ]
   }
 }, {
-  "marshallId" : 35,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 16,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "G1 Old Gen",
   "sf_chartIndex" : 1519033233515,
   "sf_description" : "",
@@ -3753,8 +1675,8 @@
     "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
-  "marshallId" : 36,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 17,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "Non-Heap Memory Used %",
   "sf_chartIndex" : 1519115406271,
   "sf_description" : "Non-Heap memory used percentage over committed",
@@ -3980,8 +1902,8 @@
     "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
-  "marshallId" : 37,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 18,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "Loaded classes",
   "sf_chartIndex" : 1519111524326,
   "sf_description" : "Number of classes loaded in the JVM",
@@ -4064,8 +1986,8 @@
     "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
-  "marshallId" : 38,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 19,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "G1 Survivor Space",
   "sf_chartIndex" : 1518707755750,
   "sf_type" : "Chart",
@@ -4242,8 +2164,220 @@
     "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
-  "marshallId" : 39,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 20,
+  "marshallMemberOf" : [ 15 ],
+  "sf_chart" : "GC: G1 Collection Time",
+  "sf_chartIndex" : 1519111272385,
+  "sf_description" : "GC Young Generation - Collection time in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#05ce00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "collection_time",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-G1 Young Generation",
+        "type" : "property",
+        "value" : "gc-G1 Young Generation"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "hostHasService",
+        "propertyValue" : "kafka",
+        "type" : "property",
+        "value" : "kafka"
+      } ],
+      "seriesData" : {
+        "metric" : "total_time_in_ms.collection_time",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showDots" : false,
+      "showLegend" : false,
+      "sortPreference" : "",
+      "stackedChart" : false,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "Duration (ms)",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 13,
+    "uiHelperValue" : "##CHARTID##_13"
+  }
+}, {
+  "marshallId" : 21,
+  "marshallMemberOf" : [ 15 ],
+  "sf_chart" : "GC: G1 Invocations",
+  "sf_chartIndex" : 1519111345386,
+  "sf_description" : "GC Young Generation - invocations per sec",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#f47e00",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "invocations",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin_instance",
+        "propertyValue" : "gc-G1 Young Generation",
+        "type" : "property",
+        "value" : "gc-G1 Young Generation"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "hostHasService",
+        "propertyValue" : "kafka",
+        "type" : "property",
+        "value" : "kafka"
+      } ],
+      "seriesData" : {
+        "metric" : "invocations",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 5,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "dimensionInLegend" : "sf_metric",
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "showDots" : false,
+      "showLegend" : false,
+      "sortPreference" : "",
+      "stackedChart" : false,
+      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "invocations/sec",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      }, {
+        "label" : "",
+        "max" : null,
+        "min" : null,
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        },
+        "title" : {
+          "text" : ""
+        }
+      } ]
+    },
+    "currentUniqueKey" : 6,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 22,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "Code Cache",
   "sf_chartIndex" : 1519031810389,
   "sf_description" : "",
@@ -4434,14 +2568,97 @@
     "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
-  "marshallId" : 40,
-  "marshallMemberOf" : [ 34 ],
-  "sf_chart" : "GC: G1 Collection Time",
-  "sf_chartIndex" : 1519111272385,
-  "sf_description" : "GC Young Generation - Collection time in milliseconds",
+  "marshallId" : 23,
+  "marshallMemberOf" : [ 15 ],
+  "sf_chart" : "G1 Eden Space",
+  "sf_chartIndex" : 1518707369586,
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#ff8dd1",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Init Memory",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "hostHasService",
+        "propertyValue" : "kafka",
+        "type" : "property",
+        "value" : "kafka"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin",
+        "propertyValue" : "GenericJMX",
+        "type" : "property",
+        "value" : "GenericJMX"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-G1 Eden Space",
+        "type" : "property",
+        "value" : "memory_pool-G1 Eden Space"
+      } ],
+      "seriesData" : {
+        "metric" : "jmx_memory.init",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#876ff3",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Committed Memory",
+      "queryItems" : [ {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "hostHasService",
+        "propertyValue" : "kafka",
+        "type" : "property",
+        "value" : "kafka"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin",
+        "propertyValue" : "GenericJMX",
+        "type" : "property",
+        "value" : "GenericJMX"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-G1 Eden Space",
+        "type" : "property",
+        "value" : "memory_pool-G1 Eden Space"
+      } ],
+      "seriesData" : {
+        "metric" : "jmx_memory.committed",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
       "configuration" : {
         "aliases" : { },
         "colorOverride" : "#05ce00",
@@ -4452,29 +2669,36 @@
       "dataManipulations" : [ ],
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "collection_time",
+      "name" : "Used Memory",
       "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin_instance",
-        "propertyValue" : "gc-G1 Young Generation",
-        "type" : "property",
-        "value" : "gc-G1 Young Generation"
-      }, {
         "NOT" : false,
         "iconClass" : "icon-properties",
         "property" : "hostHasService",
         "propertyValue" : "kafka",
         "type" : "property",
         "value" : "kafka"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin",
+        "propertyValue" : "GenericJMX",
+        "type" : "property",
+        "value" : "GenericJMX"
+      }, {
+        "NOT" : false,
+        "iconClass" : "icon-properties",
+        "property" : "plugin_instance",
+        "propertyValue" : "memory_pool-G1 Eden Space",
+        "type" : "property",
+        "value" : "memory_pool-G1 Eden Space"
       } ],
       "seriesData" : {
-        "metric" : "total_time_in_ms.collection_time",
+        "metric" : "jmx_memory.used",
         "regExStyle" : null
       },
       "transient" : false,
       "type" : "plot",
-      "uniqueKey" : 1,
+      "uniqueKey" : 3,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -4490,7 +2714,7 @@
       "seriesData" : { },
       "transient" : true,
       "type" : "plot",
-      "uniqueKey" : 2,
+      "uniqueKey" : 4,
       "yAxisIndex" : 0
     } ],
     "chartMode" : "graph",
@@ -4498,22 +2722,19 @@
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "colorByMetric" : false,
+      "colorByMetric" : true,
       "colorByValue" : false,
       "dimensionInLegend" : "sf_metric",
-      "hideTimestamp" : false,
       "histogramColor" : "#ea1849",
       "range" : -900000,
       "rangeEnd" : null,
       "secondaryVisualization" : "NONE",
-      "showDots" : false,
-      "showLegend" : false,
+      "showLegend" : true,
       "sortPreference" : "",
       "stackedChart" : false,
       "useKMG2" : true,
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
-        "label" : "Duration (ms)",
         "max" : null,
         "min" : null,
         "name" : "yAxis0",
@@ -4521,133 +2742,15 @@
           "high" : null,
           "low" : null
         }
-      }, {
-        "label" : "",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
       } ]
     },
-    "currentUniqueKey" : 3,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 13,
-    "uiHelperValue" : "##CHARTID##_13"
+    "currentUniqueKey" : 5,
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
   }
 }, {
-  "marshallId" : 41,
-  "marshallMemberOf" : [ 34 ],
-  "sf_chart" : "GC: G1 Invocations",
-  "sf_chartIndex" : 1519111345386,
-  "sf_description" : "GC Young Generation - invocations per sec",
-  "sf_type" : "Chart",
-  "sf_uiModel" : {
-    "allPlots" : [ {
-      "configuration" : {
-        "aliases" : { },
-        "colorOverride" : "#f47e00",
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "invocations",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin_instance",
-        "propertyValue" : "gc-G1 Young Generation",
-        "type" : "property",
-        "value" : "gc-G1 Young Generation"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "hostHasService",
-        "propertyValue" : "kafka",
-        "type" : "property",
-        "value" : "kafka"
-      } ],
-      "seriesData" : {
-        "metric" : "invocations",
-        "regExStyle" : null
-      },
-      "transient" : false,
-      "type" : "plot",
-      "uniqueKey" : 1,
-      "yAxisIndex" : 0
-    }, {
-      "configuration" : {
-        "aliases" : { },
-        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1
-      },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "New Plot",
-      "queryItems" : [ ],
-      "seriesData" : { },
-      "transient" : true,
-      "type" : "plot",
-      "uniqueKey" : 5,
-      "yAxisIndex" : 0
-    } ],
-    "chartMode" : "graph",
-    "chartType" : "line",
-    "chartconfig" : {
-      "absoluteEnd" : null,
-      "absoluteStart" : null,
-      "colorByMetric" : false,
-      "colorByValue" : false,
-      "dimensionInLegend" : "sf_metric",
-      "hideTimestamp" : false,
-      "histogramColor" : "#ea1849",
-      "range" : -900000,
-      "rangeEnd" : null,
-      "secondaryVisualization" : "NONE",
-      "showDots" : false,
-      "showLegend" : false,
-      "sortPreference" : "",
-      "stackedChart" : false,
-      "useKMG2" : true,
-      "yAxisConfigurations" : [ {
-        "id" : "yAxis0",
-        "label" : "invocations/sec",
-        "max" : null,
-        "min" : null,
-        "name" : "yAxis0",
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        }
-      }, {
-        "label" : "",
-        "max" : null,
-        "min" : null,
-        "plotlines" : {
-          "high" : null,
-          "low" : null
-        },
-        "title" : {
-          "text" : ""
-        }
-      } ]
-    },
-    "currentUniqueKey" : 6,
-    "relatedDetectors" : [ ],
-    "revisionNumber" : 11,
-    "uiHelperValue" : "##CHARTID##_11"
-  }
-}, {
-  "marshallId" : 42,
-  "marshallMemberOf" : [ 34 ],
+  "marshallId" : 24,
+  "marshallMemberOf" : [ 15 ],
   "sf_chart" : "Heap Memory Usage %",
   "sf_chartIndex" : 1518702073245,
   "sf_description" : "Filters: plugin:GenericJMX",
@@ -4901,49 +3004,432 @@
     "uiHelperValue" : "##CHARTID##_9"
   }
 }, {
-  "marshallId" : 43,
-  "marshallMemberOf" : [ 34 ],
-  "sf_chart" : "G1 Eden Space",
-  "sf_chartIndex" : 1518707369586,
+  "marshallId" : 25,
+  "marshallMemberOf" : [ 1 ],
+  "sf_dashboard" : "Kafka",
+  "sf_description" : "",
+  "sf_discoveryQuery" : "sf_hostHasService:kafka",
+  "sf_discoverySelectors" : [ "sf_hostHasService:kafka", "sf_key:host" ],
+  "sf_filterAlias" : {
+    "variables" : [ ]
+  },
+  "sf_isLocked" : false,
+  "sf_maxDelayOverride" : -1,
+  "sf_savedFilters" : {
+    "density" : 0.0,
+    "sources" : null,
+    "time" : null,
+    "variables" : null
+  },
+  "sf_selectedEventOverlays" : [ ],
+  "sf_type" : "Dashboard",
+  "sf_uiModel" : {
+    "version" : 1,
+    "widgets" : [ {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1440706746767,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1440799109405,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1519130201067,
+        "id" : 0
+      },
+      "row" : 0,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1443988084636,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1440706577801,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1443988451417,
+        "id" : 0
+      },
+      "row" : 1,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1443988555069,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1440803652686,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1443988705261,
+        "id" : 0
+      },
+      "row" : 2,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1443988806621,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1443988869697,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1443989413030,
+        "id" : 0
+      },
+      "row" : 3,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 4,
+      "options" : {
+        "chartIndex" : 1443989550070,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 8,
+      "options" : {
+        "chartIndex" : 1440794092709,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1519046613545,
+        "id" : 0
+      },
+      "row" : 4,
+      "sizeX" : 4,
+      "sizeY" : 1
+    }, {
+      "col" : 0,
+      "options" : {
+        "chartIndex" : 1519132456179,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1
+    }, {
+      "col" : 6,
+      "options" : {
+        "chartIndex" : 1519132661491,
+        "id" : 0
+      },
+      "row" : 5,
+      "sizeX" : 6,
+      "sizeY" : 1
+    } ]
+  }
+}, {
+  "marshallId" : 26,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Consumer Fetch Time p99 (ms)",
+  "sf_chartIndex" : 1443989550070,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka.fetch-consumer.total-time.99th"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "forcedResolution" : "0",
+      "maxDecimalPlaces" : 4,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 8
+  }
+}, {
+  "marshallId" : 27,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Request Queue Size",
+  "sf_chartIndex" : 1440794092709,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MAX"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka-request-queue"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "disableThrottle" : false,
+      "forcedResolution" : "0",
+      "maxDecimalPlaces" : 4,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6
+  }
+}, {
+  "marshallId" : 28,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Producer Requests/sec",
+  "sf_chartIndex" : 1443988869697,
+  "sf_description" : "",
   "sf_type" : "Chart",
   "sf_uiModel" : {
     "allPlots" : [ {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#ff8dd1",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
-      "dataManipulations" : [ ],
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Init Memory",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "hostHasService",
-        "propertyValue" : "kafka",
-        "type" : "property",
-        "value" : "kafka"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "GenericJMX",
-        "type" : "property",
-        "value" : "GenericJMX"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin_instance",
-        "propertyValue" : "memory_pool-G1 Eden Space",
-        "type" : "property",
-        "value" : "memory_pool-G1 Eden Space"
-      } ],
+      "name" : "",
+      "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "jmx_memory.init",
-        "regExStyle" : null
+        "metric" : "counter.kafka.produce.total-time.count"
       },
       "transient" : false,
       "type" : "plot",
@@ -4952,40 +3438,123 @@
     }, {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#876ff3",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "forcedResolution" : "0",
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 6,
+    "uiHelperValue" : "##CHARTID##_6"
+  }
+}, {
+  "marshallId" : 29,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Avg Bytes/Message",
+  "sf_chartIndex" : 1440706577801,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
         "maxExtrapolations" : -1,
         "rollupPolicy" : null
       },
-      "dataManipulations" : [ ],
-      "invisible" : false,
-      "metricDefinition" : { },
-      "name" : "Committed Memory",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "hostHasService",
-        "propertyValue" : "kafka",
-        "type" : "property",
-        "value" : "kafka"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "GenericJMX",
-        "type" : "property",
-        "value" : "GenericJMX"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin_instance",
-        "propertyValue" : "memory_pool-G1 Eden Space",
-        "type" : "property",
-        "value" : "memory_pool-G1 Eden Space"
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
       } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.kafka-bytes-in - Sum",
+      "queryItems" : [ ],
       "seriesData" : {
-        "metric" : "jmx_memory.committed",
-        "regExStyle" : null
+        "metric" : "counter.kafka-bytes-in"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.kafka-messages-in - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-messages-in"
       },
       "transient" : false,
       "type" : "plot",
@@ -4994,44 +3563,22 @@
     }, {
       "configuration" : {
         "aliases" : { },
-        "colorOverride" : "#05ce00",
+        "colorOverride" : "#f47e00",
         "extrapolationPolicy" : "NULL_EXTRAPOLATION",
-        "maxExtrapolations" : -1,
-        "rollupPolicy" : null
+        "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
+      "expressionText" : "A / B",
+      "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
-      "name" : "Used Memory",
-      "queryItems" : [ {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "hostHasService",
-        "propertyValue" : "kafka",
-        "type" : "property",
-        "value" : "kafka"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin",
-        "propertyValue" : "GenericJMX",
-        "type" : "property",
-        "value" : "GenericJMX"
-      }, {
-        "NOT" : false,
-        "iconClass" : "icon-properties",
-        "property" : "plugin_instance",
-        "propertyValue" : "memory_pool-G1 Eden Space",
-        "type" : "property",
-        "value" : "memory_pool-G1 Eden Space"
-      } ],
-      "seriesData" : {
-        "metric" : "jmx_memory.used",
-        "regExStyle" : null
-      },
+      "name" : "bytes/message",
+      "queryItems" : [ ],
+      "seriesData" : { },
       "transient" : false,
-      "type" : "plot",
+      "type" : "ratio",
       "uniqueKey" : 3,
+      "valid" : true,
       "yAxisIndex" : 0
     }, {
       "configuration" : {
@@ -5040,6 +3587,7 @@
         "maxExtrapolations" : -1
       },
       "dataManipulations" : [ ],
+      "focusNext" : false,
       "invisible" : false,
       "metricDefinition" : { },
       "name" : "New Plot",
@@ -5055,17 +3603,740 @@
     "chartconfig" : {
       "absoluteEnd" : null,
       "absoluteStart" : null,
-      "colorByMetric" : true,
-      "colorByValue" : false,
+      "colorByMetric" : false,
+      "disableThrottle" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "bytes",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 5,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 9,
+    "uiHelperValue" : "##CHARTID##_9"
+  }
+}, {
+  "marshallId" : 30,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Producer Request Time p99 (ms)",
+  "sf_chartIndex" : 1443989413030,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka.produce.total-time.99th"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "forcedResolution" : "0",
+      "maxDecimalPlaces" : 4,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7
+  }
+}, {
+  "marshallId" : 31,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Zookeper Request Latency (ms)",
+  "sf_chartIndex" : 1519132661491,
+  "sf_description" : "Request Latency Percentile Distribution (Available from 1.x.x)",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "Median",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka.zk.request-latency.median",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "99th Percentile",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka.zk.request-latency.99th",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
       "dimensionInLegend" : "sf_metric",
       "histogramColor" : "#ea1849",
       "range" : -900000,
-      "rangeEnd" : null,
+      "rangeEnd" : 0,
       "secondaryVisualization" : "NONE",
       "showLegend" : true,
       "sortPreference" : "",
       "stackedChart" : false,
-      "useKMG2" : true,
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "milli seconds",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 32,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Total Messages In/sec",
+  "sf_chartIndex" : 1443988084636,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#0dba8f",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "message in/sec",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-messages-in"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 33,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Total Producer Requests/sec",
+  "sf_chartIndex" : 1443988451417,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#a747ff",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "requests/sec",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka.produce.total-time.count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "requests",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 34,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Total Consumer Fetches/sec",
+  "sf_chartIndex" : 1443988555069,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#e9008a",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "requests/sec",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka.fetch-consumer.total-time.count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "fetches",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 35,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "# Partitions",
+  "sf_chartIndex" : 1440706746767,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "under replicated partitions",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka-underreplicated-partitions"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "partitions",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka-partition-count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 3,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "disableThrottle" : false,
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : true,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "hostHasService"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : true,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      }, {
+        "enabled" : true,
+        "property" : "plugin_instance"
+      }, {
+        "enabled" : true,
+        "property" : "env"
+      }, {
+        "enabled" : true,
+        "property" : "container_image"
+      }, {
+        "enabled" : true,
+        "property" : "container_name"
+      } ],
+      "maxDecimalPlaces" : null,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "+sf_metric",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 4,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 17,
+    "uiHelperValue" : "##CHARTID##_17"
+  }
+}, {
+  "marshallId" : 36,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "# Brokers",
+  "sf_chartIndex" : 1440799109405,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "LAST_VALUE_EXTRAPOLATION",
+        "maxExtrapolations" : 5,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "COUNT"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "counter.kafka-bytes-out - Count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-bytes-out"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "disableThrottle" : false,
+      "groupBy" : [ ],
+      "heatmapAutoGradients" : 5,
+      "heatmapColorOverride" : "#05ce00",
+      "heatmapColorRange" : { },
+      "heatmapSortBy" : {
+        "asc" : true,
+        "value" : { }
+      },
+      "heatmapUnitsPerRow" : 0,
+      "heatmapUseValueAsColor" : false,
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 3,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "updateInterval" : "",
       "yAxisConfigurations" : [ {
         "id" : "yAxis0",
         "max" : null,
@@ -5077,8 +4348,621 @@
         }
       } ]
     },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 11,
+    "uiHelperValue" : "##CHARTID##_11"
+  }
+}, {
+  "marshallId" : 37,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Messages In/sec",
+  "sf_chartIndex" : 1443988705261,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-messages-in"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "forcedResolution" : "0",
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 38,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Consumer Fetches/sec",
+  "sf_chartIndex" : 1443988806621,
+  "sf_description" : "",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ {
+              "value" : "host"
+            } ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      }, {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : {
+            "count" : 5
+          },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka.fetch-consumer.total-time.count"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "forcedResolution" : "0",
+      "histogramColor" : "#ea1849",
+      "maxDecimalPlaces" : 2,
+      "range" : -900000,
+      "rangeEnd" : 0,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "-value",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "messages",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
+  }
+}, {
+  "marshallId" : 39,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Read Amplification",
+  "sf_chartIndex" : 1440803652686,
+  "sf_description" : "ratio of bytes out : bytes in",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.kafka-bytes-in - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-bytes-in"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "SUM"
+        },
+        "showMe" : false
+      } ],
+      "focusNext" : false,
+      "invisible" : true,
+      "metricDefinition" : { },
+      "name" : "counter.kafka-bytes-out - Sum",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka-bytes-out"
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "expressionText" : "B / A",
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "bytes_out/bytes_in",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : false,
+      "type" : "ratio",
+      "uniqueKey" : 3,
+      "valid" : true,
+      "yAxisIndex" : 0
+    }, {
+      "dataManipulations" : [ ],
+      "focusNext" : false,
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 4,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "area",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "disableThrottle" : false,
+      "forcedResolution" : "0",
+      "range" : -7200000,
+      "rangeEnd" : 0,
+      "sortPreference" : "",
+      "updateInterval" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "ratio",
+        "max" : null,
+        "min" : 0,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
     "currentUniqueKey" : 5,
-    "revisionNumber" : 6,
-    "uiHelperValue" : "##CHARTID##_6"
+    "relatedDetectors" : [ ],
+    "revisionNumber" : 7
+  }
+}, {
+  "marshallId" : 40,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Top Brokers with Max Replication Lag",
+  "sf_chartIndex" : 1519046613545,
+  "sf_description" : "Maximum lag in messages between the follower and leader replicas in milliseconds",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "TOPN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "gauge.kafka-max-lag - Top 5",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka-max-lag",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "list",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "histogramColor" : "#ea1849",
+      "legendColumnConfiguration" : [ {
+        "enabled" : false,
+        "property" : "AWSUniqueId"
+      }, {
+        "enabled" : false,
+        "property" : "dsname"
+      }, {
+        "enabled" : true,
+        "property" : "host"
+      }, {
+        "enabled" : false,
+        "property" : "hostHasService"
+      }, {
+        "enabled" : false,
+        "property" : "sf_originatingMetric"
+      }, {
+        "enabled" : false,
+        "property" : "sf_metric"
+      }, {
+        "enabled" : false,
+        "property" : "plugin"
+      } ],
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 3,
+    "uiHelperValue" : "##CHARTID##_3"
+  }
+}, {
+  "marshallId" : 41,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "Zookeper Request Latency",
+  "sf_chartIndex" : 1519132456179,
+  "sf_description" : "Zookeeper request latency in milliseconds (Available from 1.x.x)",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ {
+        "direction" : {
+          "options" : {
+            "aggregateGroupBy" : [ ],
+            "collapseGroups" : false,
+            "transformTimeRange" : null
+          },
+          "type" : "aggregation"
+        },
+        "fn" : {
+          "options" : { },
+          "type" : "MEAN"
+        },
+        "showMe" : false
+      } ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "counter.kafka.zk.request-latency.count - Mean",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "counter.kafka.zk.request-latency.count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "graph",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "label" : "milli seconds",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 4,
+    "uiHelperValue" : "##CHARTID##_4"
+  }
+}, {
+  "marshallId" : 42,
+  "marshallMemberOf" : [ 25 ],
+  "sf_chart" : "# Topics",
+  "sf_chartIndex" : 1519130201067,
+  "sf_description" : "Number of Topics in Kafka cluster (Available from 1.x.x)",
+  "sf_type" : "Chart",
+  "sf_uiModel" : {
+    "allPlots" : [ {
+      "configuration" : {
+        "aliases" : { },
+        "colorOverride" : "#bd468d",
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1,
+        "rollupPolicy" : null
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "gauge.kafka-topic-count",
+      "queryItems" : [ ],
+      "seriesData" : {
+        "metric" : "gauge.kafka-topic-count",
+        "regExStyle" : null
+      },
+      "transient" : false,
+      "type" : "plot",
+      "uniqueKey" : 1,
+      "yAxisIndex" : 0
+    }, {
+      "configuration" : {
+        "aliases" : { },
+        "extrapolationPolicy" : "NULL_EXTRAPOLATION",
+        "maxExtrapolations" : -1
+      },
+      "dataManipulations" : [ ],
+      "invisible" : false,
+      "metricDefinition" : { },
+      "name" : "New Plot",
+      "queryItems" : [ ],
+      "seriesData" : { },
+      "transient" : true,
+      "type" : "plot",
+      "uniqueKey" : 2,
+      "yAxisIndex" : 0
+    } ],
+    "chartMode" : "single",
+    "chartType" : "line",
+    "chartconfig" : {
+      "absoluteEnd" : null,
+      "absoluteStart" : null,
+      "colorByMetric" : false,
+      "colorByValue" : false,
+      "colorByValueScale" : [ ],
+      "hideTimestamp" : false,
+      "histogramColor" : "#ea1849",
+      "range" : -900000,
+      "rangeEnd" : null,
+      "secondaryVisualization" : "NONE",
+      "sortPreference" : "",
+      "yAxisConfigurations" : [ {
+        "id" : "yAxis0",
+        "max" : null,
+        "min" : null,
+        "name" : "yAxis0",
+        "plotlines" : {
+          "high" : null,
+          "low" : null
+        }
+      } ]
+    },
+    "currentUniqueKey" : 3,
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 } ]
