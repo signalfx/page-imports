@@ -3500,9 +3500,10 @@
       } ]
     },
     "currentUniqueKey" : 2,
-    "markdownText" : "Metric(s):\n<code>sf.org.numDatapointsReceived</code>\n\nTotal number of [datapoints](https://docs.signalfx.com/en/latest/concepts/data-model.html#datapoints) sent to SignalFx for your organization, minus any datapoints that were not stored and processed due to limits exceeded.",
+    "markdownText" : "The chart above shows average DPM received per interval. To view maximum DPM received per interval, and access other data related to billing, go to “Organization>Billing and Usage”.\n\nMetric(s):\n<code>sf.org.numDatapointsReceived</code>\n\nTotal number of [datapoints](https://docs.signalfx.com/en/latest/concepts/data-model.html#datapoints) sent to SignalFx for your organization, minus any datapoints that were not stored and processed due to limits exceeded.",
     "relatedDetectors" : [ ],
-    "revisionNumber" : 4
+    "revisionNumber" : 5,
+    "uiHelperValue" : "##CHARTID##_5"
   }
 }, {
   "marshallId" : 28,
